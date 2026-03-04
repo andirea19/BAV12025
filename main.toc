@@ -8,15 +8,15 @@
 \contentsline {subsection}{\numberline {3.2}Historische Entwicklung – von 1FA zu MFA}{5}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Relevante Protokolle und Technologien}{6}{subsection.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.1}Authentifizierung \& Autorisierung}{6}{subsubsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.2}Endgeräte}{7}{subsubsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.4}MFA und Regulatorik}{8}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.3.2}Endgeräte}{8}{subsubsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.4}MFA und Regulatorik}{9}{subsection.3.4}%
 \contentsline {subsection}{\numberline {3.5}Verwendungskontext und Akzeptanz}{9}{subsection.3.5}%
 \contentsline {section}{\numberline {4}Forschungsstand}{10}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Herausforderungen}{10}{subsection.4.1}%
 \contentsline {subsubsection}{\numberline {4.1.1}MFA als technische Herausforderung}{10}{subsubsection.4.1.1}%
 \contentsline {subsubsection}{\numberline {4.1.2}MFA als Herausforderung an Nutzer:innen}{11}{subsubsection.4.1.2}%
-\contentsline {subsubsection}{\numberline {4.1.3}MFA als IT-Governance-Herausforderung}{11}{subsubsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.2}Wirkmechanismen der Nutzung von MFA}{12}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}MFA als IT-Governance-Herausforderung}{12}{subsubsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.2}Wirkmechanismen der Nutzung von MFA}{13}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}IT-Governance als Treiber der Akzeptanz und Nutzung von Multifaktor-Authentifizierung}{13}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Beantwortung der Forschungsfrage}{14}{subsection.4.4}%
 \contentsline {section}{\numberline {5}Forschungsmethodik}{15}{section.5}%
@@ -29,7 +29,6 @@
 \contentsline {subsection}{\numberline {5.4}Datenaufbereitung und Auswertungsverfahren}{17}{subsection.5.4}%
 \contentsline {subsubsection}{\numberline {5.4.1}Data Preprocessing (Datenbereinigung)}{17}{subsubsection.5.4.1}%
 \contentsline {subsubsection}{\numberline {5.4.2}Deskriptive und Inferenzstatistische Analyse}{17}{subsubsection.5.4.2}%
-\contentsline {subsection}{\numberline {5.5}Ethische Überlegungen}{18}{subsection.5.5}%
 \contentsline {section}{\numberline {6}Zusammenfassung}{18}{section.6}%
-\contentsline {section}{\numberline {7}Zusammenfassung}{19}{section.7}%
+\contentsline {section}{\numberline {7}Zusammenfassung}{18}{section.7}%
 \contentsline {section}{\numberline {8}Anhang}{20}{section.8}%

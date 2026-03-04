@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.2.5)  3 MAR 2026 18:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.2.5)  4 MAR 2026 10:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -863,7 +863,7 @@ Package gensymb Info: Using \textmu for \micro on input line 69.
 \openout2 = `Dokument/Deckblatt.aux'.
 
  (Dokument/Deckblatt.tex (data/_Variables.tex)
-<FH-Burgenland_Logos/image1.png, id=142, 6359.76pt x 1589.94pt>
+<FH-Burgenland_Logos/image1.png, id=138, 6359.76pt x 1589.94pt>
 File: FH-Burgenland_Logos/image1.png Graphic file (type png)
 <use FH-Burgenland_Logos/image1.png>
 Package pdftex.def Info: FH-Burgenland_Logos/image1.png  used on input line 8.
@@ -906,7 +906,7 @@ Overfull \hbox (27.15117pt too wide) in paragraph at lines 20--20
 \openout8 = `main.toc'.
 
  (data/_Variables.tex)
-<FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png, id=186, 277.2759pt x 100.4553pt>
+<FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png, id=181, 277.2759pt x 100.4553pt>
 File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
 <use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
 Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 97.
@@ -934,13 +934,13 @@ Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used 
 LaTeX Font Info:    Font shape `T1/Arimo-TLF/m/it' will be
 (Font)              scaled to size 12.0pt on input line 19.
 
-Overfull \hbox (28.19608pt too wide) in paragraph at lines 19--20
-[]\T1/Arimo-TLF/m/it/12 Inwiefern fun-giert IT-Governance als Ein-fluss-fak-tor auf die Ver-wen-dung von Multifaktor-
+Overfull \hbox (24.4257pt too wide) in paragraph at lines 19--20
+[]\T1/Arimo-TLF/m/it/12 IT-Governance als Ein-fluss-fak-tor auf die Ver-wen-dung von Multifaktor-Authentifizierung
  []
 
 File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
 <use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
-Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 26.
+Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 30.
 (pdftex.def)             Requested size: 133.50977pt x 48.36958pt.
 [3{C:/Users/unger/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/arimo/arm_c3z4r2.enc}]) (Kapitel/2_Grundlagen.tex
 Overfull \hbox (6.16116pt too wide) in paragraph at lines 8--9
@@ -949,12 +949,12 @@ Overfull \hbox (6.16116pt too wide) in paragraph at lines 8--9
 
 File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
 <use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
-Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 18.
+Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 11.
 (pdftex.def)             Requested size: 133.50977pt x 48.36958pt.
 [4]
 File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
 <use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
-Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 37.
+Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 35.
 (pdftex.def)             Requested size: 133.50977pt x 48.36958pt.
  [5]
 Overfull \hbox (6.19473pt too wide) in paragraph at lines 38--39
@@ -963,7 +963,7 @@ Overfull \hbox (6.19473pt too wide) in paragraph at lines 38--39
 
 File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
 <use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
-Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 57.
+Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 52.
 (pdftex.def)             Requested size: 133.50977pt x 48.36958pt.
 [6]
 Overfull \hbox (3.91313pt too wide) in paragraph at lines 57--58
@@ -977,7 +977,7 @@ Overfull \hbox (1.95027pt too wide) in paragraph at lines 59--60
 
 File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
 <use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
-Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 76.
+Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 72.
 (pdftex.def)             Requested size: 133.50977pt x 48.36958pt.
 [7]
 Overfull \hbox (1.29396pt too wide) in paragraph at lines 76--77
@@ -986,19 +986,18 @@ Overfull \hbox (1.29396pt too wide) in paragraph at lines 76--77
 
 File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
 <use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
-Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 94.
+Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 92.
 (pdftex.def)             Requested size: 133.50977pt x 48.36958pt.
 [8]
 Overfull \hbox (7.48085pt too wide) in paragraph at lines 101--102
 \T1/Arimo-TLF/m/n/12 cess Ma-na-ge-ment (IAM) und dient der Ein-hal-tung von Sicherheits- und Compliance-Standards
  []
 
-) (Kapitel/3_Forschungsstand.tex
 File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
 <use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
-Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 1.
+Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 106.
 (pdftex.def)             Requested size: 133.50977pt x 48.36958pt.
- [9]
+[9]) (Kapitel/3_Forschungsstand.tex
 Overfull \hbox (18.56267pt too wide) in paragraph at lines 6--7
 \T1/Arimo-TLF/m/n/12 Die tech-ni-sche Im-ple-men-tie-rung von Multifaktor-Authentifizierung kon-fron-tiert IT-Verantwortliche
  []
@@ -1010,38 +1009,38 @@ Overfull \hbox (11.72202pt too wide) in paragraph at lines 12--13
 
 File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
 <use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
-Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 15.
+Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 13.
 (pdftex.def)             Requested size: 133.50977pt x 48.36958pt.
 [10]
-Overfull \hbox (3.94289pt too wide) in paragraph at lines 21--22
+Overfull \hbox (3.94289pt too wide) in paragraph at lines 20--21
 \T1/Arimo-TLF/m/n/12 Ak-zep-tanz: Ein-fluss-grö-ÿen be-zie-hungs-wei-se de-mo-gra-phi-sche Va-ria-blen wie Ge-schlecht oder
  []
 
 
-Overfull \hbox (24.18703pt too wide) in paragraph at lines 21--22
+Overfull \hbox (24.18703pt too wide) in paragraph at lines 20--21
 \T1/Arimo-TLF/m/n/12 2), dass meh-re-re Teil-neh-men-de ih-rer Stu-die die zu-sätz-li-che Si-cher-heit bei Banking-Anwendungen
  []
 
 File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
 <use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
-Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 25.
+Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 22.
 (pdftex.def)             Requested size: 133.50977pt x 48.36958pt.
 [11]
 File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
 <use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
-Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 44.
+Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 41.
 (pdftex.def)             Requested size: 133.50977pt x 48.36958pt.
  [12]
-Overfull \hbox (21.71054pt too wide) in paragraph at lines 49--49
+Overfull \hbox (21.71054pt too wide) in paragraph at lines 48--48
 []\T1/Arimo-TLF/b/n/14.4 IT-Governance als Trei-ber der Ak-zep-tanz und Nut-zung von Multifaktor-
  []
 
 File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
 <use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
-Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 57.
+Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 54.
 (pdftex.def)             Requested size: 133.50977pt x 48.36958pt.
 [13]
-Overfull \hbox (20.90639pt too wide) in paragraph at lines 58--59
+Overfull \hbox (20.90639pt too wide) in paragraph at lines 57--60
 []\T1/Arimo-TLF/m/n/12 Im öf-fent-li-chen Sek-tor ge-winnt zu-dem die di-gi-ta-le Sou-ve-rä-ni-tät an Be-deu-tung: E-Government-
  []
 
@@ -1062,7 +1061,7 @@ Overfull \hbox (28.39001pt too wide) in paragraph at lines 17--18
 
 File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
 <use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
-Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 32.
+Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 28.
 (pdftex.def)             Requested size: 133.50977pt x 48.36958pt.
 [16]
 Overfull \hbox (16.80057pt too wide) in paragraph at lines 40--41
@@ -1071,9 +1070,9 @@ Overfull \hbox (16.80057pt too wide) in paragraph at lines 40--41
 
 File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
 <use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
-Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 48.
+Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 46.
 (pdftex.def)             Requested size: 133.50977pt x 48.36958pt.
-[17]) (Kapitel/5_Analyse copy.tex) (Kapitel/6_Fazit.tex
+[17]) (Kapitel/5_Analyse.tex) (Kapitel/6_Fazit.tex
 Overfull \hbox (28.83577pt too wide) in paragraph at lines 2--1
 \T1/Arimo-TLF/m/n/12 Die vor-lie-gen-de Ar-beit hat ge-zeigt, dass die tech-ni-sche Si-cher-heit von Multifaktor-Authentifizierung
  []
@@ -1108,20 +1107,20 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D30E7E14D7854B4C71C44D81D67C6E6C;6996.
+(rerunfilecheck)             Checksum: 28116C658DB23905ACFC400A48C7E5B2;6827.
  ) 
 Here is how much of TeX's memory you used:
- 34533 strings out of 467871
- 692149 string characters out of 5418377
+ 34531 strings out of 467871
+ 692087 string characters out of 5418377
  1146577 words of memory out of 5000000
- 62800 multiletter control sequences out of 15000+600000
+ 62799 multiletter control sequences out of 15000+600000
  639330 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 104i,16n,111p,2560b,627s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 104i,15n,111p,2560b,627s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\unger\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk><C:/Users/unger/AppData/Local/Programs/MiKTeX/fonts/type1/google/arimo/Arimo-Bold.pfb><C:/Users/unger/AppData/Local/Programs/MiKTeX/fonts/type1/google/arimo/Arimo-Italic.pfb><C:/Users/unger/AppData/Local/Programs/MiKTeX/fonts/type1/google/arimo/Arimo.pfb><C:/Users/unger/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/unger/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/unger/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on main.pdf (21 pages, 1064733 bytes).
+Output written on main.pdf (21 pages, 1061944 bytes).
 PDF statistics:
- 348 PDF objects out of 1000 (max. 8388607)
- 55 named destinations out of 1000 (max. 500000)
- 295 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 342 PDF objects out of 1000 (max. 8388607)
+ 54 named destinations out of 1000 (max. 500000)
+ 287 words of extra memory for PDF output out of 10000 (max. 10000000)
 
