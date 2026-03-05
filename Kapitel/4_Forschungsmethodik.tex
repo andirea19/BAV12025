@@ -28,16 +28,20 @@ Um die theoretischen Konstrukte messbar zu machen, wurden sie wie folgt operatio
 \end{itemize}
 
 \subsubsection{Pre-Test}
-Vor der finalen Feldphase wurde der Fragebogen einem Pre-Test mit einer kleinen Stichprobe ($n=5$) unterzogen. Ziel war es, die technische Funktionalität, die Dauer der Bearbeitung sowie die semantische Verständlichkeit der Items zu prüfen. Basierend auf dem Feedback wurden kleinere sprachliche Unschärfen bereinigt, um die Validität des Messinstruments zu sichern.
+Vor der finalen Feldphase wurde der Fragebogen einem Pre-Test mit einer kleinen Stichprobe ($n=5$) unterzogen. Ziel war es, die technische Funktionalität, die Dauer der Bearbeitung sowie die Verständlichkeit der Inhalte zu prüfen.
+Basierend auf dem Feedback wurden kleinere sprachliche Unschärfen bereinigt, um die Validität des Messinstruments zu sichern.
+Die endgültige Version des Fragebogens wurde als \texttt{.pdf} dokumentiert und im Anhang der Arbeit bereitgestellt.
+Die Aussendung erfolgte über einen Zeitraum von vier Wochen (KW 12-15 2026) um eine möglichst breite und heterogene Stichprobe zu erreichen. Insgesamt wurden 150 vollständige Datensätze erhoben, die in die Analyse einbezogen werden können.
 
 \subsection{Datenaufbereitung und Auswertungsverfahren}
 Die Datenanalyse erfolgt mit der Open-Source-Software \textit{Orange Data Mining}. Die Wahl fiel auf dieses Tool, da es durch seine visuelle Programmierung eine transparente, reproduzierbare und nachvollziehbare Kombination aus Datenbereinigung, explorativer Datenanalyse und inferenzstatistischer Testung innerhalb einer Workflow-Umgebung ermöglicht. Der gesamte Analyseprozess wurde als Orange-Workflow (\texttt{.ows}) dokumentiert.
-
+% wie zitiere ich Orange? https://orange.biolab.si/citation/
 \subsubsection{Data Preprocessing (Datenbereinigung)}
 Über das \textit{File Widget} werden die Rohdaten importiert. Im Rahmen der Datenvorverarbeitung werden unvollständige Datensätze ausgeschlossen (\textit{Data Cleaning}). Über die \textit{Feature Selection} und \textit{Edit Domain} werden die Variablentypen definiert (Ordinal für Likert-Skalen, Nominell für demografische Merkmale). Zudem werden Ausreißer (z.\,B. „Speed-Speeder“ mit unrealistisch kurzen Bearbeitungszeiten) herausgefiltert.
 
 \subsubsection{Deskriptive und Inferenzstatistische Analyse}
 Die deskriptive Statistik dient zur Darstellung der Stichprobenverteilung. Mittels des \textit{Distributions Widgets} (Histogramme) werden soziodemografische Daten und allgemeine MFA-Nutzungshäufigkeiten visualisiert. \textit{Box Plots} kommen zum Einsatz, um Unterschiede in der Usability-Bewertung zwischen verschiedenen Nutzergruppen (z.\,B. hohe vs. niedrige IT-Affinität) visuell zu prüfen.
+% hier kann ich einen Screenshot einbauen
 
 Zur Überprüfung der aufgestellten Hypothesen kommt die \textbf{Inferenzstatistik} zum Einsatz:
 \begin{itemize}
@@ -45,6 +49,8 @@ Zur Überprüfung der aufgestellten Hypothesen kommt die \textbf{Inferenzstatist
     \item Zur Prüfung von \textbf{$H_1$ (Einfluss der IT-Governance)} werden Gruppenvergleiche durchgeführt. Über das \textit{ANOVA} bzw. \textit{t-Test Widget} (bzw. bei Verletzung der Normalverteilungsannahme der Mann-Whitney-U-Test) wird getestet, ob sich das private MFA-Nutzungsverhalten von Personen mit strenger beruflicher Governance signifikant von Personen ohne entsprechende berufliche Vorgaben unterscheidet.
 \end{itemize}
 Die Signifikanzschwelle wird auf $\alpha = 0.05$ festgelegt. Alle Ergebnisse werden in einem ausführlichen Analysebericht dokumentiert, der die statistischen Kennzahlen, die Effektstärken sowie die Interpretation der Befunde im Kontext der Forschungsfrage enthält.
-%\subsection{Ethische Überlegungen}
+
+
+%\subsection{Ethische Überlegungen} ist ein bissi viel, oder
 %Die Durchführung der Studie erfolgt unter strikter Einhaltung ethischer Richtlinien. Alle Teilnehm  enden werden vorab über die Ziele der Forschung, die Freiwilligkeit der Teilnahme sowie die Anonymität und Vertraulichkeit der Daten informiert. Es wird sichergestellt, dass keine personenbezogenen Daten erhoben werden, die Rückschlüsse auf die Identität der Probanden zulassen. Zudem wird die Möglichkeit gegeben, die Teilnahme jederzeit ohne Angabe von Gründen abzubrechen. Die gewonnenen Erkenntnisse werden ausschließlich für wissenschaftliche Zwecke verwendet und in aggregierter Form veröffentlicht, um die Privatsphäre der Teilnehmenden zu schützen.    
 
