@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1772718093.61313 "c:/Users/unger/Documents/BA2025/BAV12025/main.tex" "main.pdf" "main" 1772718097.39501 0
+["pdflatex"] 1772718272.67704 "c:/Users/unger/Documents/BA2025/BAV12025/main.tex" "main.pdf" "main" 1772718276.49207 0
   "C:/Users/unger/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1772558456 162521 680adadc641e962bf0ef27ae0572df2d ""
   "C:/Users/unger/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ectt1200.pk" 1772558588 24152 99fc0447398119e4fd8f41717a607723 ""
   "C:/Users/unger/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1770311462 13333486 6a292ff0f339a7b77d45c0f04fa8b4b2 ""
@@ -202,12 +202,12 @@
   "C:/Users/unger/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "C:/Users/unger/AppData/Local/Programs/MiKTeX/tex/latex/xfor/xfor.sty" 1233849756 2689 44855b72da58344b1c1d9b3087bce6ca ""
   "C:/Users/unger/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "Dokument/Deckblatt.aux" 1772718096 1335 17362fde82d7ea650b1ff17de6ca73e4 "pdflatex"
+  "Dokument/Deckblatt.aux" 1772718275 1335 17362fde82d7ea650b1ff17de6ca73e4 "pdflatex"
   "Dokument/Deckblatt.tex" 1772615753 1020 c58b0e9f8677502f32c519c6c41f1e66 ""
   "FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png" 1768581476 151215 2657986a58ea85e2f324babf184ad95d ""
   "FH-Burgenland_Logos/image1.png" 1768581476 691347 1548c57c6a1041765ed29b7c4cbf7474 ""
   "Kapitel/0_Aufgabenstellung.tex" 1772558686 2374 054b3cc44169220d4fbbcad1496c234a ""
-  "Kapitel/1_Einleitung.tex" 1772615611 5525 eead7d767bd496bbe1ef41b0e3048a07 ""
+  "Kapitel/1_Einleitung.tex" 1772718268 5898 e34cc5e0f608ddc9139f3b8337777c07 ""
   "Kapitel/2_Grundlagen.tex" 1772718026 17279 73bb215c08a8c36f2c50ecf7775db796 ""
   "Kapitel/3_Forschungsstand.tex" 1772615611 16538 a17b15ee890fb48b6325045f74897dbe ""
   "Kapitel/4_Forschungsmethodik.tex" 1772718092 9294 1015a68db4f510c6690f5919b69df3fe ""
@@ -217,10 +217,10 @@
   "data/_Packages.tex" 1768581476 2096 35efc571145fbe9c1fabcb42176f9697 ""
   "data/_Variables.tex" 1768581476 728 21cde1e7c007eb392f6f68f56457ed14 ""
   "main.acr" 0 -1 0 ""
-  "main.aux" 1772718096 5174 2afdbf898093d21471ea15379c93aa2c "pdflatex"
-  "main.out" 1772718096 6827 28116c658db23905acfc400a48c7e5b2 "pdflatex"
+  "main.aux" 1772718276 5177 af2d62d62d4bd585c539f3e694499a0c "pdflatex"
+  "main.out" 1772718276 6827 28116c658db23905acfc400a48c7e5b2 "pdflatex"
   "main.tex" 1772615868 4457 c99678ec87911cef0eadef019e9b9334 ""
-  "main.toc" 1772718096 3199 cd9eb76d4aed8649532423f1b6005706 "pdflatex"
+  "main.toc" 1772718276 3202 a5d0725b8f5c6e552431bbfee89bd880 "pdflatex"
   (generated)
   "Dokument/Deckblatt.aux"
   "main.acn"
