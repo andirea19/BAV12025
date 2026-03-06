@@ -1,0 +1,1349 @@
+Skip to main content
+Skip to article
+View PDF
+Download full issue
+Computers in Human Behavior
+Volume 63, October 2016, Pages 75-90
+Investigating the influence of the most commonly used external variables of TAM on students’ Perceived Ease of Use (PEOU) and Perceived Usefulness (PU) of e-portfolios
+Author links open overlay panel
+Fazil Abdullah
+,
+Rupert Ward
+,
+Ejaz Ahmed
+Show more
+Share
+Cite
+https://doi.org/10.1016/j.chb.2016.05.014
+Get rights and content
+Full text access
+Highlights
+•
+We validated and used the GETAMEL to examine students’ e-portfolio adoption.
+•
+Four variables affected Perceived Ease of Use (PEOU) of the e-portfolio.
+•
+The four variables are Experience, Enjoyment, Self-Efficacy and Subjective Norm.
+•
+PEOU and Enjoyment affected Perceived Usefulness (PU) of the e-portfolio.
+•
+Both PEOU and PU affected students’ intention to use the e-portfolio.
+Abstract
+Engagement with e-portfolios has been shown to improve students’ learning. However, what influences students to accept e-portfolios is a question that needs careful study. The purpose of this study is to investigate the influence of Self-Efficacy, Subjective Norm, Enjoyment, Computer Anxiety and Experience on students’ Perceived Ease of Use (PEOU) and Perceived Usefulness (PU) of an e-portfolio system and their Behavioural Intention (BI) to use the system for learning. To do this, the study tested and used the General Extended Technology Acceptance Model for E-Learning (GETAMEL) in the context of e-portfolios. Valid data were collected from 242 UK undergraduate students who had been introduced to e-portfolios. The data set was analysed using SPSS software. Results showed that the best predictor of student’s Perceived Ease of Use of the e-portfolio is Experience, followed by Enjoyment, Self-Efficacy and Subjective Norm. The best predictor of student’s Perceived Usefulness of the e-portfolio is Perceived Ease of Use followed by Enjoyment. Both Perceived Ease of Use and Perceived Usefulness predict student’s Behavioural Intention to Use the e-portfolio. The findings improve understanding regarding acceptance of e-portfolio systems and this work is therefore of particular interest to researchers, developers and practitioners of e-portfolios.
+Previous
+Next
+Keywords
+E-portfoliosE-learningTechnology adoptionTechnology Acceptance Model
+1. Introduction
+Computers and the Internet has unavoidably changed the way in which people work, communicate, shop and learn. Education in particular has benefited greatly from these new technologies. Being economical, flexible and accessible without constraints of time and distance, technologies such as electronic learning (e-learning) systems are becoming increasingly relevant in Higher Education (Lin, Lu & Liu, 2013). An e-learning system is defined by Lee, Hsieh and Ma (2011, p. 355) as “an information system that can integrate a wide variety of instructional material (via audio, video, and text mediums) conveyed through e-mail, live chat sessions, online discussions, forums, quizzes and assignments”. E-learning systems such as Moodle and Blackboard have become an important part of delivering the modern university curriculum (Lin et al., 2014, Paechter et al., 2010, p. 222, p. 457), supporting teaching and learning in higher education through delivering information and instructions to learners via the Internet (Lee, Hsieh & Chen, 2013, p. 173).
+Alongside these e-learning systems, e-portfolios are becoming popular and used in universities to support students’ learning (Kahn, 2014, p. 4; Tzeng & Chen, 2012, p. 163).
+1.1. E-portfolios
+E-portfolios evolved from paper-based student portfolios in the mid-1980s (Lorenzo & Ittelson, 2005, p. 3) and have attracted significant interest from educators (Chen et al., 2012, Gerbic et al., 2009). An e-portfolio is defined as “a collection of digital artefacts that demonstrates what a person knows and can do. It is used in academic assessment, career planning, and for documenting and demonstrating students’ learning and growth over time” (Xuesong, Olfman & Firpo, 2011, p. 1).
+The Dearing Report (Dearing, 1997) and the Leitch Report (Leitch, 2006) are the two leading reports after which e-portfolio gained value in UK higher education. These reports emphasised the need to facilitate extended learning experiences for students, through personal development, and to provide students with a platform to record their skills and achievements for accreditation and job applications. This lead to a significant increase in interest in e-portfolios amongst higher education institutions in terms of providing a platform for students to engage with their personal development, and to support their graduate employability. Now many universities use e-portfolio systems, and it is predicted that most educational institutions will use them in the near future (Gerbic et al., 2009, p. 327; Tzeng & Chen, 2012, p. 163).
+1.1.1. Benefit of e-portfolio use in education
+Abrami and Barrett (2005) categorised e-portfolios into three main types: progress, showcase and assessment. The purpose of a progress e-portfolio is to demonstrate a student’s learning and growth over a period of time (Beresford and Cobham, 2010, Xuesong et al., 2011), enabling learners to see their own progress clearly, and identify areas where they need to develop. It also provide visible and tangible evidence of how students are progressing, allowing others to monitor student learning and provide feedback accordingly (Driessen, 2008, p. 9). The purpose of a showcase e-portfolio is to present a student’s competencies and achievements, assisting students with academic accreditation and job applications (Papp, 2014). The purpose of an assessment e-portfolio is to evaluate student’s achievements. It emphasises the process of change or development, at multiple points in time. Assessment e-portfolios are particularly useful in evaluating programmes that have flexible or individualised goals or outcomes, as it allows for the possibility of assessing complex and difficult-to-understand constructs that are often impossible in conventional assessments (McDonald, 2012, p. 345). These different types of e-portfolios can be combined together to facilitate student learning and personal development.
+If e-portfolios are accepted and used by students they can have many positive impacts on their learning, including the following:
+E-portfolios facilitate self-directed learning through critical reflection.
+E-portfolios persuade students to reflect on their learning needs, errors, interests, challenges and goals so that they can improve and correct them accordingly (Wade, Abrami, & Sclater, 2005). They encourage learners to think critically and become active, independent and self-regulated learners (McDonald, 2012, Meyer et al., 2010, p. 85, p. 337).
+E-portfolios enable communication and feedback anytime/anywhere between the e-portfolio users and those who have access to the e-portfolio.
+E-portfolios provide remote access and therefore overcome the time-space limitations (Hwang, Tsai, Yu & Lin, 2011, p. 247), allowing students to share their work with others such as peers, teachers, parents and employers remotely and asynchronously via the internet (Papp, 2014, Wade et al., 2005). E-portfolios can therefore facilitate a student-centred and personalised approach to learning in a connected world (Beresford & Cobham, 2011, p. 273).
+E-portfolios provide an effective means of storing, organising and showcasing evidence of learning.
+E-portfolios enable students to digitally produce a more enriched learning experience (Lopez-Fernandez & Rodriguez-Illera, 2009, p. 609), giving e-portfolio users the power to integrate multimedia materials such as images, videos and sounds (Meyer et al., 2010, p. 84). This is very important, as it allows students to better demonstrate the process and evidence of their learning and achievement (Quynh, 2012, p. 54).
+E-portfolios can demonstrate a student’s learning and growth over time.
+(Barrett, 2005, Beresford and Cobham, 2010, p. 2; Xuesong et al., 2011, p. 1, p. 2). They provide visible and tangible evidence of how students are progressing and allow others to monitor, discuss and assess student learning (Driessen, 2008, p. 9).
+E-portfolios are considered an important tool for student learning and personal development (Hsieh, Chen & Hung, 2015, p. 838; Joint Information Systems Committee, 2008), for professional development in vocational higher education (Lim et al., 2016, Winberg and Pallitt, 2016) and for student assessments (Buyarski and Landis, 2014, Contreras-Higuera et al., 2016). Studies such as Attwell, 2007, Barrett and Garrett, 2009, Meyer et al., 2010, Posey et al., 2015 and Trevitt, Macduff and Steed (2014) also have shown that positive benefits can be derived from the use of e-portfolios in education both as multimedia containers and as tools to support learning and personal development. E-portfolios enable students to become independent, self-directed and reflective learners (Beresford and Cobham, 2011, Meyer et al., 2010, p. 85, p. 273), and therefore it is important that universities understand how e-portfolios may be of value.
+1.2. The purpose of the study
+Because of the potential advantages of e-portfolios, e-portfolio implementation in higher education is growing (Gerbic et al., 2009, p. 327; Tzeng & Chen, 2012, p. 163). The increase in the use of e-portfolios in education has raised the importance of e-portfolio acceptance issues. E-portfolio systems cannot enhance student learning and development if students do not accept they should use the systems (Tosh, Light, Fleming & Haywood, 2005). Current literature on e-portfolios has mainly focused on the potential benefit of e-portfolios in education (Attwell, 2007, Barrett and Garrett, 2009, Becta, 2007, Lim et al., 2016, Meyer et al., 2010, Wakimoto and Lewis, 2014), which helps with understanding the importance of e-portfolios for teaching and learning. However, little current literature studies the factors that affect undergraduate student acceptance or rejection of e-portfolios. To ensure e-portfolios are effective teaching and learning tools in education, they need to be accepted by students. More investigation is therefore required to both identify and better understand the factors that affect student acceptance or rejection of e-portfolios.
+The purpose of this study is to investigate the factors that might influence students’ Perceived Ease of Use (PEOU) and Perceived Usefulness (PU) of e-portfolios and their Behavioural Intention to Use (BI) e-portfolios for learning and personal development.
+Based on 107 e-learning adoption studies Abdullah and Ward (2016) have developed a General Extended Technology Acceptance Model for E-Learning (GETAMEL), which hypothesises relationship between the most commonly used external variables (Self-Efficacy, Subjective Norm, Enjoyment, Computer Anxiety and Experience) of Technology Acceptance Model (TAM) and PEOU and PU of e-learning. This study validates and uses the GETAMEL to identify the relationships between the most commonly used external variables of TAM and PEOU and PU of e-portfolios. It adopts a positivist approach in testing the research hypotheses, using a deductive survey-based research approach (testing hypotheses) and quantitative methods of statistical analysis to support or reject the hypothesised links between the factors. The study involved a survey of existing questions, distributed to 292 undergraduate students who had been introduced to the e-portfolio. Valid data collected from 242 students (205 males and 37 females) were examined using Structural Equation Modelling (SEM) within SPSS.
+In summary, this study uses the GETAMEL to investigate the relationships between the external variables and students’ PEOU and PU of e-portfolios to identify what external variables should be considered in enhancing undergraduate students’ e-portfolio adoption.
+2. Theoretical framework
+In order to identify and explain the factors that affect acceptance of e-learning, researchers have used a number of different technology adoption theories, including Theory of Reasoned Action (TRA), Theory of Planned Behaviour (TPB), Task Technology Fit (TTF), Unified Theory of Acceptance and Use of Technology (UTAUT) and Technology Acceptance Model (TAM). Among these theories, “TAM is the most common ground theory in e-learning acceptance literature” (Šumak, Heričko, & Pušnik, 2011, p. 2068).
+2.1. Technology Acceptance Model
+TAM, shown in Fig. 1, was developed by Davis in 1986. Its purpose is to explain technology adoption behaviour. The arrows in the model show the effect of one variable on another. External variables affect both PEOU and PU of technology. PEOU influences PU and Attitude Towards Using (AT) technology. PU affects AT and BI. AT affects BI. BI then influences Actual Use.
+Download: Download high-res image (141KB)
+Download: Download full-size image
+
+Fig. 1. Technology Acceptance Model (Davis, Bagozzi & Warshaw, 1989, p. 985, p. 985).
+
+Previous research has confirmed that TAM is a valid model that represents an important theoretical framework to explain and predict technology acceptance behaviour (Al-Gahtani, 2016, Hidayanto et al., 2014, Hsia et al., 2014, Lee et al., 2014, Tarhini et al., 2014, Wu and Zhang, 2014).
+In a meta-analysis study, King and He (2006) reported some good results of using TAM, their analysis confirmed “TAM to be a valid and robust model” (p. 740). A recent meta-analysis of 42 e-learning acceptance studies by Šumak et al. (2011) also showed that 36 out of the 42 studies (86% of the 42 studies) used TAM as a ground theory (p. 2069). In regards to TAM’s explanatory power some recent e-learning studies that have extended and used TAM have reported ’Total Variance Explained’ ranging from 52% to 70% (including Lee et al., 2013, Lee et al., 2014, p. 572, p. 182; Shen & Chuang, 2010, p. 205), providing strong justifications for using an extended TAM in this study. For example Lee et al. (2014) have extended TAM with Computer Self-Efficacy, Internet Self-Efficacy, Instructor’s Attitude Toward Students, Learning Content and Technology Accessibility to empirically examine the influence of individual and system characteristics on student acceptance of e-learning systems. Their study showed that these factors played an important role in influencing students’ perception and intention to use the e-learning systems, with their proposed model explaining 63% of the variance in intention to use the system (p. 572). Lee et al. (2013) also extended TAM with Task Equivocality, Prior Experiences, Computer Self-Efficacy and Organisational Support to examine the effects of these factors on employees’ use of e-learning systems in organisations. In their study PU was affected by Organisation Support, Prior Experience and Task Equivocality. PEOU on the other hand was affected by Organisation Support, Computer Self-Efficacy and Prior Experience. Their resulting model explained 52% of the variance in employees’ Behavioural Intention to Use the system (p. 182). Shen and Chuang (2010, p. 205) extended TAM with Interactivity and Self-Efficacy to examine students’ Attitude and Behavioural Intention to Use an interactive whiteboard technology. Their extended model demonstrated that students’ Attitude and Behavioural Intention to Use the system were influenced by Interactivity, Perceived Self-Efficacy, Perceived Ease of Use and Perceived Usefulness. Overall their extended model explained 70% of variance in Behavioural Intention to Use the e-learning system (p. 205).
+2.1.1. Excluding attitude construct from TAM
+Originally, the Attitude factor was included in TAM as a mediator between user perceptions (PEOU and PU) and BI (Davis, 1986) but recent studies have excluded Attitude from the model, because of its weak role between the constructs (Bhatiasevi, 2011, p. 514; Chen, Lin, Yeh & Lou, 2013, p. 113; Giovanis, Binioris & Polychronopoulos, 2012, p. 28; Hussein, Aditiawarman & Mohamed, 2007, p. 4; Lee, 2006, p. 518; Liu, 2010, p. 54; Macharia & Nyakwende, 2009, p. 9; Tobing, Hamzah, Sura & Amin, 2008, p. 4; Yi & Hwang, 2003, p. 433). Davis et al. (1989, p. 997) found a weak relationship between Perceived Usefulness and Attitude but a strong relationship between Perceived Usefulness and Behavioural Intention and therefore removed Attitude from the original TAM model. Wang and Wang (2009, p. 765) also excluded Attitude from their proposed research model because of its weak relationship with BI. Venkatesh, Morris, Davis & Davis (2003, p. 461) also found that Attitude did not have any direct effect on intention. Further, according to Liu (2010, p. 54) removing Attitudes from TAM can provide better understanding of the effects of PEOU and PU on the BI construct. Therefore, Attitude is not considered in this study.
+2.1.2. The most important constructs of TAM
+The most important constructs in TAM are Perceived Ease of Use and Perceived Usefulness (Chen et al., 2013, p. 112). This is because users’ acceptance or rejection of technologies is mainly influenced by these two constructs (Davis, 1989). Perceived Ease of Use is defined as “the degree to which a person believes that using a particular system would be free of effort” and Perceived Usefulness is refers to “the degree to which a person believes that using a particular system would enhance his or her job performance” (Davis, 1989). Both these factors directly affect learners’ intention to use e-learning (Al-Gahtani, 2016, p. 32; Calisir, AltinGumussoy, Bayraktaroglu, & Karaali, 2014, p. 526; Hsia et al., 2014, p. 59; Lee et al., 2014, p. 572; Tarhini et al., 2014, p. 159). However, PEOU and PU are both affected by external variables (Al-Ammary, Al-Sherooqi & Al-Sherooqi, 2014, p. 212; Farahat, 2012, p. 100; Motaghian, Hassanzadeh, & Moghadam, 2013, p. 166; Zare & Yazdanparast, 2013, p. 48). Therefore in order to be able to explain user’s technology adoption behaviour, it is important to understand the external variables of PEOU and PU (Al-Gahtani, 2016, Brown et al., 2006, Emmett, 2011, Liu et al., 2010, Tajudeen et al., 2012, Venkatesh and Davis, 1996). Adding external variables to TAM not only allows researchers to explain technology adoption behaviour but also to pinpoint the particular reasons for which the technology may not be adopted, so that researchers and practitioners “pursue appropriate corrective steps” (Davis et al., 1989, p. 985), providing strong justifications for validating and using an extended TAM (the GETAME, shown in Fig. 2) in this study.
+Download: Download high-res image (343KB)
+Download: Download full-size image
+
+Fig. 2. GETAMEL with the average path coefficients (β) between the 5 most commonly used external variables and students’ Perceived Ease of Use and Perceived Usefulness of e-learning systems developed by Abdullah and Ward (2016, p. 246).
+
+Because of its creditability TAM has been extended and used extensively in education to explain users’ intention to use different types of e-learning technologies and systems, including the use of Web Course Tools (Ngai et al., 2007, Sanchez-Franco, 2010), Educational Wikis (Liu, 2010), Moodle (Hsu and Chang, 2013, Sánchez and Hueros, 2010), use of iPads for Learning (Wu, Kuo, & Wu, 2013), use of Clickers in student learning (Wu & Gao, 2011), Multimedia e-learning (Lau and Woods, 2008, Lin et al., 2010), use of virtual world Second Life for learning (Ali et al., 2013, Bhatiasevi, 2011, Chow et al., 2012, Shen and Eder, 2009), Social Networking as Learning Tools (Al-Ammary et al., 2014), Google Applications for collaborative learning (Cheung & Vogel, 2013), Learning Management systems (De Smet, Bourgonjon, De Wever, Schellens & Valcke, 2012), E-Class systems (Hidayanto et al., 2014) and Mobile phones for Learning (Chang et al., 2012, Fadare et al., 2011, Hei and Hu, 2011, Liu et al., 2010, Park et al., 2012, Tajudeen et al., 2012). However TAM has not been properly extended and sufficiently used in the context of e-portfolio adoption.
+2.2. TAM in e-portfolio acceptance research
+Some recent studies have studied acceptance of e-portfolios using different methods to TAM and suggested several variables that might affect users’ adoption of e-portfolios. For example, Tzeng, Kuo, Talley, Chen and Wang (2015) used Information Systems Success Model to study the factors that affects nursing staffs’ adoption of e-portfolios and the results of their study demonstrated that System Quality, Information Quality, and User Satisfaction are important variables in successful e-portfolio usage. Chen, Yang and Huang (2015) used a modified Information Systems Success Model to determine the factors that affect readers’ satisfaction of an e-portfolio-based integrated learning environment supported by library resources. The results of their study showed that Reader-Perceived Benefits, Information Quality and System Quality are important factors for the reader’s satisfaction with the system. Lin and Taralynn (2015) used qualitative research methods to identify the factors that associated with pre-service teachers’ adoption of e-portfolios. Their study suggested that factors affecting pre-service teachers’ adoption of e-portfolio include School Requirements, Social Pressures, Time Constraints, Previous Experiences, Family Consciousness, and Personality. Contreras-Higuera et al. (2016) used a two-step cluster analysis method to investigate university students’ perceptions of e-portfolios and rubrics as combined assessment tools and found that Greater Teacher Experience in Using the E-portfolio, Continuous Technical Support, Greater Weight in Assessment and Smaller Class Sizes affected students’ perceptions.
+In regards to using TAM in the context of e-portfolio adoption, we found only 2 quantitative studies. However these studies have some limitations, including insufficient or absent external variables and ill-defined constructs as discussed below.
+Shroff, Deneen and Ng (2011) used TAM to examine undergraduate students’ intentions to use an e-portfolio system. Seventy two participants completed their study survey. The findings of their study showed that PEOU affected PU (β = 0.71; p < 0.001) and Attitude Towards Usage (β = 0.30; p < 0.05). Their study suggested that “TAM is a solid theoretical model where its validity can extend to an e-portfolio context”. However, their study had not extended TAM with any external variables. In regard to using TAM, Venkatesh and Davis (1996, p. 473) argued that in order to be able to explain user acceptance and use it is important to understand the external variables of TAM. This is because TAM without external variables provides only broad information on user’s opinions about a system but does not offer ‘‘specific information that can better guide system development” (Mathieson, 1991, p. 173). In order to increase the theoretical and practical values of an e-portfolio acceptance model, the model should therefore be extended with a range of specific external factors that affect users’ acceptance of e-portfolios.
+Chen et al. (2012) combined Technology Acceptance Model (TAM) and Information System Success Model (ISSM) and extended their combined model with Motivation and Computer Self-Efficacy to investigate users Attitude, Degree of Satisfaction and Acceptance of an e-portfolio system. In regards to the effects of the external variables on TAM’s constructs, their findings revealed that Motivation was significantly associated with PEOU (β = 0.303, p < 0.001) and PU (β = 0.588, p < 0.001). Their study also showed that Computer Self-Efficacy was also associated with PEOU (β = 0.446, p < 0.001) and PU (β = 0.156, p < 0.001). However their study had the following two major weaknesses.
+First, they have used only Computer Self-Efficacy and Motivation as external variables. Existing literature (see Abdullah and Ward, 2016, Šumak et al., 2011) show that there are other important external variables that can influence acceptance of e-learning systems, including Subjective Norm (Farahat, 2012, p. 100), Perceived Enjoyment (Wu & Gao, 2011, p. 47), Computer Anxiety (Alenezi, Abdul Karim & Veloo, 2010, p. 29) and Experience (Martin, 2012, p. 501). Chen et al. (2012, p. 124) have themselves acknowledged that “there are still other factors affecting intention to use and actual use that have not been taken into consideration” in their study.
+Second, e-learning adoption studies normally categorise the User Motivation construct into two main types, extrinsic motivation (such as Perceived Usefulness) and intrinsic motivation (such as Enjoyment) (Davis, Bagozzi & Warshaw, 1992) and specify the Motivation type that their study investigates. Inconsistent with previous research, Chen et al. (2012) have not specified the type of Motivation that they have studied. Because of this the causal affects that they have found between the Motivation construct and other constructs (PEOU and PU) in their study can be attributed to either intrinsic motivation or extrinsic motivation or both. In order to increase the theoretical and practical values of an e-portfolio adoption model, the model should pinpoint specific factors that affect the use of e-portfolio. More investigation for identifying and better understanding the factors that affect students’ acceptance or rejection of e-portfolio is therefore needed, and the research reported here will address this gap by validating and using the GETAMEL for this purpose.
+2.3. General extended Technology Acceptance Model for e-learning (GETAMEL)
+Based on the principals of TAM, recently Abdullah and Ward (2016) have developed a General Extended Technology Acceptance Model for e-learning (GETAMEL) (shown in Fig. 2). They developed this model through a meta-analysis of 107 recent studies that had extended and used TAM in the context of e-learning adoption. Their study revealed that Self-efficacy, Subjective Norm, Enjoyment, Computer Anxiety and Experience were the most commonly used and confirmed external variables of TAM among 152 different external variables studied in the 107 studies. They used these five commonly used and confirmed external variables as external variables of their proposed GETAMEL (shown in Fig. 2).
+This study empirically tests and uses the GETAMEL in the context of e-portfolio use, investigating the effects of the five external variables (Self-Efficacy, Subjective Norm, Enjoyment, Computer Anxiety and Prior Experience) on students’ Perceived Ease of Use and Perceived Usefulness of an e-portfolio system, and determines how learners’ perceptions may influence their Behavioural Intention to Use the system for learning and personal development.
+2.3.1. External variables and the research hypotheses
+2.3.1.1. Self-Efficacy
+Previous studies show that Self-Efficacy (SE) played a vital role in explaining adoption of e-learning technologies or systems (Bhatiasevi, 2011, Brown et al., 2006, Park et al., 2012). Self-Efficacy is defined as an individual’s judgement of his or her own capability to perform specific tasks (Bandura, 1982, p. 391). In regards to computer usage, Computer Self-Efficacy (CSE) refers to one’s beliefs about his/her ability to accomplish a particular task using a computer (Shen & Eder, 2009, p. 226). CSE profoundly affects user behaviour towards using computers, as individuals with high levels of CSE will be confident in their capability to overcome any difficulties when using computers. Therefore, “the higher the individual’s computer Self-Efficacy, the higher his/her use of computers” (Compeau & Higgins, 1995, p. 196). On the other hand, individuals who is not confident to use computers my not use them (Igbaria & Iivari, 1995, p. 590). Similarly, previous studies (including Hsia & Tseng, 2008, p. 42; Moghadam & Bairamzadeh, 2009, p. 1660; Yuen & Ma, 2008, p. 233) showed that students with high levels of e-learning Self-Efficacy are more likely to use e-learning and students with lower e-learning Self-Efficacy may avoid using it.
+In their meta-analysis Abdullah and Ward (2016) reported 41 recent studies (including Al-Gahtani, 2016, Ali et al., 2013, Lee et al., 2014) that have investigated the effect of SE on users PEOU of e-learning, 33 of these studies showed that SE significantly and positively affected PEOU. In addition to this, Chen et al. (2012) found that Computer Self-Efficacy was also associated with Perceived Ease of Use (β = 0.446, p < 0.001) of e-portfolios. In accordance with previous studies and the GETAMEL (shown in Fig. 2), this study proposes the following research hypothesis.
+
+Hypothesis 1
+
+SE positively affects students’ PEOU of the e-portfolio.
+In regards to the relationship between SE and PU literature reports various results. Although several studies (including Abbad et al., 2009, Bhatiasevi, 2011, Lee et al., 2013, Ma et al., 2013, Mohamed and Abdul Karim, 2012, Purnomo and Lee, 2013) have indicated lack of significant association between the two constructs (SE and PU), some studies (including Al-Ammari and Hamad, 2008, Al-Ammary et al., 2014, Al-Mushasha, 2013, Chow et al., 2012, Hussein et al., 2007, Park, 2009) in fact have found significant positive relationship between SE and students’ PU of e-learning. Interestingly Aypay, Çelik, Aypay and Sever (2012) have found significant negative relationship between SE and students PU of computers. In context of e-portfolios Chen et al. (2012) also found that Computer Self-Efficacy was associated with Perceived Usefulness (β = 0.156, p < 0.001). In line with the GETAMEL (shown in Fig. 2) and to determine whether SE affects students’ decisions to use e-portfolios in this study, we also propose the following research hypothesis.
+
+Hypothesis 2
+
+SE positively affects students’ PU of the e-portfolio.
+2.3.1.2. Subjective Norm
+The results of many empirical studies have demonstrated that Subjective Norm (SN) is important in determining students acceptance of e-learning systems (Al-Gahtani, 2016, Farahat, 2012, Park, 2009). Subjective Norm is defined by Venkatesh et al. (2003, p. 452) as “the person’s perception that most people who are important to him think he should or should not perform the behaviour in question”. In the context of e-learning usage Subjective Norm refers to “the extent to which a student perceives a pressure from members in his or her environment to use e-learning systems” (Agudo-Peregrina, Hernández-García, & Pascual-Miguel, 2014, p. 303). It is argued that if a person believes that his peers or teachers think that she or he should use an e-learning system, then the person incorporates their beliefs into his/her own beliefs system and therefore perceives the e-learning more useful in its purpose (Cheng, 2011, p. 277; Van Raaij & Schepers, 2008, p. 482).
+The influence of SN on learners’ Perceived Usefulness of e-learning have been studied widely in previous research. In their meta-analysis Abdullah and Ward (2016) showed 19 out of 22 studies (including Al-Ammari and Hamad, 2008, Karaali et al., 2011, Rejón-Guardia et al., 2013) that have investigated the relationship between SN and PU, found significant positive association between the two constructs. In line with the GETAMEL (shown in Fig. 2), this study proposes the following research hypothesis.
+
+Hypothesis 3
+
+SN positively affects students’ PU of the e-portfolio.
+Previous studies also show that SN positively and significantly affected learners’ PEOU of e-learning (Farahat, 2012, Lee et al., 2011, Motaghian et al., 2013, Yuen and Ma, 2008). This study includes the links between SN and both PEOU and PU to determine whether social influence affects students’ decision to use e-portfolios. In accordance with the GETAMEL (shown in Fig. 2), this study proposes the following research hypothesis.
+
+Hypothesis 4
+
+SN positively affects students’ PEOU of the e-portfolio.
+2.3.1.3. Enjoyment
+Enjoyment has been studied extensively in the context of e-learning adoption (e.g., Al-Ammary et al., 2014, Al-Gahtani, 2016, Chen et al., 2013, Shyu and Huang, 2011, Zare and Yazdanparast, 2013), with the results showing that higher levels of e-learning enjoyment lead to better e-learning acceptance. In the context of technology usage Enjoyment is defined as “the extent to which the activity of using a specific system is perceived to be enjoyable in its own right, aside from any performance consequences resulting from system use” (Park, Son & Kim, 2012, p. 379). Previous research suggests that if a student find an e-learning system enjoyable to use, then he/she is more likely to have positive perception about the ease of use and usefulness of the system (Al-Aulamie et al., 2012, Chen et al., 2013) and higher degree of intention to use the system (Cheng, 2011, Cheng, 2012, p. 289, p. 380; Yang & Lin, 2011, p. 9020). Many studies reported that Enjoyment significantly and positively affected students’ PEOU (including Al-Aulamie et al., 2012, Shyu and Huang, 2011, Zare and Yazdanparast, 2013) and PU (including Chen et al., 2007, Wu and Gao, 2011, Zhang et al., 2007) of e-learning systems. Because of this and in accordance with the GETAMEL (shown in Fig. 2), this study proposes the following research hypotheses:
+
+Hypothesis 5
+
+Enjoyment positively affects students’ PEOU of the e-portfolio.
+
+Hypothesis 6
+
+Enjoyment positively affects students’ PU of the e-portfolio.
+2.3.1.4. Computer anxiety
+There is a significant body of theoretical and empirical evidence suggesting that Computer Anxiety (CA) is associated with avoidance or lesser use of e-learning (Al-alak and Alnawas, 2011, Al-Gahtani, 2016, Ali et al., 2013, Calisir et al., 2014, Chen and Tseng, 2012, Karaali et al., 2011, Lefievre, 2012, Park et al., 2012a, Saadé and Kira, 2006, Van Raaij and Schepers, 2008). CA is defined as “the tendency of an individual to be uneasy, apprehensive, or fearful about the current or future use of computers in general” (Igbaria & Parasuraman, 1989, p. 375). It is an important factor to be considered in e-learning adoption studies (Alenezi et al., 2010), because CA negatively and significantly affects students’ intention to use e-learning systems (Alenezi et al., 2010, p. 32; Rezaei, Mohammadi, Asadi & Kalantary, 2008, p. 91). Also lecturers who are anxious or uncomfortable with using computers will be more likely to be reluctant to use e-learning systems (Al-alak & Alnawas, 2011, p. 208).
+Previous studies show that CA negatively and significantly affected students’ Perceived Ease of Use of e-learning systems (Al-Gahtani, 2016, Ali et al., 2013, Lefievre, 2012, Saadé and Kira, 2006). Because of this and in accordance with the GETAMEL (shown in Fig. 2), this study proposes the following research hypothesis:
+
+Hypothesis 7
+
+CA negatively affects students’ PEOU of the e-portfolio.
+In regards to the relationship between CA and PU, Abdullah and Ward (2016) reported 7 studies that have examined the effects of CA on PU of e-learning, five of these studies (Chen and Tseng, 2012, Ifinedo, 2006, Liu, 2010, Mohamed and Abdul Karim, 2012, Saadé and Kira, 2006) have indicated a lack of significant relationship between the two constructs. Therefore in accordance with the GETAMEL (shown in Fig. 2), this link will be excluded in this study.
+2.3.1.5. Experience
+Computer related experience is defined as “the amount and type of computer skills a person acquires over time” (Smith, Caputi, Crittenden, Jayasuriya & Rawstorne, 1999, p. 227). Experience considered an important factor affecting students’ adoption of e-learning (Premchaiswadi, Porouhan & Premchaiswadi, 2012, p. 336; Williams & Williams, 2009, p. 65). According to King and He (2006, p. 747) Experience is “the best-studied moderator variable in TAM”. Previous research showed that computer related experience positively and significantly affected individuals’ Behavioural Intention to Use learning systems or technologies (Al-alak, & Alnawas, 2011, p. 213; De Smet et al., 2012, p. 694; Premchaiswadi et al., 2012, p. 336; Williams & Williams, 2009, p. 65).
+E-learning acceptance literature confirmed that Experience affected both learners’ Perceived Ease of Use (De Smet et al., 2012, Lee et al., 2011, Lee et al., 2013, Purnomo and Lee, 2013) and Perceived Usefulness (Lee et al., 2013, Martin, 2012, Purnomo and Lee, 2013, Rezaei et al., 2008) of e-learning. Because of this and in accordance with the GETAMEL (shown in Fig. 2), this study proposes the following research hypotheses:
+
+Hypothesis 8
+
+Experience positively affects students’ PEOU of the e-portfolio.
+
+Hypothesis 9
+
+Experience positively affects students’ PU of the e-portfolio.
+2.3.1.6. Summary of hypotheses
+Based on extensive literature review on extended TAM in the context of e-learning, and in accordance with the GETAMEL developed by Abdullah and Ward (2016) (shown in Fig. 2), this study proposed the following research hypotheses:
+Hypothesis 1: SE positively affects students’ PEOU of the e-portfolio.
+Hypothesis 2: SE positively affects students’ PU of the e-portfolio.
+Hypothesis 3: SN positively affects students’ PU of the e-portfolio.
+Hypothesis 4: SN positively affects students’ PEOU of the e-portfolio.
+Hypothesis 5: Enjoyment positively affects students’ PEOU of the e-portfolio.
+Hypothesis 6: Enjoyment positively affects students’ PU of the e-portfolio.
+Hypothesis 7: CA negatively affects students’ PEOU of the e-portfolio.
+Hypothesis 8: Experience positively affects students’ PEOU of the e-portfolio.
+Hypothesis 9: Experience positively affects students’ PU of the e-portfolio.
+Based on TAM’s theory we also propose the following research hypotheses:
+Hypothesis 10: PEOU positively affects students’ PU of the e-portfolio.
+Hypothesis 11: PEOU positively affects students’ Behavioural Intention to Use the e-portfolio.
+Hypothesis 12: PU positively affects students’ Behavioural Intention to Use the e-portfolio.
+3. Methods
+3.1. Instrument construction
+In order to test the research hypotheses, an online survey instrument was developed based on existing literature. The survey items and references are listed in Appendix 1. In conjunction with five demographic questions (shown in Table 1) and two e-portfolio usage questions the survey consists of thirty eight items.
+
+Table 1. Demographics of the surveyed students.
+
+Empty Cell
+	Frequency	Percentage
+Gender
+Female	37	15.3
+Male	205	84.7
+Age
+18–21	201	83.1
+22–25	21	8.7
+26–35	17	7
+36–44	2	0.8
+45+	1	0.4
+Year of study
+Year 1	170	70.2
+Year 2	61	25.2
+Final year	11	4.5
+Experience in using computers
+Less than 1 year	5	2.1
+1 to 3 years	12	5
+3 to 6 years	35	14.5
+6 to 9 years	54	22.3
+More than 9 years	136	56.2
+Study subject
+Computing course 1	66	27.3
+Computing course 2	34	14
+Computing course 3	30	12.4
+Computing course 4	30	12.4
+Computing course 5	21	8.7
+Computing course 6	20	8.3
+Computing course 7	17	7
+Computing course 8	13	5.4
+Computing course 9	11	4.5
+We developed multi-item Likert scales which have been widely used in technology acceptance studies (Lee et al., 2013, Motaghian et al., 2013, Park et al., 2012). The Self-Efficacy items were measured on the 7-point Likert scale, where 1 = Totally Confident; 2 = Moderately Confident; 3 = Slightly Confident; 4 = Neutral; 5 = Slightly Unconfident; 6 = Moderately Unconfident; and 7 = Not Confident at all. The other variables (Subjective Norm, Enjoyment, Computer Anxiety, Experience, PEOU, PU and BI) were measured using the seven-point Likert Scale, where 1 = Strongly Agree, 2 = Moderately Agree, 3 = Slightly Agree, 4 = Neutral, 5 = Slightly Disagree, 6 = Moderately Disagree and 7 = Strongly Disagree. The e-portfolio usage question 1 (“On average I use the e-portfolio”), had the following available pre-coded answers: Don’t use at all, Use less than once a week, Use about once a week, Use several times a week, Use about once a day, and Use several times a day. The e-portfolio usage question 2 (“On average, how many hours do you normally spend each week using the e-portfolio?”), had the following available pre-coded answers: None, Less than 1 h, 1–2 h, 2–4 h, and More than 4 h.
+3.2. Data collection
+This research was carried out within a computing department at a mid-ranked large UK university in the north of England. The computing department delivers commonly studied computing courses to a socially and ethnically diverse student population, with the majority of students having previously completed either A Level or BTEC Level 3 Diploma qualifications.
+The students get introduced to the e-portfolio in one of their modules during the early weeks of their first year of study as part of their regular classes by their teachers. Within the module students are required to reflect on their skills through personal skills SWOT analysis (strengths, weaknesses, opportunities and threats analysis) and personal development planning, and the e-portfolio is used to support this. The students are encouraged to use the e-portfolio for learning and personal development during and after their undergraduate study.
+The survey was carried out within the computing department from November 2014 to February 2015. In order to ensure anonymity and improve the speed of data collection, this study used an online survey questionnaire, rather than paper-based, to collect empirical data. The total sample size used in this study was 292 computing undergraduate students, with data collected from 259 respondents. After discarding 17 incomplete questionnaires, 242 valid surveys remained for analysis, yielding a response rate of 82.9%. Demographics details are shown in Table 1.
+4. Data analysis
+SPSS and Amos version 22 were used to analyse the collected data. Following the two-stage analytical procedure suggested by Hair, Anderson, Tatham and Black (1998), we first assessed the measurement model and then the structural model. The reason for this is to ensure that the relationships we find between the constructs of the GETAMEL are based on a measurement instrument that has the desired psychometric properties.
+4.1. Measurement model
+The measurement model was tested for convergent validity and discriminant validity using Confirmatory Factor Analysis.
+4.1.1. Convergent validity
+Convergent validity tests whether items of a construct, that are expected to be related, are highly correlated (Martinez-Torres et al., 2008, p. 500). Composite Reliability (CR) of greater than 0.7 (Lee, Cheung & Chen, 2005, p. 1100) and Average Variance Extracted (AVE) greater than 0.5 (Fornell & Larcker, 1981, p. 46; Lee et al., 2005, p. 1100; Wu, Chen & Lin, 2007, p. 170) are suggested for convergent validity. Table 2 shows the mean score of each variable, factor loading, Cronbach’s Alpha, CR and AVE of this study’s measurement model. All the measures exceeded the minimum levels, with CR ranging from 0.803 to 0.961, and AVE from 0.580 to 0.801, indicating a good convergent validity.
+
+Table 2. Convergent validity of this study’s measurement model.
+
+Factor	Item	Mean score of each item	Factor loadinga	Cronbach’s alphab	Composite reliability	Average Variance extracted
+Self-efficacy	SE3	2.669	0.845	0.908	0.910	0.771
+SE2	2.847	0.898			
+SE1	2.698	0.891			
+Enjoyment	ENJOY3	3.963	0.885	0.920	0.922	0.797
+ENJOY2	3.471	0.868			
+ENJOY1	3.645	0.925			
+Computer anxiety	CA4neg	1.355	0.752	0.788	0.803	0.580
+CA3neg	1.331	0.883			
+CA2neg	1.504	0.629			
+Subjective norm	SN2	3.310	0.865	0.844	0.844	0.730
+SN1	3.306	0.844			
+Experience	XP2	1.120	0.901	0.821	0.842	0.728
+XP1	1.223	0.803			
+Perceived usefulness	PU2	3.211	0.910	0.963	0.961	0.831
+PU1	3.194	0.862			
+PU4	3.347	0.934			
+PU5	3.446	0.929			
+PU6	3.227	0.920			
+Perceived Ease of Use	PEOU3	2.583	0.848	0.921	0.916	0.687
+PEOU2	2.674	0.786			
+PEOU4	2.839	0.894			
+PEOU5	2.500	0.797			
+PEOU6	2.529	0.814			
+Intention to Use	BI3	3.008	0.873	0.922	0.924	0.801
+BI2	3.149	0.910			
+BI1	3.103	0.902			
+a
+Factor Loading of >0.5 is suggested by Hair, Black, Babin and Anderson (2010, p. 117).
+b
+Cronbach’s Alpha of ≥0.7 is suggested by Hair et al. (2010, p. 126).
+4.1.2. Discriminant validity
+Discriminant validity tests whether the measure is not a reflection of some other variables (Martinez-Torres et al., 2008, p. 500). It is indicated by a low relationship between the measure of a specified construct and the measures of other constructs (Lee et al., 2005, p. 1100; Martinez-Torres et al., 2008, p. 500). Discriminant validity can be demonstrated if the square root of the AVE for a construct is greater than the relationship between the construct and all other constructs in a measurement model (Fornell & Larcker, 1981, p. 41). For this study, the discriminant validity of the measurement model is shown in Table 3, which shows the square root of the AVE for each construct is greater than the relationship between the construct and all other constructs in the model, indicating a good discriminant validity.
+
+Table 3. Showing discriminant validity of this study’s measurement model.
+
+Empty Cell
+	AVE	BI	SE	Enjoyment	AN	SN	Experience	PU	PEOU
+BI	0.801	0.895							
+SE	0.771	0.157	0.878						
+Enjoyment	0.797	0.603	0.406	0.893					
+AN	0.580	0.045	0.174	0.058	0.762				
+SN	0.730	0.557	0.260	0.600	0.050	0.855			
+Experience	0.728	0.088	0.258	0.095	0.697	0.114	0.853		
+PU	0.831	0.748	0.273	0.691	0.007	0.521	0.090	0.911	
+PEOU	0.687	0.608	0.503	0.603	0.176	0.480	0.283	0.692	0.829
+Note. Diagonal elements are square roots of the AVE.
+4.2. Structural model
+4.2.1. Model validation
+In order to validate the structural model, we performed model fit analysis. The results (shown in Table 4) indicate the research model has a good fit (Hair et al., 2010). All the indicator results (X2/df = 1.747, RMSEA = 0.056, SRMR = 0.0447, TLI = 0.955, CFI = 0.962) surpassed the minimum values, showing that the research model is robust and can explain students’ perceptions and acceptance of e-portfolio through its factors.
+
+Table 4. Model fit results.
+
+Empty Cell
+	Chi-square (X2)	Absolute fit measures	Incremental fit/Goodness-of-fit
+DF	X2/df	RMSEA	SRMR	TLI	CFI
+The research Model	478.623	274	1.747	0.056	0.0447	0.955	0.962
+Recommended valuesa			<3.00	<0.08	<0.09	≥0.92	≥0.92
+Note. DF = degree of freedom; Normed chi-square or ratio of likelihood (χ2) to degrees of freedom = χ2/df; RMSEA = Root mean square error of approximation; TLI = Tucker–Lewis Index; CFI = Comparative fit index.
+a
+Recommended values for sample size <250 and Variables >30 (Hair et al., 2010).
+5. Hypotheses testing
+The summary of the hypotheses testing is shown in Table 5. Self-Efficacy (β = 0.196, p < 0.001), Subjective Norm (β = 0.157, p < 0.05), Enjoyment (β = 0.286, p < 0.001), and Experience (β = 0.421, p = 0.051) positively and significantly associated with students’ PEOU of the e-portfolio, supporting hypotheses 1, 4, 5 and 8.
+
+Table 5. Hypotheses testing results.
+
+We found no significant negative relationship between Computer Anxiety (β = −0.017, p = 0.903) and students’ PEOU of the e-portfolio. Thus, hypothesis 7 is rejected.
+Unexpectedly we found a negative significant association between Self-Efficacy (β = −0.141, p < 0.01) and PU, rejecting Hypothesis 2.
+Enjoyment (β = 0.365, p < 0.001) and PEOU (β = 0.602, p < 0.001) positively and significantly associated with students’ PU of the e-portfolio, supporting hypotheses 6 and 10.
+Expected significant relationships were not found between Subjective Norm (β = 0.123, p = 0.076), Experience (β = −0.191, p = 0.189) and students’ PU of the e-portfolio, rejecting hypotheses 3 and 9.
+Both PEOU (β = 0.208, p < 0.05) and PU (β = 0.689, p < 0.001) positively and significantly associated with students’ Behavioural Intention to Use the e-portfolio as hypothesised, supporting hypotheses 11 and 12.
+5.1. Final model
+The final model is shown in Fig. 3. The R-Square (R2) indicate that the predictor variables (the external variables) explained 63% of PU and 49% of PEOU’s variance. In turn, PU and PEOU explained 58% of Behavioural Intention to Use variance. The other remaining variance (37% of PU, 51% of PEOU and 42% of Behavioural Intention to Use variances) may be explained by other unknown factors.
+Download: Download high-res image (254KB)
+Download: Download full-size image
+
+Fig. 3. Correlation Analysis of the Research Model. Note. The P-Values are presented in the parentheses (∗p < 0.05; ∗∗p < 0.01; ∗∗∗p < 0.001). R2 (R-Square) shows the percentages of variance explained by the predictor variables.
+
+6. Discussion and implications
+This study tested the GETAMEL in the context of e-portfolios. The results of the goodness of fit test indicated that the GETAMEL was robust and represented the collected data very well.
+The hypothesis testing results demonstrated that the model explained students’ perceptions and Behavioural Intention to Use the e-portfolio through the proposed factors.
+A positive significant relationship between Experience and PEOU was found as hypothesised. This finding is consistent with previous studies (Abbad et al., 2009, De Smet et al., 2012, Lee et al., 2011, Lee et al., 2013, Purnomo and Lee, 2013). The results also indicated that SN, Enjoyment and SE significantly correlated with PEOU. The correlation found between SN and PEOU is consistent with previous studies (e.g. Farahat, 2012, Lee et al., 2011, Motaghian et al., 2013, Yuen and Ma, 2008). The correlation found between Enjoyment and PEOU is consistent with previous studies (e.g. Al-Ammary et al., 2014, Al-Aulamie et al., 2012, Al-Gahtani, 2016, Arenas-Gaitan et al., 2010, Chen et al., 2013, Martinez-Torres et al., 2008, Shyu and Huang, 2011, Zare and Yazdanparast, 2013). The correlation found between SE and PEOU is also consistent with previous studies (e.g. Al-Ammary et al., 2014, Al-Gahtani, 2016, Al-Mushasha, 2013, Ali et al., 2013, Hsia et al., 2014, Lee et al., 2013, Lee et al., 2014, Motaghian et al., 2013, Wu et al., 2013). Thus, these four factors (Experience, SN, Enjoyment and SE) should be considered as enhancing students’ PEOU of e-portfolios.
+The link between CA and PEOU however was insignificant. This is contrary with many e-learning studies (including Al-Gahtani, 2016, Ali et al., 2013, Calisir et al., 2014, Chen and Tseng, 2012, Karaali et al., 2011, Lefievre, 2012, Park et al., 2012a) and in line with some other studies (including Liu, 2010, Mohamed and Abdul Karim, 2012, Purnomo and Lee, 2013, Rezaei et al., 2008, Shen and Eder, 2009). Therefore it is recommended that further research should be carried out to explore what lies behind this inconsistency. In this study, such a result might be related to low CA among the surveyed students in terms of computer usage, as they were all studying computer-related courses. This finding was unexpected, but as this result has also been found in other e-learning acceptance studies, it can be explained by the increasing use of computer technology in every aspect of daily life, and particularly within the computer science student population participating in this study. With negative perceptions associated with computers reducing, the effects of computer anxiety on PEOU are increasingly not significant (Shen & Eder, 2009, p. 231).
+The relationship between Experience and PU was also insignificant in this study. This finding is inconsistent with some previous studies (such as: Lee et al., 2013, Martin, 2012, Purnomo and Lee, 2013, Rezaei et al., 2008) and consistent with a number of previous studies (such as: Abbad et al., 2009, Lau and Woods, 2008, Lee et al., 2011, Pituch and Lee, 2006). Because of this, the relationship between these two constructs (Experience and PU) is also a clear avenue for future research. The insignificant relationship between these two constructs in this study indicates that computer related Experience is not associated with students’ PU of e-portfolios. From an e-portfolio developer’s point of view, this is a desirable result, as it suggests that the perceived usefulness of a well-designed e-portfolio system may not depend on previous computer related experience.
+The beta value found between SN and PU was 0.123, which is a small effect size according to guidelines proposed by Cohen (1992), but the P-Value found (p = 0.076) is not significant to the 95% confidence interval level (the P-Value threshold of <0.05). Thus, there is no strong evidence in this study to show that peer pressure influences PU of e-portfolio. According to Abbad et al. (2009) “If there is no great expectation that an e-learning system will be used for communication purposes then there will be little peer pressure to use the system”. Hence a possible reason for the insignificant relationship between SN and PU might be that students use social networking sites (such as Facebook) for communication purposes rather than e-portfolios. As there is a limited number of studies that investigate the factors that affect students PU of e-portfolios, further research involving the SN examined here will be needed to confirm this finding.
+We found a negative significant correlation between SE (β = −0.141, p < 0.01) and PU. This means students who are confident in using the e-portfolio do not find the e-portfolio useful. This finding is similar to a previous study carried out by Aypay et al. (2012), who also found significant negative correlation between Computer Self-Efficacy and students’ PU of computers. However this finding is different from what other studies have found (including: Al-Ammary et al., 2014, Al-Mushasha, 2013, Chow et al., 2012, Hussein et al., 2007, Ifinedo, 2006, Park, 2009). For this reason, there is a need for carrying out further studies exploring what lies behind this discrepancy. In this study, such a result might be related to high SE among the surveyed students in terms of technology usage, as all the surveyed students were studying computer-related courses. As computer science students, the participants might have used other technologies with more functionalities than the e-portfolio can offer. In other words, students’ negative perception about the usefulness of the e-portfolio in this study can be related to the functionality of the e-portfolio. To confirm this, further studies need to investigate variables related to the quality and functionality of the e-portfolio.
+This study also found a significant positive relationship (β = 0.365, p < 0.001) between Enjoyment and PU. This finding is consistent with many previous studies (including: Al-Aulamie et al., 2012, Chen et al., 2007, Chen et al., 2013, Park et al., 2012a, Wu and Gao, 2011, Zare and Yazdanparast, 2013, Zhang et al., 2007). This means students who enjoy using an e-portfolio find the e-portfolio useful in its purpose.
+Additionally, similar to earlier studies (including Lin et al., 2014, p. 461; Park, 2009, p. 158), this study confirmed TAM to be a useful theoretical model in understanding and explaining University students’ intention to use e-learning. The results of the hypotheses testing supported the hypothesised significant correlation between the constructs of TAM used in this study.
+6.1. Frequency of e-portfolio usage
+The participants of this research were from three different study years. 170 respondents were in the first year of their study, 61 in their second year and 11 in their final year. Since all the students were introduced to the e-portfolio in the beginning of their first year at the university, student from different study years indicated different current e-portfolio usage. 31.76% of the first year students said that they do not use the e-portfolio at all (shown in Table 6). This percentage increased to 47.54% among the 61 s year students and to 54.55% among the 11 final year students (shown in Table 6). However the majority of the first year and second year students have indicated that they use the e-portfolio.
+
+Table 6. Average current e-portfolio usage.
+
+Usage question 1	Pre-coded answers	170 First year students	61 Second year students	11 Final year students
+Number of students	%	Number of students	%	Number of students	%
+On average I use the e-portfolio (pick most accurate answer):	Don’t use at all	54	31.76	29	47.54	6	54.55
+Use less than once a week	33	19.41	17	27.87	2	18.18
+Use about once a week	72	42.35	9	14.75	2	18.18
+Use several times a week	9	5.29	4	6.56	1	9.09
+Use about once a day	2	1.18	1	1.64	0	0.00
+Use several times a day	0	0.00	1	1.64	0	0.00
+Total		170	100	61	100	11	100
+Usage question 2	Pre-coded answers	170 First year students	61 Second year students	11 Final year students
+Number of students	%	Number of students	%	Number of students	%
+On average, how many hours do you normally spend each week using the e-portfolio?	None	56	32.94	30	49.18	6	54.55
+Less than 1 h	64	37.65	17	27.87	3	27.27
+1 to 2 h	44	25.88	11	18.03	1	9.09
+2 to 4 h	5	2.94	3	4.92	0	0.00
+More than 4 h	1	0.59	0	0.00	1	9.09
+Total		170	100	61	100	11	100
+There may be two possible reasons behind the reduction in using the e-portfolio among the second and final year students. First, it can be because of the fact that students get introduced to the e-portfolio and encouraged to use it in the first year of their study and therefore they use it more often in that year. Second, it may be that “individuals’ perceptions can change over time as they gain more experience” (Lee et al., 2013, p. 185). Hence, encouraging students to use an e-portfolio and supporting them to gain more positive experience in using it, maybe two key factors that can affect students’ e-portfolio usage.
+In this research, changes or reductions in using the e-portfolio can be seen between the first, second and final year students. However, it must be noted that this study was cross-sectional and investigated students’ perception at one point of time. Therefore, longitudinal research should be conducted in order to better understand and trend the changes in students’ behaviour regarding e-portfolio usage over a period of time.
+6.2. Practical implications
+When planning a new e-portfolio system for education, education providers should have the ability to predict whether the new system will be acceptable to learners, investigate reasons why a planned system may not be fully acceptable, and then take corrective action to increase acceptability. This action would also help to improve educators’ investment in time and money (Davis et al., 1989). The results of this study show that Perceived Usefulness of the e-portfolio is the key determinant of students’ Behavioural Intention to Use the e-portfolio (β = 0.689, p < 0.001). Hence, prior to introducing a new e-portfolio system to computer science student populations, education providers can increase the acceptability of the system by having the students involved in the implementation process assessing students’ perceptions (perceived usefulness, ease of use, enjoyment etc.) about the e-portfolio, and taking corrective actions accordingly. Education sessions should be also provided to emphasise the effectiveness and usefulness of the e-portfolio. The information and training sessions should primarily focus on how the e-portfolio can help improve students’ learning and employability.
+The present study also shows that the factors that influence students’ Perceived Usefulness of the e-portfolio were Perceived Ease of Use and Enjoyment. Perceived Ease of Use is a key factor to increase students’ Perceived Usefulness (β = 0.602, p < 0.001) and it directly affects (β = 0.208, p < 0.05) students Behavioural Intention to Use the e-portfolio. Therefore, education providers should foster this factor by having on-campus user training and reassure the students that they will have personal support at the campus. E-portfolio system designers on the other hand, have to enhance the system’s ease of use through good design and by providing clear instructions to users.
+Enjoyment affected both students’ PU (β = 0.365, p < 0.001) and PEOU (β = 0.286, p < 0.001) of the e-portfolio. This suggests that students who would enjoy using the e-portfolio system have positive perceptions about the ease of use and usefulness of the system. This substantiates the importance of the e-portfolio to be intrinsically perceived as enjoyable and stimulating, in order to promote a strong positive BI. E-portfolio developers and providers need to focus more on making the use of e-portfolios enjoyable to guarantee student acceptance.
+Subjective Norm was a significant predictor (β = 0.157, p < 0.05) for how easy students thought the e-portfolio was to use. Educators should consider ways to encourage the use of e-portfolios within potential users. This can be done, for example, through incentivising students to use forums and discussion boards related to e-portfolios, and to identify other ways to maintain and increase the positive effects of Subjective Norm on students’ PEOU of e-portfolios.
+The study also found that computer related Experience (β = 0.421, p = 0.051) and Self-Efficacy (β = 0.196, p < 0.001) have substantial impacts on students’ Perceived Ease of Use of the e-portfolio. This shows that students who have computer related experience and believe in their own ability to use the e-portfolio, perceive the e-portfolio as an easy system to use. These finding have important implications for both education program managers and e-learning system designers. In order to increase students computer related experience and belief in their own ability (i.e. Self-Efficacy), education program managers need to provide training and assure the availability of mentoring and technical support. System designers need to design e-learning systems in a consistent way, so that students’ experience and confidence in using one e-learning system can be transferred to using another.
+According to this study Experience and Subjective Norm were not important determinants of PU of the e-portfolio. From an e-portfolio designer’s perspective this is a desired finding, as it suggests that students’ Perceived Usefulness of e-portfolio systems does not depend on either computer related experience nor social influences.
+6.3. Theoretical implications
+This research study demonstrates the effectiveness of GETAMEL in explaining and identifying factors that influence students’ perceptions and Behavioural Intention to Use the e-portfolio system.
+The study found a significant positive relationship between the following constructs as hypothesised:
+•
+Experience and PEOU
+•
+Subjective Norm and PEOU
+•
+Enjoyment and PEOU
+•
+Self-Efficacy and PEOU
+•
+Enjoyment and PU
+•
+PEOU and PU
+•
+PU and BI
+•
+PEOU and BI
+Substantiating the importance of these factors in influencing e-portfolio adoption, future research should consider the positive impact of these factors when investigating e-learning systems adoption, specifically e-portfolios.
+Inconsistent with many previous research studies, this study found no significant positive relationship between the following constructs:
+•
+Experience and PU
+•
+Subjective Norm and PU
+•
+Self-Efficacy and PU
+•
+Computer Anxiety and PEOU
+Therefore it is recommended that further research should be carried out to explore what lies behind this inconsistency.
+This study contributes to the field of e-learning and e-portfolio adoption research as the GETAMEL, and its psychometric properties validated in this study, can be used as a research framework to understand the adoption of e-portfolios, specifically in computer science undergraduate student populations. The model can also be used for future research in e-portfolio practice in different contexts. The fact that 58% of the variance (R2 = 0.58) in Behavioural Intention to Use the e-portfolio is explained by the theoretical model in this study, suggests that the GETAMEL has applicability across disciplines and across settings in identifying, explaining and predicting students’ Behavioural Intention to Use e-portfolios. Therefore the replication of this study across disciplines and settings is highly recommended to generalise the findings across different domains.
+Nevertheless, further exploration of alternative factors that might influence e-portfolio adoption are also warranted. The four external variables (Experience, Subjective Norm, Enjoyment and Self-Efficacy) were the primary factors that influenced the two key determinants (PEOU and PU). In the higher education setting, there might have been more than four factors that influenced those two key determinants specified in the GETAMEL. More investigation on external variables, such as e-portfolio experience, system quality, technical support and participation in the e-portfolio developing process may be needed.
+6.4. Limitations of the study and suggestions for future research
+Rigorous research procedures are used, but this research has some limitations that could be addressed in future studies. First, this study only investigated the role of five external variables in affecting the two key determinants (PEOU and PU). There might have been more than four factors that influenced those two key determinants specified in the GETAMEL. Future studies should test the possible inclusion of other external variables that are unexplored in this research. Second, this study was cross-sectional and measured perceptions and intentions to use at a single point of time. It must be noted that students’ perceptions about the ease of use and usefulness of e-portfolios can change over time as they gain more experience. Because of this, longitudinal research should be carried out to evaluate the validity of the GETAMEL and our findings, taking into account the changes in users’ perception and behaviour over a period of time. Despite its limitations, this study has value as the findings provided several important implications for educators and e-portfolio developers.
+7. Conclusion
+In summary, the findings of this study suggests that the best predictor of students’ Perceived Ease of Use of e-portfolios is (computer-related) Experience (β = 0.421, p = 0.051 to a 94.9% confidence interval), followed by Enjoyment (β = 0.286, p < 0.001), Self-Efficacy (β = 0.196, p < 0.001) and Subjective Norm (β = 0.157, p < 0.05). The best predictor of students’ Perceived Usefulness of e-portfolios is Perceived Ease of Use (β = 0.602, p < 0.001) followed by Enjoyment (β = 0.365, p < 0.001). Both Perceived Ease of Use (β = 0.208, p < 0.05) and Perceived Usefulness (β = 0.689, p < 0.001) of e-portfolios predict students’ Behavioural Intention to Use e-portfolios. Thus four external variables (Self-efficacy, Subjective Norm, Enjoyment and Experience), as well as Perceived Ease of Use, Perceived Usefulness and Behavioural Intention to Use, should be considered as important factors when designing, implementing and using e-portfolios in Higher Education in order to ensure e-portfolios are widely used by students and are effective as teaching and learning tools.
+In order to enhance students’ acceptance of e-portfolios, educators are required to foster the above influential factors by providing students with training and support including mentoring and technical support. E-portfolio developers on the other hand have to enhance the system’s ease of use and usefulness through good design, system functionalities and by providing clear instructions to users.
+This study tested the GETAMEL in the context of e-portfolio acceptance. It validated a valuable model for predicting acceptance of e-portfolios with computer science students in higher education. The fact that 58% of the variance (R2 = 0.58) in Behavioural Intention to Use the e-portfolio is explained by the theoretical model in this study, suggests that the GETAMEL has applicability across disciplines and across settings in identifying, explaining and predicting students’ Behavioural Intention to Use e-portfolios. Thus the replication of this study across different domains is highly recommended.
+Appendix 1.
+
+Table A1. Instrument
+
+Constructs	Items	Measures	Adopted from
+Self-efficacy	SE1	I am confident of using the e-portfolio even if there is no one around to show me how to do it.	(Compeau& Higgins, 1995, p. 211; Strong, Dishaw, & Bandy, 2006, p. 105; Tan and Teo, 2000, Pituch and Lee, 2006, pp. 240-1; Venkatesh & Davis, 1996, p. 479, p. 479)
+SE2	I am confident of using the e-portfolio even if I have never used such a system before.
+SE3	I am confident of using the e-portfolio even if I have only the software manuals for reference.
+Computer anxietyb	CA1a	Computers do not scare me at all.	(Venkatesh & Bala, 2008, p. 313, p. 313)
+CA2	Working with a computer makes me nervous.
+CA3	Computers make me feel uncomfortable.
+CA4	Computers make me feel uneasy.
+Experience	XP1	I enjoy using computers.	(Lee et al., 2013, p. 180; Purnomo & Lee, 2013, p. 149, p. 149)
+XP2	I am comfortable using the Internet.
+XP3 a	I am comfortable saving and locating files.
+XP4 a	I enjoy using e-mail.
+Enjoyment	ENJOY1	I find using the e-portfolio enjoyable.	(Cheng, 2011, p. 282; Cheng, 2012, p. 37; Davis et al., 1992, p. 1116; Lefievre, 2012, p. 13; Lin et al., 2010, p. 491; Park, Son et al., 2012, p. 383; Venkatesh et al., 2003, p. 456; Zhang, Zhao, & Tan, 2008, p. 314, p. 491)
+ENJOY2	The actual process of using the e-portfolio is pleasant.
+ENJOY3	I have fun using the e-portfolio.
+Subjective norm	SN1	People who influence my behaviour would think that I should use the e-portfolio.	(Venkatesh et al., 2003, p. 460; Yoo, Han & Huang, 2012, p. 949, p. 460)
+SN2	People who are important to me would think that I should use the e-portfolio.
+Perceived Ease of Use	PEOU1 a	Learning to use the e-portfolio would be easy for me.	(Davis, 1989, p. 340, p. 340)
+PEOU2	I would find it easy to get the e-portfolio to do what I want it to do.
+PEOU3	My interaction with the e-portfolio would be clear and understandable.
+PEOU4	I would find the e-portfolio to be flexible to interact with.
+PEOU5	It would be easy for me to become skillful at using the e-portfolio.
+PEOU6	I would find the e-portfolio easy to use.
+Perceived usefulness	PU1	Using the e-portfolio would allow me to accomplish learning tasks more quickly.	(Davis, 1989, p. 340, p. 340)
+PU2	Using the e-portfolio would improve my learning performance.
+PU3 a	Using the e-portfolio would increase my productivity in learning.
+PU4	Using the e-portfolio would enhance my effectiveness in learning.
+PU5	Using the e-portfolio would make learning easier.
+PU6	I would find the e-portfolio useful in my learning.
+Behavioural Intention to Use	BI1	Assuming I had access to the e-portfolio, I intend to use it.	(Venkatesh & Bala, 2008, p. 314; Venkatesh & Davis, 2000)
+BI2	Given that I had access to the e-portfolio, I predict that I would use it.
+BI3	I plan to use the e-portfolio in the future.
+Average e-portfolio usage	Usage1	On average I use the e-portfolio (pick most accurate answer):
+Don’t use at all, Use less than once a week, Use about once a week, Use several times a week, Use about once a day, Use several times a day	Self developed
+Usage2	On average, how many hours do you normally spend each week using the e-portfolio?
+None, Less than 1 h, 1–2 h, 2–4 h, More than 4 h
+Note. Apart from the average e-portfolio usage questions, all other items were measured on a seven-point Likert scale.
+a
+Deleted because of a low factor loading.
+b
+The negative items for Computer Anxiety were converted to positive in data analysis.
+References
+Abbad et al., 2009
+M.M. Abbad, D. Morris, C. de Nahlik
+Looking under the Bonnet: factors affecting student adoption of E-learning systems in Jordan
+International Review of Research in Open and Distance Learning, 10 (2) (2009), pp. 1-25
+Retrieved from:
+https://library3.hud.ac.uk/summon/
+View in ScopusGoogle Scholar
+Abdullah and Ward, 2016
+F. Abdullah, R. Ward
+Developing a general extended technology acceptance model for E-learning (GETAMEL) by analysing commonly used external factors
+Computers in Human Behavior, 56 (2016), pp. 238-256, 10.1016/j.chb.2015.11.036
+View PDF
+View articleView in ScopusGoogle Scholar
+Abrami and Barrett, 2005
+P. Abrami, H. Barrett
+Directions for research and development of electronic portfolios
+Canadian Journal of Learning and Technology, 31 (3) (2005), pp. 1-15
+Retrieved from:
+http://www.cjlt.ca/index.php/cjlt/article/viewArticle/92
+Google Scholar
+Agudo-Peregrina et al., 2014
+Á.F. Agudo-Peregrina, Á. Hernández-García, F.J. Pascual-Miguel
+Behavioral intention, use behavior and the acceptance of electronic learning systems: differences between higher education and lifelong learning
+Computers in Human Behavior, 34 (2014), pp. 301-314, 10.1016/j.chb.2013.10.035
+View PDF
+View articleView in ScopusGoogle Scholar
+Al-alak and Alnawas, 2011
+B.A. Al-alak, I.A.M. Alnawas
+Measuring the acceptance and adoption of e-learning by academic staff
+Knowledge Management & E-Learning: An International Journal, 3 (2) (2011), pp. 201-221
+Retrieved from:
+https://library3.hud.ac.uk/summon/
+View in ScopusGoogle Scholar
+Al-Ammari and Hamad, 2008
+J. Al-Ammari, S. Hamad
+Factors influencing the adoption of e-learning at University of Bahrain
+Second International Conference and Exhibition for Zain E-learning Center (2008), pp. 28-30
+Retrieved from:
+https://uqu.edu.sa/files2/tiny_mce/plugins/filemanager/files/30/papers/f82.pdf
+Google Scholar
+Al-Ammary et al., 2014
+J.H. Al-Ammary, A.K. Al-Sherooqi, H.K. Al-Sherooqi
+The acceptance of social networking as a learning tools at University of Bahrain
+International Journal of Information and Education Technology, 4 (2) (2014), pp. 208-214, 10.7763/IJIET.2014.V4.400
+Google Scholar
+Al-Aulamie et al., 2012
+A. Al-Aulamie, A. Mansour, H. Daly, O. Adjei
+The effect of interinsic motivation on learners’ behavioural intention to use e-learning systems
+International Conference on Information Technology Based Higher Education and Training (ITHET) IEEE (2012), pp. 1-4
+Retrieved from:
+https://library3.hud.ac.uk/summon/
+Google Scholar
+Al-Gahtani, 2016
+S.S. Al-Gahtani
+Empirical investigation of e-learning acceptance and assimilation: a structural equation model
+Applied Computing and Informatics, 12 (1) (2016), pp. 27-50, 10.1016/j.aci.2014.09.001
+View PDF
+View articleView in ScopusGoogle Scholar
+Al-Mushasha, 2013
+N.F.A. Al-Mushasha
+Determinants of e-learning acceptance in higher education environment based on extended technology acceptance model
+Fourth International Conference on e-Learning Best Practices in Management, Design and Development of e-Courses: Standards of Excellence and Creativity (2013), pp. 261-266, 10.1109/ECONF.2013.50
+View in ScopusGoogle Scholar
+Alenezi et al., 2010
+A.R. Alenezi, A.M. Abdul Karim, A. Veloo
+An empirical investigation into the role of enjoyment, computer anxiety, computer self-efficacy and internet experience in influencing the students’ intention to use e-learning: a case study from Saudi Arabian Governmental Universities
+The Turkish Online Journal of Educational Technology, 9 (4) (2010), pp. 22-34
+Retrieved from:
+https://library3.hud.ac.uk/summon/
+View in ScopusGoogle Scholar
+Ali et al., 2013
+H. Ali, A.A. Ahmed, T.G. Tariq, H. Safdar
+Second life (SL) in education: the intensions to use at university of bahrain
+Fourth International Conference on e-Learning “Best Practices in Management, Design and Development of e-Courses: Standards of Excellence and Creativity” IEEE (2013), pp. 205-215, 10.1109/ECONF.2013.81
+View in ScopusGoogle Scholar
+Arenas-Gaitan et al., 2010
+J. Arenas-Gaitan, F.J. Rondan-Cataluna, P. Ramirez-Correa
+Gender influence in perception and adoption of E-learning platforms
+Advances in Data Networks, Communications, Computers (2010), pp. 30-35
+Retrieved from:
+http://www.wseas.us/e-library/conferences/2010/Faro/DNCOCO/DNCOCO-04.pdf
+View in ScopusGoogle Scholar
+Attwell, 2007
+G. Attwell
+The personal learning environments – the future of eLearning?
+eLearning Papers, 2 (1) (2007), pp. 1-8
+Retrieved from: http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.97.3011&rep=rep1&type=pdf
+Google Scholar
+Aypay et al., 2012
+A. Aypay, H.C. Çelik, A. Aypay, M. Sever
+Technology acceptance in education: a study of pre-service teachers in Turkey
+Turkish Online Journal of Educational Technology, 11 (4) (2012), pp. 264-272
+View in ScopusGoogle Scholar
+Bandura, 1982
+A. Bandura
+Self-efficacy mechanism in human agency
+American Psychologist, 37 (1982), pp. 12-147
+Google Scholar
+Barrett, 2005
+H.C. Barrett
+White paper: Researching electronic Portfolios and learner engagement
+(2005)
+Retrieved from:
+http://www.taskstream.com/reflect/whitepaper.pdf
+Google Scholar
+Barrett and Garrett, 2009
+H.C. Barrett, N. Garrett
+Online personal learning environments: structuring electronic portfolios for lifelong and life-wide learning
+On the Horizon, 17 (2) (2009), pp. 142-152, 10.1108/10748120910965511
+View in ScopusGoogle Scholar
+Becta, 2007
+Becta
+The impact of e-portfolios on learning
+(2007)
+Retrieved from:
+https://drive.google.com/file/d/0B6psyHRq0wqPZFQ0dFJRR2tIQ1U/view?pref=2&pli=1
+Google Scholar
+Beresford and Cobham, 2010
+W. Beresford, D. Cobham
+The role of ePortfolios in higher education: their perceived value and potential to assist undergraduate computing students
+EDULEARNIO International Conference on Education and New Learning Technologies (EDULEARNIO). Barcelona, Spain 2010 (2010)
+Retrieved from:
+http://eprints.lincoln.ac.uk/3871/2/Eportfolios.pdf
+Google Scholar
+Beresford and Cobham, 2011
+W. Beresford, D. Cobham
+Undergraduate students: interactive, online experiences and ePortfolio development
+IEEE International Conference on Information and Education Technology, January (2011), pp. 272-275
+Retrieved from:
+http://eprints.lincoln.ac.uk/3870/1/IEEE_Paper.pdf
+CrossrefView in ScopusGoogle Scholar
+Bhatiasevi, 2011
+V. Bhatiasevi
+Acceptance of E-learning for users in higher education: an extension of the technology acceptance model
+The Social Sciences, 6 (6) (2011), pp. 513-520, 10.3923/sscience.2011.513.520
+View in ScopusGoogle Scholar
+Brown et al., 2006
+I.T.J. Brown, R.J. Stothers, S.R. Thorp, L.T. Ingram
+The role of learning styles in the acceptance of web-based learning tools
+36th Annual Conference of the Southern African Computer Lecturers Association SACLA2006, 1(1) (2006), pp. 189-200
+Retrieved from:
+http://www.sacla.org.za/sacla2006/papers/WP02%20Irwin%20Brown%20Learning%20Styles.pdf
+View in ScopusGoogle Scholar
+Buyarski and Landis, 2014
+C.A. Buyarski, C.M. Landis
+Using an ePortfolio to assess the outcomes of a first-year seminar: student narrative and authentic assessment
+International Journal of ePortfolio, 4 (1) (2014), pp. 49-60
+Retrieved from:
+http://www.theijep.com/
+Google Scholar
+Calisir et al., 2014
+F. Calisir, C. AltinGumussoy, A.E. Bayraktaroglu, D. Karaali
+Predicting the intention to use a web-based learning system: perceived content quality, anxiety, perceived system quality, image, and the technology acceptance model
+Human Factors and Ergonomics in Manufacturing & Service Industries, 24 (5) (2014), pp. 515-531, 10.1002/hfm.20548
+View in ScopusGoogle Scholar
+Chang et al., 2012
+C.C. Chang, C.F. Yan, J.S. Tseng
+Perceived convenience in an extended technology acceptance model: mobile technology and English learning for college students
+Australasian Journal of Educational Technology, 28 (5) (2012), pp. 809-826
+http://www.ascilite.org.au/ajet/ajet28/chang-cc.html
+View in ScopusGoogle Scholar
+Chen et al., 2012
+M.Y. Chen, F.M.T. Chang, C.C. Chen, M.J. Huang, J.W. Chen
+Why do individuals use e-Portfolios
+Educational Technology & Society, 15 (4) (2012), pp. 114-125
+View in ScopusGoogle Scholar
+Chen et al., 2007
+Y. Chen, C. Chen, Y. Lin, R. Yeh
+Predicting college student’ use of E-learning systems: an attempt to extend technology acceptance model
+Pacific Asia Conference on Information Systems (2007), pp. 172-183
+Retrieved from:
+http://www.pacis-net.org/file/2007/1295.pdf
+CrossrefView in ScopusGoogle Scholar
+Cheng, 2011
+Y. Cheng
+Antecedents and consequences of e-learning acceptance
+Information Systems Journal, 21 (3) (2011), pp. 269-299
+Retrieved from:
+https://library3.hud.ac.uk/summon/
+CrossrefView in ScopusGoogle Scholar
+Cheng, 2012
+Y. Cheng
+Effects of quality antecedents on e-learning acceptance
+Internet Research, 22 (3) (2012), pp. 361-390
+Retrieved from:
+https://library3.hud.ac.uk/summon/
+CrossrefView in ScopusGoogle Scholar
+Chen et al., 2013
+Y. Chen, Y. Lin, R. Yeh, S. Lou
+Examining factors affecting college students’ intention to use web-based instruction systems: towards an integrated model
+Turkish Online Journal of Educational Technology-TOJET, 12 (2) (2013), pp. 111-121
+Retrieved from:
+https://library3.hud.ac.uk/summon/
+View in ScopusGoogle Scholar
+Chen and Tseng, 2012
+H. Chen, H. Tseng
+Factors that influence acceptance of web-based e-learning systems for the in-service education of junior high school teachers in Taiwan
+Evaluation and Program Planning, 35 (3) (2012), pp. 398-406
+Retrieved from:
+https://library3.hud.ac.uk/summon/
+View PDF
+View articleView in ScopusGoogle Scholar
+Chen et al., 2015
+Z.S.C. Chen, S.J.H. Yang, J.J.S. Huang
+Constructing an e-portfolio-based integrated learning environment supported by library resource
+The Electronic Library, 33 (2) (2015), pp. 273-291, 10.1108/EL-07-2013-0118
+View in ScopusGoogle Scholar
+Cheung and Vogel, 2013
+R. Cheung, D. Vogel
+Predicting user acceptance of collaborative technologies: an extension of the technology acceptance model for E-learning
+Computers & Education, 63 (2013), pp. 160-175
+Retrieved from:
+https://library3.hud.ac.uk/summon/
+View PDF
+View articleView in ScopusGoogle Scholar
+Chow et al., 2012
+M. Chow, D.K. Herold, T. Choo, K. Chan
+Extending the technology acceptance model to explore the intention to use second life for enhancing healthcare education
+Computers & Education, 59 (4) (2012), pp. 1136-1144
+Retrieved from:
+https://library3.hud.ac.uk/summon/
+View PDF
+View articleView in ScopusGoogle Scholar
+Cohen, 1992
+J. Cohen
+A power primer
+Psychological bulletin, 112 (1) (1992), pp. 155-159, 10.1037/0033-2909.112.1.155
+View in ScopusGoogle Scholar
+Compeau and Higgins, 1995
+D.R. Compeau, C.A. Higgins
+Computer self-efficacy: development of a measure and initial test
+MIS Quarterly, 19 (2) (1995), pp. 189-211
+CrossrefGoogle Scholar
+Contreras-Higuera et al., 2016
+W.E. Contreras-Higuera, F. Martinez-Olmo, M. Jose Rubio-Hurtado, R. Vila-Banos
+University students’ perceptions of E-portfolios and rubrics as combined assessment tools in education courses
+Journal of Educational Computing Research, 54 (1) (2016), pp. 85-107, 10.1177/0735633115612784
+View in ScopusGoogle Scholar
+Davis, 1986
+F.D. Davis
+A technology acceptance model for empirically testing new end-user information systems: Theory and result
+Doctoral dissertation
+Sloan School of Management. Massachusetts Institute of Technology (1986), pp. 1-291
+Retrieved from:
+http://dspace.mit.edu/handle/1721.1/15192
+Google Scholar
+Davis, 1989
+F.D. Davis
+Perceived usefulness, perceived ease of use and user acceptance of information technology
+MIS Quarterly, 13 (1989), pp. 319-339
+View in ScopusGoogle Scholar
+Davis et al., 1989
+F.D. Davis, R.P. Bagozzi, P.R. Warshaw
+User acceptance of computer technology: a comparison of two theoretical models
+Management Science, 35 (1989), pp. 982-1003
+CrossrefView in ScopusGoogle Scholar
+Davis et al., 1992
+F.D. Davis, R.P. Bagozzi, P.R. Warshaw
+Extrinsic and intrinsic motivation to use computers in the workplace
+Journal of Applied Social Psychology, 24 (14) (1992), pp. 1111-1132
+CrossrefView in ScopusGoogle Scholar
+De Smet et al., 2012
+C. De Smet, J. Bourgonjon, B. De Wever, T. Schellens, M. Valcke
+Researching instructional use and the technology acceptation of learning management systems by secondary school teachers
+Computers & Education, 58 (2) (2012), p. 688
+Retrieved from:
+https://library3.hud.ac.uk/summon/
+View PDF
+View articleView in ScopusGoogle Scholar
+Dearing, 1997
+R. Dearing
+Report of the National Committee of Inquiry into Higher Education (The Dearing Report). The national committee of Inquiry into Higher Education
+(1997)
+Google Scholar
+Driessen, 2008
+E.W. Driessen
+Educating the self-critical doctor, using a portfolio to stimulate and assess medical students’ reflection
+(2008)
+Retrieved from:
+http://www.maastrichtuniversity.nl/web/Faculties/FHML/Theme/Education/InstituteForEducationFHML/SchoolOfHealthProfessionsEducationSHE/PhDProgramme/PhDThesesExamples.htm
+Google Scholar
+Emmett, 2011
+D.J. Emmett
+Student engagement with an ePortfolio: A case study of pre-service education students (Published PhD thesis)
+The Queensland University of Technology (2011)
+Retrieved from:
+http://eprints.qut.edu.au/40957/1/David_Emmett_Thesis.pdf
+Google Scholar
+Fadare et al., 2011
+O.G. Fadare, O.H. Babatunde, D.T. Akomolafe, O.O. Lawal
+Behavioral intention for mobile learning on 3G mobile internet technology in south-west part of Nigeria
+World Journal of Engineering and Pure & Applied Sciences, 1 (2) (2011), pp. 19-28
+Retrieved from:
+http://rrpjournals.org/wjepas/en_wjepas_vol_1_iss_2_pg_19_28
+Google Scholar
+Farahat, 2012
+T. Farahat
+Applying the technology acceptance model to online learning in the Egyptian Universities
+Social and Behavioral Sciences, 64 (2012), pp. 95-104, 10.1016/j.sbspro.2012.11.012
+View PDF
+View articleGoogle Scholar
+Fornell and Larcker, 1981
+C. Fornell, D.F. Larcker
+Evaluating structural equation models with unobservable variables and measurement error
+Journal of Marketing Research, 18 (1) (1981), pp. 39-50
+Google Scholar
+Gerbic et al., 2009
+P. Gerbic, L. Lewis, M. Northover
+Student perspectives of eportfolios: a longitudinal study of growth and development
+Ascilite Conference, Auckland, New Zealand 2009 (2009), pp. 327-331
+Retrieved from:
+http://www.ascilite.org.au/conferences/auckland09/procs/gerbic.pdf
+CrossrefView in ScopusGoogle Scholar
+Giovanis et al., 2012
+A.N. Giovanis, S. Binioris, G. Polychronopoulos
+An extension of TAM model with IDT and security/privacy risk in the adoption of internet banking services in Greece
+EuroMed Journal of Business, 7 (1) (2012), pp. 24-53, 10.1108/14502191211225365
+View in ScopusGoogle Scholar
+Hair et al., 1998
+J.F. Hair, R.E. Anderson, R.L. Tatham, W.C. Black
+Multivariate data analysis
+Prentice Hall, Upper Saddle River, NJ (1998)
+Google Scholar
+Hair et al., 2010
+J.F. Hair, W.C. Black, B.J. Babin, R.E. Anderson
+Multivariate data analysis
+(7 ed), Prentice Hall, Englewood Cliffs (2010)
+Google Scholar
+Hei and Hu, 2011
+D. Hei, L. Hu
+A study of factors that influence mobile devices’ adoption in language learning based on an extended model of TAM in China Higher Education
+10th World Conference on Mobile and Contextual Learning (2011), pp. 259-269
+Retrieved from:
+http://mlearn.bnu.edu.cn/source/Conference_Procedings.pdf
+Google Scholar
+Hidayanto et al., 2014
+A.N. Hidayanto, D. Febriawan, Y.G. Sucahyo, B. Purwandari
+Factors influencing the use of E-Class
+Journal of Industrial and Intelligent Information, 2 (2) (2014), pp. 121-125, 10.12720/jiii.2.2.121-125
+Google Scholar
+Hsia et al., 2014
+J. Hsia, C. Chang, A. Tseng
+Effects of individuals’ locus of control and computer self-efficacy on their e-learning acceptance in high-tech companies
+Behaviour & Information Technology, 33 (1) (2014), pp. 51-64, 10.1080/0144929X.2012.702284
+View in ScopusGoogle Scholar
+Hsia and Tseng, 2008
+J. Hsia, A. Tseng
+An enhanced technology acceptance model for E-learning systems in high-tech companies in Taiwan: analyzed by structural equation modeling
+International Conference on Cyberworlds (2008), pp. 39-44, 10.1109/CW.2008.46
+View in ScopusGoogle Scholar
+Hsieh et al., 2015
+T. Hsieh, S. Chen, M. Hung
+Longitudinal test of ePortfolio continuous use: an empirical study on the change of students’ beliefs
+Behaviour & Information Technology, 34 (8) (2015), pp. 838-853, 10.1080/0144929X.2014.907344
+View in ScopusGoogle Scholar
+Hsu and Chang, 2013
+H.H. Hsu, Y.Y. Chang
+Extended TAM model: impacts of convenience on acceptance and use of Moodle
+Online Submission, 3 (4) (2013), pp. 211-218
+Google Scholar
+Hussein et al., 2007
+R. Hussein, U. Aditiawarman, N. Mohamed
+E-Learning acceptance in a developing country
+German e-Science conference, A case of the Indonesian Open University (2007)
+Retrieved from: http://pubman.mpdl.mpg.de/pubman/item/escidoc:1786666:1/component/escidoc:1786665/GES_paper90.pdf
+Google Scholar
+Hwang et al., 2011
+I.-H. Hwang, S.-J. Tsai, C.-C. Yu, C.-H. Lin
+An empirical study on the factors affecting continuous usage intention of double reinforcement interactive E-Portfolio learning system
+IEEE Joint International, August (1) (2011), pp. 246-249
+CrossrefView in ScopusGoogle Scholar
+Ifinedo, 2006
+P. Ifinedo
+Acceptance and continuance intention of Web-based Learning Technologies (WLT) use among university students in a Baltic country
+The Electronic Journal of Information Systems in Developing Countries, 23 (6) (2006), pp. 1-20
+Retrieved from:
+www.ejisdc.org
+CrossrefView in ScopusGoogle Scholar
+Igbaria and Iivari, 1995
+M. Igbaria, J. Iivari
+The effects of self-efficacy on computer usage
+Omega, 23 (6) (1995), pp. 587-605, 10.1016/0305-0483(95)00035-6
+View PDF
+View articleView in ScopusGoogle Scholar
+Igbaria and Parasuraman, 1989
+M. Igbaria, S. Parasuraman
+A path analytic study of individual characteristics, computer anxiety and attitudes toward microcomputers
+Journal of Management, 15 (3) (1989), pp. 373-388, 10.1177/014920638901500302
+View in ScopusGoogle Scholar
+Joint Information Systems Committee (JISC), 2008
+Joint Information Systems Committee (JISC)
+Effective practice with e-portfolios: Supporting 21st century learning
+(2008)
+Retrieved from:
+http://www.jisc.ac.uk/media/documents/publications/effectivepracticeeportfolios.pdf
+Google Scholar
+Kahn, 2014
+S. Kahn
+E-portfolios: a look at where we’ve been, where we are now, and where we’re going
+Peer Review, 16 (1) (2014), p. 4
+Google Scholar
+Karaali et al., 2011
+D. Karaali, C.A. Gumussoy, F. Calisir
+Factors affecting the intention to use a web-based learning system among blue-collar workers in the automotive industry
+Computers in Human Behavior, 27 (1) (2011), pp. 343-354
+Retrieved from:
+https://library3.hud.ac.uk/summon/
+View PDF
+View articleView in ScopusGoogle Scholar
+King and He, 2006
+W.R. King, J. He
+A meta-analysis of the technology acceptance model
+Information & Management, 43 (6) (2006), pp. 740-755
+View PDF
+View articleView in ScopusGoogle Scholar
+Lau and Woods, 2008
+S. Lau, P.C. Woods
+An empirical study of learning object acceptance in multimedia learning environment
+Communications of the IBIMA, 5 (1) (2008), pp. 1-6
+Retrieved from:
+https://library3.hud.ac.uk/summon/
+Google Scholar
+Lee, 2006
+Y. Lee
+An empirical investigation into factors influencing the adoption of an e-learning system
+Online Information Review, 30 (5) (2006), pp. 517-541, 10.1108/14684520610706406
+View in ScopusGoogle Scholar
+Lee et al., 2005
+M.K.O. Lee, C.M.K. Cheung, Z. Chen
+Acceptance of internet-based learning medium: the role of extrinsic and intrinsic motivation
+Information & Management, 42 (8) (2005), pp. 1095-1104
+Retrieved from:
+https://library3.hud.ac.uk/summon/
+View PDF
+View articleCrossrefView in ScopusGoogle Scholar
+Lee et al., 2014
+Y.H. Lee, C. Hsiao, S.H. Purnomo
+An empirical examination of individual and system characteristics on enhancing e-learning acceptance
+Australasian Journal of Educational Technology, 30 (5) (2014), pp. 561-579
+Retrieved from:
+http://ascilite.org.au/ajet/submission/index.php/AJET/article/view/381/1080
+Google Scholar
+Lee et al., 2013
+Y. Lee, Y. Hsieh, Y. Chen
+An investigation of employees’ use of e-learning systems: applying the technology acceptance model
+Behaviour and Information Technology, 32 (2) (2013), pp. 173-189
+Retrieved from:
+https://library3.hud.ac.uk/summon/
+View in ScopusGoogle Scholar
+Lee et al., 2011
+Y. Lee, Y. Hsieh, C. Ma
+A model of organizational employees’ e-learning systems acceptance
+Knowledge-Based Systems, 24 (3) (2011), pp. 355-366
+Retrieved from:
+https://library3.hud.ac.uk/summon/
+View PDF
+View articleView in ScopusGoogle Scholar
+Lefievre, 2012
+V. Lefievre
+Gender differences in acceptance by students of training software for office tools
+Athens: ATINER’S Conference Paper Series, No: EDU2012-0138 (2012)
+Retrieved from:
+http://www.atiner.gr/papers/EDU2012-0138.pdf
+Google Scholar
+Leitch, 2006
+S. Leitch
+Prosperity for all in the global economy-world class skills: Final report
+(2006)
+Google Scholar
+Lim et al., 2016
+C.P. Lim, J.C.K. Lee, N. Jia
+E-portfolios in pre-service teacher education: sustainability and lifelong learning
+Quality and Change in Teacher Education (2016), pp. 163-174
+CrossrefGoogle Scholar
+Lin et al., 2010
+Y. Lin, Y. Chen, R.C. Yeh
+Understanding college students’ continuing intentions to use multimedia e-learning systems
+World Transactions on Engineering and Technology Education, 8 (4) (2010), pp. 488-493
+Retrieved from:
+http://www.wiete.com.au/journals/WTE&TE/Pages/Vol. 8,%20No.4%20(2010)/14-20-Lin-Y-C.pdf
+View in ScopusGoogle Scholar
+Lin et al., 2013
+P.C. Lin, H.K. Lu, C.H.I.A. Liu
+Towards an education behavioral intention model for e-learning systems: an extension of UTAUT
+Journal of Theoretical and Applied Information Technology, 47 (3) (2013), pp. 1120-1127
+Retrieved from: http://www.jatit.org/volumes/Vol47No3/37Vol47No3.pdf
+CrossrefGoogle Scholar
+Lin et al., 2014
+S. Lin, S.F. Persada, R. Nadlifatin
+A study of student behavior in accepting the blackboard learning system: a technology acceptance model (TAM) approach
+IEEE 18th International Conference on Computer Supported Cooperative Work in Design (2014), pp. 457-462, 10.1109/CSCWD.2014.6846888
+Google Scholar
+Lin and Taralynn, 2015
+Z. Lin, H. Taralynn
+Factors associated with electronic portfolio adoption among pre-service teachers
+Journal of Educational Technology Development and Exchange, 8 (1) (2015), pp. 49-66
+Google Scholar
+Liu, 2010
+X. Liu
+Empirical testing of a theoretical extension of the technology acceptance model: an exploratory study of educational wikis
+Communication Education, 59 (1) (2010), pp. 52-69, 10.1080/03634520903431745
+View in ScopusGoogle Scholar
+Liu et al., 2010
+I.F. Liu, M.C. Chen, Y.S. Sun, D. Wible, C.H. Kuo
+Extending the TAM model to explore the factors that affect intention to use an Online Learning Community
+Computers & Education, 54 (2) (2010), pp. 600-610
+View PDF
+View articleView in ScopusGoogle Scholar
+Lopez-Fernandez and Rodriguez-Illera, 2009
+O. Lopez-Fernandez, J.L. Rodriguez-Illera
+Investigating university students’ adaptation to a digital learner course portfolio
+Computers & Education, 52 (3) (2009), pp. 608-616
+View PDF
+View articleView in ScopusGoogle Scholar
+Lorenzo and Ittelson, 2005
+G. Lorenzo, J. Ittelson
+An overview of E-portfolios, Educause learning initiative advancing learning through IT innovation
+(2005)
+Retrieved from:
+http://www.pgce.soton.ac.uk/IT/Research/Eportfolios/ELI3001.pdf
+Google Scholar
+Ma et al., 2013
+C. Ma, C. Chao, B. Cheng
+Integrating technology acceptance model and task-technology fit into blended E-learning system
+Journal of Applied Sciences, 13 (5) (2013), pp. 736-742, 10.3923/jas.2013.736.742
+View in ScopusGoogle Scholar
+Macharia and Nyakwende, 2009
+J. Macharia, E. Nyakwende
+Factors affecting the adoption and diffusion of internet in higher educational institutions in Kenya
+Journal of Language, Technology & Entrepreneurship in Africa, 1 (2) (2009), pp. 6-23
+Retrieved from:
+http://www.ajol.info/index.php/jolte/article/view/41754
+Google Scholar
+Martin, 2012
+R.G. Martin
+Factors affecting the usefulness of social networking in e-Learning at German University of Technology in Oman
+International Journal of e-Education, e-Business, e-Management and e-Learning, 2 (6) (2012), pp. 498-502, 10.7763/IJEEEE.2012.V2.171
+Google Scholar
+Martinez-Torres et al., 2008
+M.R. Martinez-Torres, S.L.T. Marin, F.B. Garcia, S.G. Vazquez, M.A. Oliva, T. Torres
+A technological acceptance of e-learning tools used in practical and laboratory teaching, according to the European higher education area
+Behaviour & Information Technology, 27 (6) (2008), pp. 495-505, 10.1080/01449290600958965
+View in ScopusGoogle Scholar
+Mathieson, 1991
+K. Mathieson
+Predicting user intentions: comparing the technology acceptance model with the theory of planned behaviour
+Information Systems Research, 2 (3) (1991), pp. 173-191
+CrossrefView in ScopusGoogle Scholar
+McDonald, 2012
+B. McDonald
+Portfolio assessment: direct from the classroom
+Assessment & Evaluation in Higher Education, 37 (3) (2012), pp. 335-347
+CrossrefView in ScopusGoogle Scholar
+Meyer et al., 2010
+E. Meyer, P.C. Abrami, C.A. Wade, O. Aslan, L. Deault
+Improving literacy and metacognition with electronic portfolios: teaching and learning with ePEARL
+Computers & Education, 55 (1) (2010), pp. 84-91, 10.1016/j.compedu.2009.12.005
+View PDF
+View articleView in ScopusGoogle Scholar
+Moghadam and Bairamzadeh, 2009
+A.H. Moghadam, S. Bairamzadeh
+Extending the technology acceptance model for E-learning: a case study of Iran
+Sixth International Conference on Information Technology: New Generations (2009), pp. 1659-1660, 10.1109/ITNG.2009.152
+View in ScopusGoogle Scholar
+Mohamed and Abdul Karim, 2012
+N. Mohamed, S.N. Abdul Karim
+Open source E-learning anxiety, self-efficacy and acceptance – a partial least square approach
+International Journal of Mathematics and Computers in Simulation, 4 (6) (2012), pp. 361-368
+Retrieved from:
+http://naun.org/main/NAUN/mcs/16-364.pdf
+View in ScopusGoogle Scholar
+Motaghian et al., 2013
+H. Motaghian, A. Hassanzadeh, D.K. Moghadam
+Factors affecting university instructors’ adoption of web-based learning systems: case study of Iran
+Computers & Education, 61 (2013), pp. 158-167
+Retrieved from:
+https://library3.hud.ac.uk/summon/
+View PDF
+View articleView in ScopusGoogle Scholar
+Ngai et al., 2007
+E.W.T. Ngai, J.K.L. Poon, Y.H.C. Chan
+Empirical examination of the adoption of WebCT using TAM
+Computers and Education, 48 (2) (2007), pp. 250-267
+View PDF
+View articleView in ScopusGoogle Scholar
+Paechter et al., 2010
+M. Paechter, B. Maier, D. Macher
+Students’ expectations of, and experiences in e-learning: their relation to learning achievements and course satisfaction
+Computers & Education, 54 (1) (2010), pp. 222-229, 10.1016/j.compedu.2009.08.005
+View PDF
+View articleView in ScopusGoogle Scholar
+Papp, 2014
+R. Papp
+Assessment and assurance of learning using e-portfolios
+Journal of Case Studies in Accreditation and Assessment, 3 (2014), pp. 1-6
+Retrieved from:
+http://www.aabri.com/manuscripts/131488.pdf
+View in ScopusGoogle Scholar
+Park, 2009
+S.Y. Park
+An analysis of the technology acceptance model in understanding University Students’ behavioral intention to USE e-Learning
+Educational Technology & Society, 12 (3) (2009), pp. 150-162
+Retrieved from:
+https://library3.hud.ac.uk/summon/
+View in ScopusGoogle Scholar
+Park et al., 2012
+S.Y. Park, M.W. Nam, S.B. Cha
+University students’ behavioral intention to use mobile learning: evaluating the technology acceptance model
+British Journal of Educational Technology, 43 (4) (2012), pp. 592-605, 10.1111/j.1467-8535.2011.01229.x
+View in ScopusGoogle Scholar
+Park et al., 2012a
+Y. Park, H. Son, C. Kim
+Investigating the determinants of construction professionals’ acceptance of web-based training: an extension of the technology acceptance model
+Automation in Construction, 22 (2012), pp. 377-386
+Retrieved from:
+https://library3.hud.ac.uk/summon/
+View PDF
+View articleView in ScopusGoogle Scholar
+Pituch and Lee, 2006
+K.A. Pituch, Y.K. Lee
+The influence of system characteristics on e-learning use
+Computers & Education, 47 (2) (2006), pp. 222-244
+Retrieved from:
+https://library3.hud.ac.uk/summon/
+View PDF
+View articleView in ScopusGoogle Scholar
+Posey et al., 2015
+L. Posey, M.M. Plack, R. Snyder, P.L. Dinneen, M. Feuer, A. Wiss
+Developing a pathway for an institution Wide ePortfolio program
+International Journal of ePortfolio, 5 (1) (2015), pp. 75-92
+Retrieved from:
+http://www.theijep.com
+ISSN 2157-622X
+View in ScopusGoogle Scholar
+Premchaiswadi et al., 2012
+W. Premchaiswadi, P. Porouhan, N. Premchaiswadi
+An empirical study of the key success factors to adopt e-learning in thailand
+International Conference on Information Society (i-Society 2012) (2012), pp. 333-338
+Retrieved from:
+https://library3.hud.ac.uk/summon/
+View in ScopusGoogle Scholar
+Purnomo and Lee, 2013
+S.H. Purnomo, Y. Lee
+E-learning adoption in the banking workplace in Indonesia: an empirical study
+Information Development, 29 (2) (2013), pp. 138-153, 10.1177/0266666912448258
+View in ScopusGoogle Scholar
+Quynh, 2012
+L. Quynh
+E-Portfolio for enhancing graduate research supervision
+Quality Assurance in Education, 20 (1) (2012), pp. 54-65
+Google Scholar
+Rejón-Guardia et al., 2013
+F. Rejón-Guardia, J. Sánchez-Fernández, F. Muñoz-Leiva
+The acceptance of microblogging in the learning process: the μBAM model
+Journal of Technology and Science Education, 3 (1) (2013), pp. 31-47
+Retrieved from:
+https://library3.hud.ac.uk/summon/
+Google Scholar
+Rezaei et al., 2008
+M. Rezaei, H.M. Mohammadi, A. Asadi, K. Kalantary
+Predicting E-Learning application in agricultural higher education using technology acceptance model
+Turkish Online Journal of Distance Education-TOJDE, 98 (1) (2008), pp. 85-95
+Retrieved from:
+http://files.eric.ed.gov/fulltext/ED499474.pdf
+View in ScopusGoogle Scholar
+Saadé and Kira, 2006
+R.G. Saadé, D. Kira
+The emotional state of technology acceptance
+Issues in Informing Science and Information Technology, 3 (2006), pp. 529-539
+Retrieved from:
+http://proceedings.informingscience.org/InSITE2006/IISITSaad145.pdf
+Google Scholar
+Sanchez-Franco, 2010
+M.J. Sanchez-Franco
+WebCT – the quasimoderating effect of perceived affective quality on an extending technology acceptance model
+Computers & Education, 54 (1) (2010), pp. 37-46
+View PDF
+View articleView in ScopusGoogle Scholar
+Sánchez and Hueros, 2010
+R.A. Sánchez, A.D. Hueros
+Motivational factors that influence the acceptance of moodle using TAM
+Computers in Human Behavior, 26 (6) (2010), pp. 1632-1640
+View PDF
+View articleView in ScopusGoogle Scholar
+Shen and Chuang, 2010
+C.C. Shen, H.M. Chuang
+Exploring users’ attitudes and intentions toward the interactive Whiteboard Technology environment
+International Review on Computers and Software, 5 (2) (2010), pp. 200-208
+Retrieved from:
+http://andyrunyan.pbworks.com/w/file/fetch/55409229/Users’%20Attitudes%20toward%20IWB’s.pdf
+Google Scholar
+Shen and Eder, 2009
+J. Shen, L.B. Eder
+Intentions to use virtual worlds for education
+Journal of Information Systems Education, 20 (2) (2009), pp. 225-233
+Retrieved from:
+https://library3.hud.ac.uk/summon
+Google Scholar
+Shroff et al., 2011
+R.H. Shroff, C.C. Deneen, E.M.W. Ng
+Analysis of the technology acceptance model in examining students’ behavioural intention to use an e-portfolio system
+Australasian Journal of Educational Technology, 27 (4) (2011), pp. 600-618
+http://www.ascilite.org.au/ajet/ajet27/shroff.html
+View in ScopusGoogle Scholar
+Shyu and Huang, 2011
+S.H. Shyu, J. Huang
+Elucidating usage of e-government learning: a perspective of the extended technology acceptance model
+Government Information Quarterly, 28 (4) (2011), pp. 491-502
+Retrieved from:
+https://library3.hud.ac.uk/summon/
+View PDF
+View articleView in ScopusGoogle Scholar
+Smith et al., 1999
+B. Smith, P. Caputi, N. Crittenden, R. Jayasuriya, P. Rawstorne
+A review of the construct of computer experience
+Computers in Human Behavior, 15 (2) (1999), pp. 227-242
+View PDF
+View articleView in ScopusGoogle Scholar
+Strong et al., 2006
+D.M. Strong, M.T. Dishaw, D.B. Bandy
+Extending task technology fit with computer self-efficacy
+ACM SIGMIS Database, 37 (3) (2006), pp. 96-107
+CrossrefView in ScopusGoogle Scholar
+Šumak et al., 2011
+B. Šumak, M. Heričko, M. Pušnik
+A meta-analysis of e-learning technology acceptance: the role of user types and e-learning technology types
+Computers in Human Behavior, 27 (6) (2011), pp. 2067-2077
+Retrieved from:
+https://library3.hud.ac.uk/summon/
+View PDF
+View articleView in ScopusGoogle Scholar
+Tajudeen et al., 2012
+S.A. Tajudeen, M.K. Basha, F.O. Michael, A.L. Mukthar
+Determinant of mobile devices acceptance for learning among students in developing country
+The Malaysian Online Journal of Educational Technology, 1 (3) (2012), pp. 17-29
+Google Scholar
+Tan and Teo, 2000
+M. Tan, T.S. Teo
+Factors influencing the adoption of Internet banking
+Journal of the AIS, 1 (5) (2000), pp. 1-44
+CrossrefGoogle Scholar
+Tarhini et al., 2014
+A. Tarhini, K. Hone, X. Liu
+The effects of individual differences on e-learning users’ behaviour in developing countries: a structural equation model
+Computers in Human Behavior, 41 (2014), pp. 153-163, 10.1016/j.chb.2014.09.020
+View PDF
+View articleGoogle Scholar
+Tobing et al., 2008
+V. Tobing, M. Hamzah, S. Sura, H. Amin
+Assessing the acceptability of adaptive E-Learning system
+Retrieved from:
+16 (3) (2008), pp. 1-10
+http://elearn2013.com/eLAP2008/Proceedings/13_fullpaper_Vianny%20Tobing_Revised.pdf
+Google Scholar
+Tosh et al., 2005
+D. Tosh, T.P. Light, K. Fleming, J. Haywood
+Engagement with electronic portfolios: challenges from the student perspective
+Canadian Journal of Learning and Technology, 31 (3) (2005)
+Retrieved from:
+http://www.cjlt.ca/index.php/cjlt/article/view/97/91
+Google Scholar
+Trevitt et al., 2014
+C. Trevitt, A. Macduff, A. Steed
+[e]portfolios for learning and as evidence of achievement: scoping the academic practice development agenda ahead
+The Internet and Higher Education, 20 (2014), pp. 69-78, 10.1016/j.iheduc.2013.06.001
+View PDF
+View articleView in ScopusGoogle Scholar
+Tzeng and Chen, 2012
+J. Tzeng, S. Chen
+College students’ intentions to use e-portfolios: from the perspectives of career-commitment status and weblog-publication behaviours
+British Journal of Educational Technology, 43 (1) (2012), pp. 163-176, 10.1111/j.1467-8535.2010.01165.x
+View in ScopusGoogle Scholar
+Tzeng et al., 2015
+W. Tzeng, K. Kuo, P.C. Talley, H. Chen, J. Wang
+Do ePortfolios contribute to learners’ reflective thinking activities? : a preliminary study of nursing staff users
+Journal of Medical Systems, 39 (9) (2015), pp. 1-10, 10.1007/s10916-015-0281-8
+View in ScopusGoogle Scholar
+Van Raaij and Schepers, 2008
+E.M. Van Raaij, J.J.L. Schepers
+The acceptance and use of a virtual learning environment in china
+Computers & Education, 50 (3) (2008), pp. 838-852
+Retrieved from:
+https://library3.hud.ac.uk/summon/
+View PDF
+View articleView in ScopusGoogle Scholar
+Venkatesh and Bala, 2008
+V. Venkatesh, H. Bala
+Technology acceptance model 3 and a research agenda on interventions
+Decision Sciences, 39 (2) (2008), pp. 273-315, 10.1111/j.1540-5915.2008.00192.x
+View in ScopusGoogle Scholar
+Venkatesh and Davis, 1996
+V. Venkatesh, F.D. Davis
+A model of the antecedents of perceived ease of use: development and test
+Decision Sciences, 27 (3) (1996), pp. 451-481
+View in ScopusGoogle Scholar
+Venkatesh and Davis, 2000
+V. Venkatesh, F.D. Davis
+A theoretical extension of the technology acceptance model: for longitudinal field studies
+Management Science, 46 (2) (2000), pp. 186-204, 10.1287/mnsc.46.2.186.11926
+View in ScopusGoogle Scholar
+Venkatesh et al., 2003
+V. Venkatesh, M.G. Morris, G.B. Davis, F.D. Davis
+User acceptance of information technology: toward a unified view
+MIS Quarterly, 27 (3) (2003), pp. 425-478
+CrossrefView in ScopusGoogle Scholar
+Wade et al., 2005
+A. Wade, P.C. Abrami, J. Sclater
+An Electronic Portfolio to support learning
+Canadian Journal of Learning and Technology, 31 (3) (2005)
+Retrieved from:
+http://cjlt.csj.ualberta.ca/index.php/cjlt/article/view/94/88
+Google Scholar
+Wakimoto and Lewis, 2014
+D.K. Wakimoto, R.E. Lewis
+Graduate student perceptions of eportfolios: uses for reflection, development, and assessment
+The Internet and Higher Education, 21 (2014), p. 53, 10.1016/j.iheduc.2014.01.002
+View PDF
+View articleView in ScopusGoogle Scholar
+Wang and Wang, 2009
+C. Wang, W. Wang
+An empirical study of instructor adoption of web-based learning systems
+Computers & Education, 53 (3) (2009), pp. 761-774
+Retrieved from:
+https://library3.hud.ac.uk/summon/
+View in ScopusGoogle Scholar
+Williams and Williams, 2009
+M. Williams, J. Williams
+Evaluating a model of business school students’ acceptance of web-based course management systems
+International Journal of Management Education, 8 (3) (2009), pp. 59-70, 10.3794/ijme.83.264
+Google Scholar
+Winberg and Pallitt, 2016
+C. Winberg, N. Pallitt
+“I am trying to practice good teaching”: reconceptualizing e-portfolios for professional development in vocational higher education
+British Journal of Educational Technology, 47 (3) (2016), pp. 543-553
+CrossrefView in ScopusGoogle Scholar
+Wu et al., 2007
+J. Wu, Y. Chen, L. Lin
+Empirical evaluation of the revised end user computing acceptance model
+Computers in Human Behavior, 23 (1) (2007), pp. 162-174, 10.1016/j.chb.2004.04.003
+View PDF
+View articleView in ScopusGoogle Scholar
+Wu and Gao, 2011
+X. Wu, Y. Gao
+Applying the extended technology acceptance model to the use of clickers in student learning: some evidence from macroeconomics classes
+American Journal of Business Education, 4 (7) (2011), pp. 43-50
+Retrieved from:
+http://journals.cluteonline.com/index.php/AJBE/article/view/4674/4763
+Google Scholar
+Wu et al., 2013
+C. Wu, Y. Kuo, S. Wu
+Investigating the antecedents of university students’ behavioral intention to use iPad for learning
+International Journal of e-Education, e-Business, e-Management and e-Learning, 3 (6) (2013), pp. 468-471, 10.7763/IJEEEE.2013.V3.280
+Google Scholar
+Wu and Zhang, 2014
+B. Wu, C. Zhang
+Empirical study on continuance intentions towards E-learning 2.0 systems
+Behaviour & Information Technology, 33 (10) (2014), pp. 1027-1038, 10.1080/0144929X.2014.934291
+View in ScopusGoogle Scholar
+Xuesong et al., 2011
+Z. Xuesong, L. Olfman, D. Firpo
+An information systems design theory for collaborative ePortfolio systems
+44th Hawaii International Conference on System Sciences (2011), pp. 1-10
+Google Scholar
+Yang and Lin, 2011
+S.C. Yang, C.H. Lin
+Factors affecting the intention to use Facebook to support problem-based learning among employees in a Taiwanese manufacturing company
+African Journal of Business Management, 5 (22) (2011), pp. 9014-9022, 10.5897/AJBM11.1191
+Google Scholar
+Yi and Hwang, 2003
+M.Y. Yi, Y. Hwang
+Predicting the use of web-based information systems: self-efficacy, enjoyment, learning goal orientation, and the technology acceptance model
+International Journal of Human – Computer Studies, 59 (4) (2003), pp. 431-449, 10.1016/S1071-5819(03)00114-9
+View PDF
+View articleView in ScopusGoogle Scholar
+Yoo et al., 2012
+S.J. Yoo, S.-H. Han, W. Huang
+The roles of intrinsic motivators and extrinsic motivators in promotinge-learning in the workplace: a case from South Korea
+Computers in Human Behavior., 28 (3) (2012), pp. 942-950
+View PDF
+View articleView in ScopusGoogle Scholar
+Yuen and Ma, 2008
+A.H.K. Yuen, W.W.K. Ma
+Exploring teacher acceptance of e-learning technology
+Asia-Pacific Journal of Teacher Education, 36 (3) (2008), pp. 229-243
+Retrieved from:
+https://library3.hud.ac.uk/summon/
+CrossrefView in ScopusGoogle Scholar
+Zare and Yazdanparast, 2013
+H. Zare, S. Yazdanparast
+The causal Model of effective factors on intention to use of information technology among payamnoor and traditional universities students
+Life Science Journal, 10 (2) (2013), pp. 46-50
+Retrieved from:
+http://www.lifesciencesite.com/lsj/life1002/008_B00896life1002_46_50.pdf
+View in ScopusGoogle Scholar
+Zhang et al., 2007
+N. Zhang, X. Guo, G. Chen
+Extended information technology initial acceptance model and its empirical test
+Systems Engineering - Theory & Practice Online, 27 (9) (2007), pp. 123-130
+Retrieved from:
+https://library3.hud.ac.uk/summon/
+View PDF
+View articleGoogle Scholar
+Zhang et al., 2008
+S. Zhang, J. Zhao, W. Tan
+Extending TAM for online learning systems: an intrinsic motivation perspective
+Tsinghua Science & Technology, 13 (3) (2008), pp. 312-317
+Retrieved from:
+https://library3.hud.ac.uk/summon/
+View PDF
+View articleCrossrefView in ScopusGoogle Scholar
+Cited by (567)
+The adoption of virtual reality devices: The technology acceptance model integrating enjoyment, social interaction, and strength of the social ties
+2019, Telematics and Informatics
+Show abstract
+Examining the students’ behavioral intention to use e-learning in Azerbaijan? The General Extended Technology Acceptance Model for E-learning approach
+2017, Computers and Education
+Show abstract
+“Extending the Technology Acceptance Model (TAM) to Predict University Students’ Intentions to Use Metaverse-Based Learning Platforms”
+2023, Education and Information Technologies
+Examining university students’ behavioural intention to use e-learning during the COVID-19 pandemic: An extended TAM model
+2021, Education and Information Technologies
+Students’ acceptance of the covid-19 impact on shifting higher education to distance learning in Poland
+2020, International Journal of Environmental Research and Public Health
+Okay, Google!: An empirical study on voice assistants on consumer engagement and loyalty
+2019, Psychology and Marketing
+View all citing articles on Scopus
+View Abstract
+© 2016 Elsevier Ltd. All rights reserved.
+About ScienceDirect
+Remote access
+Contact and support
+Terms and conditions
+Privacy policy
+Cookie settings
+
+All content on this site: Copyright © 2026 Elsevier B.V., its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training, and similar technologies. For all open access content, the relevant licensing terms apply.

@@ -1,0 +1,1748 @@
+“We’ve Disabled MFA for You”: An Evaluation of the Security and Usability of Multi-Factor Authentication Recovery Deployments
+Sabrina Amft
+CISPA Helmholtz Center for
+Information Security
+Hanover, Germany
+Sandra Höltervennhoff
+Leibniz University Hannover
+Hanover, Germany
+Nicolas Huaman
+Leibniz University Hannover
+Hanover, Germany
+Alexander Krause
+CISPA Helmholtz Center for
+Information Security
+Hanover, Germany
+Lucy Simko
+The George Washington University
+Washington, DC, USA
+Yasemin Acar
+Paderborn University &
+The George Washington University
+Paderborn, Germany
+Sascha Fahl
+CISPA Helmholtz Center for
+Information Security
+Hanover, Germany
+ABSTRACT
+Multi-Factor Authentication is intended to strengthen the security
+of password-based authentication by adding another factor, such
+as hardware tokens or one-time passwords using mobile apps.
+However, this increased authentication security comes with po
+tential drawbacks that can lead to account and asset loss. If users
+lose access to their additional authentication factors for any reason,
+they will be locked out of their accounts. Consequently, services
+that provide Multi-Factor Authentication should deploy procedures
+to allow their users to recover from losing access to their additional
+factor that are both secure and easy-to-use.
+In this work, we investigate the security and user experience
+of Multi-Factor Authentication recovery procedures, and compare
+their deployment to descriptions on help and support pages.
+We first evaluate the official help and support pages of 1,303
+websites that provide Multi-Factor Authentication and collect doc
+umented information about their recovery procedures. Second, we
+select a subset of 71 websites, create accounts, set up Multi-Factor
+Authentication, and perform an in-depth investigation of their re
+covery procedure security and user experience.
+We find that many websites deploy insecure Multi-Factor Au
+thentication recovery procedures and allowed us to circumvent
+and disable Multi-Factor Authentication when having access to the
+accounts’ associated email addresses. Furthermore, we commonly
+observed discrepancies between our in-depth analysis and the offi
+cial help and support pages, implying that information meant to
+aid users is often either incorrect or outdated.
+Based on our findings, we provide recommendations for best
+practices regarding Multi-Factor Authentication recovery.
+CCS ’23, November 26–30, 2023, Copenhagen, Denmark
+© 2023 Copyright held by the owner/author(s). Publication rights licensed to ACM. This is the author’s version of the work. It is posted here for your personal use. Not for redistribution. The definitive Version of Record was published in Proceedings of the
+2023 ACM SIGSAC Conference on Computer and Communications Security (CCS ’23),
+November 26–30, 2023, Copenhagen, Denmark, https://doi.org/10.1145/3576915.3623180.
+CCS CONCEPTS
+• Security and privacy → Usability in security and privacy; Multi-factor authentication.
+KEYWORDS
+authentication, multi-factor authentication, usable security
+ACM Reference Format:
+Sabrina Amft, Sandra Höltervennhoff, Nicolas Huaman, Alexander Krause,
+Lucy Simko, Yasemin Acar, and Sascha Fahl. 2023. “We’ve Disabled MFA for
+You”: An Evaluation of the Security and Usability of Multi-Factor Authen
+tication Recovery Deployments. In Proceedings of the 2023 ACM SIGSAC
+Conference on Computer and Communications Security (CCS ’23), November 26–30, 2023, Copenhagen, Denmark. ACM, New York, NY, USA, 24 pages.
+https://doi.org/10.1145/3576915.3623180
+1 INTRODUCTION
+Username and password are the de facto standard for user authen
+tication on the web and beyond. However, they come with many
+security problems: Users tend to choose easily guessable passwords
+and re-use them for multiple accounts [18, 69, 87, 89, 90], or suffer
+from insecure or hard-to-use password policies [35, 52, 84]. Addi
+tionally, service providers may implement insecure and inadequate
+password storage, leaving millions of passwords unprotected due
+to data breaches [17, 29, 32, 70, 72, 95]. Multi-Factor Authentication
+(MFA) adds an extra factor and additional security to password
+based authentication schemes, and has become important in many
+authentication deployments on the web. With MFA, users authenti
+cate themselves using additional factors, e. g., biometric features,
+hardware tokens, smartphone applications, or secret information
+only they know [67].
+Prior work has found tensions between security and usability in
+many MFA implementations, revealing that the complexity of MFA
+setup is a barrier to widespread use [74, 75, 76], and user accep
+tance of long-term MFA use can suffer due to the increased log-in
+and setup time [6, 31]. While most prior work focused on MFA
+methods and deployment, recovery procedures for loss of MFA are
+
+
+CCS ’23, November 26–30, 2023, Copenhagen, Denmark Amft et al.
+less well understood. Hence, in this paper, we focus on this critical
+aspect of MFA security and usability: We investigate the security
+and usability of MFA recovery procedure deployments on the web.
+Recovery procedures are crucial to regaining access to accounts in
+case MFA factors are lost, stolen, or broken. The deployment of a
+recovery procedure by service providers has a significant impact
+on authentication security and usability. While locking users out
+of an account after losing access to MFA factors keeps up security
+assumptions of MFA, it might contribute to users’ frustration [61],
+users leaving a service, or even avoiding MFA in the future. How
+ever, allowing users to access their accounts after losing their MFA
+factors by returning to password-based authentication significantly
+decreases security, allowing attackers to more easily gain access to
+user accounts than with MFA. While security and usability seem
+to be directly at odds in many current implementations of MFA
+recovery, it is essential for service providers to relieve this tension
+through better communication, and policy and technical changes
+in order to provide both security and usability to support users.
+We aim to better understand the experience of users who have
+lost access to their MFA, and systematically evaluate MFA deploy
+ment and recovery, asking the following research questions:
+RQ1: “What MFA recovery procedures are commonly deployed on
+the web?” Due to their crucial impact on authentication se
+curity and usability, the variety of deployed MFA recovery
+procedures need to be better understood in the research com
+munity. We investigate the deployment and documentation
+of common MFA recovery procedures on the web.
+RQ2: “How are MFA recovery procedures on the web implemented and what is their impact on authentication security?” MFA
+recovery procedures aim to support users getting back into
+their accounts in case of losing access to MFA factors. We
+investigate how service providers balance the usability and
+security of MFA recovery procedures.
+RQ3: “How can the security and usability of MFA recovery proce
+dures be improved?” Standards or established best practices
+for MFA recovery procedures are missing. Based on our re
+sults, we make recommendations to balance the security
+and usability of MFA recovery procedures for future deploy
+ments.
+First, we created a list of 1,303 websites offering MFA. We sys
+tematically evaluated MFA recovery procedures deployed on these
+websites using their official help and support documentation. In a
+follow-up ERB-approved study, we performed an in-depth analysis
+of the security and usability of deployed MFA recovery procedures
+for a subset of 71 websites. We created accounts, enabled and con
+figured MFA, and went through the entire recovery process.
+In this paper, we make the following contributions:
+• MFA Recovery Procedure Deployment: By analyzing
+official help and support pages, and FAQs, we find that most
+websites only offer one recovery procedure, which is most
+commonly a backup code or direct support contact. A quarter
+of pages do not mention recovery in their help.
+• User Experience of MFA Recovery Procedures: We per
+form an in-depth investigation of the user experience of MFA
+recovery procedures on 71 websites. We could recover 52.11%
+of the accounts. In most cases, access to the associated email
+inbox was sufficient.
+• Recommendations: Based on our results, we provide rec
+ommendations for future research on secure and usable MFA
+recovery procedures. We also provide guidance for web de
+velopers to help deploy easier-to-use and secure MFA recov
+ery procedures, spanning all areas of recovery such as setup,
+communication, and recovery itself.
+• Replication: We provide all material including communi
+cation templates, the study protocols and our codebooks
+to support methodological transparency, replicability, and
+validity, and to help future research on this topic as part of a
+replication package1.
+This work is structured as follows. In Section 2, we describe
+previous work on the subject. We present the methodology and
+results of our deployment evaluation in Section 3.1, followed by
+our practical recovery test in Section 3.2. In Section 4, we elaborate
+on the ethics and limitations of our work. We discuss our findings
+in Section 5, and conclude in Section 6.
+2 RELATED WORK
+In this section, we present previous work on related areas and
+discuss our novelty and contributions compared to them. We first
+showcase related papers regarding MFA security and usability, then
+discuss research on the recovery of account access regarding both
+single-factor authentication and recovery of additional factors.
+2.1 Multi-Factor Authentication Usability
+Several previous works have investigated the usability of different
+popular MFA methods.
+In 2018, Colnago et al. observed the enrollment of Duo two
+factor authentication at their university. While adopters found it
+annoying, they also perceived it as easy to use and secure [25].
+In the same year, Reynolds et al. conducted two studies with Yu
+bikeys, asking participants to set them up or to include them into
+their daily lives. Despite participants embracing hardware keys,
+the study uncovered severe usability problems, especially during
+setup [76]. In 2019, Reese et al. conducted a usability study with
+72 participants comparing five different 2FA methods, confirming
+findings by Reynolds et al. [74].
+Ciolino et al. also conducted both a lab and longitudinal study
+comparing SMS OTP and hardware keys, and similar to previous
+works reported that SMS is both faster to use and set up, and that
+hardware keys are perceived as less usable [24]. In 2020, Reynolds
+et al. evaluated authentication data sets from two universities that
+introduced 2FA, finding that more than five percent of authenti
+cation attempts failed, mostly due to technical difficulties such as
+timeouts, or users canceling or mistyping the codes [75]. Similarly,
+Abbott and Patil examined authentication logs and surveyed uni
+versity users after 2FA became mandatory for them. They found
+that user acceptance was not influenced when 2FA was required
+for some sensitive authentication purposes, but decreased when
+it was enforced for every login [6]. Also in 2020, Farke et al. ac
+companied the introduction of FIDO2 keys as a single-factor (i. e., a
+1We provide this material on our accompanying website [13] and in our replication
+package: https://doi.org/10.25835/9v3k2sx0.
+
+
+An Evaluation of the Security and Usability of Multi-Factor Authentication Recovery Deployments CCS ’23, November 26–30, 2023, Copenhagen, Denmark
+password-less login, not a MFA method) in a small company, finding
+that while participants considered them usable, they stopped using
+them due to concerns such as login efficiency or missing browser
+support [31].
+A more recent work by Lyastani et al. evaluated 85 websites
+regarding their MFA usability by creating accounts and evaluat
+ing their MFA communication and settings. They found that MFA
+implementations are largely inconsistent between different web
+sites, and that many designs have previously been identified as
+obstructive or problematic [36].
+Overall, previous work shows that the usability depends on the
+MFA method used, e. g., SMS OTPs are often faster and more usable
+than hardware keys, although they are known to be less secure.
+Additionally, users commonly struggle with setup and continued
+usage, obstructing widespread voluntary adoption of MFA. While
+our work does not investigate user sentiments, we discuss the user
+experience of MFA methods and recovery procedures, and how
+website and service providers communicate MFA and its security
+benefits for online security.
+2.2 Account Recovery
+While not many previous works have discussed the recovery of
+inaccessible MFAs, several have worked on account recovery in
+general, and its potential obstacles.
+One of the currently still popular forms of account recovery,
+security questions, was criticized as early as 2008 when Rabkin
+addressed the issue of using security questions to regain account
+access. The work highlighted several issues, including how ques
+tions ask for easily obtainable knowledge, especially with the rise
+of social media [71]. A similar work by Schechter et al. in 2009
+confirmed this, finding that in 17% of attempts, user acquaintances
+were able to guess the answer to security questions, 13% were easily
+guessable within the first five attempts in general. Further issues
+included usability problems, as 20% of users forgot the answers
+themselves six months after setting them up [77]. The usability of
+security questions was further researched by Bonneau et al. in 2015
+in a survey. They found that 37% of participants lied when answer
+ing security questions, and 40% did not remember their answers
+when requiring them to recover their account [19].
+In 2006, Brainard et al. proposed a novel approach for account
+and MFA recovery, in which a trusted person can vouch for ac
+count owners and help them regain access. They further discussed
+limitations and variants, like additional measures to prevent users
+from abusing this recovery method as its own MFA [21]. A similar
+approach was investigated in 2009 through a lab study by Schechter
+et al. [78]. In their study, 17 of 19 participants successfully used
+trusted individuals, however, similar to the answers to security
+questions, some users forgot who their trusted individual was.
+In 2015, Hang et al. researched fallback authentication methods
+for smartphones, finding that current methods were largely suffi
+cient, but that a minority of users struggled with it due to a lack of
+knowledge or alternative authentication options [42]. While most
+of these studies examined specific account recovery procedures,
+Neil et al. evaluated real-world account recovery advice on 57 pop
+ular websites. Their results indicated that help sections were often
+1. MFA and Recovery Procedure Categorization
+(1) Compile initial list of 1,303 websites with MFA support. (2) Identify MFA and recovery procedures based on support and help pages. (3) Select a sample of 71 websites for in-depth analysis.
+2. In-Depth MFA Recovery User Experience
+(1) Account creation and MFA configuration on selected sample of 71 websites. (2) Wait for one week. (3) Go through MFA recovery procedure. (4) Debrief websites.
+3. Detailed Analysis of Documented MFA Recovery Procedures
+(1) Collect MFA documentation for selected sample of 71 websites. (2) Perform in-depth analysis of documented MFA recovery procedures and extend evaluation in step 1.
+Compare documented MFA recovery procedures with our experiences in the in-depth recovery procedure evaluation in step 2.
+Figure 1: Summary of our methodology, consisting of the MFA and recovery procedure categorization (cf. Section 3.1) and a follow-up in-depth evaluation of deployed MFA recovery procedures for 71 websites (cf. Section 3.2)
+incomplete and that 39% of websites were failing to address the
+topic at all [65].
+In 2021, Kunke et al. evaluated twelve account recovery pro
+cedures for passwordless authentication with FIDO2 regarding
+different criteria within the areas of usability, deployability, and
+security [48]. They found the recoveries to be lacking and, in some
+cases, such as security questions and backup passwords, jeopardize
+the idea of passwordless authentication. In 2023, Gilsenan et al.
+performed a usability analysis of 22 popular TOTP 2FA mobile apps
+regarding their backup implementations, finding that most rely on
+less secure methods such as SMS or email for backups [37].
+Furthermore, a recent study by Gerlitz et al. has also investigated
+how websites act when additional factors are lost. They were able
+to recover about half of their created accounts, and find that there
+are no best practices for recovery behavior or communication [34].
+To summarize, previous work has evaluated the security, usabil
+ity, and communication of fallback authentication methods. How
+ever, this typically happened in the context of account recovery,
+and with no regard for MFA loss. In contrast, we evaluate existing
+MFA recovery procedures by experiencing them first-hand, with
+special regard to its usability and (loss of) security benefits.
+3 MFA RECOVERY PROCEDURE ANALYSIS
+This section presents the method and findings of our analysis of de
+ployed MFA recovery procedures. Our analysis spans two parts; we
+first investigated deployed MFA recovery procedures for 1,303 web
+sites using their publicly available help and support pages. Second,
+we performed an in-depth analysis of MFA recovery procedures
+for a subset of 71 websites. We simulated a user’s experience after
+losing access to their MFA factor. See Figure 1 for a summary of all
+steps in our methodology.
+
+
+CCS ’23, November 26–30, 2023, Copenhagen, Denmark Amft et al.
+3.1 Deployment of MFA Recovery Procedures
+First, we conducted a systematic evaluation of MFA recovery pro
+cedures deployed on 1,303 websites that use MFA, based on the
+information provided on help and support pages. Overall, we inves
+tigate the impact of MFA recovery procedures on authentication
+security and usability.
+3.1.1 Methodology. We aimed to simulate users who lost access to
+their MFA factor and tried to find information on how to recover
+access to their accounts. While our overall focus was on the users’
+perspective on MFA recovery procedures instead of a measurement
+of deployed MFA methods on the web, we provide some context
+on the spread of MFA methods and recovery procedures in the
+following.
+Our dataset included all 1,303 websites with MFA deployments
+from 2f a.directory [2], a high-quality crowdsourced collection
+of websites with information about MFA deployment on the web.
+Most websites included on 2f a.directory offer services to users,
+and typically collect user-connected information, e. g., addresses
+for online shopping, or financial information for online banking.
+The 2fa.directory excludes self-hosted websites and websites that
+are not within the top 200,000 according to SimilarWeb [5]. We
+verified the rank requirements by cross-checking our sample with
+the Tranco list [50]2, and found 1,173 (90.02%) of the websites in
+our dataset within the top 200,000 websites, of which 692 (53.11%)
+were even within the top 20,000 (cf. Table 3in Appendix B.2)
+Overall, we found 2,021 websites on 2fa.directory. From these,
+we excluded 44 duplicates that were included in multiple categories,
+7 unreachable websites. We further only examined websites that
+were either in English or German and excluded 155 websites in
+other languages. Finally, 512 pages did not offer MFA and were
+therefore not relevant for our study. This gave us a total of 1,303
+websites. We focused on German and English websites, since all
+authors were either proficient in English or German. We excluded
+other languages since in some cases automated translations of help
+and support pages in other languages were ambiguous in the MFA
+methods or recovery used, too vague, or inaccurate. While some
+websites provided official translations, they were not always well
+maintained or even outdated. We further removed 15 websites we
+could not reliably reach due to, e. g., geo-restrictions, or unavailable
+services.
+To evaluate help and support pages, we used the support links
+provided in the 2f a.directory database, and the websites’ help
+and support sections that we could either find by manually going
+through the websites, or using Google with the following search
+term "<website> two-factor authentication"3. Within our
+Google search, we followed all links that were officially affiliated
+with the website in question (i. e., no third-party news websites)
+within the first page of Google results [22, 43, 44]. We visited all of
+them and examined them for input regarding MFA methods and
+recovery procedures. We followed all links and relevant prompts,
+including "Trouble logging in?" or "Forgot your MFA?" prompts.
+2Based on https://tranco-list.eu/list/82Q5V.
+3 We found this search term to work well, as Google also detected various synonyms (such as multi-step verification) or alternative spellings (2-factor instead of two-factor).
+We complemented the Google search with our manual search.
+This did not include interactive processes to reset passwords, as we
+focused on lost MFA.
+Two researchers analyzed the help and support pages for docu
+mented MFA recovery procedures using an inductive categorization
+approach [59]. We used a semi-open coding approach and an initial
+codebook including the five MFA methods given on 2fa.directory
+and several initial recovery procedures based on personal knowl
+edge and previous work [48, 71]. We extended or updated the code
+book accordingly whenever we identified a novel MFA recovery
+procedure, and revisited previous codings. The full codebook and a
+more detailed description of MFA methods and recovery procedures
+can be found in the replication package in Table 4, and Section A
+in the Appendix respectively
+We resolved all coding conflicts as they came up, leading to a
+hypothetical agreement of 100%. In line with common practice and
+previous high-quality qualitative research, we, therefore, chose to
+omit the calculation of an inter-rater reliability score [20, 60, 62,
+92].
+For the initial categorization, we coded for documented MFA
+and recovery procedures. We used counts, means, and other aggre
+gation measures to report our findings and generate descriptive
+statistics. During our evaluation, we made notes of every recovery
+procedure that stood out, either positively or negatively. This in
+cludes constraints on MFA, e. g., if it was only provided for certain
+user groups or customers, interesting security-related statements,
+such as stressing that lost MFA could not be recovered in any way,
+or interesting methods, such as receiving recovery codes via mail.
+We used these notes as a basis for the detailed coding described in
+Section 3.2 and our best practice recommendations in Section 5.
+3.1.2 Results. Overall, mobile applications were the most popular
+MFA method, deployed on 1,036 pages (79.51%), mostly as TOTP
+generator apps. Second most popular were SMS (559, 42.90%). All
+other methods, i. e., phone calls, email, hardware tokens, and vari
+ous other methods were noticeably less widespread and present in
+between 10.67%–15.73% (139–205) of our sample. On average, web
+sites offered 1.75 (median: 1.0) MFA methods. We provide details
+for MFA methods and their recovery procedures in Table 1.
+Websites offered an average of 1.28 (median: 1.0) different recov
+ery procedures. Most websites used direct support contacts (R01)
+(491; 37.68%) and backup codes (R02) (451; 34.61%). However, 321
+(24.64%) websites that deployed MFA did not provide publicly ac
+cessible information about MFA recovery procedures at all (R17).
+While some websites might provide MFA recovery information
+behind a login, we argue that users locked out due to MFA loss
+would benefit greatly from public recovery information.
+While 179 (13.74%) websites offered MFA using hardware tokens,
+no website in our sample offered them as a recovery procedure.
+In most cases, users could only use hardware tokens with another
+MFA method – a requirement we did not find for other MFA options.
+While websites did not justify this decision, we suspect known us
+ability issues of hardware tokens and a perceived higher likelihood
+of becoming inaccessible [24, 31, 57, 76].
+We compared MFA recovery procedures between website cat
+egories provided by the 2f a.directory categories, e. g., Banking,
+
+
+An Evaluation of the Security and Usability of Multi-Factor Authentication Recovery Deployments CCS ’23, November 26–30, 2023, Copenhagen, Denmark
+Table 1: Summary of deployed MFA methods and recovery procedures in our sample of 1,303 websites. For example, we find that of 559 websites using SMS (42.90% of all websites), 199 (35.6% of websites that offer SMS as main MFA) offer support contact as a recovery procedure. Because some websites offered multiple MFA and recovery procedures, not all percentages add to 100. We provide a more detailed description of these methods in our replication packageand in Section A in the Appendix
+Deployed MFA Methods All MFA SMS Phone Call Email Hardware Mobile App Other MFA
+All Recovery 1,303 (100%) 559 (42.90%) 156 (11.97%) 205 (15.73%) 179 (13.74%) 1,036 (79.51%) 139 (10.67%)
+Deployed Recovery Procedures
+R01 Contact Website Support 491 (37.68%) 199 (35.6%) 32 (20.51%) 72 (35.12%) 57 (31.84%) 413 (39.86%) 35 (25.18%) R02 Backup Codes 451 (34.61%) 155 (27.73%) 32 (20.51%) 34 (16.59%) 71 (39.66%) 435 (41.99%) 17 (12.23%) R03 Contact Local Admin 159 (12.20%) 79 (14.13%) 41 (26.28%) 13 (6.34%) 60 (33.52%) 152 (14.67%) 12 (8.63%) R04 Additional MFA Method 150 (11.51%) 119 (21.29%) 59 (37.82%) 31 (15.12%) 70 (39.11%) 134 (12.93%) 15 (10.79%) R05 Backup SMS/Phone Call 78 (5.99%) 35 (6.26%) 14 (8.97%) 7 (3.41%) 19 (10.61%) 74 (7.14%) 3 (2.16%) R06 Backup Email 49 (3.76%) 23 (4.11%) 4 (2.56%) 7 (3.41%) 5 (2.79%) 41 (3.96%) 4 (2.88%) R07 Dedicated Account Recovery System 45 (3.45%) 34 (6.08%) 20 (12.82%) 3 (1.46%) 19 (10.61%) 39 (3.76%) 3 (2.16%) R08 TOTP Seed 44 (3.38%) 6 (1.07%) 0 (0.0%) 2 (0.98%) 6 (3.35%) 44 (4.25%) 1 (0.72%) R09 Trusted Device 37 (2.84%) 26 (4.65%) 16 (10.26%) 2 (0.98%) 18 (10.06%) 33 (3.19%) 4 (2.88%) R10 Photo/Official ID Proof 30 (2.30%) 10 (1.79%) 3 (1.92%) 2 (0.98%) 3 (1.68%) 30 (2.9%) 1 (0.72%) R11 MFA Not Needed for Login 25 (1.92%) 14 (2.5%) 1 (0.64%) 3 (1.46%) 9 (5.03%) 23 (2.22%) 3 (2.16%) R12 Security Questions 16 (1.23%) 9 (1.61%) 3 (1.92%) 3 (1.46%) 0 (0.0%) 10 (0.97%) 1 (0.72%) R13 Password Reset 13 (1.00%) 2 (0.36%) 0 (0.0%) 3 (1.46%) 2 (1.12%) 11 (1.06%) 1 (0.72%) R14 Other Recovery 77 (5.91%) 38 (6.8%) 15 (9.62%) 7 (3.41%) 27 (15.08%) 62 (5.98%) 16 (11.51%)
+R15 Help Page Not Accessible 9 (0.69%) 2 (0.36%) 1 (0.64%) 1 (0.49%) 0 (0.0%) 6 (0.58%) 3 (2.16%) R16 No MFA Recovery Available 1 (0.08%) 0 (0.0%) 0 (0.0%) 0 (0.0%) 0 (0.0%) 1 (0.1%) 0 (0.0%) R17 No MFA Recovery Documented 321 (24.64%) 153 (27.37%) 53 (33.97%) 79 (38.54%) 24 (13.41%) 180 (17.37%) 65 (46.76%)
+or University websites. While most recovery procedures were uni
+formly distributed across website categories, some recovery proce
+dures were more common in certain categories. Providing selfies
+with handwritten notes and governmental IDs (R10) almost exclu
+sively appeared on Cryptocurrency websites. Universities were more
+likely to rely on local administrators (R03) for MFA recovery. Fig
+ure 6 in the Appendix illustrates the distribution of MFA recovery
+procedures across website categories in our dataset.
+Key Points | MFA Recovery Procedure Analysis More than 80%
+of the websites we analyzed deployed mobile apps and SMS for
+MFA. Most offered one MFA option, and one recovery procedure;
+Most websites used backup codes or direct support contact as
+their recovery procedure. A quarter of websites did not provide
+public MFA recovery information.
+3.2 Recovery User Experience
+The previous experiment sheds light on the deployment frequencies
+of different MFA recovery procedures, including recovery instruc
+tions for 1,303 websites supporting MFA.
+In this section, we investigate the user experience of deployed
+MFA recovery procedures.
+Therefore, we selected a subset of 71 websites, created accounts,
+and performed the entire MFA recovery procedure process. We
+focused on authentication security and usability and how well the
+implemented MFA recovery procedures were documented.
+3.2.1 Methodology. Since we were further interested in detailed
+but also diverse insights into MFA recovery procedures that can
+not be achieved from collecting help and support pages alone, we
+selected a subset of 71 websites for an in-depth analysis of the
+user experience. Similar to previous work [37, 52, 65, 68, 81], we
+chose to comprise our sample from different sources, including 28
+of the highest ranking, 27 random, and 16 hand-picked websites.
+We chose the 16 handpicked websites based on interesting edge
+cases in our larger dataset. This included 6 websites that offered se
+curity products such as SSL certificates or antivirus programs, and
+6 websites that mentioned unusual recovery procedures. Examples
+of unusual recovery procedures were preventive measures such
+as enforcing downloads of recovery codes, offering users to store
+various types of personal data which would be later used to recover
+the account, or multiple tests of the availability of their chosen re
+covery. Similarly, we chose some websites based on their recovery
+procedures, including a website that involved team members as
+witnesses to vouch for or against a recovery decision or enforcing
+fixed waiting times before MFA would be reset. Finally, we chose 2
+websites that explicitly mentioned that the account would be lost if
+users lose their MFA, including advice to buy multiple YubiKeys,
+and 2 websites with unclear or no instructions to see what would
+happen in these cases.
+From an initial qualitative sample of several websites, sampled
+after our three criteria above, we excluded websites that required
+pre-existing contract or group memberships (25), or data we could
+not or did not want to provide to protect the privacy of the re
+searchers conducting this study, e. g., credit or ID card data (23). We
+further excluded websites with terms of service that prohibited our
+use case (20). Other reasons included that the website shared its
+account with another website already in our sample (12), that we
+were blocked on due to unspecified reasons (11), or websites whose
+free versions were only time-limited trials (17). Finally, 3 domains
+forwarded us to other websites or were offline since the deploy
+ment evaluation. An anonymized overview of excluded websites is
+given in our replication package and in Table 7 in the Appendix B.2
+Whenever we could not create accounts, we replaced a website
+with the next best alternative where possible– e. g., if a top-ranked
+website required us to have a contract with them to acquire an
+account such as a bank, we replaced it with the next most popular
+website not yet included. We ended up with a sample of 71 websites,
+on which we tested MFA recovery. Despite the exclusion of web
+sites, we feel confident that our in-depth analysis of the actual MFA
+
+
+CCS ’23, November 26–30, 2023, Copenhagen, Denmark Amft et al.
+recovery process on 71 websites provides deep and diverse insights
+valuable to the research community. Additionally, the distribution
+of offered MFA methods in our final sample is comparable to the
+overall distribution on all 1,303 websites.
+We created accounts on all 71 websites using free account plans,
+enabled MFA, and triggered the respective MFA recovery proce
+dure. Using screencasts, we made video recordings of the entire
+procedure to compare it with the official documentation during
+later evaluation. To receive email and text messages for account
+creation, MFA setup, or MFA recovery, we used a Google email
+address created for the study and an eSIM with a US-based phone
+number.
+During the MFA setup, we simulated a user who follows in
+structions but only fulfilled the minimum requirements, following
+findings from previous work [45, 90, 96]. During the process, we
+noted all steps, whether we regained access, and how long recov
+ery took. We also captured security and usability details. For each
+website, we followed the protocol below:
+(1) We enabled the first MFA method provided by a website. We
+set specific or additional MFA and recovery procedures if the
+website gave explicit instructions to do so. This decision was
+further driven by the assumption that the first listed MFA
+method and recovery procedure is preferred by a website
+and likely best supported.
+(2) After one week had passed, we revisited the websites. This
+decreased suspicion because we did not immediately lose
+access after creating the accounts.
+(3) We tried to log in without our supposedly lost MFA and re
+covery procedures. If the respective website allowed account
+recovery for lost or inaccessible MFA devices, we followed
+it without using our configured recovery procedure (i. e., we
+did not use our backup codes to regain access), to simulate
+the experience of a user who has lost MFA completely.
+(4) If a website did not provide an automated emergency solu
+tion for login without MFA or the recovery procedure we
+configured, we contacted the website’s support directly. In
+our initial request(cf. Appendix B.1) we said that we recently
+lost a backpack containing our phone and wallet, and found
+ourselves without access to the configured MFA factor.
+(5) If there was no way to contact the website (e. g., because sup
+port channels were only available for paying account plans),
+we stopped, marked the account as lost, and continued with
+the next website.
+For an in-depth analysis of MFA recovery procedure experience
+and comparison with their documentation, we qualitatively as
+sessed the help and support pages of the 71 websites in our data set.
+We collected all relevant help and support pages for all websites:
+• We performed a Google search for "<website> two-factor
+authentication"3 similar to the one for our deployment
+evaluation.
+• We collected the help and support sections linked in the
+2fa.directory database.
+• We manually navigated websites, starting with their main
+pages and using their search functions if available.
+Following the steps above, we saved screenshots of help pages
+and expanded our codebook from the initial categorization (see
+0 20 40 60 80 100
+Available, but
+Unrelated (n=5)
+Backup Code (n=39)
+No Recovery (n=21)
+Other (n=5)
+TOTP (n=5)
+Recovery Procedures
+Recovered Lost No Answer
+Figure 2: Overview of the recovery success rates per recovery procedure in percent per method. Other encompasses two phone-based recoveries and contact support. TOTP also includes the TOTP secrets. Numbers do not add up to 71 due to websites offering multiple recovery procedures.
+Table 4) We added details such as whether a website explicitly
+warned their users of account loss in case of losing access to their
+MFA, if MFA was required in general, and how often it needed to be
+entered, or whether users were required to set a recovery procedure
+(see Table 5 for the codebook expansion) We coded both the MFA
+account setup processes and the information provided on the help
+pages. We compared them to identify potential shortcomings or
+contradictions in how providers communicate MFA to their users.
+Our institution’s ethical review board (ERB) approved the study, and
+we took measures to protect the websites’ identities, their resources,
+and the time of their staff (cf. Section 4.1).
+3.2.2 Results. Below, we provide details for our MFA recovery
+procedures evaluation. Furthermore, we compare our user experi
+ence of MFA recovery procedures with their official MFA recovery
+documentation.
+Account Recovery Success Rates. Overall, we created 71 ac
+counts in August and September 2022. We regained access to 37
+(52.11%), and lost access to 30 (42.25%). As of the time of submission,
+we did not receive an answer from 4 (5.63%) service providers. Fig
+ure 5 in the Appendix connects our website sample to MFA methods
+and recovery success. We configured mobile apps (49, 69.01%), SMS
+(15, 21.13%), email (6, 8.45%) and finally hardware token (1, 1.41%)
+as primary MFA methods. We found that websites that deployed
+SMS-based MFA had slightly worse recovery success rates than
+TOTP or other app-based approaches. As we retained access to our
+email inbox during our study, i. e., we never lost access to the main
+MFA method on the respective website, email had a perfect success
+rate. We decided not to further bias our results due to a change
+in methodology by treating websites with email as the main MFA
+differently from those that deployed other MFA methods.
+Overall, we set up at least one MFA recovery procedure on 50
+(70.42%) websites. However, 21 (29.58%) either did not offer any
+MFA recovery option or did not prompt us to configure a recovery
+option during MFA setup. The recovery rates for all MFA recovery
+procedures are illustrated in Figure 2.
+We configured and stored backup codes (R02) for 39 websites.
+Only 6 (15%) of those websites tried to verify backup code avail
+ability during setup, e. g., by asking for the code or confirming that
+
+
+An Evaluation of the Security and Usability of Multi-Factor Authentication Recovery Deployments CCS ’23, November 26–30, 2023, Copenhagen, Denmark
+Figure 3: Summary of account recovery and loss split by root cause. We distinguished between recovery due to email as the main MFA method, and email as the main recovery communication channel due to which access is regained.
+we stored the code. We simulated having lost access to our backup
+codes for the recovery requests. We could regain access to only
+slightly more than half (22, 56.41%), and lost 16 accounts (41.03%).
+The remaining 1 website did not reply to our recovery request.
+We were unable to regain access to any account that used TOTP
+apps or their seeds for MFA recovery (5, 100.0%). On 5 websites, we
+tried to recover our account using available, but unrelated proce
+dures, i. e., alternative contact methods such as backup email (R06)
+or phone numbers (R05) we set up during account creation that
+were never officially dedicated as recovery or mentioned during
+MFA setup. Despite the vague communication, this led to indeed 4
+(80.0%) accounts being recovered from MFA loss. For other recovery
+procedures, mostly consisting of phone-based (R05) recovery or
+the direct mention of support channels (R01) as a backup solution,
+we regained access to 2 (40.0%) accounts. Finally, we did not set
+up (R16) MFA recovery procedures on 21 websites, as this was not
+part of the MFA setup process. Despite the lack of a recovery proce
+dure, we could regain 10 (47.62%) accounts. Overall, we configured
+MFA recovery for 54 accounts. We successfully regained access to
+27 (50%), and lost access to 23 (42.59%) accounts. We received no
+answer from 4 (7.41%).
+Account Recovery User Experience. During our user experi
+ence, we found MFA recovery implementations to differ vastly,
+e. g., websites offering different MFA or recovery procedures, or
+some including the recovery procedure configuration in MFA setup
+while others do not. We provide details on the reasons for accepting
+or denying manual account recovery, finding similarly inconsis
+tent and contradictory recovery philosophies, e. g., some websites
+argued that because our account was barely used, there was no
+harm in allowing us back in, while others argued that this meant
+there was no harm in us losing access and creating a new account.
+Our findings hereof are described in the following paragraphs and
+illustrated in Figure 3.
+Among the 30 accounts to which we did not regain access, 6
+(8.45%) were because we could not contact the website’s adminis
+trator or customer support team. Reasons included that on some
+websites, our free account plan was not eligible to receive any sup
+port, leaving us, and any user with a free account, no way to reach
+out and ask for help. Additionally, some websites required us to
+use contact forms for which we did not have all the necessary in
+formation, e. g., credit card information or banking transactions,
+IMEI phone identifiers, or information about the specific program
+from the vendor’s offer we were using, the information we were not
+asked to provide or set up during account creation. Another website
+required us to provide our location and an order number, as the
+contact form assumed that only paying customers with questions
+or problems regarding their orders would reach out. Finally, one
+website had removed their contact information from their website,
+arguing that due to a high request volume, only specific user groups
+were allowed to contact them. We refrained from reaching out with
+a dishonest request.
+Of the websites we were able to contact, 10 (14.08%) had strict
+policies regarding recovery and would not allow access without the
+configured MFA or recovery procedure. Finally, 13 (18.31%) websites
+required us to provide various sensitive and identifying documents,
+such as governmental ID cards or bank transaction receipts; when
+we refused, we lost access to these accounts. However, we success
+fully recovered 6 (8.45%) accounts due to being able to access our
+primary email MFA method and 10 (14.08%) due to being able to
+provide specific knowledge about the account during the recovery
+procedure. This encompassed metadata or contextual information,
+such as our organization name, our address, the account creation
+date, typical login locations as well as our ISP or IP. One website
+asked us a series of questions about our typical behavior and set
+tings, many of which were potentially public knowledge, such as
+the date of our last broadcast or other connected platforms. We re
+covered one account by answering security questions that had been
+part of the account creation process. Three websites asked about po
+tentially sensitive, personal, or identifying information such as, e. g.,
+recent orders or payment information—which we could not provide
+as we never completed a transaction on the website—or use of an
+SSH shell or GitHub recovery—which we had never connected—but
+several websites allowed us to regain access despite failing these
+requirements.
+For 4 (5.63%) accounts, we regained access immediately after our
+initial request with no further questions asked and no requirements
+or needing to go through any recovery process. In 3 (4.23%) cases,
+the recovery was time based. Here, MFA was disabled after a waiting
+period of 3–14 days. In these cases, our primary email account
+received multiple reminders and warnings, designed to give the
+legitimate account owners time to interrupt the recovery in case a
+malicious or unknown third party made the recovery request.
+Overall, we found that most of our requests to regain access were
+fulfilled after just a few emails from our primary email account
+and that we rarely required more than contextual knowledge about
+either the account or us as the main user. Our findings suggest that
+the security of many deployed MFA recovery procedures is similar
+to that of the email account connected to the MFA we wished to
+recover, or that of security questions, as many requested data points
+were often easily guessable or public knowledge such as connected
+
+
+CCS ’23, November 26–30, 2023, Copenhagen, Denmark Amft et al.
+platforms or our companies address, or accessible via our email
+inbox such as account creation dates or ISPs.
+Correspondence with Website Support Teams. The majority
+of accounts, to which we regained access, it was sufficient to have
+email access (26, 70.27%); this encompasses accounts that used email
+as their main MFA or recovery procedure, as well as accounts that
+asked us to confirm our request by email to disable MFA and regain
+access. While only confirmed by one website explicitly, we assume
+this was required as a form of phishing protection.
+In two cases, websites typically used for commercial purposes
+tried to ask our account owner to allow them to disable MFA for us.
+As they assumed a hierarchy within the account – e. g., a dedicated
+main user, admin or owner, and several team members–but found
+us to be the only user, we received messages to the same email
+both as a user who applied for a MFA reset, and as account owner
+that can allow or deny this request. Hence, we were able to allow
+ourselves back into the account. While this might be an edge case
+of their recovery procedure, it might lead to a decreased security
+of important administrator roles in comparison to normal users, as
+this cancels the extra obstacle of requiring admin approval.
+Overall, we set up a recovery procedure during the account and
+MFA setup for 50 (70.42%) websites. When we initially applied
+for account recovery (cf. Appendix B.1 for the message) we did
+not mention these recovery procedures, but only stressed that we
+lost our wallet and phone. While this would render most pre-set
+recoveries, such as backup codes, still usable (47, 87.04%), only a
+minority of 10 (14.08%) websites mentioned using the pre-set recov
+ery procedure, with one of them disabling our MFA without further
+requirements after we responded that we lost the backup codes as
+well. 10 (14.08%) websites insisted on only allowing us access if we
+used either the original MFA or the recovery procedure we set up.
+Only a few websites enforced and verified the configuration of a
+MFA recovery procedure. During our experiment, 10 (14.08%) web
+sites required us to set up and test the recovery procedure before
+being allowed to complete the MFA setup or required a manual
+confirmation that backup codes were stored before finalizing the
+MFA configuration.
+Documented MFA (Recovery) Procedures. In this paragraph,
+we discuss our evaluation of how websites communicated the details
+of MFA and recovery procedures with users, encompassing both
+our user experience during the account and MFA setup process, as
+well as the publicly accessible help and support pages.
+Building on our evaluation of help pages in our initial catego
+rization (Section 3.1.1), for our user experience, we revisited each of
+the 71 websites’ help and support pages in a more in-depth investi
+gation of their MFA and recovery procedures and formed a basis
+for comparison with our user experience. We collected additional
+data about, e. g., whether the recovery setup was part of enabling
+MFA, if users were warned about account loss in case of MFA loss,
+or whether account restrictions or forced setup of recoveries were
+mentioned. We next discuss interesting findings and differences be
+tween the documentation and our own experience. Figure 4 displays
+the frequency with which the topics in this section are present in
+either our experience or the official help and documentation pages.
+Overall, our recovery experience never matched the documented
+0 20 40 60 80 100 Percentage
+Recovery is Part
+Of MFA Setup
+Explicit Warning
+About Account Loss
+Vague Warning
+About Account Loss
+Warning about
+SMS Usage
+Account Usage
+Mandates MFA
+MFA Enforces
+Recovery Setup
+Mention of
+MFA Trigger
+Present in Experience Present in Documentation
+Figure 4: Percentage of occurrence of certain topics or hints within either our own experience when setting up accounts and MFA, or the respective help and support pages. Note that not all services offer SMS, i. e., related topics are not necessarily applicable for all tested websites.
+recovery procedure perfectly. Even if only the offered MFA meth
+ods are considered, we still only find 9 (12.68%) of all help and
+support pages to match our experience regarding available MFA
+methods and recovery procedures. This difference suggests that
+recovery procedures are commonly not communicated properly
+during setup, or that documentations are outdated or incomplete.
+Our detailed analysis also reveals that at most two-thirds of
+websites discussed recovery procedures during MFA setup, slightly
+more frequently present in documentations (66.2%) than in (our)
+user experience (59.15%).
+Although a perfectly secure MFA implementation would include
+account loss for users unable to prove their identity, we found
+only 16 (22.54%) websites to explicitly warn us about the potential
+danger of irrevocably losing access. This was even rarer within
+official documentation (13, 18.31%). However, 35 websites (49.3%)
+included more vague warning phrasings that mentioned account
+loss but refrained from portraying it as a guaranteed consequence
+of losing MFA and its recovery. Overall, we find that most of these
+do not convey the urgency of keeping the MFA secured, or do not
+even clearly state the connection between losing one’s MFA and
+therefore losing access to the account. In the following, we examine
+aspects from Figure 4 in tandem with our recovery rates.
+We further find that the warnings did not always portray the
+truth: 9 (12.68%) websites allowed us back into our accounts despite
+having warned us explicitly that they would not. On the other hand,
+we found that we lost 6 (8.45%) accounts without receiving any prior
+warning. As such, we emphasize that when warning users about
+account loss in case of MFA loss, websites should also introduce
+users to the recovery process, particularly during MFA setup. We
+find that of the websites that do warn about account loss, only 14
+(19.72%) adhere to this, suggesting that users are often left alone
+with the task of researching and enabling MFA recovery procedures,
+despite the danger of account loss.
+In our initial evaluation of deployed MFA and recovery pro
+cedures, we found SMS to be a popular MFA solution despite its
+known insecurities [15, 46, 51, 80]. We were therefore interested
+
+
+An Evaluation of the Security and Usability of Multi-Factor Authentication Recovery Deployments CCS ’23, November 26–30, 2023, Copenhagen, Denmark
+in the number of websites that acknowledged these insecurities
+and warned about SMS and found that while SMS was available for
+roughly half of all pages, websites rarely (0% during user experi
+ence;9.86% of documentations) admitted its insecurity.
+Further, our analysis indicates that websites were often incon
+sistent regarding their communication of mandatory MFA usage or
+the enforcement of recovery procedures. We find usage restrictions
+mentioned more commonly within official documentation (30.99%)
+than we encountered (4.23%). This is likely because websites most
+commonly mentioned requiring account administrators to enable
+MFA, and the accounts we created might not have had this sta
+tus. Regarding enforcing recovery setup, only a small portion of
+websites includes this (14.08% during user experience; 7.04% of doc
+umentations). As websites cannot verify that users did, e. g., store
+their backup codes, we considered every mechanism that tried to
+only allow users to continue the process after the recovery was set,
+e. g., by using checkboxes in which users confirm that they stored
+the backup, asking users to use the backup as a proof, or setting up
+recovery before MFA itself is set.
+Websites often mention in which situations MFA is triggered,
+e. g., any login, only logins from new locations or devices, or spe
+cific functionalities such as accessing security-relevant settings or
+withdrawing funds. However, we find the MFA trigger more com
+monly mentioned on help and support pages (92.96%) than as a part
+of the MFA setup (70.42%), although, e. g., how commonly users are
+required to provide the information can be an important reason for
+or against enabling MFA.
+Finally, we examined the number of pages within the documen
+tation, help sites, and FAQs that discussed MFA and its recovery.
+In cases where a website offered multiple services, we included
+only those related to the specific account we set up, and argue that
+ideally, all information should be present on a few pages to help
+users find information quickly without getting lost within the doc
+umentation and to help website providers keeping all information
+current as there are fewer pages requiring updates. We find that 18
+(25.35%) websites within our sample used more than three differ
+ent pages to discuss all details of MFA and its recovery, therefore
+potentially obstructing a user’s search for help, and involuntarily
+burying information within too many pages.
+Sample Characteristics. This study explored different MFA recov
+ery implementations that services deployed in an in-depth study
+of recovery procedures. While our sample is not generalizable,
+we provide an overview of the websites within our sample and
+the respective recovery results to contextualize our findings. An
+anonymized overview of websites in our sample can be found in
+our replication packageand in Table 6 in the Appendix. In general,
+it is difficult to quantify the value of accounts, as this is not only
+dependent on financial information linked to them, but also on
+social, physical, or sentimental value, and therefore subjective for
+each user. For example, while losing a social media account can be
+meaningless for some, it might be the base of income for others.
+Likewise, the precise threat model is dependent on how valuable
+users estimate their accounts to be, which results in a similar sub
+jective outcome. However, we deem the value of an account to be
+highly relevant to users, as this has an impact on their security
+decisions and how they protect accounts.
+To estimate the risk and damage for users when they lose access
+to an account, or when a malicious third party is wrongfully given
+access, we took notes on which types of data a website requires
+to function, including financial data (e. g., credit card or banking
+information), addresses (typically in the form of delivery or in
+voice addresses), or others such as telephone numbers. We find the
+majority (42) of websites to require financial data to utilize the web
+site, typically because its main purpose is related to investments,
+shopping, or money pooling, and while accounts can be created
+without providing payment data, they are unusable with regard
+to the website’s purpose. Additionally, 25 websites do not require
+storing payment data, but offer e. g., voluntary subscriptions. In
+our recovery experiment, we were able to recover half of these
+websites (50% for required data; 56% for voluntary data), showing
+that the improper MFA implementations we encountered indeed
+endangered valuable user data. Similarly, a large portion requires
+(30) or optionally collects (20) an address, and again was able to re
+gain access to a significant number of websites (33.33% for required
+data; 60.00% for voluntary data).
+Overall, most websites in our sample offer paid services, there
+fore collecting personal data. While financial data is typically not
+displayed in plain text (i. e., attackers cannot gain the credit card
+number as only the last digits are shown), it might still be abused by
+an attacker if malicious orders are placed using stored payment in
+formation. Other information, such as personal addresses or phone
+numbers, could be leaked and abused. In cases where the account
+is lost without a malicious party gaining access, users might lose
+access to products they legitimately bought, or lose content with
+sentimental value, such as social media they maintained for years,
+or photos and memories they shared. However, we found some
+websites to re-allow access in case an invoice or bank statement
+was provided, as this was accepted to identify the user.
+When regarding the different sample sources, i. e., whether the
+account was added to our sample because it was interesting, top
+ranked, or randomly selected, we see almost no differences regard
+ing the success of our recovery study. Overall, we successfully
+regained half of all samples, with the largest difference being that
+we received any kind of answer or reaction from all top-ranked ac
+counts, therefore losing more accounts than in other sample types.
+However, the non-answer of 4 handpicked and random accounts
+can also be considered as a form of account loss. Similarly, we found
+top-ranked accounts to more commonly offer contact forms rather
+than email addresses, which might be due to them being more pro
+fessionally structured due to their popularity and large user bases.
+While the recovery results were similar for all samples, we found
+handpicked accounts to diverge from the other two samples in some
+cases, e. g., by less commonly offering SMS or software tokens and
+overall having less variety in their offered MFA methods, as well as
+offering no contact forms, but usually, email addresses to reach out
+to support staff.
+While we excluded websites that required the provision of, e. g.,
+governmental IDs at start-up to protect the sensitive documents of
+the researchers conducting this study, we found that 13 websites
+later required them for recovery purposes, leading to account loss
+on our side. This includes websites that mainly deal with, e. g.,
+cryptocurrencies, payments, or IT-focused websites that offered,
+e. g., domain registrations, and website hosting. However, we also
+
+
+CCS ’23, November 26–30, 2023, Copenhagen, Denmark Amft et al.
+encountered similar websites within the sample that allowed us
+access without requiring a governmental ID, i. e., we regained access
+to potentially valuable accounts with typically only access to the
+respective email inbox.
+Key Points | Recovery User Experience We created 71 accounts,
+lost access to our MFA, and recovered access to half of them.
+Three quarters of the websites prompted us to set up any kind
+of recovery during MFA setup, typically backup codes. Reasons
+for success included email access and contextual knowledge;
+reasons for account loss were strict policies, lack of ID, and
+lack of contact options. User experience and documentations
+rarely matched, with documentations usually providing addi
+tional information.
+4 ETHICS AND LIMITATIONS
+Below, we discuss ethical concerns and the limitations of our work.
+4.1 Ethics
+This work was approved by our institution’s ethical review board.
+In the first part of our evaluation, we manually examined non
+personal, publicly available data. We further took care to not cause
+unusual resource burdens, and refrain from naming any website
+in the paper. In the second part of this work we contacted human
+support staff who were not initially aware that our support requests
+were part of an academic research project. However, we carefully
+designed our study according to the Menlo Report [28] and its
+recommendations for a deception study. Overall, we deem the harm
+caused by our study to be justified by the benefits to society offered
+by the evaluation of current MFA setups and recovery procedures
+and the resulting recommendations for developers and website
+operators. During our work, we caused an additional workload
+with our dishonest support requests. To minimize the burden on
+individuals, we took care to exclude websites working solely with
+volunteers. Furthermore, we limited ourselves to creating only one
+account per service and sent only one support request. We kept
+all communication as concise as possible and did not send out
+reminders. We also refrained from collecting sensitive data, and did
+not evaluate the support staff members themselves.
+For each website, we studied the terms of service and refrained
+from registering with 20 services for which we would have violated
+them. As we were unable to ask for prior consent due to the nature of
+the study, we followed best practices and sent a post hoc notification
+and debriefing email to all services we evaluated (see Appendix B.1)
+We informed them about the fully anonymous use of their data and
+allowed them to drop out of the study, in which case we deleted
+all collected data for the respective website, and did not use it in
+our work. A total of 4 websites declined participation and were
+subsequently removed from our data set. Overall, we deem the
+deception in this work to be necessary for our goal of evaluating
+unbiased MFA recovery procedures, as otherwise support staff
+members might have adapted their behavior. All details of our
+methodology, including all texts we used to communicate with
+human support workers, were part of our approved ERB application.
+4.2 Limitations
+In observational studies like ours, there are multiple potential
+sources of bias or error. First, regarding our data source, we obtained
+a list of websites offering MFA using the 2fa.directory database. As
+we illustrate (c.f. Section 3.1) this database offers a public repository,
+where volunteers can contribute data according to certain quality
+criteria [3, 4, 5]. The quality criteria nicely align with our research
+goals, since they require high popularity ranks. We, therefore, de
+cided to use 2fa.directory instead of manually going through top
+websites. During our evaluation, we noticed that the list is slightly
+biased towards including more technical websites (e. g., 43.59% of
+all 1,303 websites belong to technical or related categories). How
+ever, these websites are likely more tech-affine and therefore may
+be more likely to offer MFA. This suggests that our measurement
+constitutes an upper bound to MFA recovery procedure quantity. To
+categorize the websites, we restricted ourselves to publicly available
+information, and might therefore have missed information only
+accessible to authorized users. However, this reflects the perspec
+tive of users who lost access, search information on MFA recovery
+procedures, and can also only rely on publicly available data.
+The user experience study had additional limitations. We could
+not create accounts on 111 websites, including websites that re
+quired us to provide a government-issued ID, sign a (paid) contract
+for, e. g., a bank or investment service and utility providers for, e. g.,
+gas or electricity, be part of a certain group such as enrolled stu
+dents, or own certain devices such as IoT devices. This decision was
+made to protect the privacy of the Ph.D. students conducting this
+research. Additionally, our sample of service providers is globally
+distributed, and some services abroad did not allow us to create
+accounts located in Germany. We further focused on free account
+plans and did not pay for any service. While premium account tiers
+could have led to different results (e. g., because we would have
+received premium support), we think that our results still provide
+valuable insights for the community, and reflect the experience of
+users who are unable to pay for such services. Furthermore, we ex
+cluded 155 websites that were not primarily in German or English.
+While we aimed to sample high-ranked, handpicked, and random
+websites to increase diversity, and resampled whenever we needed
+to skip a website (cf. Section 3.1.1), the number of handpicked web
+sites was limited and could therefore not be arbitrarily extended,
+resulting in uneven group sizes. Our study is further limited by
+our choice to not utilize the recovery codes we received on some
+websites and to retain our email inbox. However, our goal was to
+treat all websites equally, and we argue that losing our recovery
+procedure along with the main MFA sufficiently reflects reality,
+especially since the configuration is rarely enforced.
+Finally, during our detailed analysis of our experience and official
+help and documentation pages, we might have missed information
+due to not following every path during the account and MFA setup.
+We especially did not follow links to the documentation given
+during MFA setup, but only the texts and prompts were shown
+during the process.
+5 DISCUSSION
+Below, we discuss our results and address our research questions.
+
+
+An Evaluation of the Security and Usability of Multi-Factor Authentication Recovery Deployments CCS ’23, November 26–30, 2023, Copenhagen, Denmark
+5.1 RQ1: Diverse Landscape of Recovery Procedures
+We identified 17 different recovery procedures based on the public
+help and support pages of 1,303 websites (cf. Section 3.1.2). Most
+providers offered support telephone hotlines, email addresses, or
+local IT staff, followed by backup codes. All procedures offer limited
+usability and security: Users may reach out to support channels
+and IT staff over insecure channels, such as unencrypted email [53,
+82]. While backup codes are easy to distribute, they have similar
+issues as passwords: users can lose them or store them insecurely.
+The high diversity of MFA recovery procedures we found is
+in line with work by Ghorbani Lyastani et al. who investigated
+MFA deployments without evaluating recovery. Implementations
+between websites and service types differed vastly, and we could
+not identify best practices regarding MFA recovery procedures. Due
+to the lack of standards or best practices, most website providers
+deployed custom procedures, often leading to contradictions be
+tween websites and making the lives of their users unnecessarily
+complicated. For example, we both encountered websites suggest
+ing setting up multiple backup methods, while others encouraged
+their users to only configure one recovery procedure to reduce
+their attack surface. While we agree that too many backup options
+decrease security, it is sensible to not rely on a single method and to
+clearly communicate the offered methods and the significance of a
+working recovery. Similarly, some websites warned us about using
+SMS-based services due to various possible attacks on mobile net
+works, while others praised SMS for its availability and usability. In
+general, SMS should be avoided due to several vulnerabilities [15, 46,
+51, 80] – however, due to its advantages, it can be a valid method
+for low-risk services if there is an alternative for users that are
+uncomfortable with sharing their private phone numbers. After
+reaching out to their support, some providers recommended we
+create new accounts instead of recovering the existing ones. They
+made this recommendation after manually checking our accounts
+and seeing that they were not frequently used.
+Another provider re-allowed us access without identification
+because the account was empty and not much used. In this specific
+case, we deem both methods valid for empty accounts but argue
+that account deletion is the safer option to give users full control
+over the stored data in case recovery procedures are abused. In all of
+these cases, the deviating arguments have a well-meaning, true core,
+and in many cases, compromises based on the nature of the service
+are necessary. We discuss shortcomings and recommendations in
+Section 5.3.
+5.2 RQ2: Inconsistencies Compromise Security & Usability
+Overall, we found examples of both websites that prioritized se
+curity, and did not allow us access without the proper MFA or
+recovery procedure we configured, and websites that helped us to
+regain access without having access to our second factor, lowering
+authentication security (cf. Section 3.2.2). However, from a user’s
+point of view, this means either sacrificing security or usability,
+which can be especially critical for accounts that manage important
+resources such as monetary funds or medical data.
+We identified inconsistencies between the authentication secu
+rity associated with the use of MFA, and the recovery procedures im
+plemented on many websites. Using MFA is expected to strengthen
+the security of authentication by limiting account access to users
+who know the account password and are in possession of the con
+figured additional authentication factor. However, having access to
+the email address we used for account creation was sufficient for
+most of the accounts we regained access to. This effectively reduces
+the security of MFA to that of email security, which has been criti
+cized in prior work about account recovery [8, 53], and would allow
+an attacker with email access to circumvent MFA. Whenever we
+were required to provide contextual evidence such as our address
+or the nature of connected platforms, the security decreased to the
+level of security questions, which are also known to be insecure
+and guessable [19, 71].
+Although we never said anything about having lost backup codes
+as well, services typically did not request them to recover our MFA.
+This might be based on experiences with prior users that typically
+lose both MFA and recovery, or that many users did not configure a
+recovery procedure. However, it also means that services refrained
+from utilizing their own suggested recovery. Websites that distrib
+ute backup codes should adhere to these security decisions and not
+accept other, even less secure alternative identifications.
+We ascribed many of the rejected recovery requests to usability
+issues. This includes not being able to contact the support, e. g.,
+because contact is only available to logged-in or paying users. This
+can be especially frustrating when users are left without any other
+recovery option.
+In other cases, providers requested any form of ID or data with
+out previously informing us that they would be part of the MFA
+recovery procedure. While governmental IDs are a valid way to
+verify identities in some situations, they are not suitable to do so
+for accounts that often know little more about their users than full
+names, birthdates, or email addresses. Furthermore, even video
+based identification processes have been successfully circumvented,
+allowing attackers to falsify documents and successfully imperson
+ate their victims [30].
+We find that websites rarely prepare users to provide ID iden
+tification, as they are usually not prompted to provide it during
+account setup, or informed that it will become relevant during re
+covery. However, the availability of these documents can otherwise
+be an issue, and lead to higher obstacles during recovery later on.
+For example, not all countries, including the USA and Switzerland,
+require their citizens to own governmental IDs. Further, the causes
+of MFA loss might also affect the availability of recovery: a lost or
+stolen purse might mean that not only the TOTP app on a user’s
+phone, but also their wallet and ID might be gone, or an emergency,
+such as a house fire, could destroy both mobile phones and identi
+fying documents. Finally, users who are not aware of the relevance
+of identifying information for MFA recovery might provide false
+information to protect their privacy.
+Some websites had exceptional expectations. For example, some
+help and support pages suggested setting up multiple hardware keys
+in case one was lost or broken. While having a backup configured
+is, in general, sensible, hardware keys are expensive, and having
+to set up multiple keys can impose a financial burden excluding
+
+
+CCS ’23, November 26–30, 2023, Copenhagen, Denmark Amft et al.
+users from setting up MFA or its recovery. However, this is also
+encouraged by official FIDO guidelines regarding security keys [10].
+Other websites downplayed the process of regaining access to
+their users’ phone numbers, by suggesting users get a replacement
+SIM card with which they can access their original MFA again.
+However, this replacement can require significant time to arrive,
+especially if the user needs replacement during, e. g., a vacation.
+We find the documentation to largely match our experience, but
+none of them matches perfectly. While we expect help and support
+pages to be more detailed, we argue that some details, such as warn
+ings about account loss, or the intended recovery procedure should
+also be communicated during MFA setup. However, they are often
+not found at all in either, therefore not sufficiently preparing users
+for a potential loss of MFA. We further find that websites often do
+not match their documentation regarding the most basic elements,
+such as the offered MFA and setup methods, which suggests that
+help and support pages might be outdated and not reflect the cur
+rent recovery procedures. This could lead to unpleasant surprises
+as users are not properly prepared for MFA recovery.
+5.3 RQ3: Improving MFA Recovery Procedures
+The three most pressing problems we identified related to unreach
+able support teams, insufficient MFA recovery procedure documen
+tation, and information that was needed for recovery but not con
+figured during setup. Based on our findings, we make the following
+recommendations:
+Prepare. Our findings illustrate that recovery procedures require
+a sufficient setup that should be part of the MFA setup. We suggest
+that all information service providers requests during recovery
+are collected at account setup. Users need to be warned about
+everything that is strictly necessary, i. e., they should be told about
+required documents and how to avoid recovery failures due to
+security reasons. However, asking for too much or too sensitive
+information can be risky in regard to, e. g., information abuse and
+data breaches [47, 58] and might deter users. Future research should
+work on identifying the right balance between the interests of
+both user privacy and MFA recovery. While we agree that limiting
+the number of MFA recovery procedures is useful to not open up
+multiple attack vectors, having fallbacks available is in line with
+general security recommendations depending on the respective use
+case and threat model [27, 56]. As some procedures, such as SMS
+or security questions, are known to be insecure or impractical, we
+suggest offering backup codes, additional unique communication
+channels, e. g., bank statements where possible to identify the user
+as account owners, or additional (desktop) devices with TOTP.
+Communicate. The process of setting up, disabling, or recovering
+MFA and what to expect in the worst case should be clearly and
+directly communicated during the setup process and be part of
+publicly available help and support pages. We argue that having too
+many help pages can be confusing and lead to both users not finding
+the information they need [73], and website maintainers struggling
+to keep them all up-to-date. We, therefore, suggest keeping the
+number of different help and support pages as low as possible and
+using structural elements like HTML tabs to help users more easily
+find the required information for their platform or MFA method.
+Maintain. Recovery procedures should be tested regularly. Web
+sites could prompt users to, e. g., enter one of their backup codes or
+a TOTP to make sure that the recovery procedure is still available
+and working. Previous work has shown that pop-ups and secu
+rity warnings can be perceived as obtrusive or might be ignored
+by users [7, 14, 83, 91]. Hence, future work is required to find a
+good trade-off between verifying that recovery procedures are still
+available, and obstructing user workflows too much.
+Recover. For MFA recovery, we urge websites to adhere to their
+documented recovery procedures. When websites deviate from
+their documented recovery procedures, e. g., by restoring access
+despite warning about definite account loss, or by allowing ad
+ditional recovery measures, they might create opportunities for
+attackers that users are not aware of, or create (false) expectations
+for other websites. Additionally, honest and clear communication
+about the consequences of MFA loss can help users make informed
+and empowered decisions about their authentication security. We
+advise against using sensitive documents, such as governmental
+IDs or utility bills, as identity proof, as they often cannot reliably
+identify authorized users. However, if this kind of identification is
+sensible and necessary, websites should take precautions to collect
+it early on and make sure that users are informed of this part of
+their recovery procedure.
+5.4 Putting our Work into Context
+Previous work often focused on investigating the theoretical usabil
+ity of recovery procedures in different areas [36, 37, 42, 48, 65, 71,
+75]. In contrast, our work studies the first-hand user experience of
+MFA recovery procedures on websites: We went through the actual
+MFA recovery procedure processes implemented by 71 websites
+and reported lessons learned. We could regain access to almost
+half of the websites we tested based on having access to our email
+inbox. Hence, our study illustrates that MFA recovery procedures’
+security on websites is affected by similar security risks as TOTP
+apps or smartphone security implementing insecure methods as
+fallback [37, 48, 75, 78].
+Previous work evaluated security documentation for setting up
+MFA [36, 76], and encountered issues around unclear instructions.
+Our work shows many websites did not sufficiently document
+their MFA recovery processes, e. g. instructions described recovery
+processes that did not match the implemented deployments. Some
+websites did not provide documentation at all.
+6 CONCLUSION
+MFA recovery procedures need to balance security and usability
+by allowing authorized users to access accounts without locking
+them out due to MFA loss. We are the first to analyze deployed MFA
+recovery procedures and related documentations on the web. In
+this work, we first categorized the recovery procedures deployed
+on 1,303 websites, then conducted an in-depth analysis in which we
+created 71 accounts, configured MFA and recovery procedures, and
+finally tried to recover them from supposed MFA loss. We found
+that most websites only offered a limited selection of recovery
+procedures and that these were not necessarily part of the MFA
+setup process. In the recovery process, websites often did not adhere
+to their documentation and allowed us access without requiring
+
+
+An Evaluation of the Security and Usability of Multi-Factor Authentication Recovery Deployments CCS ’23, November 26–30, 2023, Copenhagen, Denmark
+the configured MFA or recovery. In most cases, having access to
+the account’s associated email address was sufficient for account
+recovery. Overall, we recommend websites clearly and correctly
+document their MFA recovery procedures. Measures to detect loss
+of MFA or recovery procedures before users are locked out should
+be in place.
+ACKNOWLEDGMENTS
+We thank the included websites for allowing us to use their data
+and our insights into their processes for this work. Furthermore, we
+thank our reviewers for their valuable feedback. Finally, we thank
+Philip Klostermeyer and Juliane Schmüser for proofreading our
+work. Funded by the and by the VolkswagenStiftung Niedersächsis
+ches Vorab – ZN3695 and by the Deutsche Forschungsgemeinschaft
+(DFG, German Research Foundation) under Germany ́s Excellence
+Strategy - EXC 2092 CASA – 390781972.
+REFERENCES
+[1] 1Password. 2023. The World’s Most-Loved Password Manager. https://1passw ord.com/ (visited on 09/06/2023). (2023). [2] 2factorauth. 2023. 2FA Directory. https : / / 2fa . directory / int/ (visited on 09/06/2023). (2023). [3] 2factorauth. 2023. 2fa.directory Excluded Categories and Websites. https://gith ub.com/2factorauth/twofactorauth/blob/master/EXCLUSION.md (visited on 09/06/2023). (2023). [4] 2factorauth. 2023. Contributing to 2fa.directory. https://github.com/2factorau th/twofactorauth/blob/master/CONTRIBUTING.md (visited on 09/06/2023). (2023). [5] 2factorauth. 2023. Issue: Add Site with 2FA. https://github.com/2factorauth/tw of actorauth/issues/new?assignees=&labels=add+site&template=01- add- sitewith-2fa.yml&title=Add+%5Bsite+name%5D (visited on 09/06/2023). (2023). [6] Jacob Abbott and Sameer Patil. 2020. How Mandatory Second Factor Affects the Authentication User Experience. In Proceedings of the 2020 CHI Conference
+on Human Factors in Computing Systems, 1–13.
+[7] Devdatta Akhawe and Adrienne Porter Felt. 2013. Alice in Warningland: A Large-Scale Field Study of Browser Security Warning Effectiveness. In Proc.
+22nd Usenix Security Symposium (SEC’13). USENIX Association.
+[8] Fatma Al Maqbali and Chris J Mitchell. 2018. Email-Based Password Recovery
+Risking or Rescuing Users? In 2018 International Carnahan Conference on Security Technology (ICCST). IEEE, 1–5.
+[9] FIDO Alliance. 2016. FIDO 2.0: Client To Authenticator Protocol. https://fidoal liance.org/specs/f ido- v2.0- rd- 20161004/f ido- client- to- authenticator- protoco l-v2.0-rd-20161004.html (visited on 09/06/2023). (2016). [10] FIDO Alliance. 2023. FIDO Security Key UX Guidelines. https://fidoalliance.or g/ux-guidelines/security-key-ux-guidelines/ (visited on 09/06/2023). (2023). [11] FIDO Alliance. 2021. FIDO1.0 U2F Specification Archive. https://fidoalliance.o rg/specs/fido-u2f-v1.0-ps-20141009/ (visited on 09/06/2023). (2021). [12] Ron Amadeo. 2019. The Pixel 4’s Face Unlock Works on Sleeping, Unconscious People. https://arstechnica.com/gadgets/2019/10/the-pixel-4s-face-unlockworks-on-sleeping-unconscious-people/ (visited on 09/06/2023). (2019). [13] Sabrina Amft, Sandra Höltervennhoff, Nicolas Huaman, Alexander Krause, Lucy Simko, Yasemin Acar, and Sascha Fahl. 2023. Website: “We’ve Disabled MFA for You”: An Evaluation of the Security and Usability of Multi-Factor Authentication Recovery Deployments. https://publications.teamusec.de/2023ccs-multi-factor-recovery/ (visited on 09/06/2023). (2023). [14] Daniel V. Bailey, Philipp Markert, and Adam J. Aviv. 2021. "I Have No Idea What They’re Trying to Accomplish:" Enthusiastic and Casual Signal Users’
+Understanding of Signal PINs. In Seventeenth Symposium on Usable Privacy
+and Security (SOUPS 2021). USENIX Association, (Aug. 2021), 417–436. isbn: 978-1-939133-25-0. https://www.usenix.org/conference/soups2021/presentati on/bailey. [15] Brian Barrett. 2019. Wired: How Twitter CEO Jack Dorsey’s Account Was Hacked. https://www.wired.com/story/jack-dorsey-twitter-hacked/ (visited on 09/06/2023). (2019). [16] David Basin and Cas Cremers. 2010. Degrees of Security: Protocol Guarantees in the Face of Compromising Adversaries. In International Workshop on Computer Science Logic. Springer, 1–18. [17] Erick Bauman, Yafeng Lu, and Zhiqiang Lin. 2015. Half a Century of Practice: Who is Still Storing Plaintext Passwords? In International Conference on
+Information Security Practice and Experience. Springer, 253–267.
+[18] Joseph Bonneau. 2012. The Science of Guessing: Analyzing an Anonymized
+Corpus of 70 Million Passwords. In 2012 IEEE Symposium on Security and
+Privacy. IEEE, 538–552. [19] Joseph Bonneau, Elie Bursztein, Ilan Caron, Rob Jackson, and Mike Williamson. 2015. Secrets, Lies, and Account Recovery: Lessons from the Use of Personal
+Knowledge Questions at Google. In Proceedings of the 24th International Conference on World Wide Web, 141–150.
+[20] Xander Bouwman, Harm Griffioen, Jelle Egbers, Christian Doerr, Bram Klievink, and Michel van Eeten. 2020. A different Cup of TI? The Added Value of Commer
+cial Threat Intelligence. In 29th USENIX Security Symposium (USENIX Security
+20). USENIX Association, (Aug. 2020), 433–450. isbn: 978-1-939133-17-5. https: //www.usenix.org/conf erence/usenixsecurity20/presentation/bouwman. [21] John Brainard, Ari Juels, Ronald L Rivest, Michael Szydlo, and Moti Yung. 2006. Fourth-Factor Authentication: Somebody You Know. In Proceedings of the 13th
+ACM Conference on Computer and Communications Security, 168–178.
+[22] Brian Dean. 2019. We Analyzed 5 Million Google Search Results - Here’s What We Learned About Organic Click Through Rate. https://backlinko.com/googlectr-stats (visited on 01/04/2022). (2019). [23] Pew Research Center. 2021. Mobile Fact Sheet. https://www.pewresearch.org/i nternet/fact-sheet/mobile/ (visited on 09/06/2023). (2021). [24] Stéphane Ciolino, Simon Parkin, and Paul Dunphy. 2019. Of Two Minds about Two-Factor: Understanding Everyday FIDO U2F Usability through Device Com
+parison and Experience Sampling. In Fifteenth Symposium on Usable Privacy and Security (SOUPS 2019).
+[25] Jessica Colnago, Summer Devlin, Maggie Oates, Chelse Swoopes, Lujo Bauer, Lorrie Cranor, and Nicolas Christin. 2018. “It’s Not Actually that Horrible” Exploring Adoption of Two-Factor Authentication at a University. In Proceedings
+of the 2018 CHI Conference on Human Factors in Computing Systems, 1–11.
+[26] Sanchari Das, Andrew Dingman, and L Jean Camp. 2018. Why Johnny Doesn’t Use Two Factor a Two-Phase Usability Study of the FIDO U2F Security Key. In
+International Conference on Financial Cryptography and Data Security. Springer,
+160–179. [27] Roger Dingledine, Nick Mathewson, and Paul Syverson. 2004. Tor: The SecondGeneration Onion Router. Tech. rep. Naval Research Lab Washington DC. [28] D Dittrich and E Kenneally. 2012. The Menlo Report: Ethical Principles Guiding Information and Communication Technology Research. https://catalog.caida.o rg/paper/2012_menlo_report_actual_formatted (visited on 09/06/2023). (2012). [29] Paul Ducklin. 2022. Slack Admits to Leaking Hashed Passwords for Five Years. https://nakedsecurity.sophos.com/2022/08/08/slack- admits- to- leaking- hashe d-passwords-for-three-months/ (visited on 09/06/2023). (2022). [30] erdgeist. 2022. Chaos Computer Club Hacks Video-Ident. https://www.ccc .de/en/updates/2022/chaos- computer- club- hackt- video- ident (visited on 09/06/2023). (2022). [31] Florian M Farke, Lennart Lorenz, Theodor Schnitzler, Philipp Markert, and Markus Dürmuth. 2020. “You Still Use the Password After All”–Exploring FIDO2 Security Keys in a Small Company. In Sixteenth Symposium on Usable
+Privacy and Security (SOUPS 2020), 19–35.
+[32] SelfKey Foundation. 2022. All Data Breaches in 2019 – 2022 – An Alarming Timeline. https://selfkey.org/data-breaches-in-2019/ (visited on 09/06/2023). (2022). [33] Sergiu Gatlan. 2022. Lastpass Says Hackers Accessed Customer Data in New Breach. https://www.bleepingcomputer.com/news/security/lastpass-says-ha ckers-accessed-customer-data-in-new-breach/ (visited on 09/06/2023). (2022). [34] Eva Gerlitz, Maximilian Häring, Charlotte Theresa Mädler, Matthew Smith, and Christian Tiefenau. 2023. Adventures in Recovery Land: Testing the Account Recovery of Popular Websites When the Second Factor is Lost. In Nineteenth
+Symposium on Usable Privacy and Security (SOUPS 2023). USENIX Association,
+227–243. [35] Eva Gerlitz, Maximilian Häring, and Matthew Smith. 2021. Please do not use!? _ or your License Plate Number: Analyzing Password Policies in German
+Companies. In Seventeenth Symposium on Usable Privacy and Security (SOUPS
+2021), 17–36. [36] Sanam Ghorbani Lyastani, Michael Backes, and Sven Bugiel. 2023. A Systematic Study of the Consistency of Two-Factor Authentication User Journeys on
+Top-Ranked Websites. In 30th Annual Network & Distributed System Security
+Symposium (NDSS’23). The Internet Society. [37] Conor Gilsenan, Fuzail Shakir, Noura Alomar, and Serge Egelman. 2023. Security and Privacy Failures in Popular 2FA Apps. In 32nd USENIX Security
+Symposium (USENIX Security 23).
+[38] Google. 2023. Google. https://google.com (visited on 09/06/2023). (2023). [39] Andy Greenberg. 2013. Forbes: German Hacker Group Says It’s Broken The iPhone’s TouchID Fingerprint Reader. https://www.forbes.com/sites/andygree nberg/2013/09/22/german- hackers- say- theyve- broken- the- iphones- touchidfingerprint-reader/ (visited on 09/06/2023). (2013). [40] Andy Greenberg. 2017. Wired: Watch a 10-Year-Old’s Face Unlock His Mom’s iPhone X. https://www.wired.com/story/10-year-old-face-id-unlocks-mother s-iphone-x/ (visited on 09/06/2023). (2017).
+
+
+CCS ’23, November 26–30, 2023, Copenhagen, Denmark Amft et al.
+[41] Ameya Hanamsagar, S Woo, Christopher Kanich, and Jelena Mirkovic. 2016. How Users Choose and Reuse Passwords. Information Sciences Institute. [42] Alina Hang, Alexander De Luca, Emanuel Von Zezschwitz, Manuel Demmler, and Heinrich Hussmann. 2015. Locked Your Phone? Buy a New One? From Tales of Fallback Authentication on Smartphones to Actual Concepts. In Pro
+ceedings of the 17th International Conference on Human-Computer Interaction with Mobile Devices and Services, 295–305.
+[43] Nadjla Hariri. 2011. Relevance Ranking on Google: Are Top Ranked Results Really Considered more Relevant by the Users? Online Information Review. [44] Helene Hembrooke, Bing Pan, Thorsten Joachims, Geri Gay, and Laura Granka. 2005. In Google we Trust: Users Decisions on Rank, Position and Relevancy.
+Journal of Computer-Mediated Communication, Special Issue on Search Engines.
+[45] Cormac Herley. 2009. So long, and No Thanks for the Externalities: The Rational Rejection of Security Advice by Users. In Proceedings of the 2009 Workshop on
+New Security Paradigms Workshop, 133–144.
+[46] Roger Piqueras Jover. 2020. Security Analysis of SMS as a Second Factor of Authentication. Communications of the ACM, 63, 12, 46–52. [47] Sowmya Karunakaran, Kurt Thomas, Elie Bursztein, and Oxana Comanescu. 2018. Data Breaches: User Comprehension, Expectations, and Concerns with
+Handling Exposed Data. In Fourteenth Symposium on Usable Privacy and Security (SOUPS 2018), 217–234.
+[48] Johannes Kunke, Stephan Wiefling, Markus Ullmann, and Luigi Lo Iacono. 2021. Evaluation of Account Recovery Strategies with FIDO2-Based Passwordless
+Authentication. In Roßnagel, Schunck et al.(Eds.): Open Identity Summit 2021 (OID’21), Lyngby, Denmark, June 1st and 2nd, 2021. Gesellschaft für Informatik
+eV, 59–70. [49] LastPass. 2023. LastPass | Password Manager. https : / / www . lastpass . com/ (visited on 09/06/2023). (2023). [50] Victor Le Pochat, Tom Van Goethem, Samaneh Tajalizadehkhoob, Maciej Korczyński, and Wouter Joosen. 2019. Tranco: A Research-Oriented Top Sites Ranking Hardened Against Manipulation. In Proceedings of the 26th Annual
+Network and Distributed System Security Symposium (NDSS 2019). (Feb. 2019).
+doi: 10.14722/ndss.2019.23386. [51] Kevin Lee, Benjamin Kaiser, Jonathan Mayer, and Arvind Narayanan. 2020. An Empirical Study of Wireless Carrier Authentication for SIM Swaps. In Sixteenth
+Symposium on Usable Privacy and Security (SOUPS 2020). USENIX Association,
+(Aug. 2020), 61–79. isbn: 978-1-939133-16-8. https://www.usenix.org/conferen ce/soups2020/presentation/lee. [52] Kevin Lee, Sten Sjöberg, and Arvind Narayanan. 2022. Password Policies of Most Top Websites Fail to Follow Best Practices. In Eighteenth Symposium on
+Usable Privacy and Security (SOUPS 2022), 561–580.
+[53] Yue Li, Haining Wang, and Kun Sun. 2018. Email as a Master Key: Analyzing
+Account Recovery in the Wild. In IEEE INFOCOM 2018-IEEE Conference on Computer Communications. IEEE, 1646–1654.
+[54] Google LLC. 2023. Google Authenticator. https://play.google.com/store/apps /details?id=com.google.android.apps.authenticator2 (visited on 09/06/2023). (2023). [55] D. M’Raihi, S. Machani, M. Pei, and J. Rydell. 2011. TOTP: Time-Based One-Time Password Algorithm. RFC 6238. http://www.rfc- editor.org/rfc/rfc6238.txt. RFC Editor, (May 2011). http://www.rfc-editor.org/rfc/rfc6238.txt. [56] Pratyusa K. Manadhata and Jeannette M. Wing. 2011. An Attack Surface Metric.
+IEEE Transactions on Software Engineering, 37, 3, 371–386. doi: 10.1109/TSE.20
+10.60. [57] Karola Marky, Kirill Ragozin, George Chernyshov, Andrii Matviienko, Martin Schmitz, Max Mühlhäuser, Chloe Eghtebas, and Kai Kunze. 2022. “Nah, it’s just annoying!” A Deep Dive into User Perceptions of Two-Factor Authentication.
+ACM Transactions on Computer-Human Interaction, 29, 5, 1–32.
+[58] Peter Mayer, Yixin Zou, Florian Schaub, and Adam J Aviv. 2021. "Now I’m a bit {angry:}" Individuals’ Awareness, Perception, and Responses to Data Breaches
+that Affected Them. In 30th USENIX Security Symposium (USENIX Security 21),
+393–410.
+[59] Philipp Mayring. 2014. Qualitative Content Analysis: Theoretical Foundation, Basic Procedures and Software Solution. Social Science Open Access Repository (SSOAR), Klagenfurt, 143. [60] Allison McDonald, Catherine Barwulor, Michelle L Mazurek, Florian Schaub, and Elissa M Redmiles. 2021. "It’s stressful having all these phones": Investigating Sex Workers’ Safety Goals, Risks, and Practices Online. In 30th USENIX
+Security Symposium. USENIX, 375–392.
+[61] Allison McDonald, Carlo Sugatan, Tamy Guberek, and Florian Schaub. 2021. The Annoying, the Disturbing, and the Weird: Challenges with Phone Numbers as Identifiers and Phone Number Recycling. In Proceedings of the 2021 CHI
+Conference on Human Factors in Computing Systems, 1–14.
+[62] Nora McDonald, Sarita Schoenebeck, and Andrea Forte. 2019. Reliability and Inter-Rater Reliability in Qualitative Research: Norms and Guidelines for CSCW and HCI Practice. ACM on Human-Computer Interaction, 3, CSCW, Article 72, 23 pages. [63] Inc. Meta Platforms. 2023. Facebook. https://facebook.com (visited on 09/06/2023). (2023).
+[64] Patrick Mutchler, Adam Doupé, John Mitchell, Christopher Kruegel, and Giovanni Vigna. 2015. A Large-Scale Study of Mobile Web App Security. In Proc.
+2015 Mobile Security Technologies Workshop (MoST’15). IEEE.
+[65] Lorenzo Neil, Elijah Bouma-Sims, Evan Lafontaine, Yasemin Acar, and Bradley Reaves. 2021. Investigating Web Service Account Remediation Advice. In Sev
+enteenth Symposium on Usable Privacy and Security (SOUPS 2021), 359–376.
+[66] Netflix. 2023. Netflix. https://netflix.com (visited on 09/06/2023). (2023). [67] William Newhouse, Brian Johnson, Sarah Kinling, Jason Kuruvilla, Blaine Mulugeta, and Kenneth Sandlin. 2019. NIST SPECIAL PUBLICATION 180017 Multifactor Authentication for E-Commerce Risk-Based, FIDO Universal Second Factor Implementations for Purchasers. https : / / doi . org / 10 . 6028 /NIST.SP.1800-17. (July 2019). [68] Marten Oltrogge, Nicolas Huaman, Sabrina Amft, Yasemin Acar, Michael Backes, and Sascha Fahl. 2021. Why Eve and Mallory Still Love Android: Revisiting TLS (In)Security in Android Applications. In Proc. 30th Usenix Security Symposium (SEC’21). USENIX Association. [69] Sarah Pearman, Jeremy Thomas, Pardis Emami Naeini, Hana Habib, Lujo Bauer, Nicolas Christin, Lorrie Faith Cranor, Serge Egelman, and Alain Forget. 2017. Let’s Go in for a Closer Look: Observing Passwords in Their Natural
+Habitat. In Proceedings of the 2017 ACM SIGSAC Conference on Computer and Communications Security, 295–310.
+[70] Vilius Petkauskas. 2022. Thomson Reuters Collected and Leaked at Least 3TB of Sensitive Data. https://cybernews.com/security/thomson-reuters-leaked-ter abytes-sensitive-data/ (visited on 09/06/2023). (2022). [71] Ariel Rabkin. 2008. Personal Knowledge Questions for Fallback Authentication: Security Questions in the Era of Facebook. In Proceedings of the 4th Symposium
+on Usable Privacy and Security, 13–23.
+[72] Simone Raponi and Roberto Di Pietro. 2020. A Longitudinal Study on Websites Password Management (in)Security: Evidence and Remedies. IEEE Access, 8, 52075–52090. [73] Elissa M Redmiles, Noel Warford, Amritha Jayanti, Aravind Koneru, Sean Kross, Miraida Morales, Rock Stevens, and Michelle L Mazurek. 2020. A Comprehensive Quality Evaluation of Security and Privacy Advice on the Web. In 29th
+USENIX Security Symposium (USENIX Security 20), 89–108.
+[74] Ken Reese, Trevor Smith, Jonathan Dutson, Jonathan Armknecht, Jacob Cameron, and Kent Seamons. 2019. A Usability Study of Five Two-Factor Authentication
+Methods. In Fifteenth Symposium on Usable Privacy and Security (SOUPS 2019).
+[75] Joshua Reynolds, Nikita Samarin, Joseph Barnes, Taylor Judd, Joshua Mason, Michael Bailey, and Serge Egelman. 2020. Empirical Measurement of Systemic
+2FA Usability. In 29th USENIX Security Symposium (USENIX Security 20), 127
+143. [76] Joshua Reynolds, Trevor Smith, Ken Reese, Luke Dickinson, Scott Ruoti, and Kent Seamons. 2018. A Tale of Two Studies: The Best and Worst of Yubikey
+Usability. In 2018 IEEE Symposium on Security and Privacy (SP). IEEE, 872–888.
+[77] Stuart Schechter, AJ Bernheim Brush, and Serge Egelman. 2009. It’s No Secret. Measuring the Security and Reliability of Authentication via “Secret” Questions.
+In 2009 30th IEEE Symposium on Security and Privacy. IEEE, 375–390.
+[78] Stuart Schechter, Serge Egelman, and Robert W Reeder. 2009. It’s Not What You Know, But Who You Know: A Social Approach to Last-Resort Authentication.
+In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems,
+1983–1992. [79] Zoë Schlanger. 2017. A Man was Able to Use Face ID to Unlock His Brother’s New iPhone X. https://qz.com/1120545/a-man-was-able-to-use-face-id-to-un lock-his-brothers-apple-aapl-iphone-x (visited on 09/06/2023). (2017). [80] Hossein Siadati, Toan Nguyen, Payas Gupta, Markus Jakobsson, and Nasir Memon. 2017. Mind Your SMSes: Mitigating Social Engineering in Second Factor Authentication. Computers & Security, 65, 14–28. [81] Peter Snyder, Cynthia Taylor, and Chris Kanich. 2017. Most Websites Don’t Need to Vibrate: A Cost-Benefit Approach to Improving Browser Security. In
+Proceedings of the 2017 ACM SIGSAC Conference on Computer and Communications Security, 179–194.
+[82] Christian Stransky, Oliver Wiese, Volker Roth, Yasemin Acar, and Sascha Fahl. 2022. 27 Years and 81 Million Opportunities Later: Investigating the Use of Email Encryption for an Entire University. In 43rd IEEE Symposium on Security
+and Privacy, IEEE S&P 2022, May 22-26, 2022. IEEE Computer Society, (May
+2022). [83] Joshua Sunshine, Serge Egelman, Hazim Almuhimedi, Neha Atri, and Lorrie Faith Cranor. 2009. Crying Wolf: An Empirical Study of SSL Warning Effective
+ness. In Proc. 18th Usenix Security Symposium (SEC’09). USENIX Association.
+[84] Joshua Tan, Lujo Bauer, Nicolas Christin, and Lorrie Faith Cranor. 2020. Practical Recommendations for Stronger, More Usable Passwords Combining Minimumstrength, Minimum-length, and Blocklist Requirements. In Proceedings of the
+2020 ACM SIGSAC Conference on Computer and Communications Security, 1407
+1426. [85] Twilio. 2023. Authy. https://authy.com/ (visited on 09/06/2023). (2023). [86] Inc. Twitter. 2023. X. https://twitter.com (visited on 09/06/2023). (2023). [87] Blase Ur, Fumiko Noma, Jonathan Bees, Sean M Segreti, Richard Shay, Lujo Bauer, Nicolas Christin, and Lorrie Faith Cranor. 2015. “I Added ‘!’at the End
+
+
+An Evaluation of the Security and Usability of Multi-Factor Authentication Recovery Deployments CCS ’23, November 26–30, 2023, Copenhagen, Denmark
+to Make It Secure”: Observing Password Creation in the Lab. In Symposium on
+Usable Privacy and Security (SOUPS).
+[88] Chun Wang, Steve TK Jan, Hang Hu, Douglas Bossart, and Gang Wang. 2018. The Next Domino to Fall: Empirical Analysis of User Passwords Across Online
+Services. In Proceedings of the Eighth ACM Conference on Data and Application Security and Privacy, 196–203.
+[89] Ke Coby Wang and Michael K. Reiter. 2019. How to End Password Reuse on the
+Web. In 26th Annual Network and Distributed System Security Symposium, NDSS 2019, San Diego, California, USA, February 24-27, 2019. The Internet Society.
+https://www.ndss- symposium.org/ndss- paper/how- to- end- password- reuseon- the- web/. [90] Rick Wash, Emilee Rader, Ruthie Berman, and Zac Wellmer. 2016. Understanding Password Choices: How Frequently Entered Passwords are Re-used Across
+Websites. In Twelfth Symposium on Usable Privacy and Security (SOUPS 2016),
+175–188. [91] Joel Weinberger and Adrienne Porter Felt. 2016. A Week to Remember: The Impact of Browser Warning Storage Policies. In Proc. 12th Symposium on Usable
+Privacy and Security (SOUPS’16). USENIX Association.
+[92] Dominik Wermke, Noah Wöhler, Jan H Klemmer, Marcel Fourné, Yasemin Acar, and Sascha Fahl. 2022. Committed to trust: a qualitative study on security & trust in open source software projects. In 2022 IEEE Symposium on Security and Privacy (SP). IEEE, 1880–1896. [93] Inc. Wikimedia Foundation. 2023. Wikipedia. https://en.wikipedia.org (visited on 09/06/2023). (2023). [94] Davey Winder. 2019. Forbes: Apple’s iPhone FaceID Hacked In Less Than 120 Seconds. https://www.forbes.com/sites/daveywinder/2019/08/10/apples-ipho ne-faceid-hacked-in-less-than-120-seconds/ (visited on 09/06/2023). (2019). [95] Davey Winder. 2019. Forbes: Collection 1: More Than 770M People Pwned In Biggest Stolen Data Dump Yet. https://www.forbes.com/sites/daveywinder/20 19/01/17/collection- 1- more- than- 770m- people- pwned- in- biggest- stolen- dat a-dump-yet/ (visited on 09/06/2023). (2019). [96] Shundan Xiao, Jim Witschey, and Emerson Murphy-Hill. 2014. Social Influences on Secure Development Tool Adoption: Why Security Tools Spread. In
+Proceedings of the 17th ACM Conference on Computer Supported Cooperative Work & Social Computing, 1095–1106.
+A MFA METHODS AND KNOWN RECOVERY PROCEDURES
+Below, we provide background information for MFA approaches
+and recovery procedures we encountered. We also discuss their
+impact on authentication security and usability.
+A.1 Email
+MFA based on email, commonly uses pre-generated one-time pass
+codes (OTP) or a verification link sent to the user via email. Conse
+quently, users retain account access as long as they can access their
+email account. However, email security is lacking when compared
+to other mechanisms, as emails are usually sent in plaintext [82],
+and email account security often depends on password-based au
+thentication [41, 88]. Password resets also often occur via email [38,
+63, 66, 86, 93], effectively downgrading security to the email ac
+counts’ password. It is further possible to use email OTPs as a
+recovery procedure for MFA4.
+A.2 SMS & Phone Call OTP
+A common alternative to email are OTPs via SMS. Apart from
+that, users can receive automated phone calls to provide OTPs.
+Most people own a phone [23], making SMS or phone calls popular
+additional authentication factors. The recovery of this method is
+potentially expensive and time-consuming because it requires users
+to obtain a new device and regain access to their phone number.
+While popular, telephone-based MFA has proven to be insecure due
+to its susceptibility to various severe attacks [15, 46, 51, 80], that
+4 In our evaluation, we only considered this as recovery if it was explicitly a secondary
+backup, and otherwise considered it as an additional MFA method.
+enable third parties to intercept traffic or change the user’s phone
+number to the attacker’s device via social engineering. Similar to
+email, a secondary phone number can be used to offer SMS or phone
+calls as MFA recovery4.
+A.3 Mobile Applications
+Mobile applications, such as time-based one-time password (TOTP)
+apps like Google Authenticator [54], are a common MFA method.
+They generate one-time passwords [55] (OTPs) that users can pro
+vide to prove their identity4. The app is set up by scanning a confi
+dential QR code or entering a secret key provided by the respective
+website, which serves as a seed for the TOTP algorithm. As long
+as both server and client have the same current time and share the
+same secret, they can independently compute the same TOTP val
+ues. Besides this, some apps like Authy [85], or password manager
+apps such as LastPass [49] or 1Password [1] require users to register
+an account and offer a cloud backup of the supported MFA as a
+trade-off. While this eases recovery, it also means that users are not
+fully in control over their data, as service providers also have access
+to the backups. Related to this, LastPass leaked user data during
+two hacks in 2022 [33]. Lastly, some websites provide custom apps
+for their respective services, and include MFA in the forms of, e. g.,
+TOTP, usage of biometric sensors embedded in smartphones, or
+push notifications. The provided security and usability in these
+cases is limited by the app vendor and its implementation [64].
+A.4 Hardware Tokens
+Hardware tokens (e. g., smart-cards), code generators (e. g., Trans
+action Authentication Number (TAN) generators), or Universal Sec
+ond Factor (U2F) [11] hardware keys, are established MFA methods.
+WebAuthn supports the use of trusted platform modules, including
+biometric identity checks [9]. The adoption of U2F and WebAuthn
+has been limited [26], often due to their complex initial setups and
+device requirements. However, recent improvements provide better
+usability [74]. The protocol offers verified security guarantees [16]
+and the main assumption is the secrecy of the chosen hardware
+token, resulting in the credential proof being something you have.
+A.5 User-Dependent Methods
+Below, we illustrate approaches that are dependent on the user, their
+input, or inherent features. First, biometry-based MFA commonly
+relies on apps that use the internal biometry security options of,
+e. g., mobile phones to authenticate. The main advantage compared
+to mobile applications is that authentication uses biometric features,
+requiring no additional device or memorization. While technically
+secure, there have been reports of malfunctioning biometrics [12,
+39, 40, 79, 94], and they further require very sensitive personal infor
+mation for authentication. Another approach are secret questions
+that supposedly only the authorized user can answer, and backup
+codes that users are given and supposed to store securely or print,
+or the storage of the TOTP secret, i. e., the secret key or QR code
+shown during MFA setup. While these methods are commonly
+deployed as recovery or alternative to MFA, the security is often
+lacking: security questions can easily be guessed, especially since
+they tend to require information that is often known to acquain
+tances or social media contacts [19, 71, 77], and user-set passwords
+
+
+CCS ’23, November 26–30, 2023, Copenhagen, Denmark Amft et al.
+are often weak or re-used [18, 69, 87, 89, 90]. Methods such as
+backup codes or stored secrets are easily lost or allow attackers to
+bypass MFA completely if they gain access.
+A.6 Website-Dependent Methods
+We also distinguish methods that are dependent on the websites.
+In case access to MFA is lost, users can often contact the website
+support. In other cases, especially for team-accounts or self-hosted
+tools, the account is managed by local administrators that can be
+contacted. Both cases can include fixed waiting times or identity
+verification for account recovery. In some cases, this process is more
+straightforward, as users are asked to provide a photo proof of
+them holding, e. g., handwritten notes or governmental IDs. Other
+websites utilize automated dedicated recovery systems, or disable
+MFA automatically when the password is reset. The security of
+these methods depends on the respective communication channel,
+such as email or HTTPS. While easy to use, the usability can suffer
+from, e. g., long response times or queries for additional information,
+as methods involving any form of communication are often dynamic
+and resolved on a case-by-case basis.
+A.7 Additional Methods
+In some cases, MFA is not needed for login, but required for
+certain service features such as withdrawing funds. Some websites
+allow to omit MFA for trusted devices. While used as recovery,
+those methods are often bound to a time-limit of, e. g., 30–90 days
+after which MFA is required again, leading to a decreased backup
+usability if MFA is lost outside this time frame.
+Other recovery advice might combine some of the previously
+mentioned factors, or give additional advice to, e. g., contact mobile
+providers to replace inaccessible SIM cards. Finally, the recovery
+can simply consist of setting up additional MFA methods, i. e.,
+extra methods that can all act as a backup for whichever method
+was lost by the user. While this has been an official FIDO recom
+mendation [10], it also increases the attack vectors for malicious
+third parties.
+While neither a MFA nor recovery procedure, we encountered
+additional edge cases in which we were unable to determine the
+methods. This includes inaccessible help pages we were unable
+to visit due to, e. g., geo-blocking or deleted pages, and websites
+either mentioning explicitly that they had no recovery methods,
+or websites that did not mention recovery at all.
+B GENERAL APPENDIX
+B.1 Recovery Test Templates
+Recovery Request Message. Subject: Lost Second Factor
+Hello,
+I recently registered an account on your website and enabled 2FA.
+Yesterday, my backpack with my wallet and phone was stolen, so
+now I cannot access anything, and am unable to get past the 2FA.
+What do I need to do to regain access? My username/email/account
+number is data.
+Best regards,
+First Author
+Debriefing Message. Dear website support,
+We are a research team at the Anonymized For Review Institution,
+Country, and study the usability of multi factor authentication
+(MFA). We are currently investigating the trade-off between us
+ability and security of multi factor authentication recovery. As a
+part of this research, we created accounts on several websites, en
+abled MFA, and tried to recover our accounts after a while due to
+supposedly inaccessible MFA. These websites were chosen because
+they were listed on 2fa.directory [1], ranked highly on Tranco [2],
+or because their documentation implied interesting MFA methods.
+As you might already guess, we write to you today because your
+website was among the ones we chose. We wanted to inform you
+about your involuntary participation, as well as give you the time
+to decline and have your data removed. On date, we send you an
+email/chat request (request ID if possible), which was part of our
+research, i.e., it was not a real users’ request to recover their MFA.
+While we are not content about deceiving you and sending a false
+request, we wanted to assure you that it was necessary for the goal
+of our research. We wanted to truly gauge the experience of a typi
+cal user, and to assess the usability and security of MFA procedures
+on the web. Due to this goal, we were sadly unable to communicate
+the true purpose of our request upfront. Please be assured that we
+only sent one line of request, and that we kept it as short as possible
+to decrease the load on your staff caused by our inquiry.
+As mentioned, we would like to give you the opportunity to have
+your data removed and drop out of our data set before we de-identify
+it and use it as part of a scientific article. If you let us know until
+October 10th5, we will irrevocably delete all communication with
+or data about your website. Please be assured that we currently
+only store the data on encrypted, self-hosted servers, and that only
+involved researchers have access to our results. Furthermore, we
+will never publish the name of your website or any involved staff
+member. We will de-identify your website in our work, and we
+will never mention your service’s or website name. We hope that
+our study did not cause too much harm, and that you do not have
+objections against us using the data. In any case, we thank you for
+being able to create an account and collect valuable experiences,
+for the helpful support you gave us, and want to apologize for any
+inconvenience caused by our request.
+If you are interested in more details of our research, please visit our
+project website: https://anonymizedforreview.tld/projects/multifactorrecovery/.
+In case you are interested in the results of our research, we would
+be happy to share the paper once it is published. Finally, we are
+also interested in deepening our understanding of MFA and its
+recovery by also including your perspective in future research (e.g.
+an interview). If you would be available for a follow-up study, we
+would be delighted to hear from you!
+Best regards,
+First Author (PhD Candidate)
+Anonymized For Review Institution
+[1] https://2fa.directory/int/
+[2] https://tranco-list.eu/
+5This initially encompassed two weeks, but if any further opt-outs would have reached
+us until submission, we would have removed them as well.
+
+
+An Evaluation of the Security and Usability of Multi-Factor Authentication Recovery Deployments CCS ’23, November 26–30, 2023, Copenhagen, Denmark
+B.2 Additional Tables
+Table 2: Distribution of the initial 1,303 websites over various TLDs.
+Top-Level Domain Counts Relative
+ca 15 1.15% ch 13 1.00% co.uk 21 1.61% com 944 72.45% com.au 22 1.69% de 48 3.68% edu 32 2.46% gov 10 0.77% io 52 3.99% net 32 2.46% org 41 3.15% other 73 5.60%
+Table 3: Distribution of the initial 1,303 websites over the listed bins of Tranco ranks.
+Tranco Ranking Counts Relative
+1 - 20000 692 53.11% 20001 - 40000 165 12.66% 40001 - 60000 95 7.29% 60001 - 80000 55 4.22% 80001 - 100000 42 3.22% 100001 - 120000 34 2.61% 120001 - 140000 37 2.84% 140001 - 160000 23 1.77% 160001 - 180000 11 0.84% 180001 - 200000 19 1.46% ≥ 200001 130 9.98%
+We were further interested in the top-level domains (TLDs) of
+websites in our sample. Due to our removal of 155 websites in
+languages we were not fluent in, we found the vast majority of
+remaining websites (944, 72.45%) to be .com websites, with the
+remaining being other English (e. g., .ca, .com.au, .co.uk) or German
+(.de, .ch) TLDs. Additionally, we find some neutral ones (.io, .net,
+.org), and .edu and .gov, which we almost exclusively found in the
+respective categories of Education, Universities and Government
+(see Table 2). We find no significant differences between recovery
+methods offered on different TLDs.
+
+
+CCS ’23, November 26–30, 2023, Copenhagen, Denmark Amft et al.
+Table 4: Codes used in our research. MFA Methods and Recovery Methods coded within our procedure categorization described in Section 3.1.1
+Code Frequency Description
+MFA Methods
+SMS 559 (42.90%) SMS (usually with OTP) sent to users’ phone number. Phone Call 156 (11.97%) Call used to convey information (e. g., spoken code, code hidden in caller ID). Email 205 (15.73%) Email (usually with OTP) sent to users’ associated email address. Hardware Token 179 (13.74%) Hardware device, e. g., U2F security key, or physical OTP generator. Mobile App 1,036 (79.51%) Mobile app to verify user. Usually TOTP apps, but also proprietary apps using, e. g., push notifications. Other MFA 139 (10.67%) Other methods such as biometry, local files, printed codes via mail and others. No MFA 512 (28.21%) No MFA present, i. e., the website never offered MFA, removed it, or never mentions it on public help pages.
+Recovery Methods
+Contact Website Support 491 (37.68%) Contact the service over varying mediums. Can include fixed wait or ID checks. Backup Codes 451 (34.61%) Code provided by service. It can be both an OTP or secret knowledge, distributed number varies. Contact Local Admin 159 (12.20%) Contact local admin or designated superuser to, e. g., reset MFA. Additional MFA Method 150 (11.51%) Explicit mention of using multiple MFA methods to have a backup. Backup SMS/Phone Call 78 (5.99%) Send SMS or call user. Only when SMS/Call is not a MFA method, or if it is explicitly a separate backup number. Backup Email 49 (3.76%) Send email. Only when email is not a method, or if it is explicitly a separate backup address. Dedicated Account Recovery System 45 (3.45%) Service offers a designated form to initiate recovery for lost MFA. If this was just a standard contact form,
+we chose Contact Service/Website instead.
+TOTP Seed 44 (3.38%) Store the initial MFA secret to be able to set it up again. Usually TOTP seeds. Trusted Device 37 (2.84%) MFA not required after first authentication. Excludes cases in which this is limited to a certain time frame, as it is only a backup during this time. Photo/Official ID Proof 30 (2.30%) Requires upload of a selfie of user holding, e. g., ID cards and written notes as identity proof. MFA Not Needed for Login 25 (1.92%) MFA not required for login, only for certain functions. Users can simply log in and update MFA. Security Question 16 (1.23%) Answer a (set of) security questions to regain access. Password Reset 13 (1.00%) Users can use the password reset function to deactivate MFA as well, therefore avoiding real recovery. Other Recovery 77 (5.91%) Other methods or combinations of methods, e. g., Contact the phone provider for new SIM, letters with recovery codes, or using verification links via email and SMS and a photo proof. Help Page Not Accessible 9 (0.69%) Details cannot be verified due to unavailable help pages (e. g., geo-blocking, deleted pages) No MFA Recovery Available 1 (0.08%) The help and documentation explicitly stresses that there is no recovery procedure. No MFA Recovery Documented 321 (24.64%) MFA is available, but no recovery is mentioned.
+Table 5: Codes used in our research. Detailed Information describes the codes used within our recovery test (cf. Section 3.2.1) to account for additional interesting details not covered in the previous categorization.
+Code Frequency Experiment
+Frequency Documentation
+Description
+Recovery is Part Of MFA Setup 42 (59.15%) 47 (66.2%) Whether recovery is discussed during/alongside MFA setup (yes, no) Explicit Warning About Account Loss 16 (22.54%) 13 (18.31%) Whether website warns users about losing access if MFA is lost and no(t enough) recovery methods were set. Only includes if the warning was explicit and stresses that account loss is final. (emphasized, yes, no) Vague Warning About Account Loss 32 (45.07%) 35 (49.3%) Similar to Warning, but also includes soft warnings in which alternative recoveries are mentioned, or the account loss is only portrait as a vague possibility. (yes, no) Warning about SMS Usage 0 (0%) 7 (9.86%) Whether website warns about using SMS OTPs due to their insecurity (yes, no). Account Usage Mandates MFA 3 (4.23%) 22 (30.99%) Whether users are hindered to freely enable and disable MFA (yes, no). MFA Enforces Recovery Setup 10 (14.08%) 5 (7.04%) Whether users are forced to set up a backup (yes, no). Mention of MFA Trigger 50 (70.42%) 66 (92.96%) List of triggers that cause the users MFA to be requested (free text) Number of Help Pages - 18 (25.35%) Whether a service has more than three relevant help pages regarding MFA and its recovery (yes, no).
+
+
+An Evaluation of the Security and Usability of Multi-Factor Authentication Recovery Deployments CCS ’23, November 26–30, 2023, Copenhagen, Denmark
+Table 6: List of websites examined during our recovery experience described in Section 3.2, including their approximated Tranco rank, category or sample group. We chose to omit details on present MFA and recovery methods, as well as the recovery result, within the public version of this work to ensure the anonymity of included websites.
+∗ Specific purpose ∗ Always required
+offered used
+Data
+ID Tranco Category Sample
+Financial
+Address
+Other PII
+Contact
+1 10,001-50,000 Cryptocurrencies Handpicked ∗ ∗ Email 2 10,001-50,000 Hosting & VPS Random ∗ ∗ Email 3 50,001-200,000 Developers Random ∗ ∗ Email 4 50,001-200,000 Communication Random ∗ ∗ Email 5 50,001-200,000 Email Handpicked ∗ Email 6 <1,000 Security Handpicked ∗ ∗ ∗ Email 7 10,001-50,000 Domains Handpicked ∗ ∗ Email 8 50,001-200,000 Identity Management Handpicked ∗ ∗ Email 9 <1,000 Social Top-Ranked ∗ Email 10 <1,000 Gaming Top-Ranked ∗ Contact Form 11 5,001-10,000 Communication Random ∗ ∗ Email 12 1,001-5,000 Marketing & Analytics Handpicked ∗ ∗ Email 13 <1,000 Social Top-Ranked Contact Form 14 5,001-10,000 Developers Random ∗ ∗ Reset Form 15 1,001-5,000 Other Random ∗ Contact Form 16 1,001-5,000 Crowdfunding Handpicked ∗ ∗ Email 17 1,001-5,000 Security Handpicked ∗ ∗ Email 18 <1,000 Domains Handpicked ∗ ∗ Reset Form 19 <1,000 Other Top-Ranked ∗ ∗ Email 20 <1,000 Entertainment Top-Ranked ∗ Email 21 <1,000 Hotels & Accommodations Top-Ranked ∗ ∗ ∗ Email 22 <1,000 Other Top-Ranked ∗ ∗ Email 23 <1,000 Education Top-Ranked ∗ Email 24 <1,000 Crowdfunding Random ∗ ∗ Email 25 <1,000 Domains Random ∗ ∗ ∗ Email 26 1,001-5,000 Other Random ∗ ∗ Email 27 5,001-10,000 VPN Providers Random ∗ Reset Form 28 >200,000 Cryptocurrencies Random ∗ Email 29 <1,000 Communication Top-Ranked ∗ ∗ ∗ Contact Form 30 <1,000 Retail Top-Ranked ∗ ∗ ∗ Contact Form 31 <1,000 Other Top-Ranked ∗ ∗ Email 32 <1,000 Crowdfunding Top-Ranked ∗ ∗ Contact Form 33 5,001-10,000 Domains Random ∗ ∗ ∗ Live Chat 34 1,001-5,000 Cryptocurrencies Random ∗ Contact Form 35 5,001-10,000 Gaming Random ∗ ∗ ∗ Email 36 >200,000 Cloud Computing Random ∗ Email 37 10,001-50,000 Identity Management Random ∗ ∗ Live Chat 38 10,001-50,000 Social Random ∗ Live Chat 39 10,001-50,000 Cryptocurrencies Handpicked ∗ ∗ Reset Form 40 <1,000 Social Top-Ranked Reset Form 41 50,001-200,000 Betting Random ∗ Live Chat 42 <1,000 Marketing & Analytics Top-Ranked ∗ ∗ Reset Form 43 <1,000 Developers Handpicked Email 44 5,001-10,000 Hosting & VPS Handpicked ∗ ∗ ∗ Email 45 1,001-5,000 Domains Handpicked ∗ ∗ ∗ Email 46 <1,000 Social Top-Ranked ∗ Contact Form 47 <1,000 Social Top-Ranked ∗ ∗ Not Possible 48 <1,000 Backup & Sync Top-Ranked ∗ ∗ Contact Form 49 <1,000 Developers Top-Ranked Contact Form 50 <1,000 Communication Top-Ranked ∗ ∗ Not Possible 51 <1,000 Domains Top-Ranked ∗ ∗ ∗ Email 52 <1,000 Communication Top-Ranked ∗ ∗ Email 53 <1,000 Remote Access Handpicked ∗ ∗ Not Possible 54 10,001-50,000 Finance Handpicked ∗ ∗ ∗ Not Possible 55 <1,000 Other Top-Ranked ∗ ∗ Not Possible 56 <1,000 Retail Top-Ranked ∗ ∗ ∗ Live Chat 57 50,001-200,000 Food Random ∗ ∗ ∗ Contact Form 58 10,001-50,000 Communication Random ∗ Not Possible 59 <1,000 Other Handpicked ∗ ∗ Email 60 <1,000 Retail Top-Ranked ∗ ∗ ∗ Contact Form 61 <1,000 Domains Top-Ranked ∗ ∗ ∗ Contact Form 62 <1,000 Investing Top-Ranked ∗ ∗ Reset Form 63 <1,000 Retail Top-Ranked ∗ ∗ ∗ Reset Form 64 <1,000 Security Top-Ranked ∗ ∗ Reset Form 65 <1,000 Hosting & VPS Random ∗ ∗ Reset Form 66 >200,000 Cryptocurrencies Random ∗ ∗ ∗ Email 67 10,001-50,000 Domains Random ∗ ∗ Reset Form 68 10,001-50,000 Cryptocurrencies Random ∗ ∗ ∗ Contact Form 69 50,001-200,000 Payment Random ∗ ∗ ∗ Email 70 5,001-10,000 Cryptocurrencies Random ∗ ∗ ∗ Reset Form 71 10,001-50,000 Domains Random ∗ ∗ ∗ Email
+
+
+CCS ’23, November 26–30, 2023, Copenhagen, Denmark Amft et al.
+Table 7: List of websites skipped during our recovery experience described in Section 3.2, including their approximated Tranco rank, category, sample group and reason for skipping it.
+ID Tranco Range Category Sample Skip Stage Reason
+1 1,001-5,000 Developers Random Registration Blocked (eSIM usage) 2 1,001-5,000 Investing Random Registration Blocked (Location) 3 1,001-5,000 Banking Random Registration Blocked (Location) 4 50,001-200,000 Betting Random Registration Blocked (Location) 5 1,001-5,000 Security Random Registration Blocked (unknown reason) 6 10,001-50,000 Gaming Random Registration Blocked (unknown reason) 7 50,001-200,000 Developers Random Registration Blocked (unknown reason) 8 <1,000 Social Handpicked Registration Blocked (unknown reason) 9 <1,000 Social Top-Ranked Registration Blocked (unknown reason) 10 >200,000 Cryptocurrencies Random Registration Blocked (unknown reason) 11 10,001-50,000 Developers Handpicked Website Choice Domain already within sample. 12 <1,000 Utilities Top-Ranked Website Choice Domain already within sample. 13 <1,000 Entertainment Top-Ranked Website Choice Domain already within sample. 14 <1,000 Backup & Sync Top-Ranked Website Choice Domain already within sample. 15 <1,000 Communication Top-Ranked Website Choice Domain already within sample. 16 <1,000 Email Top-Ranked Website Choice Domain already within sample. 17 <1,000 Payment Random Website Choice Domain already within sample. 18 <1,000 Payment Random Website Choice Domain already within sample. 19 <1,000 Backup & Sync Top-Ranked Website Choice Domain already within sample. 20 <1,000 Backup & Sync Random Website Choice Domain already within sample. 21 <1,000 Task Management Random Website Choice Domain already within sample. 22 <1,000 IoT Random Website Choice Domain already within sample. 23 50,001-200,000 Gaming Random Website Choice Maintained by volunteers 24 1,001-5,000 Retail Random Website Choice Method prohibited by ToS. 25 1,001-5,000 Gaming Random Website Choice Method prohibited by ToS. 26 1,001-5,000 Payment Random Website Choice Method prohibited by ToS. 27 10,001-50,000 Cryptocurrencies Random Website Choice Method prohibited by ToS. 28 10,001-50,000 Other Random Website Choice Method prohibited by ToS. 29 <1,000 Hosting & VPS Top-Ranked Website Choice Method prohibited by ToS. 30 <1,000 IoT Handpicked Website Choice Method prohibited by ToS. 31 <1,000 Social Top-Ranked Website Choice Method prohibited by ToS. 32 <1,000 Social Top-Ranked Website Choice Method prohibited by ToS. 33 <1,000 Developers Top-Ranked Website Choice Method prohibited by ToS. 34 <1,000 Retail Top-Ranked Website Choice Method prohibited by ToS. 35 <1,000 Email Top-Ranked Website Choice Method prohibited by ToS. 36 <1,000 Entertainment Top-Ranked Website Choice Method prohibited by ToS. 37 <1,000 Gaming Top-Ranked Website Choice Method prohibited by ToS. 38 <1,000 Gaming Top-Ranked Website Choice Method prohibited by ToS. 39 <1,000 Domains Top-Ranked Website Choice Method prohibited by ToS. 40 <1,000 Developers Top-Ranked Website Choice Method prohibited by ToS. 41 >200,000 Cloud Computing Random Website Choice Method prohibited by ToS. 42 >200,000 Gaming Random Website Choice Method prohibited by ToS. 43 >200,000 Cryptocurrencies Random Website Choice Method prohibited by ToS. 44 10,001-50,000 Developers Handpicked MFA Setup No MFA on base website. 45 10,001-50,000 Gaming Handpicked MFA Setup No MFA on base website. 46 10,001-50,000 Marketing & Analytics Random Registration No MFA on base website. 47 10,001-50,000 Payment Random Registration No MFA on base website. 48 10,001-50,000 Developers Random Registration No MFA on base website. 49 <1,000 Communication Top-Ranked Registration No MFA on base website. 50 <1,000 Social Top-Ranked Registration No MFA on base website. 51 <1,000 Creativity Top-Ranked MFA Setup No MFA on base website. 52 <1,000 Other Top-Ranked MFA Setup No MFA on base website. 53 <1,000 Retail Top-Ranked MFA Setup No MFA on base website. 54 <1,000 Cloud Computing Top-Ranked MFA Setup No MFA on base website. 55 <1,000 Communication Top-Ranked MFA Setup No MFA on base website. 56 10,001-50,000 Investing Random Registration Requirements (contract) 57 5,001-10,000 Utilities Random Registration Requirements (contract) 58 50,001-200,000 Marketing & Analytics Random Registration Requirements (contract) 59 50,001-200,000 Hosting & VPS Random Registration Requirements (contract) 60 50,001-200,000 Banking Random Registration Requirements (contract) 61 50,001-200,000 Communication Random Registration Requirements (contract) 62 50,001-200,000 Email Random Registration Requirements (contract) 63 50,001-200,000 Developers Random Registration Requirements (contract) 64 50,001-200,000 Banking Random Registration Requirements (contract) 65 <1,000 Cloud Computing Random Registration Requirements (contract) 66 <1,000 Other Random Registration Requirements (contract) 67 >200,000 Utilities Random Registration Requirements (contract) 68 10,001-50,000 Remote Access Random Registration Requirements (device ownership) 69 5,001-10,000 IoT Handpicked Registration Requirements (device ownership) 70 <1,000 Remote Access Top-Ranked Registration Requirements (device ownership) 71 <1,000 Social Random Registration Requirements (device ownership) 72 <1,000 Communication Top-Ranked Registration Requirements (device ownership)
+
+
+An Evaluation of the Security and Usability of Multi-Factor Authentication Recovery Deployments CCS ’23, November 26–30, 2023, Copenhagen, Denmark
+Table 7: List of websites skipped during our recovery experience continued.
+ID Tranco Range Category Sample Skip Stage Reason
+73 10,001-50,000 Finance Random Registration Requirements (Foreign Address) 74 50,001-200,000 IoT Random Registration Requirements (Foreign Address) 75 <1,000 Payment Top-Ranked Registration Requirements (Foreign Phone) 76 1,001-5,000 Banking Random Registration Requirements (ID) 77 10,001-50,000 Banking Random Registration Requirements (ID) 78 10,001-50,000 Banking Random Registration Requirements (ID) 79 10,001-50,000 Finance Random Registration Requirements (ID) 80 10,001-50,000 Investing Random Registration Requirements (ID) 81 10,001-50,000 Banking Random Registration Requirements (ID) 82 5,001-10,000 Banking Random Registration Requirements (ID) 83 50,001-200,000 Investing Handpicked Registration Requirements (ID) 84 50,001-200,000 Banking Random Registration Requirements (ID) 85 50,001-200,000 Investing Random Registration Requirements (ID) 86 >200,000 Cryptocurrencies Random Registration Requirements (ID) 87 50,001-200,000 Banking Random Registration Requirements (ID/payment) 88 <1,000 Banking Top-Ranked Registration Requirements (ID/payment) 89 1,001-5,000 Universities Random Registration Requirements (membership) 90 <1,000 Universities Random Registration Requirements (membership) 91 <1,000 Universities Top-Ranked Registration Requirements (membership) 92 <1,000 Universities Top-Ranked Registration Requirements (membership) 93 <1,000 Universities Top-Ranked Registration Requirements (membership) 94 10,001-50,000 Finance Handpicked Registration Requirements (payment) 95 50,001-200,000 VPN Providers Random Registration Requirements (payment) 96 <1,000 Cloud Computing Handpicked Registration Requirements (payment) 97 <1,000 Cloud Computing Top-Ranked Registration Requirements (payment) 98 <1,000 Cloud Computing Top-Ranked Registration Requirements (payment) 99 <1,000 Hosting & VPS Top-Ranked Registration Requirements (payment) 100 >200,000 Investing Random Registration Requirements (payment) 101 1,001-5,000 Hosting & VPS Handpicked Registration Requirements (payments) 102 1,001-5,000 Other Random Website Choice Time-limited free trial. 103 10,001-50,000 Task Management Random Website Choice Time-limited free trial. 104 10,001-50,000 Finance Handpicked Website Choice Time-limited free trial. 105 10,001-50,000 Other Handpicked Website Choice Time-limited free trial. 106 10,001-50,000 Other Random Website Choice Time-limited free trial. 107 10,001-50,000 Security Random Website Choice Time-limited free trial. 108 10,001-50,000 Developers Random Website Choice Time-limited free trial. 109 5,001-10,000 Health Random Website Choice Time-limited free trial. 110 50,001-200,000 Hosting & VPS Random Website Choice Time-limited free trial. 111 50,001-200,000 Other Random Website Choice Time-limited free trial. 112 50,001-200,000 Cloud Computing Random Website Choice Time-limited free trial. 113 50,001-200,000 Security Random Website Choice Time-limited free trial. 114 <1,000 Finance Top-Ranked Website Choice Time-limited free trial. 115 <1,000 Communication Top-Ranked Website Choice Time-limited free trial. 116 <1,000 Domains Top-Ranked Website Choice Time-limited free trial. 117 <1,000 Other Top-Ranked Website Choice Time-limited free trial. 118 <1,000 Other Top-Ranked Website Choice Time-limited free trial. 119 >200,000 Hosting & VPS Random Website Choice Time-limited free trial. 120 >200,000 Backup & Sync Random Website Choice Time-limited free trial. 121 >200,000 Other Random Website Choice Time-limited free trial. 122 50,001-200,000 Cloud Computing Random Website Choice Website not available. 123 50,001-200,000 Backup & Sync Random Website Choice Website not available. 124 50,001-200,000 Health Random Website Choice Website not available.
+
+
+CCS ’23, November 26–30, 2023, Copenhagen, Denmark Amft et al.
+C ADDITIONAL FIGURES
+Received 20 February 2007; revised 12 March 2009; accepted 5 June 2009
+
+
+An Evaluation of the Security and Usability of Multi-Factor Authentication Recovery Deployments CCS ’23, November 26–30, 2023, Copenhagen, Denmark
+1
+1
+6 1
+1
+2
+5
+9
+9
+2
+17
+20
+21
+25
+3
+2
+12
+5
+Email
+(N=6)
+Hardware Token
+(N=1)
+MFA Methods Recovery
+Websites
+Mobile App
+(N=49)
+SMS
+(N=15)
+Handpicked
+(N=16)
+Top-Ranked
+(N=28)
+Random
+(N=27)
+Recovered (N=37)
+Lost (N=30)
+No Answer (N=4)
+Figure 5: Illustration of our website sample, configured MFA method and recovery result.
+
+
+CCS ’23, November 26–30, 2023, Copenhagen, Denmark Amft et al.
+BackupCodes
+ContactService/Website
+ContactLocalAdmin
+AdditionalMFAMethod
+BackupSMS/PhoneCall
+TrustedDevice
+BackupEmail
+AccountRecoveryService
+AccessNotLost
+ContactwithPhotoProof
+NothingMentioned
+HelpNotAccesible
+InitialSecret
+PasswordReset
+SecurityQuestions
+OtherRecovery
+NoRecovery
+Backup & Sync
+Banking
+Cloud Computing
+Communication
+Cryptocurrencies
+Developers
+Domains
+Education
+Email
+Finance
+Gaming
+Government
+Health
+Hosting & VPS
+Identity Management
+Investing
+IoT
+Marketing & Analytics
+Other
+Payment
+Remote Access
+Retail
+Security
+Social
+Task Management
+Universities
+Utilities
+53.3 20.0 23.3 10.0 16.7 0.0 10.0 6.7 0.0 0.0 20.0 0.0 3.3 0.0 3.3 10.0 0.0
+2.2 34.6 0.0 6.6 1.5 0.7 1.5 0.0 5.1 0.0 51.5 0.0 0.0 0.7 0.0 11.0 0.0
+51.4 62.9 22.9 17.1 2.9 8.6 5.7 2.9 5.7 0.0 8.6 0.0 0.0 8.6 0.0 2.9 0.0
+50.0 32.0 32.0 12.0 6.0 14.0 6.0 6.0 6.0 0.0 10.0 0.0 0.0 2.0 2.0 2.0 0.0
+24.5 44.5 0.0 4.5 0.0 2.7 1.8 10.0 1.8 20.0 12.7 4.5 22.7 0.0 0.9 6.4 0.0
+61.4 25.7 10.9 8.9 3.0 3.0 1.0 0.0 0.0 0.0 27.7 0.0 0.0 1.0 0.0 3.0 0.0
+44.1 54.2 5.1 6.8 1.7 8.5 0.0 5.1 1.7 0.0 13.6 0.0 10.2 0.0 0.0 6.8 0.0
+8.3 50.0 0.0 0.0 0.0 0.0 8.3 0.0 0.0 0.0 41.7 0.0 0.0 0.0 0.0 0.0 0.0
+60.7 35.7 17.9 14.3 3.6 17.9 3.6 7.1 0.0 0.0 7.1 0.0 3.6 3.6 0.0 10.7 0.0
+18.5 33.3 11.1 13.0 0.0 1.9 7.4 5.6 1.9 7.4 31.5 1.9 0.0 0.0 1.9 3.7 0.0
+37.7 52.8 1.9 5.7 0.0 11.3 3.8 1.9 0.0 0.0 18.9 0.0 1.9 1.9 0.0 7.5 1.9
+11.8 35.3 0.0 17.6 0.0 0.0 0.0 0.0 5.9 0.0 41.2 0.0 0.0 0.0 0.0 0.0 0.0
+19.0 42.9 14.3 9.5 4.8 0.0 19.0 4.8 0.0 0.0 23.8 0.0 0.0 0.0 0.0 9.5 0.0
+43.2 50.0 2.7 9.5 0.0 13.5 2.7 1.4 1.4 0.0 21.6 0.0 6.8 0.0 4.1 6.8 0.0
+45.0 15.0 20.0 40.0 10.0 15.0 0.0 0.0 5.0 0.0 20.0 0.0 0.0 0.0 0.0 5.0 0.0
+25.5 51.0 0.0 9.8 0.0 3.9 2.0 0.0 2.0 3.9 31.4 0.0 0.0 3.9 2.0 2.0 0.0
+47.1 41.2 5.9 5.9 0.0 5.9 5.9 0.0 0.0 0.0 17.6 0.0 0.0 0.0 0.0 5.9 0.0
+42.4 47.5 25.4 8.5 0.0 6.8 5.1 0.0 0.0 0.0 22.0 0.0 0.0 0.0 0.0 3.4 0.0
+39.0 42.7 14.6 13.4 2.4 9.8 4.9 3.7 1.2 1.2 17.1 0.0 2.4 2.4 2.4 1.2 0.0
+26.5 44.1 17.6 17.6 11.8 5.9 2.9 11.8 5.9 0.0 32.4 0.0 0.0 0.0 0.0 14.7 0.0
+56.2 18.8 12.5 6.2 0.0 6.2 6.2 0.0 0.0 0.0 31.2 0.0 0.0 0.0 0.0 6.2 0.0
+40.0 44.0 0.0 20.0 8.0 4.0 0.0 8.0 0.0 4.0 28.0 0.0 0.0 0.0 0.0 4.0 0.0
+39.5 28.9 23.7 7.9 2.6 5.3 5.3 0.0 0.0 0.0 15.8 0.0 5.3 0.0 5.3 2.6 0.0
+53.6 28.6 3.6 10.7 10.7 3.6 7.1 3.6 0.0 0.0 25.0 0.0 0.0 0.0 0.0 7.1 0.0
+45.0 10.0 20.0 0.0 0.0 10.0 0.0 0.0 0.0 0.0 25.0 5.0 0.0 0.0 0.0 0.0 0.0
+14.6 0.0 82.9 56.1 0.0 4.9 2.4 4.9 0.0 0.0 2.4 2.4 0.0 0.0 2.4 22.0 0.0
+15.4 23.1 11.5 7.7 7.7 11.5 7.7 7.7 0.0 0.0 53.8 3.8 3.8 0.0 0.0 0.0 0.0
+Recovery Method Present per Category
+0
+20
+40
+60
+80
+100
+Figure 6: Presence of MFA recovery methods within the initial 1,303 websites over different categories on 2fa.directory in %. As websites can offer more than one recovery option, the numbers may not add up to 100%.
