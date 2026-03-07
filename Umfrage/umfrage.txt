@@ -1,0 +1,89 @@
+„Goldene Regel“ bei Umfragen: So kurz wie möglich, so lang wie nötig. 
+Einleitungstext
+Herzlich willkommen zu dieser wissenschaftlichen Umfrage im Rahmen meiner Bachelor-/Seminararbeit. Die Umfrage untersucht, wie berufliche IT-Sicherheitsvorgaben unseren privaten Umgang mit Technologie beeinflussen. Die Teilnahme dauert ca. 5 Minuten. Ihre Daten werden vollständig anonym erhoben und DSGVO-konform nur für diese Forschung verwendet. Mit dem Klick auf "Weiter" stimmen Sie der Teilnahme zu.
+
+Block A: Demografie & Hintergrund (Kontrollvariablen)
+1. Sind Sie aktuell berufstätig und nutzen im Rahmen Ihrer Arbeit IT-Systeme (Computer, Smartphone etc.)?
+
+( ) Ja
+( ) Nein (-> Beendet die Umfrage)
+
+2. In welche Altersgruppe fallen Sie?
+
+( ) Unter 25 / ( ) 26-35 / ( ) 36-45 / ( ) 46-55 / ( ) Über 55 Jahre
+
+3. Wie schätzen Sie Ihre eigene IT-Affinität (technisches Wissen) ein?
+
+Skala: 1 (Sehr niedrig) bis 5 (Sehr hoch)
+[EXTRA] 4. In welcher Branche sind Sie primär tätig? (Spannend, um stark regulierte Branchen wie Banken zu filtern)
+( ) IT & Telekommunikation / ( ) Finanzen & Versicherungen / ( ) Öffentlicher Dienst & Gesundheit / ( ) Industrie & Handel / ( ) Sonstige
+[EXTRA] 5. Wie groß ist Ihr Unternehmen in etwa? (Spannend für IT-Governance, da (meine Annahme) Konzerne  strenger sind als kleine Firmen)
+
+( ) 1 - 49 Mitarbeitende / ( ) 50 - 249 Mitarbeitende / ( ) 250 oder mehr Mitarbeitende
+
+Block B: Der berufliche Kontext (IT-Governance)
+6. Ist die Nutzung von Multifaktor-Authentifizierung (MFA) an Ihrem Arbeitsplatz verpflichtend?
+
+( ) Ja / ( ) Nein / ( ) Ich weiß es nicht
+
+7. Welche MFA-Methoden nutzen Sie beruflich? (Mehrfachnennung)
+
+[ ] Authenticator App (z.B. Microsoft/Google)
+[ ] Hardware-Token (z.B. YubiKey, Smartcard)
+[ ] SMS-Code
+[ ] Biometrie (Fingerabdruck / Gesichtserkennung)
+[ ] Andere
+
+8. Wie bewerten Sie die IT-Sicherheit und Vorgaben (Governance) an Ihrem Arbeitsplatz?
+(Skala: 1 = Stimme gar nicht zu ... bis ... 5 = Stimme voll zu)
+
+Mein Arbeitgeber kommuniziert die Gründe für IT-Sicherheitsmaßnahmen sehr transparent.
+Bei Problemen mit dem MFA-System erhalte ich schnell Hilfe durch den IT-Support.
+Die Sicherheitsrichtlinien in meinem Unternehmen werden streng kontrolliert.
+[EXTRA] Mein Arbeitgeber bietet regelmäßig Schulungen oder Informationen zum Thema IT-Sicherheit an.
+[EXTRA] Es gibt klare Vorgaben oder Konsequenzen, wenn Sicherheitsrichtlinien nicht eingehalten werden.
+
+Block C: Usability am Arbeitsplatz
+9. Wie bewerten Sie die Benutzerfreundlichkeit Ihrer beruflichen MFA-Lösung?
+(Skala: 1 = Stimme gar nicht zu ??? 5 = Stimme voll zu)
+
+Die Nutzung von MFA an meinem Arbeitsplatz ist einfach und intuitiv.
+Der Anmeldeprozess mit MFA stört mich oft in meinem Arbeitsfluss. (Achtung: negative Formulierung)
+Ich fühle mich durch die Nutzung von MFA beruflich besser vor Hackerangriffen geschützt.
+[EXTRA] Wenn ich mich über MFA neu anmelden muss, kostet mich das unverhältnismäßig viel Zeit.
+[EXTRA] Die von meinem Arbeitgeber bereitgestellte MFA-Lösung funktioniert immer zuverlässig und fehlerfrei.
+
+Block D: Privater Kontext & Spill-over (nachschärfen hier!)
+10. Für welche privaten Dienste haben Sie MFA aktuell aktiviert? (Mehrfachnennung)
+
+[ ] Online-Banking / Zahlungsdienst
+[ ] E-Mail (z. B. GMail, GMX)
+[ ] Social Media (z. B. Instagram, LinkedIn)
+[ ] Online-Shopping (z. B. Amazon)
+[ ] Ich nutze privat kein MFA
+
+11. Wie bewerten Sie den Einsatz von MFA in Ihrem Privatleben?
+(Skala: 1 = Stimme gar nicht zu ... bis ... 5 = Stimme voll zu)
+
+Ich nutze MFA privat nur bei Diensten, bei denen ich dazu gezwungen werde (z. B. beim Banking).
+Ich habe große Angst davor, mich privat aus meinen Konten auszusperren (z. B. wenn ich mein Handy verliere).
+Die Einrichtung von MFA für private Konten empfinde ich als zu kompliziert.
+[EXTRA] Ich halte meine privaten Daten für nicht wichtig genug, weshalb mir MFA privat oft übertrieben vorkommt. (Misst den in deiner Arbeit erwähnten "Optimismus-Bias")
+
+12. Einfluss des Berufs auf das Privatleben (Spill-over-Effekt)
+(Skala: 1 = Stimme gar nicht zu ... bis ... 5 = Stimme voll zu)
+
+Weil ich MFA bei der Arbeit nutze, verstehe ich die Technologie generell besser.
+Die berufliche Nutzung von MFA hat mich motiviert, MFA auch für meine privaten Konten zu aktivieren.
+Wenn ich bei der Arbeit schlechte Erfahrungen mit MFA mache, vermeide ich die Nutzung im Privatlebe. (Misst den negativen Spill-over)
+[EXTRA] Ich nutze für meine privaten Konten freiwillig dieselben MFA-Methoden (z. B. dieselbe Authenticator-App) wie in der Arbeit.
+
+[EXTRA] Durch die IT-Sicherheitsvorgaben in der Arbeit fühle ich mich privat im Internet generell sicherer und kompetenter.
+
+Block E: Abschluss
+13. Haben Sie noch Anmerkungen zum Thema MFA oder zu diese Umfrage?
+
+[Freitextfeld - optionale Kommentare??]
+
+Abschlusstext:
+Vielen Dank für Ihre wertvolle Teilnahme und Unterstützung meiner Forschung! Sie können dieses Fenster nun schließen.
