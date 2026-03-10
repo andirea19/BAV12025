@@ -1,11 +1,19 @@
 \section{Forschungsmethodik}
-
-% Design = indivuelle und Methodik = generell?
+% Design = Übergeordnet und Methodik = generell = Kernmethode -> Zusammenfassen (Angewendete Methoden)
 % schreibe ich über die Literaturrecherche hier auch? 
 \subsection{Forschungsdesign und wissenschaftstheoretische Einordnung}
 % wie soll ich das hier am besten formulieren? Es ist ja nicht so, dass ich jetzt eine Umfrage mache, um die Forschungsfrage zu beantworten, sondern dass ich die Forschungsfrage so formuliere, dass sie mit einer Umfrage beantwortet werden kann. Das klingt irgendwie komisch.
 Die vorliegende Arbeit verwendet ein quantitatives Forschungsdesign, das deduktiv ausgerichtet ist. Gemäß diesem Ansatz kann wissenschaftlicher Fortschritt nur durch Falsifikation erzielt werden. Dementsprechend wurden aus der bestehenden Literatur (Usability-Forschung, IT-Governance, Spill-over-Theorie) theoriegeleitete Hypothesen abgeleitet, die empirisch überprüft werden, um die Nullhypothese ($H_0$) zu verwerfen.
 Für die Beantwortung der Forschungsfrage -- inwiefern IT-Governance als Einflussfaktor auf die private Verwendung von Multifaktor-Authentifizierung (MFA) wirkt -- ist ein quantitativer Ansatz zwingend erforderlich. Es gilt, die Stärke und Richtung der Zusammenhänge zwischen der beruflichen MFA-Nutzung, der wahrgenommenen Usability, den Governance-Vorgaben und dem privaten Sicherheitsverhalten zu messen. Während qualitative Methoden tiefere Einblicke in individuelle Motive bieten könnten, erlaubt erst die standardisierte quantitative Erhebung generalisierbare Aussagen über Kausalitäts-Tendenzen und signifikante Korrelationen in der breiten Masse der Erwerbstätigen. Der primäre Fokus der Untersuchung liegt dabei auf der Schnittstelle zwischen Arbeitswelt und Privatleben (Work-Life-Interface bzw. Security Spill-over). 
+Die methodische Bearbeitung dieser Arbeit folgt einem zweistufigen Forschungsdesign, bestehend aus einer systematischen Literaturrecherche und einer darauf aufbauenden, quantitativen Datenerhebung.
+
+\subsubsection{Systematische Literaturrecherche als theoretisches Fundament}
+Den ersten methodischen Schritt bildete eine umfassende Literaturrecherche. Dabei wurden aktuelle wissenschaftliche Publikationen, Fachbeiträge sowie internationale Standards und Regularien (wie beispielsweise die Richtlinien von NIST oder ISO) systematisch analysiert, um die technischen Spezifikationen der Multifaktor-Authentifizierung (MFA) mit etablierten IT-Governance-Faktoren in Verbindung zu setzen. 
+Ziel dieser theoretischen Vorarbeit war es, die Nutzungsmuster im beruflichen und privaten Sektor gegenüberzustellen, kontextuelle Unterschiede herauszuarbeiten sowie zentrale Erfolgsfaktoren und Implementierungshindernisse zu identifizieren. Die Erkenntnisse dieser systematischen Recherche bilden das deduktive Fundament für die Konstruktion des Erhebungsinstruments der anschließenden empirischen Untersuchung.
+
+% muss klarer werden, warum ich was wo mache und wie der Aufbau ist
+\subsubsection{Operationalisierung und theoriegeleitete Itemgenerierung}
+Die Konstruktion des Erhebungsinstruments (Fragebogen) stützt sich deduktiv auf die zentralen Erkenntnisse der vorangegangenen Literaturrecherche. Um eine hohe Inhaltsvalidität zu gewährleisten, wurden die in der Literatur identifizierten Hemmnisse und Treiber der MFA-Nutzung in messbare Indikatoren (Items) übersetzt. Die Items wurden dabei primär auf einer fünfstufigen Likert-Skala (1 = „stimme gar nicht zu“ bis 5 = „stimme voll zu“) formuliert.
 
 \subsection{Grundgesamtheit und Stichprobenziehung}
 Um die Validität der Ergebnisse zu gewährleisten, muss die Zielgruppe präzise eingegrenzt werden. Die Grundgesamtheit der vorliegenden Untersuchung bilden \textbf{erwerbstätige Personen im DACH-Raum, die im Rahmen ihrer beruflichen Tätigkeit regelmäßig mit IT-Systemen und digitalen Authentifizierungsverfahren konfrontiert sind}. 
@@ -37,9 +45,11 @@ Der finale Online-Fragebogen (vgl. Anhang) gliedert sich in vier strukturierte A
 
 \subsubsection{Pre-Test und Datenerhebung}
 Vor der eigentlichen Feldphase wurde der Entwurf des Fragebogens einem Pre-Test mit einer kleinen Stichprobe ($n = 5$) unterzogen. Ziel war es, die technische Funktionalität (z.\,B. korrekte Filterführung, mobile Darstellung), die Bearbeitungsdauer (ca. fünf Minuten) sowie die semantische Verständlichkeit zu prüfen. Basierend auf dem Feedback wurden leichte sprachliche Präzisierungen bei den Fragen zur privaten MFA-Nutzung vorgenommen, um die Validität des Messinstruments zu sichern.
-Die finale Datenerhebung erfolgte mittels des standardisierten Online-Fragebogens über einen Zeitraum von vier Wochen (KW 12--15 2026), um eine möglichst breite und heterogene Stichprobe zu erreichen. Insgesamt konnten 150 vollständige Datensätze erhoben werden, die in die anschließende statistische Analyse einbezogen werden.
+Die finale Datenerhebung erfolgte mittels des standardisierten Online-Fragebogens über einen Zeitraum von drei Wochen (KW 13--15 2026), um eine möglichst breite und heterogene Stichprobe zu erreichen. Insgesamt konnten 150 vollständige Datensätze erhoben werden, die in die anschließende statistische Analyse einbezogen werden.
+% Stichprobengröße: min. 385
+
 \subsection{Datenaufbereitung und Auswertungsverfahren}
-Die Datenanalyse erfolgt mit der Open-Source-Software \textit{Orange Data Mining}. Die Wahl fiel auf dieses Tool, da es durch seine visuelle Programmierung eine transparente, reproduzierbare und nachvollziehbare Kombination aus Datenbereinigung, explorativer Datenanalyse und inferenzstatistischer Testung innerhalb einer Workflow-Umgebung ermöglicht. Der gesamte Analyseprozess wurde als Orange-Workflow (\texttt{.ows}) dokumentiert.
+Die Datenanalyse erfolgt mit der Open-Source-Software \textit{Orange Data Mining}. Die Wahl fiel auf dieses Tool, da es durch seine visuelle Programmierung eine transparente und nachvollziehbare Kombination aus Datenaufbereitung, Datenanalyse und inferenzstatistischer Testung innerhalb einer Workflow-Umgebung ermöglicht. Der gesamte Analyseprozess wurde als Orange-Workflow (\texttt{.ows}) dokumentiert.
 % wie zitiere ich Orange? https://orange.biolab.si/citation/
 Über das \textit{File Widget} werden die Rohdaten aus den Befragungen importiert. Im Rahmen der Datenvorverarbeitung werden unvollständige Datensätze ausgeschlossen (\textit{Data Cleaning}). Über die \textit{Feature Selection} und \textit{Edit Domain} werden die Variablentypen definiert (Ordinal für Likert-Skalen, Nominell für demografische Merkmale). Zudem werden Ausreißer (z.\,B. „Speed-Speeder“ mit unrealistisch kurzen Bearbeitungszeiten) herausgefiltert.
 Die deskriptive Statistik dient zur Darstellung der Stichprobenverteilung. Mittels des \textit{Distributions Widgets} (Histogramme) werden soziodemografische Daten und allgemeine MFA-Nutzungshäufigkeiten visualisiert. \textit{Box Plots} kommen zum Einsatz, um Unterschiede in der Usability-Bewertung zwischen verschiedenen Nutzergruppen (z.\,B. hohe vs. niedrige IT-Affinität) visuell zu prüfen.

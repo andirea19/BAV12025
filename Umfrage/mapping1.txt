@@ -1,0 +1,46 @@
+Mapping anhand der Hypothesen und Forschungsfragen
+
+Block A: Kontrollvariablen und Demografie
+F1: Filterfrage (Grundgesamtheit: berufstätig mit IT-Nutzung)
+F2 – F4: Soziodemografie (Rolle, Alter, Bildung) – Dienen als Kontrollvariablen, z. B. um Alterseffekte zu prüfen.
+F5: Subjektive IT-Affinität – Kontrollvariable zur Überprüfung, ob Technikwissen das Verhalten stärker beeinflusst als Governance.
+F6 – F7: Unternehmensmerkmale (Branche, Größe) – Dienen der Kategorisierung (z. B. regulierte vs. unregulierte Branchen).
+
+Block B: IT-Governance und beruflicher Kontext (Überprüfung von H1)
+F8: Subjektiver Reifegrad der IT-Governance – Allgemeine Einschätzung der Sicherheitskultur.
+F9: IT-Infrastruktur / Equipment – Prüft den Einfluss der Hardware (z. B. BYOD vs. Firmen-Token) auf die Akzeptanz.
+F10: Verbindlichkeit / Zwang – Kategorisiert die Teilnehmenden in Zwangsnutzer:innen vs. freiwillige Nutzer:innen.
+F11: Dimensionen der Governance – Operationalisiert in Zwang (technische Durchsetzung), Transparenz (Kommunikation), Support (Hilfestellung) und Konsequenzen.
+
+Block C: Usability und Risikowahrnehmung am Arbeitsplatz (Überprüfung von H2)
+F12: Nutzungsfrequenz – Misst die quantitative Konfrontation mit MFA (Gewöhnungseffekt).
+F13: Usability-Evaluation – Operationalisiert in technischer Komplexität, Störfaktor im Arbeitsfluss (Reaktanz) und wahrgenommener Risikoreduktion.
+
+Block D: Privater Kontext und Spill-over-Effekt (Überprüfung von H3)
+F14: Freiwillige private Nutzung – Abfrage konkreter, weltweit dominanter Dienste zur Messung des privaten Status Quo (Abhängige Variable).
+F15: Private Risikowahrnehmung – Operationalisiert in Zwang vs. Freiwilligkeit, Recovery-Risiko (Angst vor Aussperren) und Optimismus-Bias (Glaube, man sei kein Ziel für Hacker).
+F16: Spill-over-Effekt (Transfer-Merkmale) – Prüft präzise, WAS transferiert wird: Wissen (kognitiv), Equipment (technisch), Motivation (positiver Spill-over) oder Widerwille/Reaktanz (negativer Spill-over).
+
+Block E: Qualitätssicherung
+F17: Attention Check (Kontrollfrage) – Sichert die Datenqualität (Ausschluss von Bots/Klickern).
+F18: Offenes Feedback – Möglichkeit für qualitative Ergänzungen.
+
+Die inhaltliche Zuordnung zu den Items in der Literatur (mit Quellen, yeah)
+IT-Governance & Reifegrad (Fragen 8, 10, 11): * Literatur: Wibowo & Ramli (2022); de Bruijn et al. (2017)
+Begründung: Wibowo & Ramli fordern die Messung des Reifegrads von Governance. De Bruijn betont, dass Zwang allein nicht reicht, sondern Transparenz und Support (Helpdesk) essenziell für die Akzeptanz sind.
+
+Equipment & Infrastruktur (Frage 9):
+Literatur: Ciolino et al. (2019); Wolf et al. (2019)
+Begründung: Ciolino untersucht die Hürden von Hardware-Token, Wolf beleuchtet die Skepsis gegenüber Biometrie. Die Frage prüft, ob die Hardware-Art die Usability beeinflusst.
+
+Usability & Störfaktor am Arbeitsplatz (Frage 12, 13):
+Literatur: Marky et al. (2022); Acemyan et al. (2018)
+Begründung: Marky et al. beschreiben MFA oft als störend ("annoying"). Acemyan et al. belegen, dass schlechte Usability den Arbeitsfluss bricht und zu Ablehnung führt.
+
+Privates Risiko & Angst vor Aussperren (Frage 15):
+Literatur: Pratama & Firmansyah (2021); Das et al. (2018)
+Begründung: Pratama & Firmansyah definieren die "Recovery Anxiety" (Angst, sich bei Handyverlust dauerhaft auszusperren) als größte Adoptionshürde im privaten Bereich.
+
+Spill-over-Effekt (Frage 16):
+Literatur: Colnago et al. (2018); Das et al. (2021); Staines (1980)
+Begründung: Colnago et al. belegen den positiven Kompetenz-Transfer (Wissen und Motivation schwappen über). Das et al. (2021) belegen den negativen Spill-over (Reaktanz/Widerwille bei schlechter Governance).

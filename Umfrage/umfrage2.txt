@@ -1,0 +1,97 @@
+Einleitungstext
+Hallo, bitch
+
+Block A: Demografie & Hintergrund
+
+In welche Altersgruppe fallen Sie?
+( ) Unter 25 / ( ) 26-35 / ( ) 36-45 / ( ) 46-55 / ( ) Über 55 Jahre / ( ) Keine Angabe
+
+Was ist Ihr höchster abgeschlossener Bildungsstand?
+( ) Pflichtschule / ( ) Lehre oder Berufsausbildung / ( ) Matura oder Abitur / ( ) Hochschule (Bachelor, Master, Diplom) / ( ) Keine Angabe
+
+Wie schätzen Sie Ihre eigene IT-Affinität (technisches Wissen) ein?
+Skala von 1 (Sehr niedrig) bis 7 (Sehr hoch). Option: ( ) Keine Angabe / Weiß ich nicht.
+
+Sind Sie aktuell berufstätig und nutzen im Rahmen Ihrer Arbeit IT-Systeme (Computer, Smartphone etc.)?
+( ) Ja
+( ) Nein (Springt ans Ende)
+
+Was ist Ihre aktuelle berufliche Rolle/Position?
+( ) Angestellte:r / ( ) Arbeiter:in / ( ) Lehrling / ( ) Praktikant:in / ( ) Führungskraft / ( ) Selbstständig
+
+
+In welcher Branche sind Sie primär tätig?
+( ) IT & Telekommunikation / ( ) Finanzen & Versicherungen / ( ) Öffentlicher Dienst & Gesundheit / ( ) Industrie & Handel / ( ) Andere
+
+Wie groß ist Ihr Unternehmen in etwa?
+( ) 1 - 49 Mitarbeitende / ( ) 50 - 249 Mitarbeitende / ( ) 250 oder mehr Mitarbeitende
+
+Block B: Beruflicher Kontext
+8. Wie schätzen Sie den allgemeinen Reifegrad der IT-Governance (Sicherheitsrichtlinien, Kontrollen, Prozesse) in Ihrem Unternehmen ein?
+Skala von 1 (Sehr niedrig / kaum vorhanden) bis 10 (Sehr hoch / hochprofessionell). Option: ( ) 0 = Weiß ich nicht / Kann ich nicht beurteilen.
+
+Welche IT-Infrastruktur / welches Equipment nutzen Sie für die Durchführung der Multifaktor-Authentifizierung (MFA) am Arbeitsplatz primär? (Mehrfachnennung möglich)
+[ ] Firmen-Smartphone (zur Freigabe / Code-Empfang)
+[ ] Privates Smartphone (BYOD - Bring Your Own Device)
+[ ] Stationäres Gerät / Firmen-Laptop (z.B. Fingerabdrucksensor direkt am Gerät)
+[ ] Externer Hardware-Token (z.B. YubiKey als USB-Stick)
+
+Ist die Nutzung von MFA an Ihrem Arbeitsplatz verpflichtend?
+( ) Ja, für alle Systeme / ( ) Ja, aber nur für bestimmte (sensible) Systeme / ( ) Nein, sie ist freiwillig / ( ) Weiß ich nicht
+
+Wie bewerten Sie die IT-Vorgaben an Ihrem Arbeitsplatz?
+(Skala von 1 = Größte Ablehnung bis 7 = Größte Zustimmung. Option: Keine Angabe / Nicht relevant)
+
+Die Sicherheitsrichtlinien (z. B. MFA-Pflicht) in meinem Unternehmen werden technisch strikt erzwungen.
+
+Mein Arbeitgeber kommuniziert die regulatorischen Gründe (warum wir das machen müssen) sehr transparent.
+
+Bei Problemen mit der MFA-Einrichtung oder dem Equipment erhalte ich schnelle Hilfe.
+
+Es gibt klare Konsequenzen, wenn Sicherheitsvorgaben umgangen werden.
+
+Block C: Usability & Risikowahrnehmung am Arbeitsplatz
+12. Wie oft müssen Sie sich während der Arbeit aktiv mittels MFA authentifizieren?
+( ) Mehrmals täglich / ( ) Einmal täglich / ( ) Mehrmals pro Woche / ( ) Seltener
+
+Wie bewerten Sie die Usability Ihrer beruflichen MFA-Lösung?
+(Skala von 1 = Größte Ablehnung bis 7 = Größte Zustimmung. Option: Keine Angabe)
+
+Der technische Prozess der MFA-Anmeldung ist einfach und intuitiv.
+
+Der Anmeldeprozess unterbricht meinen Arbeitsfluss erheblich.
+
+Durch die MFA-Nutzung fühle ich mich beruflich spürbar besser vor Cyber-Risiken geschützt.
+
+Block D: Privater Kontext & Gewohnheiten (Quellen!!)
+14. Für welche der folgenden privaten Online-Dienste haben Sie MFA FREIWILLIG aktiviert? (Mehrfachnennung möglich)
+[ ] WhatsApp
+[ ] Instagram
+[ ] Facebook
+[ ] TikTok
+[ ] LinkedIn (als primär beruflich-privates Netzwerk)
+[ ] Private E-Mail (z.B. GMail, GMX)
+[ ] Keine von den angeführten
+[ ] Ich nutze privat generell keine MFA
+
+Wie bewerten Sie das IT-Risiko in Ihrem Privatleben?
+(Skala von 1 = Größte Ablehnung bis 7 = Größte Zustimmung. Option: Keine Angabe)
+
+Ich nutze MFA privat ausschließlich dort, wo ich gesetzlich oder technisch dazu gezwungen werde (z.B. Bank-App).
+Ich habe Angst, mich durch MFA privat dauerhaft aus meinen Konten auszusperren (z.B. bei Handyverlust).
+Ich halte meine privaten Daten für nicht wertvoll genug für Hacker, weshalb MFA oft übertrieben ist.
+
+Übertragung von Gewohnheiten (Spill-over-Effekt):
+(Skala von 1 = Größte Ablehnung bis 7 = Größte Zustimmung. Option: Keine Angabe)
+Weil ich MFA bei der Arbeit nutze, verstehe ich die technologischen Zusammenhänge besser.
+Ich nutze für meine privaten Konten exakt dieselbe MFA-App (z.B. MS Authenticator), die ich auch in der Arbeit verwende.
+Der berufliche Umgang mit IT-Sicherheit hat mich motiviert, meine privaten Konten besser zu schützen.
+Wenn die MFA bei der Arbeit nervt, weigere ich mich bewusst, mir diese Komplexität auch im Privatleben anzutun.
+
+Block E: Abschluss
+Will ich hier eine depperte "bin ich eh aufmerksam frage einbauen?"
+
+Haben Sie noch Anmerkungen zum Thema MFA oder zu dieser Umfrage?
+[Freitextfeld] - wird dann gekonnt ignorierte
+
+Abschlusstext

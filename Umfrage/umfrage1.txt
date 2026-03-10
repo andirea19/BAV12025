@@ -1,4 +1,8 @@
 „Goldene Regel“ bei Umfragen: So kurz wie möglich, so lang wie nötig. 
+
+// Tabelle in der Arbeit mit Verhältnis von Faktoren und Fragen
+// Dateilgrad erhöhen, damit ich sie dann verdichten kann
+
 Einleitungstext
 Herzlich willkommen zu dieser wissenschaftlichen Umfrage im Rahmen meiner Bachelor-/Seminararbeit. Die Umfrage untersucht, wie berufliche IT-Sicherheitsvorgaben unseren privaten Umgang mit Technologie beeinflussen. Die Teilnahme dauert ca. 5 Minuten. Ihre Daten werden vollständig anonym erhoben und DSGVO-konform nur für diese Forschung verwendet. Mit dem Klick auf "Weiter" stimmen Sie der Teilnahme zu.
 
@@ -8,18 +12,22 @@ Block A: Demografie & Hintergrund (Kontrollvariablen)
 ( ) Ja
 ( ) Nein (-> Beendet die Umfrage)
 
-2. In welche Altersgruppe fallen Sie?
+[ ] Höchster Bildungsstand -> 0-10
 
-( ) Unter 25 / ( ) 26-35 / ( ) 36-45 / ( ) 46-55 / ( ) Über 55 Jahre
+2. In welche Altersgruppe fallen Sie? -> 0-10
+
+Keine Angabe ( ) Unter 25 / ( ) 26-35 / ( ) 36-45 / ( ) 46-55 / ( ) Über 55 Jahre
 
 3. Wie schätzen Sie Ihre eigene IT-Affinität (technisches Wissen) ein?
 
 Skala: 1 (Sehr niedrig) bis 5 (Sehr hoch)
-[EXTRA] 4. In welcher Branche sind Sie primär tätig? (Spannend, um stark regulierte Branchen wie Banken zu filtern)
-( ) IT & Telekommunikation / ( ) Finanzen & Versicherungen / ( ) Öffentlicher Dienst & Gesundheit / ( ) Industrie & Handel / ( ) Sonstige
-[EXTRA] 5. Wie groß ist Ihr Unternehmen in etwa? (Spannend für IT-Governance, da (meine Annahme) Konzerne  strenger sind als kleine Firmen)
-
+[!] 4. In welcher Branche sind Sie primär tätig? (Spannend, um stark regulierte Branchen wie Banken zu filtern)
+( ) IT & Telekommunikation / ( ) Finanzen & Versicherungen / ( ) Öffentlicher Dienst & Gesundheit / ( ) Industrie & Handel / ( ) Andere
+[!] 5. Wie groß ist Ihr Unternehmen in etwa? (Spannend für IT-Governance, da (meine Annahme) Konzerne  strenger sind als kleine Firmen)
 ( ) 1 - 49 Mitarbeitende / ( ) 50 - 249 Mitarbeitende / ( ) 250 oder mehr Mitarbeitende
+--> ist IT-Governance vorhanden? (Reifegrad? 1-10, 0 = weiß ich nicht)
+--> wenn ja, wo und wie
+--> Rolle? Angestellt, Arbeiter:in, Lehrling, Praktikant:in
 
 Block B: Der berufliche Kontext (IT-Governance)
 6. Ist die Nutzung von Multifaktor-Authentifizierung (MFA) an Ihrem Arbeitsplatz verpflichtend?
