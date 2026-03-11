@@ -12,13 +12,16 @@ Was ist Ihr höchster abgeschlossener Bildungsstand?
 Wie schätzen Sie Ihre eigene IT-Affinität (technisches Wissen) ein?
 Skala von 1 (Sehr niedrig) bis 7 (Sehr hoch). Option: ( ) Keine Angabe / Weiß ich nicht.
 
-Sind Sie aktuell berufstätig und nutzen im Rahmen Ihrer Arbeit IT-Systeme (Computer, Smartphone etc.)?
+Sind Sie aktuell berufstätig?
+( ) Ja
+( ) Nein (Springt ans Ende)
+
+Nutzen Sie im Rahmen Ihrer Arbeit IT-Systeme (Computer, Smartphone etc.)?
 ( ) Ja
 ( ) Nein (Springt ans Ende)
 
 Was ist Ihre aktuelle berufliche Rolle/Position?
 ( ) Angestellte:r / ( ) Arbeiter:in / ( ) Lehrling / ( ) Praktikant:in / ( ) Führungskraft / ( ) Selbstständig
-
 
 In welcher Branche sind Sie primär tätig?
 ( ) IT & Telekommunikation / ( ) Finanzen & Versicherungen / ( ) Öffentlicher Dienst & Gesundheit / ( ) Industrie & Handel / ( ) Andere
