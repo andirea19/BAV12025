@@ -1,16 +1,18 @@
 \section{Einleitung}
 
 \subsection{Problemstellung}
-Digitale Authentifizierungstechnologien bewegen sich in einem strategischen Spannungsfeld zwischen Sicherheit und Usability. Diese Dualität stellt Unternehmen wie Privatpersonen vor die Herausforderung, sensible Daten und Zugriffe nachhaltig zu sichern. Die klassische Ein-Faktor-Authentifizierung (1FA) kann dieses Problem nicht mehr lösen, da der Faktor „Wissen“ (meist ein Passwort) durch menschliche Schwächen wie Vergesslichkeit oder Bequemlichkeit anfällig ist und dessen Manipulierbarkeit in der Literatur umfangreich dokumentiert wurde (Bonneau et al., 2015, S. 81).
-
-Gleichzeitig verzeichnen europäische Organisationen einen massiven Anstieg von identitätsbezogenen Angriffen (European Union Agency for Cybersecurity, 2024, S. 27). Angriffsvektoren wie Phishing, Identitätsbetrug und Malware bedrohen dabei private und korporative Akteure gleichermaßen. In diesem Kontext stellt die alleinige Nutzung von Passwörtern ein inakzeptables Risiko dar (Das et al., 2020, S. 5446).
-
-Multifaktor-Authentifizierung (MFA) schließt diese Sicherheitslücke, indem sie zusätzliche, voneinander unabhängige Faktoren in die Identitätsfeststellung integriert (O’Gorman, 2003, S. 2023). Insbesondere in sensiblen Sektoren wie dem Gesundheitswesen, dem Bankensektor oder der öffentlichen Verwaltung hätte eine Kompromittierung verheerende Folgen, weshalb verbindliche Standards und Guidelines hier dringend erforderlich sind (EBA, o.\,J., S. 12).
-
-Die vorliegende Arbeit untersucht, welche Faktoren die effektive Nutzung von MFA beeinflussen. Während Aspekte der Usability und Akzeptanz als Rahmenbedingungen betrachtet werden, liegt der primäre Fokus auf IT-Governance als steuerndem Element. Obwohl Governance üblicherweise im Unternehmenskontext verortet wird, gewinnt sie durch die wachsende Anzahl an IT-Regularien (NIS-2, DORA, FIDA, CRA) zunehmend auch für Privatpersonen an Relevanz, da berufliche Sicherheitsvorgaben und private Nutzungsgewohnheiten zunehmend verschwimmen.
+Digitale Authentifizierungstechnologien bewegen sich in einem strategischen Spannungsfeld zwischen Sicherheit und Usability. Diese Dualität stellt Unternehmen wie Privatpersonen vor die Herausforderung, sensible Daten und Zugriffe nachhaltig zu sichern.
+Die klassische Ein-Faktor-Authentifizierung (1FA) kann dieses Problem nicht mehr lösen, da der Faktor „Wissen“ (meist ein Passwort) durch menschliche Schwächen wie Vergesslichkeit oder Bequemlichkeit anfällig ist und dessen Manipulierbarkeit in der Literatur umfangreich dokumentiert wurde (Bonneau et al., 2015, S. 81).
+Gleichzeitig verzeichnen europäische Organisationen einen massiven Anstieg von identitätsbezogenen Angriffen (European Union Agency for Cybersecurity, 2024, S. 27). Angriffsvektoren wie Phishing, Identitätsbetrug und Malware bedrohen dabei private und korporative Akteure gleichermaßen.
+In diesem Kontext stellt die alleinige Nutzung von Passwörtern ein inakzeptables Risiko dar (Das et al., 2020, S. 5446).
+Multifaktor-Authentifizierung (MFA) schließt diese Sicherheitslücke, indem sie zusätzliche, voneinander unabhängige Faktoren in die Identitätsfeststellung integriert (O’Gorman, 2003, S. 2023).
+Insbesondere in sensiblen Sektoren wie dem Gesundheitswesen, dem Bankensektor oder der öffentlichen Verwaltung hätte eine Kompromittierung verheerende Folgen, weshalb verbindliche Standards und Guidelines hier dringend erforderlich sind (EBA, o.\,J., S. 12).
+Die vorliegende Arbeit untersucht, welche Faktoren die effektive Nutzung von MFA beeinflussen.
+Während Aspekte der Usability und Akzeptanz als Rahmenbedingungen betrachtet werden, liegt der primäre Fokus auf IT-Governance als steuerndem Element. Obwohl Governance üblicherweise im Unternehmenskontext verortet wird, gewinnt sie durch die wachsende Anzahl an IT-Regularien (NIS-2, DORA, FIDA, CRA) zunehmend auch für Privatpersonen an Relevanz, da berufliche Sicherheitsvorgaben und private Nutzungsgewohnheiten zunehmend verschwimmen.
 
 \subsection{Zielsetzung und wissenschaftliche Fragestellung}
-Multifaktor-Authentifizierung (MFA) stellt weit mehr dar als eine rein technische Standardlösung für das Identitäts- und Zugangsmanagement. Sie bewegt sich in einem komplexen Anforderungsfeld: Die Technologie muss nicht nur kryptografisch sicher und resistent gegen Täuschung sein, sondern gleichzeitig externe Compliance-Anforderungen erfüllen und durch eine hohe Benutzerfreundlichkeit (Usability) Risiken minimieren, die durch menschliches Fehlverhalten entstehen (Kim et al., 2011, S. 187).
+Multifaktor-Authentifizierung (MFA) stellt weit mehr dar als eine rein technische Standardlösung für das Identitäts- und Zugangsmanagement.
+Sie bewegt sich in einem komplexen Anforderungsfeld: Die Technologie muss nicht nur kryptografisch sicher und resistent gegen Manipulation sein, sondern gleichzeitig externe Compliance-Anforderungen erfüllen und durch Benutzerfreundlichkeit Risiken minimieren, die durch menschliches Fehlverhalten entstehen (Kim et al., 2011, S. 187).
 In diesem Kontext nimmt IT-Governance eine Schlüsselrolle ein. Durch Richtlinien und strategische Vorgaben können Unternehmen Sicherheitsaspekte mit den Interessen der Stakeholder in Einklang bringen (Wibowo \& Ramli, 2022, S. 2). Auf Basis der ermittelten Authenticator Assurance Levels (AAL) werden Technologien und Prozesse definiert, um diese Ziele zu erreichen. Damit verortet sich das Thema nachvollziehbar im Bereich des strategischen IT-Infrastruktur-Managements.
 
 Daraus abgeleitet lautet die zentrale Forschungsfrage der vorliegenden Arbeit:
@@ -23,7 +25,7 @@ Als Unterfragen ergeben sich:
 \begin{itemize}
 % alt    \item Welche technischen und regulatorischen Faktoren beeinflussen die Verwendung von MFA?
 % alt    \item Inwiefern lässt sich ein Transfer zwischen diesen Bereichen (Spill-over) feststellen?
-\item \textbf{Unterfrage 1:} Welche technischen Aspekte (Usability, Infrastruktur) und regulatorischen Mechanismen der IT-Governance (Zwang vs. Support) beeinflussen die Akzeptanz und Nutzung von MFA im beruflichen Umfeld?
+\item \textbf{Unterfrage 1:} Welche technischen Aspekte (Usability, Infrastruktur) und regulatorischen Mechanismen der IT-Governance beeinflussen die Akzeptanz und Nutzung von MFA im beruflichen Umfeld?
 \item \textbf{Unterfrage 2:} Welche spezifischen Merkmale der Technologieanwendung (Wissen, Tools, Motivation) werden durch einen Spill-over-Effekt in die private Nutzung transferiert und welche Faktoren begünstigen dabei einen positiven bzw. negativen Transfer?
 
 \end{itemize} 
@@ -36,7 +38,7 @@ Um diese Fragestellung zielgerichtet zu beantworten und die Zusammenhänge empir
     \item \textbf{$H_3$:} Positive Erfahrungen mit MFA im beruflichen Kontext erhöhen die Wahrscheinlichkeit der privaten Nutzung von MFA (Spill-over-Effekt).
 \end{itemize}
 
-Methodisch stützt sich die vorliegende Arbeit auf ein zweistufiges Forschungsdesign. Den theoretischen Unterbau bildet eine systematische Literaturrecherche (Literature Review), bei der relevante wissenschaftliche Publikationen, Fachartikel und Standards (z.\,B. NIST, ISO) analysiert werden, um sowohl die technischen Aspekte von MFA als auch die organisatorischen Governance-Faktoren zu beleuchten.
+Methodisch stützt sich die vorliegende Arbeit auf ein zweistufiges Forschungsdesign. Den theoretischen Unterbau bildet eine Literaturrecherche, bei der relevante wissenschaftliche Publikationen, Fachartikel und Standards (z.\,B. NIST, ISO) analysiert werden, um sowohl die technischen Aspekte von MFA als auch die organisatorischen Governance-Faktoren zu beleuchten.
 Darauf aufbauend erfolgt zur Überprüfung der aufgestellten Hypothesen eine quantitative Datenerhebung in Form einer standardisierten Online-Umfrage. Dieses Vorgehen ermöglicht es, die Nutzungsmuster im beruflichen und privaten Kontext empirisch gegenüberzustellen, den Spill-over-Effekt statistisch zu quantifizieren und weiters Erfolgsfaktoren zu identifizieren.
 Dafür wurden berufstätige Personen im DACH-Raum, die regelmäßig mit IT-Systemen und digitalen Authentifizierungsverfahren konfrontiert sind, als Zielgruppe definiert. Die gewonnenen Erkenntnisse tragen dazu bei, die Schnittstelle zwischen beruflicher IT-Governance und privater Sicherheitskultur besser zu verstehen und daraus praxisrelevante Handlungsempfehlungen abzuleiten.
 Die Relevanz dieser Arbeit ergibt sich insbesondere für (angehende) IT-Manager:innen sowie Verantwortliche im Bereich Identity- und Access-Management (IAM), um Entscheidungen mit stärkerem Nutzer:innen-Fokus zu treffen und Organisationen auf die steigenden Anforderungen von regulatorischen Vorgaben vorzubereiten.
