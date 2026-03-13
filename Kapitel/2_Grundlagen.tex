@@ -4,7 +4,7 @@
 Authentifizierung bezeichnet den technischen Prozess, bei dem ein System die behauptete, digitale Identität einer Person prüft. Dabei ist sie von Identitätsfeststellung (Identity Proofing) und Autorisierung zu unterscheiden (Temoshok et al., 2025a--c).
 
 Klassisch erfolgte Authentifizierung mittels eines Faktors, über Wissen (zum Beispiel Passwort). Angesichts bekannter Schwächen von Passwörtern und darauf abgestimmter Angriffsformen empfiehlt der NIST-Rahmen abhängig vom Risiko der Anwendung höhere Authenticator Assurance Levels (AAL) bis hin zu verpflichtender Multifaktor-Authentifizierung (MFA) (Temoshok, 2025; Temoshok et al., 2025b).
-
+% Hier sind die ganz grundlegenden Infos
 MFA kombiniert mindestens zwei unabhängige Faktorarten (O'Gorman \& O'Gorman, 2003, S. 2022):
 \begin{itemize}
     \item \textbf{Besitz} („Something you have“): Smartcard, Hardware-Schlüssel, Token.
@@ -18,28 +18,32 @@ Neue Darstellungen erweitern diese drei klassischen Faktoren um zwei weitere:
     \item \textbf{Tätigkeitsbezug} („Something you do“): Verhalten mit dem Gerät, Klick- und Tippverhalten (OWASP, o.\,J.).
 \end{itemize}
 
-Für den vorliegenden Text liegt der Fokus jedoch auf den obengenannten Faktoren. Einerseits aufgrund ihrer dichteren Forschungslage, andererseits um Kreuzbeziehungen (zum Beispiel: Wie wirkt Unternehmensgovernance auf den Arbeitsort und die IP-Adresse bei Home-Office-Regelungen?) zu reduzieren, die hier nicht in der gebührenden Komplexität dargestellt werden könnten.
-Zur Absicherung digitaler Identitäten wird eine Kombination mehrerer etablierter Protokolle und Technologien verwendet, um sowohl die Identitätsprüfung als auch die Zugriffssteuerung zu regeln (Rose et al., 2020, S. 6). Auf diese wird in Folge genauer eingegangen.
+Für den vorliegenden Text liegt der Fokus jedoch auf den drei obengenannten Faktoren.
+Einerseits aufgrund ihrer dichteren Forschungslage, andererseits um Kreuzbeziehungen (zum Beispiel: Wie wirkt Unternehmensgovernance auf den Arbeitsort und die IP-Adresse bei Home-Office-Regelungen?) zu reduzieren, die hier nicht in der gebührenden Komplexität dargestellt werden könnten.
+Zur Absicherung digitaler Identitäten wird eine Kombination mehrerer etablierter Protokolle und Technologien verwendet, um sowohl die Identitätsprüfung als auch die Zugriffssteuerung zu regeln (Rose et al., 2020, S. 6).
+Auf diese wird in Folge genauer eingegangen.
 Während traditionelle Modelle oft auf örtlichen (sogenannten perimeterbasierten) Ansätzen beruhten, erfordern moderne Architekturen eine kleinteilige Unterscheidung zwischen der Verifizierung einer Identität (Authentifizierung) und der Gewährung von Zugriffsrechten (Autorisierung) (Shirey, 2007, S. 25--28).
 Entscheidend ist die Unabhängigkeit der Faktoren voneinander, aber auch ihre Bindung an die Nutzer:in und das verwendete Protokoll (zum Beispiel bei einem kryptografischen Herausforderungs-Antwort-Verfahren). Damit steigt die Resistenz gegen Phishing oder technische Manipulation, wie etwa bei FIDO2/WebAuthn als besitzbasierten, kryptografischen Faktoren (Lang et al., 2016, S. 423).
 In risikobasierten Ansätzen (RBA) werden zusätzliche Faktoren bei auffälligem Kontext angefordert (Wiefling et al., 2019). Allerdings sind sie im Hinblick auf die Anfälligkeit von Passwörtern durchaus auch unter anderen Umständen zu empfehlen (Otta et al., 2023, S. 4). 
 
 \subsection{Historische Entwicklung – von 1FA zu MFA}
 \textit{,,In times gone by, authentication was not a complex task. One person, call her Alice, would meet another person, Bob, and either recognize him by visual appearance or not. […] Now we cannot ‘see’ the entity on the remote end of a computer network, and indeed the entity could be a friend, a machine, or an attacker. We exchange personal information, such as financial and health data, that we wish to remain as private and as confidential as correspondence between spies.``} (O’Gorman, 2003, S. 2001)
-
-Die Entwicklung der digitalen Authentifizierung ist eng mit der allgemeinen Informationssicherheit verbunden. Schon in den 1960er-Jahren wurden Passwörter als primäre Methode zur Zugangskontrolle eingeführt und über Jahrzehnte als Standard eingesetzt (Bonneau et al., 2015, S. 78--80). Dieses Prinzip geht von der Annahme aus, dass nur autorisierte Personen das zugrunde liegende „Geheimnis“ kennen (O’Gorman \& O’Gorman, 2003, S. 2022).
-
-Mit der zunehmenden Vernetzung und Komplexität moderner IT-Systeme steigen allerdings die Sicherheitsrisiken sukzessiv. Das beeinflusst nur teilweise die Sensibilisierung von Nutzer:innen bezüglich IT-Risiken: Empirische Studien zeigen, dass Nutzer:innen häufig dieselben oder sehr einfache Passwörter für mehrere Dienste wiederverwenden, um die kognitive Belastung zu reduzieren (Florêncio et al., 2007, S. 660). Dieser menschliche Faktor führt zu einer hohen Anfälligkeit für Angriffe wie Credential Stuffing (Kunke et al., 2021, S. 59) und erleichtert Brute-Force-Angriffe (Bonneau et al., 2012, S. 555).
-
-Als Reaktion auf diese Schwachstelle entstanden Zwei-Faktor-Authentifizierungsverfahren (2FA), die erstmals Besitzfaktoren wie Hardware-Token oder mobile TAN-Generatoren einbezogen. Der Übergang zur Mehrfaktor-Authentifizierung (MFA) erfolgte evolutionär, indem biometrische und kontextbezogene Merkmale ergänzt wurden (Temoshok et al., 2025, S. 14).
+\newline
+Die Entwicklung der digitalen Authentifizierung ist eng mit der allgemeinen Informationssicherheit verbunden.
+Schon in den 1960er-Jahren wurden Passwörter als primäre Methode zur Zugangskontrolle eingeführt und über Jahrzehnte als Standard eingesetzt (Bonneau et al., 2015, S. 78--80).
+Dieses Prinzip geht von der Annahme aus, dass nur autorisierte Personen das zugrunde liegende „Geheimnis“ kennen (O’Gorman \& O’Gorman, 2003, S. 2022).
+Mit der zunehmenden Vernetzung und Komplexität moderner IT-Systeme steigen allerdings die Sicherheitsrisiken sukzessiv.
+Das beeinflusst nur teilweise die Sensibilisierung von Nutzer:innen bezüglich IT-Risiken: Empirische Studien zeigen, dass Nutzer:innen häufig dieselben oder sehr einfache Passwörter für mehrere Dienste wiederverwenden, um die kognitive Belastung zu reduzieren (Florêncio et al., 2007, S. 660). Dieser menschliche Faktor führt zu einer hohen Anfälligkeit für Angriffe wie Credential Stuffing (Kunke et al., 2021, S. 59) und erleichtert Brute-Force-Angriffe (Bonneau et al., 2012, S. 555).
+Als Reaktion auf diese Schwachstelle entstanden Zwei-Faktor-Authentifizierungsverfahren (2FA), die erstmals Besitzfaktoren wie Hardware-Token oder mobile TAN-Generatoren einbezogen.
+Der Übergang zur Mehrfaktor-Authentifizierung (MFA) erfolgte in Schritten, indem biometrische und kontextbezogene Merkmale ergänzt wurden (Temoshok et al., 2025, S. 14).
 Aktuelle Authentifizierungssysteme vereinen technische Innovationen mit Anforderungen an Datenschutz, Benutzerfreundlichkeit und regulatorische Vorgaben, etwa im Finanzwesen durch die Zahlungsdienst-Richtlinie PSD2 (de Bruijn \& Janssen, 2017, S. 3). Damit bildet MFA heute einen zentralen Bestandteil moderner Sicherheitsarchitekturen, der technologische sowie auch organisatorische Aspekte vereint.
-Gängige Multi-Faktor-Authentifizierungssysteme (MFA) nutzen eine Vielzahl technischer Verfahren, die sich (unter anderem) im Sicherheitsniveau, hinsichtlich ihrer Benutzerfreundlichkeit und im Implementierungsaufwand unterscheiden (Mohammed et al., 2023, S. 4).
+Gängige Multi-Faktor-Authentifizierungssysteme nutzen eine Vielzahl technischer Verfahren, die sich (unter anderem) im Sicherheitsniveau, hinsichtlich ihrer Benutzerfreundlichkeit und im Implementierungsaufwand unterscheiden (Mohammed et al., 2023, S. 4).
 Die Verbindung mehrerer Faktoren erhöht die Resilienz gegenüber unbefugten Zugriffen, da Angreifer:innen nicht mehr nur ein einzelnes Geheimnis kompromittieren müssen. Dabei ist die erwähnte Unabhängigkeit der Faktoren und Bindung der Faktoren an Gerät und Nutzer:in entscheidend, wie sie in den Digital Identity Guidelines des NIST definiert sind (Temoshok et al., 2025, S. 12--14). Zu diesem Zweck werden im Folgenden relevante Technologien und Protokolle kurz vorgestellt.
 
 \subsection{Relevante Protokolle und Technologien}
 
 \subsubsection{Authentifizierung \& Autorisierung}
-Die Authentifizierung ist der Prozess, bei dem ein Anspruchsteller (Claimant) den Besitz und die Kontrolle über einen oder mehrere Authentifikatoren nachweist, um seine Identität gegenüber einem Bestätiger (Verifier) zu bestätigen (Temoshok et al., 2025, S. 4--5). Authentifizierungsmethoden basieren traditionell, wie einleitend erwähnt, auf drei Faktoren (NIST SP 800-63 Digital Identity Guidelines, o.\,J.).
+Die Authentifizierung ist der Prozess, bei dem ein Anspruchsteller/ eine Anspruchstellerin (Claimant) den Besitz und die Kontrolle über einen oder mehrere Authentifikatoren nachweist, um seine Identität gegenüber einem Bestätiger (Verifier) zu bestätigen (Temoshok et al., 2025, S. 4--5). Authentifizierungsmethoden basieren traditionell, wie einleitend erwähnt, auf drei Faktoren (NIST SP 800-63 Digital Identity Guidelines, o.\,J.).
 
 Da simple Passwörter anfällig für Diebstahl und Phishing sind, gilt die MFA als Standard für höhere Sicherheitsanforderungen. MFA kombiniert mindestens zwei verschiedene dieser Faktoren, um die Sicherheit über die bloße Kenntnis eines Geheimnisses hinaus zu erhöhen; also zu Authentifizieren (Ometov et al., 2018, S. 3).
 Einmalpasswörter (One-Time Password, OTP) beruhen auf kurzlebigen Codes, die entweder zeit- (Time-Based One-Time Password, TOTP) oder zählerbasiert (HMAC-based One-Time Password, HOTP) generiert werden (M’Raihi et al., 2011, S. 3--4).
@@ -88,7 +92,8 @@ Ziel dieser Methodiken ist, dass Sicherheitssysteme intuitiv (richtig) bedienbar
 Das geht Hand-in-Hand mit der kognitiven Last (Cognitive Load), dem Aufwand bei der Verwendung.  (Acemyan et al., 2018): Reduzieren der psychischen Anstrengung bei der Verwendung
 Eine Möglichkeit, um diese Belastung zu reduzieren, ist bei der Entwicklung von IT-Systemen auf die Usability zu achten.
 Das bietet sich in insofern an, dass die Usability ein objektiv messbares und normiertes Kriterium ist. ISO 9241-11 (ISO, 2018)
-Im MFA-Kontext tritt hier die Frage nach der Aufgabe der Technologie auf (Primäraufgabe vs. Sekundäraufgabe) (Marky et al., 2022): MFA ist nie das eigentliche Ziel der User:innen, sondern eine Sekundäraufgabe
-Es muss ein Security-Usability Kompromiss getroffen werden, da ein Zielekonflikt zwischen Sicherheit und Bequemlichkeit besteht.
+Im MFA-Kontext tritt hier die Frage nach der Aufgabe der Technologie auf (Primäraufgabe vs. Sekundäraufgabe) \bibitem{marky2022}
+(Marky et al., 2022): MFA ist nie das eigentliche Ziel der User:innen, sondern eine Sekundäraufgabe
+Es muss ein Kompromiss zwischen Sicherheit und Bequemlichkeit getroffen werden. 
 % wie bereits beschrieben, aber wo? 
-Folgen eines schlechten Trade-offs: „Security Fatigue“ (Sicherheitsermüdung), Reaktanz und die Flucht in Workarounds (Fagan \& Khan, 2016)
+Mögliche Folgen eines schlecht ausverhandelten MFA-System können „Security Fatigue“ (Sicherheitsermüdung), negative Reaktionen und die Verwendung von Workarounds sein (Fagan \& Khan, 2016)
