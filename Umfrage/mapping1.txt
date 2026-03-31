@@ -1,4 +1,4 @@
-Mapping anhand der Hypothesen und Forschungsfragen
+Mapping (anhand der imaginären) Hypothesen und Forschungsfragen
 
 Block A: Kontrollvariablen und Demografie
 F1: Filterfrage (Grundgesamtheit: berufstätig mit IT-Nutzung)
@@ -11,6 +11,7 @@ F8: Subjektiver Reifegrad der IT-Governance – Allgemeine Einschätzung der Sic
 F9: IT-Infrastruktur / Equipment – Prüft den Einfluss der Hardware (z. B. BYOD vs. Firmen-Token) auf die Akzeptanz.
 F10: Verbindlichkeit / Zwang – Kategorisiert die Teilnehmenden in Zwangsnutzer:innen vs. freiwillige Nutzer:innen.
 F11: Dimensionen der Governance – Operationalisiert in Zwang (technische Durchsetzung), Transparenz (Kommunikation), Support (Hilfestellung) und Konsequenzen.
+F?: Wird auf MFA Wert gelegt?
 
 Block C: Usability und Risikowahrnehmung am Arbeitsplatz (Überprüfung von H2)
 F12: Nutzungsfrequenz – Misst die quantitative Konfrontation mit MFA (Gewöhnungseffekt).
@@ -37,7 +38,7 @@ Usability & Störfaktor am Arbeitsplatz (Frage 12, 13):
 Literatur: Marky et al. (2022); Acemyan et al. (2018)
 Begründung: Marky et al. beschreiben MFA oft als störend ("annoying"). Acemyan et al. belegen, dass schlechte Usability den Arbeitsfluss bricht und zu Ablehnung führt.
 
-Privates Risiko & Angst vor Aussperren (Frage 15):
+Privates Risiko & Angst vorm Aussperren (Frage 15):
 Literatur: Pratama & Firmansyah (2021); Das et al. (2018)
 Begründung: Pratama & Firmansyah definieren die "Recovery Anxiety" (Angst, sich bei Handyverlust dauerhaft auszusperren) als größte Adoptionshürde im privaten Bereich.
 
