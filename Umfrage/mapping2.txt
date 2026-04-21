@@ -1,0 +1,31 @@
+Block A Kontrollvariablen und Demografie
+
+F1: IT Affinität -> Einfluss technisches Wissen auf Verhalten
+F2 bis F4: Soziodemografie -> Kontrollvariablen füer Alter und Bildung
+F6 bis F7: Unternehmensmerkmale -> Einordnung Branche, Größe
+
+Block B IT Governance und beruflicher Kontext
+Referenz: Wibowo & Ramli (2022); de Bruijn et al. (2017)
+
+F8: Governancefrage 1 -> Sicherheit als Kultur
+F9-F10: Equipment -> Einfluss Hardware auf Akzeptanz (Ciolino et al. 2019)
+F11: Verbindlichkeit -> Unterscheidung Zwang vs Freiwilligkeit (plus Governance 2)
+F12: Häufigkeit 
+
+Block C Usability und Risikowahrnehmung am Arbeitsplatz
+Referenz: Marky et al. (2022); Acemyan et al. (2018)
+
+F13: Nutzungsfrequenz -> Frage nach Gewöhnungseffekt (HIER NOCH GENAUER AUSFORMULIEREN)
+
+Block D Privater Kontext und Spill over Effekt
+
+Quelle: Colnago et al. (2018); Das et al. (2021); Pratama & Firmansyah (2021)
+--> Spillover selber!
+
+F14 bis F16 : Status Quo -> Private Nutzungshäufigkeit Dienste
+F17: Transfer, Risikowahrnehmung -> Recovery Anxiety und Optimismus Bias, Spill over Effekt
+
+Block E Qualitätssicherung
+
+F19: Offenes Feedback -> Qualitative Erganzungen
+WICHTIG: Ich habe beim Aussenden gebeten, RLB anzugeben, wenn sie über das Intranet rekrutiert wurden!
