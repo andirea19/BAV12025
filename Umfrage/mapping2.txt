@@ -29,3 +29,10 @@ Block E Qualitätssicherung
 
 F19: Offenes Feedback -> Qualitative Erganzungen
 WICHTIG: Ich habe beim Aussenden gebeten, RLB anzugeben, wenn sie über das Intranet rekrutiert wurden!
+
+\begin{center}
+\begin{tabular}{c c c c} 
+Block & Variable & Theoretischer Bezug & Item(s)
+A & Gen. Info (Demografie, IT-Affinität) als Selbstberichtete Daten & F1–F7 
+B & IT-Governance und Arbeit & Wibowo & Ramli (2022); de Bruijn et al. (2017)
+F8–F12CUsability & RisikowahrnehmungMarky et al. (2022); Acemyan et al. (2018)F13DSpill-over Effekte (Privatnutzung)Colnago et al. (2018); Pratama & Firmansyah (2021)F14–F17EQualitätssicherungOffene KommentareF19
