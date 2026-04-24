@@ -52,12 +52,21 @@ Die finale Datenerhebung erfolgte mittels des standardisierten Online-Fragebogen
 \subsection{Datenaufbereitung und Auswertungsverfahren}
 Die Datenanalyse erfolgt mit der Open-Source-Software \textit{Orange Data Mining}. Die Wahl fiel auf dieses Tool, da es durch seine visuelle Programmierung eine transparente und nachvollziehbare Kombination aus Datenaufbereitung, Datenanalyse und inferenzstatistischer Testung innerhalb einer Workflow-Umgebung ermöglicht. Der gesamte Analyseprozess wurde als Orange-Workflow (\texttt{.ows}) dokumentiert.
 % wie zitiere ich Orange? https://orange.biolab.si/citation/
-Über das \textit{File Widget} werden die Rohdaten aus den Befragungen importiert. Im Rahmen der Datenvorverarbeitung werden unvollständige Datensätze ausgeschlossen (\textit{Data Cleaning}). Über die \textit{Feature Selection} und \textit{Edit Domain} werden die Variablentypen definiert (Ordinal für Likert-Skalen, Nominell für demografische Merkmale). Zudem werden Ausreißer (z.\,B. „Speed-Speeder“ mit unrealistisch kurzen Bearbeitungszeiten) herausgefiltert.
+Über das File Widget werden die Rohdaten aus den Befragungen importiert. Im Rahmen der Datenvorverarbeitung werden unvollständige Datensätze ausgeschlossen (\textit{Data Cleaning}). Über die \textit{Feature Selection} und \textit{Edit Domain} werden die Variablentypen definiert (Ordinal für Likert-Skalen, Nominell für demografische Merkmale). Zudem werden Ausreißer (z.\,B. „Speed-Speeder“ mit unrealistisch kurzen Bearbeitungszeiten) herausgefiltert.
 Die deskriptive Statistik dient zur Darstellung der Stichprobenverteilung. Mittels des \textit{Distributions Widgets} (Histogramme) werden soziodemografische Daten und allgemeine MFA-Nutzungshäufigkeiten visualisiert. \textit{Box Plots} kommen zum Einsatz, um Unterschiede in der Usability-Bewertung zwischen verschiedenen Nutzergruppen (z.\,B. hohe vs. niedrige IT-Affinität) visuell zu prüfen.
 % hier kann ich einen Screenshot einbauen
 
 \subsection{Mapping}
-
+\begin{center}
+\begin{tabular}{c c c c} 
+Block & Variable & Theoretischer Bezug & Item(s)
+A & Gen. Info (Demografie, IT-Affinität) als Selbstberichtete Daten & F1–F7 
+B & IT-Governance und Arbeit & Wibowo & Ramli (2022); de Bruijn et al. (2017) & F8–F12
+C & Verwendung & Marky et al. (2022); Acemyan et al. (2018) & F13
+D & Spill-over Effekte (Privat) & Colnago et al. (2018); Pratama & Firmansyah (2021) & F14–F17
+E & Qualitätssicherung & Offene Kommentare & F19
+\end{tabular}
+\end{center}
 
 % raus mit den Hypothesen --> verweisen auf die Einflussfaktoren (Modellauswertung)
 %Zur Überprüfung der aufgestellten Hypothesen kommt die \textbf{Inferenzstatistik} zum Einsatz:

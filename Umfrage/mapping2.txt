@@ -34,5 +34,9 @@ WICHTIG: Ich habe beim Aussenden gebeten, RLB anzugeben, wenn sie über das Intr
 \begin{tabular}{c c c c} 
 Block & Variable & Theoretischer Bezug & Item(s)
 A & Gen. Info (Demografie, IT-Affinität) als Selbstberichtete Daten & F1–F7 
-B & IT-Governance und Arbeit & Wibowo & Ramli (2022); de Bruijn et al. (2017)
-F8–F12CUsability & RisikowahrnehmungMarky et al. (2022); Acemyan et al. (2018)F13DSpill-over Effekte (Privatnutzung)Colnago et al. (2018); Pratama & Firmansyah (2021)F14–F17EQualitätssicherungOffene KommentareF19
+B & IT-Governance und Arbeit & Wibowo & Ramli (2022); de Bruijn et al. (2017) & F8–F12
+C & Verwendung & Marky et al. (2022); Acemyan et al. (2018) & F13
+D & Spill-over Effekte (Privat) & Colnago et al. (2018); Pratama & Firmansyah (2021) & F14–F17
+E & Qualitätssicherung & Offene Kommentare & F19
+\end{tabular}
+\end{center}
