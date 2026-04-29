@@ -1,87 +1,60 @@
 \section{Grundlagen}
 
 \subsection{Allgemeine Definitionen}
-Authentifizierung bezeichnet den technischen Prozess, bei dem ein System die behauptete, digitale Identität einer Person prüft. Dabei ist sie von Identitätsfeststellung (Identity Proofing) und Autorisierung zu unterscheiden (Temoshok et al., 2025a--c).
+Authentifizierung bezeichnet den technischen Prozess, bei dem ein System die behauptete digitale Identität einer Person prüft. Dabei ist sie strikt von der Identitätsfeststellung (Identity Proofing), also der erstmaligen Überprüfung einer Identität (z. B. durch einen Ausweis), und der Autorisierung zu unterscheiden. Während die Authentifizierung die Frage „Bist ich wirklich die Person, die ich vorgibst zu sein?“ beantwortet, klärt die Autorisierung, welche Rechte dieser Person nach dem Login zustehen.
 
-Klassisch erfolgte Authentifizierung mittels eines Faktors, über Wissen (zum Beispiel Passwort). Angesichts bekannter Schwächen von Passwörtern und darauf abgestimmter Angriffsformen empfiehlt der NIST-Rahmen abhängig vom Risiko der Anwendung höhere Authenticator Assurance Levels (AAL) bis hin zu verpflichtender Multifaktor-Authentifizierung (MFA) (Temoshok, 2025; Temoshok et al., 2025b).
+Klassisch erfolgte die Authentifizierung mittels eines einzelnen Faktors, meist über Wissen in Form eines Passworts. Angesichts der evolutionären Entwicklung von Angriffsformen wie Social Engineering oder automatisierten Passwort-Angriffen empfiehlt der NIST-Rahmen heute risikobasierte Authenticator Assurance Levels (AAL). Diese reichen bis hin zur verpflichtenden Multifaktor-Authentifizierung (MFA), um die Integrität kritischer Infrastrukturen zu gewährleisten.
 % Hier sind die ganz grundlegenden Infos
-MFA kombiniert mindestens zwei unabhängige Faktorarten (O'Gorman \& O'Gorman, 2003, S. 2022):
+MFA kombiniert mindestens zwei unabhängige Faktorarten, um die Sicherheit exponentiell zu erhöhen:
 \begin{itemize}
-    \item \textbf{Besitz} („Something you have“): Smartcard, Hardware-Schlüssel, Token.
-    \item \textbf{Inhärenz} („Something you are“): biometrische Merkmale (zum Beispiel Fingerabdruck, Gesichtsscan).
-    \item \textbf{Wissen} („Something you know“): Passwort, PIN, Sicherheitsfragen.
+    \item \textbf{Besitz} („Something you have“): Hierzu zählen physische Gegenstände wie Smartcards, Hardware-Sicherheitsschlüssel (z. B. YubiKeys) oder kryptografische Token.
+    \item \textbf{Inhärenz} („Something you are“): Hierunter fallen biometrische Merkmale wie der Fingerabdruck, Irisscan oder die Gesichtserkennung.
+    \item \textbf{Wissen} („Something you know“): Das klassische Geheimnis, etwa ein Passwort, eine PIN oder eine Passphrase.
 \end{itemize}
 
-Neue Darstellungen erweitern diese drei klassischen Faktoren um zwei weitere: 
+% Ergänzung: Hier könnte man noch kurz einfügen, dass die Unabhängigkeit der Kanäle (Out-of-Band) entscheidend ist, um Man-in-the-Middle-Angriffe zu verhindern.
+
+Neue Darstellungen erweitern diese drei klassischen Faktoren um zwei kontextbezogene Dimensionen: 
 \begin{itemize}
-    \item \textbf{Ortsbezug} („Somewhere you are“): IP-Adresse, Geolocation.
-    \item \textbf{Tätigkeitsbezug} („Something you do“): Verhalten mit dem Gerät, Klick- und Tippverhalten (OWASP, o.\,J.).
+    \item \textbf{Ortsbezug} („Somewhere you are“): Die Verifizierung erfolgt über Geofencing, IP-Adressen-Abgleich oder GPS-Daten.
+    \item \textbf{Tätigkeitsbezug} („Something you do“): Verhaltensbiometrie analysiert Muster wie die Tippgeschwindigkeit oder die Dynamik der Mausführung (OWASP, o.\,J.).
 \end{itemize}
 
-Für den vorliegenden Text liegt der Fokus jedoch auf den drei obengenannten Faktoren.
-Einerseits aufgrund ihrer dichteren Forschungslage, andererseits um Kreuzbeziehungen (zum Beispiel: Wie wirkt Unternehmensgovernance auf den Arbeitsort und die IP-Adresse bei Home-Office-Regelungen?) zu reduzieren, die hier nicht in der gebührenden Komplexität dargestellt werden könnten.
-Zur Absicherung digitaler Identitäten wird eine Kombination mehrerer etablierter Protokolle und Technologien verwendet, um sowohl die Identitätsprüfung als auch die Zugriffssteuerung zu regeln (Rose et al., 2020, S. 6).
-Auf diese wird in Folge genauer eingegangen.
-Während traditionelle Modelle oft auf örtlichen (sogenannten perimeterbasierten) Ansätzen beruhten, erfordern moderne Architekturen eine kleinteilige Unterscheidung zwischen der Verifizierung einer Identität (Authentifizierung) und der Gewährung von Zugriffsrechten (Autorisierung) (Shirey, 2007, S. 25--28).
-Entscheidend ist die Unabhängigkeit der Faktoren voneinander, aber auch ihre Bindung an die Nutzer:in und das verwendete Protokoll (zum Beispiel bei einem kryptografischen Herausforderungs-Antwort-Verfahren). Damit steigt die Resistenz gegen Phishing oder technische Manipulation, wie etwa bei FIDO2/WebAuthn als besitzbasierten, kryptografischen Faktoren (Lang et al., 2016, S. 423).
-In risikobasierten Ansätzen (RBA) werden zusätzliche Faktoren bei auffälligem Kontext angefordert (Wiefling et al., 2019). Allerdings sind sie im Hinblick auf die Anfälligkeit von Passwörtern durchaus auch unter anderen Umständen zu empfehlen (Otta et al., 2023, S. 4). 
+Für den vorliegenden Text liegt der Fokus jedoch auf den drei obengenannten klassischen Faktoren. Einerseits aufgrund ihrer dichteren Forschungslage, andererseits um komplexe Kreuzbeziehungen zu reduzieren, die etwa bei der Analyse von Home-Office-Regelungen und wechselnden IP-Standorten in der Governance entstehen würden.
 
-\subsection{Relevante Protokolle und Technologien}
+\subsection{Protokolle und Technologien}
 
 \subsubsection{Authentifizierung \& Autorisierung}
-Die Authentifizierung ist der Prozess, bei dem ein Anspruchsteller/ eine Anspruchstellerin (Claimant) den Besitz und die Kontrolle über einen oder mehrere Authentifikatoren nachweist, um seine Identität gegenüber einem Bestätiger (Verifier) zu bestätigen (Temoshok et al., 2025, S. 4--5). Authentifizierungsmethoden basieren traditionell, wie einleitend erwähnt, auf drei Faktoren (NIST SP 800-63 Digital Identity Guidelines, o.\,J.).
+Die Authentifizierung ist der Prozess, bei dem eine Anspruchstellerin oder ein Anspruchsteller (Claimant) den Besitz und die Kontrolle über Authentifikatoren nachweist. Dieser Nachweis erfolgt gegenüber einem Bestätiger (Verifier).
 
-Da simple Passwörter anfällig für Diebstahl und Phishing sind, gilt die MFA als Standard für höhere Sicherheitsanforderungen. MFA kombiniert mindestens zwei verschiedene dieser Faktoren, um die Sicherheit über die bloße Kenntnis eines Geheimnisses hinaus zu erhöhen; also zu Authentifizieren (Ometov et al., 2018, S. 3).
-Einmalpasswörter (One-Time Password, OTP) beruhen auf kurzlebigen Codes, die entweder zeit- (Time-Based One-Time Password, TOTP) oder zählerbasiert (HMAC-based One-Time Password, HOTP) generiert werden (M’Raihi et al., 2011, S. 3--4).
-Wird der Code per App oder Hardware-Token erzeugt, gilt das Verfahren als relativ sicher (O’Gorman, 2003). SMS-basierte Übermittlungen sind hingegen anfällig für Phishing und SIM-Swapping-Angriffe (Ulqinaku et al., 2020, S. 1200--1201).
-Hardware-Token und Smartcards stellen physische Besitzfaktoren dar, die über kryptografische Verfahren (beispielsweise U2F, FIDO2) eine Challenge-Response-Authentifizierung ermöglichen. Diese Lösungen gelten als besonders resistent gegen Phishing und Replay-Angriffe (Lang et al., 2016, S. 424--427), erfordern jedoch organisatorischen Aufwand bei Verwaltung und Einsatz (Pfeffer et al., 2021, S. 40--42).
-Biometrische Authentifizierung nutzt inhärente Merkmale wie Fingerabdruck, Gesicht oder Stimme.
-Sie bietet leichte Nutzung, wirft aber Fragen zum Datenschutz, zur Einwilligung und zu möglichen Spoofing-Risiken auf (Trewin et al., 2012, S. 160--163; Wolf et al., 2019, S. 151).
-Ein zentraler Standard für Authentifizierung ist FIDO2, der vom W3C und der FIDO-Alliance entwickelt wurde. Er besteht aus der Web Authentication API (WebAuthn) und dem Client-to-Authenticator-Protocol (CTAP). FIDO2 ermöglicht passwortlose Authentifizierung durch asymmetrische Kryptographie, bei der private Schlüssel sicher auf einem Authentifikator (zum Beispiel YubiKey oder Smartphone-TPM) gespeichert werden und den Servern nur der öffentliche Schlüssel bekannt ist (Lyastani et al., 2020, S. 269).
-Zur Klassifizierung der Stärke von Authentifizierungsprozessen definiert das NIST Authentication Assurance Levels (AAL). AAL1 erfordert einfache Authentifizierung, AAL2 verlangt MFA mit zwei Faktoren, und AAL3 setzt den Einsatz kryptografischer Hardware-Token voraus, die resistent gegen Verifier-Impersonation (Phishing) sind (Temoshok et al., 2025, S. 13--14).
-Nach einer erfolgreichen Authentifizierung regelt die Autorisierung, auf welche Ressourcen zugegriffen werden kann, also welcher Account auf welche Art autorisiert ist. In modernen IT-Architekturen erfolgt dies oft dynamisch und kontextbezogen (Rose et al., 2020, S. 6).
-Häufig genutzte Modelle sind Role-Based Access Control (RBAC), bei welchem Rechte an Rollen gebunden sind, sowie Attribute-Based Access Control (ABAC), das Entscheidungen basierend auf Attributen der Nutzenden und der Umgebung trifft (Hu et al., 2014, S. 4).
-Im Rahmen von Zero Trust und modernen Sicherheits-Frameworks wird das Prinzip der minimalen Rechtevergabe (Least Privilege Access) durchgesetzt. Dies kann durch Just-In-Time (JIT) Zugriff erweitert werden, bei dem Privilegien nur temporär für einen spezifischen Zeitraum oder eine Aufgabe gewährt werden (Rose et al., 2020, S. 12).
-In zentral verwalteten Umgebungen (zum Beispiel Single Sign-On in einem Unternehmen) überträgt ein Identity Provider (IdP) Autorisierungsinformationen mittels Assertions (zum Beispiel via SAML oder OIDC) an die Relying Party (RP). Das NIST definiert hierfür Federation Assurance Levels (FAL), die festlegen, wie stark die Assertion gegen Manipulation und Injektionsangriffe geschützt ist (Temoshok et al., 2025, S. 40--44).
+Da einfache Passwörter anfällig für Diebstahl und Phishing sind, gilt die MFA heute als Standard für erhöhte Sicherheitsanforderungen. Sie erhöht die Barriere für Angreifer, da nicht mehr nur ein einzelnes Geheimnis kompromittiert werden muss, sondern zwei voneinander unabhängige Hürden überwunden werden müssen.
+Einmalpasswörter (One-Time Password, OTP) stellen eine häufige Implementierung dar. Sie beruhen auf kurzlebigen Codes, die entweder zeitbasiert (Time-Based One-Time Password, TOTP) oder zählerbasiert (HMAC-based One-Time Password, HOTP) generiert werden. 
+Wird der Code per App oder Hardware-Token erzeugt, gilt das Verfahren als relativ sicher. Im Gegensatz dazu gelten SMS-basierte Verfahren aufgrund der Anfälligkeit für SIM-Swapping oder das Abfangen im Mobilfunknetz als weniger robust.
+Hardware-Token und Smartcards ermöglichen über kryptografische Verfahren wie U2F oder FIDO2 eine sogenannte Challenge-Response-Authentifizierung. Hierbei sendet der Server eine zufällige Herausforderung (Challenge), die vom Token mit einem privaten Schlüssel signiert wird. Diese Lösungen sind besonders resistent gegen Phishing, erfordern jedoch einen höheren organisatorischen Aufwand bei der Hardware-Verwaltung.
+Biometrische Verfahren bieten eine hohe Benutzerfreundlichkeit, bringen jedoch Herausforderungen hinsichtlich des Datenschutzes mit sich, da biometrische Daten im Falle eines Diebstahls – im Gegensatz zu Passwörtern – nicht geändert werden können.
 
 \subsubsection{Endgeräte}
-Die Sicherheit des Endgeräts spielt eine entscheidende Rolle bei der Autorisierungsentscheidung, da selbst eine valide Benutzeridentität auf einem kompromittierten Gerät ein Risiko darstellt.
-Technologien zur Autorisierung unterscheiden zwischen Plattform Authenticators (im Endgerät integriert, zum Beispiel Apple Touch ID, Windows Hello), die oft biometrische Faktoren nutzen, und Roaming Authenticators (zum Beispiel YubiKeys), die zwischen Geräten gewechselt werden können. Die Nutzung integrierter Plattform-Authentifikatoren bindet den Zugriff stark an das spezifische Endgerät.
-Authenticator-Apps wie Google Authenticator oder Microsoft Authenticator implementieren typischerweise das TOTP-Verfahren (wie definiert in RFC 6238 (M’Raihi et al., 2011)). Sie sind von Mobilfunknetzen unabhängig und bieten dadurch ein höheres Sicherheitsniveau bei geringem Bedienaufwand (Temoshok et al., 2025, \S 4, S. 13).
-In einer Zero-Trust-Architektur wird keinem Gerät implizit vertraut (Rose et al., 2020, S. 11). Der Sicherheitsstatus (Device Posture), zum Beispiel Patch-Level, Malware-Freiheit oder Standort, wird kontinuierlich überwacht und fließt in Echtzeit in die Autorisierungsentscheidung ein.
-Um automatisierte Angriffe zu verhindern, werden Techniken wie Device Fingerprinting eingesetzt, um ein Gerät eindeutig zu identifizieren und an einen Benutzeraccount zu binden. Dies verhindert, dass gestohlene Zugangsdaten (wie Session-Cookies) auf fremden Geräten genutzt werden können, und ermöglicht eine präzisere Risikobewertung (Tank \& Dalvi, 2018, S. 29).
-Die Einbindung privater Endgeräte (Bring Your Own Device) stellt besondere Anforderungen an die Autorisierung, da hier die Balance zwischen Sicherheitskontrolle durch die Organisation und der Privatsphäre des Nutzers gewahrt werden muss (Miller et al., 2012, S. 54).
-Die Verbindung mehrerer Faktoren erhöht die Resilienz gegenüber unbefugten Zugriffen, da Angreifer:innen nicht mehr nur ein einzelnes Geheimnis kompromittieren müssen. Dabei ist die erwähnte Unabhängigkeit der Faktoren und Bindung der Faktoren an Gerät und Nutzer:in entscheidend, wie sie in den Digital Identity Guidelines des NIST definiert sind (Temoshok et al., 2025, S. 12--14). Zu diesem Zweck wurden relevante Technologien und Protokolle kurz vorgestellt.
-Als letztes soll auch die Kategorie Passwordless vorgestellt werden: Passwordlose Verfahren (Passwordless Login) ersetzen den Faktor „Wissen“, also ein Passwort, durch Public-Key-Kryptografie und biometrische Verifikation. Moderne Standards wie FIDO2 oder Passkeys gelten als phishing-resistent und benutzerfreundlich, werden jedoch in der Praxis eher zögerlich implementiert (Lyastani et al., 2020, S. 270).
+Die Sicherheit des Endgeräts ist für die Autorisierung essenziell, da ein kompromittiertes Gerät (z. B. durch Malware) selbst eine starke Authentifizierung wertlos machen kann.
+Es wird zwischen Plattform-Authentifikatoren (im Gerät integriert, wie Windows Hello) und Roaming-Authentifikatoren (mobil einsetzbar, wie USB-Keys) unterschieden.
+In modernen Zero-Trust-Architekturen wird keinem Gerät implizit vertraut. Der Sicherheitsstatus (Device Posture) wird kontinuierlich überwacht. Hierbei fließen Patch-Level und Standorte in Echtzeit in die Entscheidung ein. Techniken wie Device Fingerprinting helfen dabei, Geräte eindeutig zu identifizieren und an Benutzeraccounts zu binden, um das Entführen von Sitzungen (Session Hijacking) zu verhindern.
 
 \subsection{MFA und Regulatorik}
-Die Implementierung von Multifaktor-Authentifizierung ist in der modernen IT-Governance nicht mehr rein risikobasiert, sondern wird zunehmend durch regulatorische Vorgaben der Europäischen Union mandatiert. Insbesondere drei Rahmenwerke sind hierbei von zentraler Bedeutung: die NIS-2-Richtlinie, DORA und die DSGVO.
-Die NIS- beziehungsweise NIS2-Richtlinie (Network and Information Security Directive) erweitert den Kreis der betroffenen Unternehmen („Essential“ und „Important Entities“) und verschärft die Anforderungen an die Cybersicherheit. Da sich das Inkrafttreten der NIS-2 in Österreich noch verzögert, wird hier stattdessen die Lex specialis des Digital Operational Resilience Act (DORA) herangezogen. DORA zielt auf die digitale Widerstandsfähigkeit von Finanzunternehmen ab und schreibt strenge Anforderungen an (unter anderem) das IKT-Risikomanagement vor. Bezogen auf das Identitätsmanagement verlangt DORA robuste Authentifizierungsmechanismen, um den Zugriff auf IKT-Systeme und Daten zu schützen, wobei MFA als Standardmaßnahme gilt, um die Integrität von Finanztransaktionen und Kundendaten zu gewährleisten.
-Auch die Datenschutz-Grundverordnung (kurz: DSGVO) wirkt als indirekter Treiber. Zwar nennt sie MFA nicht explizit, jedoch fordert Artikel 32 „geeignete technische und organisatorische Maßnahmen“, um ein dem Risiko angemessenes Schutzniveau zu gewährleisten. Aufsichtsbehörden und die ENISA interpretieren MFA heute als „Stand der Technik“ für den Zugriff auf sensible personenbezogene Daten, womit eine Nicht-Verwendung bei einem Data Breach als Verstoß gegen die DSGVO gewertet werden kann.
+Die Implementierung von MFA wird zunehmend durch EU-Vorgaben mandatiert. Die NIS-2-Richtlinie und der Digital Operational Resilience Act (DORA) verpflichten insbesondere kritische Sektoren wie das Finanzwesen zu robusten Authentifizierungsmechanismen. DORA verlangt explizit MFA, um die Integrität von Transaktionen zu schützen. 
+Zusätzlich fordert die DSGVO in Artikel 32 „geeignete technische Maßnahmen“, wobei Aufsichtsbehörden MFA mittlerweile als „Stand der Technik“ interpretieren.
+
 \subsection{Verwendungskontext und Akzeptanz}
-Die Nutzung von MFA unterscheidet sich deutlich zwischen privaten und beruflichen Kontexten. Im privaten Bereich ist MFA häufig optional und wird vor allem dort schlagend, wo regulatorische Vorgaben bestehen – zum Beispiel im Online-Banking durch PSD2 (Govindraj C.V., 2024, S. 2). Dabei stehen persönliche Faktoren wie Bequemlichkeit und Datenschutzbedenken im Vordergrund.
-Im beruflichen Umfeld ist IT-Governance ein treibender Faktor für die Akzeptanz von MFA. Da Sicherheit oft nicht im Fokus der Nutzer:innen ist, erzwingt Governance die Nutzung, beispielsweise durch Richtlinien und technische Kontrollen (Das et al., 2020, S. 5). 
-In solchen Frameworks ist MFA meist verpflichtender Bestandteil eines Identity and Access Management (IAM) und dient der Einhaltung von Sicherheits- und Compliance-Standards (ISO 27001, NIST AAL2--3). Dabei erfordert ein Kompromiss zwischen Sicherheit und Benutzerfreundlichkeit sorgfältiges Vorgehen (Marky et al., 2022).
-Zentrale Erfolgsfaktoren für die Akzeptanz von MFA-Systemen sind daher: Onboarding (Das et al., 2018, S. 6), risikobasierte Adaption der Systeme, Datenschutz und Fallback-Möglichkeiten. 
-Erstens intuitives Onboarding, denn eine verständliche Ersteinrichtung steigert die Akzeptanz gegenüber der Technologie (Colnago et al., 2018, S. 458--460). Zweitens minimiert die risikobasierte Authentifizierung zusätzlich Reibung, indem weitere Faktoren nur bei Bedarf, wie etwa verdächtigen Anmeldeversuchen, verlangt werden (Wiefling et al., 2019, S. 140). Drittens: Sichere Wiederherstellungsmechanismen – zum Beispiel Backup-Codes oder Hardware-Ersatz – sind notwendig, dürfen aber keine neuen Angriffsvektoren eröffnen (Klivan et al., 2023, S. 3140; Keil \& Zugenmaier, 2024, S. 73). Und zuletzt: Datenschutzkonformität. Biometrische und kontextbasierte Verfahren müssen der DSGVO entsprechen (Zweckbindung, Einwilligung, Datensparsamkeit). Die Wahrnehmung von Privatsphäre beeinflusst die Akzeptanz erheblich (Malhotra et al., 2004, S. 340--341; Dienlin \& Trepte, 2015, S. 285).
-Eine strategische Einführung der Technologie mit Schulungen, klaren Kommunikationsmaßnahmen und definierten Recovery-Prozessen ist bei Cybersecurity und Governance generell für den Erfolg entscheidend (de Bruijn et al., 2017, S. 4).
+Im privaten Bereich dominiert oft die Freiwilligkeit, sofern keine Vorgaben wie die PSD2 im Banking bestehen. Hier sind Bequemlichkeit und Usability die Hauptentscheidungskriterien.
+Im beruflichen Umfeld hingegen erzwingt die IT-Governance die Nutzung durch Richtlinien. Akzeptanzfaktoren sind hierbei ein intuitives Onboarding, risikobasierte Anpassungen (Authentifizierung nur bei Bedarf) sowie zuverlässige Recovery-Prozesse für den Fall eines Geräteverlusts.
 
 % wie besprochen am 10.02. füge ich einen Input zu diesem Thema an
-\subsection{Usability und Mensch-Maschine-Interaktion} (Sasse et al., 2001, S. 1-2)
-Für das Verstädnis der Thematik ist auch die Mensch-Maschine-Interaktion (HCI) ein Schlüsselkonzept.
-Dabei handelt es sich um ein interdisziplinäres Forschungsfeld. Im Zentrum steht die Anpassung von IT-Systemen an menschliche Fähigkeiten und Grenzen.
+\subsection{Usability und Mensch-Maschine-Interaktion}
+Für das Verständnis der Thematik ist die Mensch-Maschine-Interaktion (HCI) ein Schlüsselkonzept. Im Zentrum steht die Anpassung von Systemen an menschliche Grenzen.
 % Sinnvoll? Oder zu weit? Paradigmenwechsel: Der Mensch gilt nicht mehr primär als „Weakest Link“ (Risikofaktor), sondern mangelhaftes Systemdesign als Ursache für Anwendungsfehler.
-Im Kontext dieser Forschung ist die Usability von Sicherheitsmaßnahmen, insbesondere von MFA, ein zentrales Thema.
-Denn die Akzeptanz und korrekte Nutzung von MFA hängt maßgeblich davon ab, wie intuitiv und benutzerfreundlich die Systeme gestaltet sind (Cranor \& Garfinkel, 2005, S. 1).
-Das führt zum Begriff der Usable Security, einer Sub-disziplin der HCI für den IT-Sicherheitskontext. ( Cranor \& Garfinkel, 2005, S. 1) % „Usable Security is the design and implementation of security mechanisms that are not only effective but also usable by their intended users.“
-Ziel dieser Methodiken ist, dass Sicherheitssysteme intuitiv (richtig) bedienbar sein müssen, um absichtliche oder versehentliche Umgehung zu verhindern.
-Das geht Hand-in-Hand mit der kognitiven Last (Cognitive Load), dem Aufwand bei der Verwendung.  (Acemyan et al., 2018): Reduzieren der psychischen Anstrengung bei der Verwendung
-Eine Möglichkeit, um diese Belastung zu reduzieren, ist bei der Entwicklung von IT-Systemen auf die Usability zu achten.
-Das bietet sich in insofern an, dass die Usability ein objektiv messbares und normiertes Kriterium ist. ISO 9241-11 (ISO, 2018)
-Im MFA-Kontext tritt hier die Frage nach der Aufgabe der Technologie auf (Primäraufgabe vs. Sekundäraufgabe) %\bibitem{marky2022}
-(Marky et al., 2022, S. 15): MFA ist nie das eigentliche Ziel der User:innen, sondern eine Sekundäraufgabe
-Es muss ein Kompromiss zwischen Sicherheit und Bequemlichkeit getroffen werden. 
-% wie bereits beschrieben, aber wo? 
-Mögliche Folgen eines schlecht ausverhandelten MFA-System können „Security Fatigue“ (Sicherheitsermüdung), negative Reaktionen und die Verwendung von Workarounds sein (Fagan \& Khan, 2016, S. 2).
+% Ergänzung: Hier könnte ich kurz das "Mental Model" der Nutzerin erwähnen. Wenn der Nutzer nicht versteht, warum er MFA nutzt, sinkt die Compliance.
 
-% laut Vorlage brauche ich ein Zwischenfazit hier. ??
+Im Kontext der MFA ist die „Usable Security“ entscheidend. Ziel ist es, Mechanismen so zu gestalten, dass sie effektiv und gleichzeitig ohne übermäßige kognitive Last bedienbar sind. Die ISO 9241-11 definiert Usability durch Effektivität, Effizienz und Zufriedenstellung. 
+Ein kritischer Punkt ist, dass MFA für User immer eine Sekundäraufgabe darstellt – das eigentliche Ziel ist der Zugriff auf eine Anwendung. Ist dieser Prozess zu hürdenreich, entstehen „Security Fatigue“ oder riskante Workarounds (Schatten-IT).
+
+\subsection{Zwischenfazit der Grundlagen}
+% Ergänzung: Hier füge ich das gewünschte Zwischenfazit ein, um die theoretischen Blöcke zu verbinden.
+Zusammenfassend lässt sich festhalten, dass MFA ein hybrides System aus technischer Präzision und menschlicher Interaktion darstellt. Während regulatorische Rahmenbedingungen wie NIS-2 und DORA den organisatorischen Druck zur Implementierung erhöhen, entscheidet die Usability über die tatsächliche Wirksamkeit im Alltag. Die hier definierten Konzepte bilden die Basis für die spätere Analyse des Spill-over-Effekts, bei dem untersucht wird, wie berufliche Routine die privaten Sicherheitsgewohnheiten formt.
