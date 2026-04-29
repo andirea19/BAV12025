@@ -6,50 +6,46 @@
 % 4 Die Nutzungsperspektive: Akzeptanz und Barrieren (FF 4)
 % 5 Spill-over: Einfluss auf das private Sicherheitsverhalten (FF 5)
 
-\section{Stand des Wissens}
-
 \subsection{Entwicklung und Motivation zur Umstellung auf MFA}
-% Ziel dieses Abschnitts: Beantwortung der FF 1 (Motivation). )
+% Ziel dieses Abschnitts: Beantwortung der FF 1 (Motivation). 
+Die Entwicklung der digitalen Authentifizierung spiegelt den fundamentalen Wandel der globalen Bedrohungslage wider. Wie O’Gorman (2003, S. 2001) darlegt, hat die Digitalisierung die Identitätsprüfung entmaterialisiert: Von einer physischen, auf persönlicher Erkennung basierenden Interaktion hin zu einer anonymen, netzwerkbasierten Herausforderung. 
+% TODO?: Statistische Zunahme von Identitätsdiebstahl/ Cyberangriffe eingehen (Lagebericht-Ding)
+Während in der Frühphase der IT-Sicherheit ein einfaches Passwort als hinreichend galt, belegt die Literatur der letzten Dekade eine drastische Zunahme von Angriffsvektoren, die genau diesen „Single-Factor“-Ansatz kompromittieren (Bonneau et al., 2015, S. 78). Die Motivation zur Umstellung auf Multi-Faktor-Authentifizierung (MFA) ist daher weniger als kurzlebiger technologischer Trend zu verstehen, sondern als notwendige Reaktion auf die Professionalisierung der Cyberkriminalität (Kunke et al., 2021, S. 59). 
 
-Die Entwicklung der digitalen Authentifizierung spiegelt den Wandel der globalen Bedrohungslage wider.
-Wie O’Gorman (2003, S. 2001) positioniert, verändert die Digitalisierung die Identitätsprüfung von einer physischen, auf persönlicher Erkennung basierenden Interaktion hin zu einer anonymen, netzwerkbasierten Herausforderung. Während in der Frühphase der IT-Sicherheit ein einfaches Passwort als hinreichend galt, zeigt die Literatur der letzten Dekade eine drastische Zunahme von Angriffsvektoren, die genau diesen "Single-Factor"-Ansatz kompromittieren (Bonneau et al., 2015, S. 78).
-Die Motivation zur Umstellung auf MFA ist daher weniger ein technologischer Trend, sondern eine notwendige Reaktion auf den Anstieg von Credential Stuffing und Brute-Force-Angriffen (Kunke et al., 2021, S. 59). Organisationen stehen heute unter dem Druck, nicht nur Daten zu schützen, sondern auch regulatorische Compliance-Vorgaben zu erfüllen. Während frühe Implementierungen auf einfachen Hardware-Token basierten, integrieren moderne Authentifizierungs-Systeme heute vermehrt kontextbezogene und biometrische Daten, um die Lücke zwischen Sicherheit und Benutzerfreundlichkeit zu schließen (Temoshok et al., 2025, S. 14). Damit fungiert MFA heute als zentrales Element in Sicherheitsarchitekturen, das weit über die reine Zugangskontrolle hinausgeht.
+Moderne Authentifizierungssysteme integrieren heute vermehrt kontextbezogene Faktoren sowie biometrische Daten, um die Lücke zwischen Sicherheit und Benutzerfreundlichkeit zu schließen (Temoshok et al., 2025, S. 14). Damit fungiert MFA heute als zentrales Element moderner Sicherheitsarchitekturen, das weit über die reine Zugangskontrolle hinausgeht.
 
 \subsection{IT-Governance als Rahmenbedingung für MFA}
 % Ziel dieses Abschnitts: Beantwortung der FF 2 (IT-Governance Vorgaben).
-
-Die Einführung von MFA ist kein isoliertes technisches Projekt, sondern eine klassische Aufgabe der IT-Governance. Governance definiert in diesem Kontext den strategischen Rahmen, der Awareness, Audit-Richtlinien und Compliance-Prozesse miteinander verknüpft (Wibowo \& Ramli, 2022, S. 6). 
-Organisationen nutzen hierbei etablierte Frameworks wie ISO 27001 oder NIST Digital Identity Guidelines, um die sogenannten Authenticator Assurance Levels (AAL) zu definieren. Im beruflichen Kontext bedeutet dies, dass Governance-Vorgaben zwei gegensätzliche Ziele ausbalancieren müssen: Einerseits die Erhöhung des Sicherheitsniveaus durch restriktive Verfahren (z. B. FIDO2-Hardwarekeys), andererseits die Aufrechterhaltung der betrieblichen Produktivität (Ariyadi \& Akbar, 2025, S. 154). 
-Problematisch wird dieser Prozess, wenn Governance-Richtlinien an der betrieblichen Realität vorbeigehen. Studien belegen, dass zu starre Vorgaben oft zur Entstehung von Schatten-IT führen, da Mitarbeitende versuchen, die als unkomfortabel wahrgenommenen Sicherheitshürden zu umgehen (Fagan \& Khan, 2016, S. 66). Eine effektive Governance-Strategie muss daher nicht nur technische Standards vorgeben, sondern auch die Integration in bestehende Identitäts- und Zugriffsmanagementsysteme (IAM) sowie den Support-Aufwand bei Token-Verlusten (Account Recovery) proaktiv adressieren (Das et al., 2020, S. 5446).
+Die Einführung von MFA ist kein isoliertes technisches Projekt, sondern eine strategische Aufgabe der IT-Governance. In diesem Kontext definiert die Governance den Rahmen, der Sicherheitsbewusstsein (\textit{Awareness}), Audit-Richtlinien und Compliance-Prozesse miteinander verknüpft (Wibowo \& Ramli, 2022, S. 6). 
+Organisationen orientieren sich hierbei an etablierten Frameworks wie der ISO 27001 oder den NIST Digital Identity Guidelines, um sogenannte \textit{Authenticator Assurance Levels} (AAL) festzulegen. Im beruflichen Alltag bedeutet dies eine Gratwanderung: Governance-Vorgaben müssen das Sicherheitsniveau erhöhen, ohne dabei die betriebliche Produktivität zu lähmen (Ariyadi \& Akbar, 2025, S. 154). 
+% TODO: Verbidngun in Umfrage bezgl. Probleme mit Schatten-IT und Schulung andeuten 
+Studien zeigen, dass zu starre Vorgaben oft die Entstehung von Schatten-IT begünstigen, da Mitarbeitende versuchen, unkomfortable Sicherheitshürden zu umgehen (Fagan \& Khan, 2016, S. 66). Eine effektive Strategie muss daher auch Aspekte wie das Identitätsmanagement (IAM) sowie den Support-Aufwand bei Geräteverlust (\textit{Account Recovery}) adressieren (Das et al., 2020, S. 5446).
 
 \subsection{Technische Konkretisierung und Herausforderungen}
 % Ziel dieses Abschnitts: Beantwortung der FF 3 (Technische und Organisatorische Vorgaben).
+Die technische Umsetzung zeigt den Übergang von theoretischen Vorgaben hin zu operativen Systemen. In der aktuellen Forschung gelten FIDO-basierte Verfahren (FIDO2 und WebAuthn) aufgrund ihrer Resistenz gegen Phishing-Angriffe als technologischer Goldstandard. Dennoch offenbaren empirische Analysen eine deutliche Diskrepanz zur Praxis: Ein erheblicher Anteil der Lösungen basiert weiterhin auf klassischen Einmal-Passwörtern (OTP), da diese leichter in bestehende Altsysteme integrieren lassen (Tran-Truong et al., 2025, S. 2--3).
 
-Die technische Umsetzung von Multi-Faktor-Authentifizierung (MFA) markiert den Übergang von theoretischen Governance-Vorgaben hin zu operativen Systemen.
-Dabei zeigt sich in der Literatur ein ausgeprägtes Spannungsfeld zwischen dem Wunsch nach maximaler Sicherheit und der Notwendigkeit zur Systemintegration.
-Während FIDO-basierte Verfahren (FIDO2 und WebAuthn) aufgrund ihrer Phishing-Resistenz als Goldstandard der aktuellen Forschung gelten, offenbaren empirische Analysen eine Diskrepanz zur Industriepraxis: Ein erheblicher Anteil der eingesetzten Authentifizierungslösungen basiert weiterhin auf veralteten OTP-Verfahren, da diese kosteneffizienter und einfacher in Legacy-Infrastrukturen zu integrieren sind (Tran-Truong et al., 2025, S. 2--3).
-Ein kritischer, oft vernachlässigter Aspekt ist die Gestaltung der Recovery-Prozesse. Die Forschung belegt, dass selbst technologisch hochsichere MFA-Implementierungen untergraben werden, sobald für den Fall eines Token-Verlustes unsichere alternative Wiederherstellungsmethoden angeboten werden (Ulqinaku et al., 2021, S. 3822). Angreifer nutzen diese „Sollbruchstellen“ gezielt, um die Phishing-Resistenz der Hauptverfahren auszuhebeln. Die technische Konkretisierung muss daher nicht nur den primären Authentifizierungspfad, sondern den gesamten Lebenszyklus der Identität (Identity Lifecycle) inklusive sicherer Wiederherstellungsszenarien abdecken. Hierbei gewinnen adaptive Ansätze und Machine Learning an Bedeutung, um Sicherheitsniveaus dynamisch an das Kontextrisiko anzupassen, ohne die operative Kontinuität zu gefährden (Aburbeian \& Fernández-Veiga, 2024, S. 177).
+% TODO: Hier konkrete MFA-Methoden nenne (als Beispiel für den Stand der Technik).
+Ein oft unterschätzter Schwachpunkt sind die Wiederherstellungsprozesse. Die Forschung belegt, dass selbst hochsichere MFA-Implementierungen wertlos werden, wenn für den Fall eines Token-Verlustes unsichere alternative Methoden zur Kontenwiederherstellung angeboten werden (Ulqinaku et al., 2021, S. 3822). Hierbei gewinnen adaptive Ansätze an Bedeutung, die das Sicherheitsniveau dynamisch an das aktuelle Risiko anpassen (Aburbeian \& Fernández-Veiga, 2024, S. 177).
 
-\subsection{Nutzung: Akzeptanz und Barrieren}
+\subsection{Die Nutzungsperspektive: Akzeptanz und Barrieren}
 % Ziel dieses Abschnitts: Beantwortung der FF 4 (Konsequenzen für die Belegschaft)
+Die Effektivität von MFA entscheidet sich letztlich an der Akzeptanz durch die Nutzer:innen. Die Forschung identifiziert die sogenannte \textit{Security Fatigue} als zentrales Hindernis: Wird MFA als reine Schikane empfunden, sinkt die Nutzungsbereitschaft und die Wahrscheinlichkeit für riskantes Umgehungsverhalten steigt (Acemyan et al., 2018, S. 1141).
 
-Die Effektivität von MFA zeigt sich letztlich nicht in der kryptografischen Komplexität, sondern an der Akzeptanz durch die Anwender:innen.
-Die Forschung identifiziert die sogenannte Security Fatigue als zentrales Hinderniss: Wenn MFA-Verfahren als störende Schikane empfunden werden, sinkt nicht nur die Bereitschaft zur Nutzung, sondern es steigt die Wahrscheinlichkeit für aktives Umgehungsverhalten (Acemyan et al., 2018, S. 1141).
-Dabei ist die Wahrnehmung von Sicherheit subjektiv und von sozio-demografischen Faktoren geprägt.
-Während technisches Selbstvertrauen und Einkommen die Bereitschaft zur Verwendung der Technologie positiv korrelieren, erzeugen biometrische Verfahren insbesondere bei Expert:innen Vorbehalte hinsichtlich des Datenschutzes (Pratama \& Firmansyah, 2021; Wolf et al., 2019). Zudem zeigt sich eine Paradoxie: Laien bevorzugen aus Bequemlichkeitsgründen oft unsichere biometrische Verfahren, während Sicherheitsfachkräfte diese aufgrund der Unwiderruflichkeit biometrischer Daten kritisch bewerten. Eine erfolgreiche MFA-Implementierung muss daher das "Design-for-Usability" priorisieren. Physische Security-Keys bieten zwar ein hohes Sicherheitsniveau, stoßen jedoch bei breiteren Nutzergruppen ohne entsprechende Schulung und Unterstützung oft auf signifikante Adoptionshürden (Ciolino et al., 2019, S. 46).
+Dabei ist die Wahrnehmung von Sicherheit stark subjektiv geprägt. Während technisches Selbstvertrauen die Akzeptanz fördert, führen biometrische Verfahren oft zu Datenschutzbedenken (Pratama \& Firmansyah, 2021; Wolf et al., 2019). Es zeigt sich eine Paradoxie: Laien bevorzugen aus Bequemlichkeit oft biometrische Verfahren, während Fachkräfte diese aufgrund der Unwiderruflichkeit biometrischer Daten kritisch bewerten. Eine erfolgreiche Implementierung muss daher ein \textit{Design-for-Usability} priorisieren (Ciolino et al., 2019, S. 46).
 
 \subsection{Wirkmechanismen der Nutzung: Spill-over in den privaten Kontext}
 % Ziel dieses Abschnitts: Beantwortung der UF 5 (Private Nutzung)
-% hier fehlt noch die Usability und die Quellen zum Einfluss zwischen den Kontexten
+% hier fehlt noch die Usability und die Quellen zum Einfluss zwischen den Kontexten (Erledigt ?)
 
-Die letzte Ebene der Analyse befasst sich mit dem Transfer von Sicherheitskompetenzen, dem sogenannten Spill-over-Effekt.
-Die Literatur belegt, dass berufliche MFA-Erfahrungen maßgeblich das private Sicherheitsverhalten beeinflussen.
-Dieser Prozess lässt sich in drei Mechanismen unterteilen:
+Die letzte Ebene der Analyse befasst sich mit dem Transfer von Sicherheitskompetenzen, dem sogenannten \textit{Spill-over-Effekt}. Die Literatur belegt, dass berufliche Erfahrungen mit MFA maßgeblich das private Sicherheitsverhalten prägen können. Dieser Prozess lässt sich in drei Mechanismen unterteilen:
 
 \begin{itemize}
-    \item \textbf{Kompetenz-Transfer:} Die Angst vor dem „Ausgesperrt-Sein“ (s.g. Recovery Anxiety) ist die größte Hürde für die private Verwendung der Technologie. Durch die Anleitung im beruflichen Umfeld bauen Anwender:innen die notwendige Routine auf, um diese Angst zu überwinden und die Technologie auch privat einzusetzen (Colnago et al., 2018, S. 15).
-    \item \textbf{Awareness-Transfer:} Während private Nutzer:innen Risiken oft durch einen Optimismus-Bias unterschätzen, führt der berufliche Umgang mit Compliance-Vorgaben zu einer realistischeren Risikowahrnehmung. Die im Unternehmen erlernte Bedeutung von Identitätsschutz wird als abstraktes Konzept in die private IT-Hygiene integriert (Wibowo \& Ramli, 2022, S. 6).
-    \item \textbf{Reaktive Ablehnung:} Nicht jeder Spill-over ist positiv. Wenn MFA im beruflichen Kontext als Überwachung oder übermäßige Einschränkung wahrgenommen wird, resultiert daraus eine kognitive Abwehrhaltung. Dieser "negative Spill-over" führt dazu, dass Nutzer:innen aus Trotz oder zur Entlastung im privaten Bereich bewusst auf Schutzmechanismen verzichten (Das et al., 2021, S. 15).
+    \item \textbf{Kompetenz-Transfer:} Die Angst, sich durch technische Fehler selbst auszusperren (\textit{Recovery Anxiety}), ist eine große Hürde. Durch Routine im Beruf bauen Anwender:innen Sicherheit auf, um diese Technik auch privat einzusetzen (Colnago et al., 2018, S. 15).
+    \item \textbf{Awareness-Transfer:} Der berufliche Umgang mit Compliance-Regeln schärft die Wahrnehmung für den Wert digitaler Identität und wird Teil der privaten IT-Hygiene (Wibowo \& Ramli, 2022, S. 6).
+    \item \textbf{Reaktive Ablehnung:} Wird MFA im Job als Form der Überwachung wahrgenommen, entsteht eine kognitive Abwehrhaltung, die privat zu einem bewussten Verzicht auf Schutzmechanismen führen kann (Das et al., 2021, S. 15).
 \end{itemize}
 
-Zusammenfassend lässt sich festhalten, dass die Implementierung von MFA in Unternehmenskontext über die Unternehmensgrenzen hinaus wirkt. Sie dient entweder als Katalysator für ein sichereres digitales Leben oder; im Falle einer ineffizienten Governance; als Treiber für sicherheitstechnische Antipatie im Privaten.
+Zusammenfassend lässt sich festhalten, dass MFA im Unternehmen weit über die Bürogrenzen hinaus wirkt. Sie fungiert entweder als Katalysator für ein sichereres digitales Leben oder als Treiber für eine allgemeine Abneigung gegen Sicherheitstechnologien.
+
+% TODO: Hier im Fazit eine Überleitung zur Methodik formulieren!
