@@ -34,12 +34,19 @@ Hardware-Token und Smartcards ermöglichen über kryptografische Verfahren wie U
 Biometrische Verfahren bieten eine hohe Benutzerfreundlichkeit, bringen jedoch Herausforderungen hinsichtlich des Datenschutzes mit sich, da biometrische Daten im Falle eines Diebstahls – im Gegensatz zu Passwörtern – nicht geändert werden können.
 
 \subsubsection{Endgeräte}
-Die Sicherheit des Endgeräts ist für die Autorisierung essenziell, da ein kompromittiertes Gerät (z. B. durch Malware) selbst eine starke Authentifizierung wertlos machen kann.
-Es wird zwischen Plattform-Authentifikatoren (im Gerät integriert, wie Windows Hello) und Roaming-Authentifikatoren (mobil einsetzbar, wie USB-Keys) unterschieden.
-In modernen Zero-Trust-Architekturen wird keinem Gerät implizit vertraut. Der Sicherheitsstatus (Device Posture) wird kontinuierlich überwacht. Hierbei fließen Patch-Level und Standorte in Echtzeit in die Entscheidung ein. Techniken wie Device Fingerprinting helfen dabei, Geräte eindeutig zu identifizieren und an Benutzeraccounts zu binden, um das Entführen von Sitzungen (Session Hijacking) zu verhindern.
+% Ziel des Abschnitts: Bedeutung der Endgerätesicherheit, Unterscheidung der Authentifikatoren und Device Posture im Kontext von Zero Trust.
+
+Die Sicherheit des jeweiligen Endgerätes ist für die Autorisierung essenziell, da ein kompromittiertes Gerät, beispielsweise durch Malware, selbst eine starke Authentifizierung wertlos machen kann \cite[S. 269]{ulqinaku2021}. 
+Im Rahmen moderner Authentifizierungsarchitekturen wird daher zwischen zwei Hauptkategorien von Authentifikatoren unterschieden: Plattform-Authentifikatoren und Roaming-Authentifikatoren.
+Plattform-Authentifikatoren sind fest in das Endgerät integriert und nutzen hardwarebasierte Sicherheitsmodule wie das {Trusted Platform Module} (TPM 2.0) oder Apples {Secure Enclave}. Ein prominentes Beispiel hierfür ist {Windows Hello}, welches biometrische Merkmale (wie Gesichtserkennung oder Fingerabdruck) mit einer lokalen PIN kombiniert. Die biometrischen Daten verlassen dabei zu keinem Zeitpunkt das Gerät. Stattdessen wird bei erfolgreicher biometrischer Prüfung ein kryptografisches Schlüsselpaar freigegeben, das lokal im TPM gespeichert ist \cite[S. 80]{keil2024}. Dies verhindert sogenannte Phishing-Angriffe, da keine über das Netzwerk übertragbaren Geheimnisse abgefangen werden können. Im Gegensatz dazu stehen Roaming-Authentifikatoren, wie hardwarebasierte USB-Sicherheits-Keys (z.B. YubiKey), die mobil an verschiedenen Geräten eingesetzt werden können \cite[S. 343]{ciolino2019}.
+In modernen {Zero-Trust}-Architekturen wird keinem Gerät implizit vertraut. Der Sicherheitsstatus des Geräts, die sogenannte {Device Posture}, wird vor und während des Zugriffs kontinuierlich überwacht. Hierbei fließen verschiedene Parameter wie das aktuelle Patch-Level, der Standort und die Integrität der lokalen Sicherheitssoftware in Echtzeit in die Entscheidungsfindung der Authentifizierung ein \cite[S. 146]{otta2023}. 
+Zusätzlich helfen Techniken wie das {Device Fingerprinting} dabei, Geräte anhand von Hard- und Software-Eigenschaften eindeutig zu identifizieren und an spezifische Benutzeraccounts zu binden. Dadurch wird sichergestellt, dass selbst bei bekanntem Passwort kein unbefugter Zugriff von fremden Geräten erfolgen kann, wodurch wirksam {Session Hijacking} (das Entführen von Sitzungen) verhindert wird \cite[S. 138]{wiefling2019}.
 
 \subsection{MFA und Regulatorik}
-Die Implementierung von MFA wird zunehmend durch EU-Vorgaben mandatiert. Die NIS-2-Richtlinie und der Digital Operational Resilience Act (DORA) verpflichten insbesondere kritische Sektoren wie das Finanzwesen zu robusten Authentifizierungsmechanismen. DORA verlangt explizit MFA, um die Integrität von Transaktionen zu schützen. 
+Die Implementierung von MFA wird zunehmend durch EU-Vorgaben mandatiert.
+Die NIS-2-Richtlinie (in Österreich NISG 2026)und der Digital Operational Resilience Act (DORA) verpflichten insbesondere kritische Bereiche wie das Finanz- und Gesundheitswesen zu Authentifizierungsmechanismen, beziehungsweise einem Ausbau der relevanten IT-Infrastruktur.
+% NISG und DORA noch genauer!
+DORA verlangt explizit MFA, um die Integrität von Transaktionen zu schützen. (DORA, Art. 28, Abs. 2)
 Zusätzlich fordert die DSGVO in Artikel 32 „geeignete technische Maßnahmen“, wobei Aufsichtsbehörden MFA mittlerweile als „Stand der Technik“ interpretieren.
 
 \subsection{Verwendungskontext und Akzeptanz}
@@ -52,8 +59,15 @@ Für das Verständnis der Thematik ist die Mensch-Maschine-Interaktion (HCI) ein
 % Sinnvoll? Oder zu weit? Paradigmenwechsel: Der Mensch gilt nicht mehr primär als „Weakest Link“ (Risikofaktor), sondern mangelhaftes Systemdesign als Ursache für Anwendungsfehler.
 % Ergänzung: Hier könnte ich kurz das "Mental Model" der Nutzerin erwähnen. Wenn der Nutzer nicht versteht, warum er MFA nutzt, sinkt die Compliance.
 
-Im Kontext der MFA ist die „Usable Security“ entscheidend. Ziel ist es, Mechanismen so zu gestalten, dass sie effektiv und gleichzeitig ohne übermäßige kognitive Last bedienbar sind. Die ISO 9241-11 definiert Usability durch Effektivität, Effizienz und Zufriedenstellung. 
-Ein kritischer Punkt ist, dass MFA für User immer eine Sekundäraufgabe darstellt – das eigentliche Ziel ist der Zugriff auf eine Anwendung. Ist dieser Prozess zu hürdenreich, entstehen „Security Fatigue“ oder riskante Workarounds (Schatten-IT).
+\subsection{Usability und Mensch-Maschine-Interaktion}
+% Ziel des Abschnitts: Bedeutung der Usable Security und HCI im Kontext der MFA
+
+Für das grundlegende Verständnis der Akzeptanz von Authentifizierungsverfahren ist die Mensch-Maschine-Interaktion (HCI) ein zentrales Konzept. In der modernen Sicherheitsforschung hat dabei ein wesentlicher Paradigmenwechsel stattgefunden: Der Mensch wird nicht mehr primär als das „schwächste Glied“ ({Weakest Link}) und somit als Sicherheitsrisiko betrachtet. Vielmehr wird mangelhaftes und kontraintuitives Systemdesign als eigentliche Ursache für Anwendungsfehler und Umgehungsverhalten identifiziert \cite[S. 345]{gratian2018}. Systeme müssen sich folglich an die kognitiven und physischen Grenzen der Nutzenden anpassen, anstatt umgekehrt.
+Dieser Ansatzes baut aud dem Konzept der sogeannten Usable Security auf. Dieses fordert, dass Sicherheitsmechanismen so gestaltet sein müssen, dass sie effektiv und gleichzeitig ohne übermäßige kognitive Last bedienbar sind. Die ISO 9241-11 definiert Usability über die drei Dimensionen Effektivität, Effizienz und Zufriedenstellung \cite[S. 42]{bortz2016}. Im Kontext der Multi-Faktor-Authentifizierung (MFA) bedeutet dies, dass die Interaktion mit dem Sicherheitsfaktor die eigentliche Arbeitsaufgabe nicht übermäßig dominieren darf.
+Ein Einflussfaktor auf die Interaktion ist, dass MFA für Anwender:innen eine Nebenrolle einnimmt. Das primäre Ziel ist der schnelle und unterbrechungsfreie Zugriff auf eine Anwendung oder Ressource.
+Wenn das {Mental Model} (das mentale Modell) der Nutzenden nicht mit der zugrunde liegenden Sicherheitsarchitektur übereinstimmt, sinkt die Compliance.
+Verstehen Anwender:innen beispielsweise nicht, warum ein zusätzlicher Authentifizierungsschritt notwendig ist, wird dieser als Barriere und nicht als Schutz wahrgenommen \cite[S. 160]{das2020}. 
+Ist der Authentifizierungsprozess folglich mit zu vielen Hürden verbunden, führt dies unvermeidlich zu {Security Fatigue} (Sicherheitsmüdigkeit) oder zur Etablierung riskanter Workarounds wie der Schatten-IT \cite[S. 1141]{acemyan2018}. Die Gestaltung von MFA-Systemen muss daher die Prinzipien des {Design-for-Usability} priorisieren. Adaptive und transparente Systeme, die den kognitiven Aufwand minimieren, erhöhen nicht nur die Benutzerzufriedenheit, sondern stärken letztlich auch das Sicherheitsniveau der gesamten Organisation \cite[S. 201]{enhuber2023}.
 
 \subsection{Zwischenfazit der Grundlagen}
 % Ergänzung: Hier füge ich das gewünschte Zwischenfazit ein, um die theoretischen Blöcke zu verbinden.
