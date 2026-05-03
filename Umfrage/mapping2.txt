@@ -23,7 +23,7 @@ Quelle: Colnago et al. (2018); Das et al. (2021); Pratama & Firmansyah (2021)
 --> Spillover selber!
 
 F14 bis F16 : Status Quo -> Private Nutzungshäufigkeit Dienste
-F17: Transfer, Risikowahrnehmung -> Recovery Anxiety und Optimismus Bias, Spill over Effekt
+F17: Transfer, Risikowahrnehmung -> Recovery Anxiety und Optimismus Bias, Spill-over-Effekt
 
 Block E Qualitätssicherung
 
@@ -32,11 +32,41 @@ WICHTIG: Ich habe beim Aussenden gebeten, RLB anzugeben, wenn sie über das Intr
 
 \begin{center}
 \begin{tabular}{c c c c} 
+\toprule
 Block & Variable & Theoretischer Bezug & Item(s)
 A & Gen. Info (Demografie, IT-Affinität) als Selbstberichtete Daten & F1–F7 
 B & IT-Governance und Arbeit & Wibowo & Ramli (2022); de Bruijn et al. (2017) & F8–F12
 C & Verwendung & Marky et al. (2022); Acemyan et al. (2018) & F13
 D & Spill-over Effekte (Privat) & Colnago et al. (2018); Pratama & Firmansyah (2021) & F14–F17
 E & Qualitätssicherung & Offene Kommentare & F19
+\bottomrule
 \end{tabular}
 \end{center}
+
+Block A: Gen. Info (Demografie, IT-Affinität)
+F1$: Wie schätzen Sie Ihr technisches Wissen ein? Je mehr Sterne, umso technisch versierter.
+F2$: Wie alt sind Sie?$F3$: Was ist Ihr aktueller Beschäftigungsstand? Bitte kreuzen Sie den höchsten Stand an Beschäftigung an (keine Mehrfachnennungen).
+F4$: Was ist Ihr höchster Bildungsabschluss? Bitte kreuzen Sie den höchsten Stand an (keine Mehrfachnennungen).
+F5$: Wie groß ist das Unternehmen, für das Sie tätig sind?
+F6$: In welcher Branche ist Ihr Arbeitgeber (hauptsächlich) tätig?
+F7$: Nutzen Sie im Rahmen Ihrer Arbeit IKT-Systeme (Computer, Smartphone ...)
+
+Block B: IT-Governance und Arbeit
+F8$: In meinem Unternehmen gibt es klare Richtlinien und verpflichtende Schulungen zum Umgang mit MFA.
+F9$: Mein Arbeitgeber kommuniziert, warum IT-Sicherheitsmaßnahmen notwendig sind
+F10$: Bei Problemen mit dem MFA-System erhalte ich Hilfe im Unternehme
+F11$: Die Konsequenzen bei Missachtung der MFA-Vorgaben sind in meinem Unternehmen klar kommuniziert
+F12$: Ihnen ist bekannt, dass der Verstoß gegen MFA-Richtlinien zu konkreten Maßnahmen geführt hat
+
+Block C: Verwendung
+F13$: Ich finde die Verwendung von MFA sinnvoll.
+
+Block D: Spill-over Effekte (Privat)
+F14$: Die berufliche Nutzung von MFA hat mich motiviert, MFA auch privat zu aktivieren.
+F15$: Weil ich MFA bei der Arbeit nutze, verstehe ich die Technologie generell besser
+F16$: Ich würde MFA privat nicht nutzen, wenn ich die Nutzung nicht bei der Arbeit gezeigt bekommen hätte.
+F17$: Ich nutze MFA privat nur bei Diensten, bei denen ich dazu gezwungen werde.
+
+Block E: Qualitätssicherung
+!F18$: Zur Sicherstellung der Datenqualität wählen Sie hier bitte die Option 'Stimme voll zu' aus.
+F19$: Haben Sie Anmerkungen zum Thema Multifaktor-Authentifizierung (MFA) oder gibt es Aspekte Ihres Nutzungsverhaltens (beruflich oder privat), die in den vorherigen Fragen nicht berücksichtigt wurden? (Kommentare)
