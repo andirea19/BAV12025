@@ -43,11 +43,12 @@ In modernen {Zero-Trust}-Architekturen wird keinem Gerät implizit vertraut. Der
 Zusätzlich helfen Techniken wie das {Device Fingerprinting} dabei, Geräte anhand von Hard- und Software-Eigenschaften eindeutig zu identifizieren und an spezifische Benutzeraccounts zu binden. Dadurch wird sichergestellt, dass selbst bei bekanntem Passwort kein unbefugter Zugriff von fremden Geräten erfolgen kann, wodurch wirksam {Session Hijacking} (das Entführen von Sitzungen) verhindert wird \cite[S. 138]{wiefling2019}.
 
 \subsection{MFA und Regulatorik}
-Die Implementierung von MFA wird zunehmend durch EU-Vorgaben mandatiert.
-Die NIS-2-Richtlinie (in Österreich NISG 2026)und der Digital Operational Resilience Act (DORA) verpflichten insbesondere kritische Bereiche wie das Finanz- und Gesundheitswesen zu Authentifizierungsmechanismen, beziehungsweise einem Ausbau der relevanten IT-Infrastruktur.
-% NISG und DORA noch genauer!
-DORA verlangt explizit MFA, um die Integrität von Transaktionen zu schützen. (DORA, Art. 28, Abs. 2)
-Zusätzlich fordert die DSGVO in Artikel 32 „geeignete technische Maßnahmen“, wobei Aufsichtsbehörden MFA mittlerweile als „Stand der Technik“ interpretieren. %QUELLE!
+Die Implementierung von Multifaktor-Authentifizierung (MFA) ist längst nicht mehr nur eine rein technische Entscheidung, sondern wird zunehmend durch europäische und nationale Gesetzgebungsakte mandatiert. Die europäische Gesetzgebung zielt darauf ab, die digitale Resilienz kritischer Infrastrukturen zu erhöhen und ein einheitliches Sicherheitsniveau zu etablieren. 
+Ein zentraler Treiber dieser Entwicklung ist die überarbeitete Richtlinie über Maßnahmen für ein hohes gemeinsames Cybersicherheitsniveau in der Union (NIS-2-Richtlinie), welche in Österreich durch das neue Netz- und Informationssystemsicherheitsgesetz (NISG 2026) umgesetzt wurde.
+Das sNISG 2026 verpflichtet betroffene Einrichtungen aus kritischen und wichtigen Sektoren, konkret aber nicht ausschließlich das Finanz- und Gesundheitswesen sowie die öffentliche Verwaltung, zur Implementierung strenger Authentifizierungsmechanismen und dem Ausbau der relevanten IT-Infrastruktur \cite[Art. 21]{eu2022a}.
+Verschärft wird diese Anforderung für den Finanzsektor durch den \textit{Digital Operational Resilience Act} (DORA), welcher im Januar 2025 in Kraft getreten ist.
+DORA verlangt von Finanzunternehmen explizit die Nutzung starker und mehrstufiger Authentifizierungsverfahren, um die Integrität und Vertraulichkeit von Transaktionen und Kundendaten zu schützen \cite[Art. 28 Abs. 2]{eu2022b}. Dies erfordert von den Instituten eine kontinuierliche Anpassung ihrer Authentifizierungsinfrastruktur an den aktuellen Stand der Technik.
+Ergänzend dazu fordert die Datenschutz-Grundverordnung (DSGVO) in Artikel 32 die Umsetzung geeigneter technischer und organisatorischer Maßnahmen (TOMs), um ein dem Risiko angemessenes Schutzniveau zu gewährleisten. Europäische Aufsichtsbehörden, wie der Europäische Datenschutzausschuss (EDSA), interpretieren den Schutz von personenbezogenen Daten mittels MFA mittlerweile als integralen Bestandteil des „Stands der Technik“ \cite[S. 11]{enisa2025}. Unternehmen, die auf Authentifizierung mittels einfacher Passwörter setzen, laufen demnach Gefahr, bei Sicherheitsvorfällen ein höheres Bußgeld wegen mangelnder Sorgfaltspflicht zu riskieren \cite[S. 42]{krykavska2023}.
 
 \subsection{Verwendungskontext und Akzeptanz}
 Im privaten Bereich dominiert oft die Freiwilligkeit, sofern keine Vorgaben wie beispielsweise durch die PSD2 im Banking bestehen. %habe ich die PSD schon vorgestellt??
@@ -59,10 +60,6 @@ Im beruflichen Umfeld hingegen erzwingt die IT-Governance die Nutzung durch Rich
 Für das Verständnis der Thematik ist die Mensch-Maschine-Interaktion (HCI) ein Schlüsselkonzept. Im Zentrum steht die Anpassung von Systemen an menschliche Grenzen.
 % Sinnvoll? Oder zu weit? Paradigmenwechsel: Der Mensch gilt nicht mehr primär als „Weakest Link“ (Risikofaktor), sondern mangelhaftes Systemdesign als Ursache für Anwendungsfehler.
 % Ergänzung: Hier könnte ich kurz das "Mental Model" der Nutzerin erwähnen. Wenn der Nutzer nicht versteht, warum er MFA nutzt, sinkt die Compliance.
-
-\subsection{Usability und Mensch-Maschine-Interaktion}
-% Ziel des Abschnitts: Bedeutung der Usable Security und HCI im Kontext der MFA
-
 Für das grundlegende Verständnis der Akzeptanz von Authentifizierungsverfahren ist die Mensch-Maschine-Interaktion (HCI) ein zentrales Konzept. In der modernen Sicherheitsforschung hat dabei ein wesentlicher Paradigmenwechsel stattgefunden: Der Mensch wird nicht mehr primär als das „schwächste Glied“ ({Weakest Link}) und somit als Sicherheitsrisiko betrachtet. Vielmehr wird mangelhaftes und kontraintuitives Systemdesign als eigentliche Ursache für Anwendungsfehler und Umgehungsverhalten identifiziert \cite[S. 345]{gratian2018}. Systeme müssen sich folglich an die kognitiven und physischen Grenzen der Nutzenden anpassen, anstatt umgekehrt.
 Dieser Ansatzes baut aud dem Konzept der sogeannten Usable Security auf. Dieses fordert, dass Sicherheitsmechanismen so gestaltet sein müssen, dass sie effektiv und gleichzeitig ohne übermäßige kognitive Last bedienbar sind. Die ISO 9241-11 definiert Usability über die drei Dimensionen Effektivität, Effizienz und Zufriedenstellung \cite[S. 42]{bortz2016}. Im Kontext der Multi-Faktor-Authentifizierung (MFA) bedeutet dies, dass die Interaktion mit dem Sicherheitsfaktor die eigentliche Arbeitsaufgabe nicht übermäßig dominieren darf.
 Ein Einflussfaktor auf die Interaktion ist, dass MFA für Anwender:innen eine Nebenrolle einnimmt. Das primäre Ziel ist der schnelle und unterbrechungsfreie Zugriff auf eine Anwendung oder Ressource.
