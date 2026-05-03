@@ -61,7 +61,7 @@ F12$: Ihnen ist bekannt, dass der Verstoß gegen MFA-Richtlinien zu konkreten Ma
 Block C: Verwendung
 F13$: Ich finde die Verwendung von MFA sinnvoll.
 
-Block D: Spill-over Effekte (Privat)
+Block D: Spill-over-Effekt (Privat)
 F14$: Die berufliche Nutzung von MFA hat mich motiviert, MFA auch privat zu aktivieren.
 F15$: Weil ich MFA bei der Arbeit nutze, verstehe ich die Technologie generell besser
 F16$: Ich würde MFA privat nicht nutzen, wenn ich die Nutzung nicht bei der Arbeit gezeigt bekommen hätte.
