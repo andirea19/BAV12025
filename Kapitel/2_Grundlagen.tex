@@ -28,31 +28,47 @@ Für den vorliegenden Text liegt der Fokus jedoch auf den drei obengenannten kla
 Die Authentifizierung ist der Prozess, bei dem eine Anspruchstellerin oder ein Anspruchsteller (Claimant) den Besitz und die Kontrolle über Authentifikatoren nachweist. Dieser Nachweis erfolgt gegenüber einem Bestätiger (Verifier).
 
 Da einfache Passwörter anfällig für Diebstahl und Phishing sind, gilt die MFA heute als Standard für erhöhte Sicherheitsanforderungen. Sie erhöht die Barriere für Angreifer, da nicht mehr nur ein einzelnes Geheimnis kompromittiert werden muss, sondern zwei voneinander unabhängige Hürden überwunden werden müssen.
+
 Einmalpasswörter (One-Time Password, OTP) stellen eine häufige Implementierung dar. Sie beruhen auf kurzlebigen Codes, die entweder zeitbasiert (Time-Based One-Time Password, TOTP) oder zählerbasiert (HMAC-based One-Time Password, HOTP) generiert werden. 
+
 Wird der Code per App oder Hardware-Token erzeugt, gilt das Verfahren als relativ sicher. Im Gegensatz dazu gelten SMS-basierte Verfahren aufgrund der Anfälligkeit für SIM-Swapping oder das Abfangen im Mobilfunknetz als weniger robust.
+
 Hardware-Token und Smartcards ermöglichen über kryptografische Verfahren wie U2F oder FIDO2 eine sogenannte Challenge-Response-Authentifizierung. Hierbei sendet der Server eine zufällige Herausforderung (Challenge), die vom Token mit einem privaten Schlüssel signiert wird. Diese Lösungen sind besonders resistent gegen Phishing, erfordern jedoch einen höheren organisatorischen Aufwand bei der Hardware-Verwaltung.
+
 Biometrische Verfahren bieten eine hohe Benutzerfreundlichkeit, bringen jedoch Herausforderungen hinsichtlich des Datenschutzes mit sich, da biometrische Daten im Falle eines Diebstahls – im Gegensatz zu Passwörtern – nicht geändert werden können.
 
 \subsubsection{Endgeräte}
 % Ziel des Abschnitts: Bedeutung der Endgerätesicherheit, Unterscheidung der Authentifikatoren und Device Posture im Kontext von Zero Trust.
 
+
 Die Sicherheit des jeweiligen Endgerätes ist für die Autorisierung essenziell, da ein kompromittiertes Gerät, beispielsweise durch Malware, selbst eine starke Authentifizierung wertlos machen kann \cite[S. 269]{ulqinaku2021}. 
+
 Im Rahmen moderner Authentifizierungsarchitekturen wird daher zwischen zwei Hauptkategorien von Authentifikatoren unterschieden: Plattform-Authentifikatoren und Roaming-Authentifikatoren.
+
 Plattform-Authentifikatoren sind fest in das Endgerät integriert und nutzen hardwarebasierte Sicherheitsmodule wie das {Trusted Platform Module} (TPM 2.0) oder Apples {Secure Enclave}. Ein prominentes Beispiel hierfür ist {Windows Hello}, welches biometrische Merkmale (wie Gesichtserkennung oder Fingerabdruck) mit einer lokalen PIN kombiniert. Die biometrischen Daten verlassen dabei zu keinem Zeitpunkt das Gerät. Stattdessen wird bei erfolgreicher biometrischer Prüfung ein kryptografisches Schlüsselpaar freigegeben, das lokal im TPM gespeichert ist \cite[S. 80]{keil2024}. Dies verhindert sogenannte Phishing-Angriffe, da keine über das Netzwerk übertragbaren Geheimnisse abgefangen werden können. Im Gegensatz dazu stehen Roaming-Authentifikatoren, wie hardwarebasierte USB-Sicherheits-Keys (z.B. YubiKey), die mobil an verschiedenen Geräten eingesetzt werden können \cite[S. 343]{ciolino2019}.
+
 In modernen {Zero-Trust}-Architekturen wird keinem Gerät implizit vertraut. Der Sicherheitsstatus des Geräts, die sogenannte {Device Posture}, wird vor und während des Zugriffs kontinuierlich überwacht. Hierbei fließen verschiedene Parameter wie das aktuelle Patch-Level, der Standort und die Integrität der lokalen Sicherheitssoftware in Echtzeit in die Entscheidungsfindung der Authentifizierung ein \cite[S. 146]{otta2023}. 
+
 Zusätzlich helfen Techniken wie das {Device Fingerprinting} dabei, Geräte anhand von Hard- und Software-Eigenschaften eindeutig zu identifizieren und an spezifische Benutzeraccounts zu binden. Dadurch wird sichergestellt, dass selbst bei bekanntem Passwort kein unbefugter Zugriff von fremden Geräten erfolgen kann, wodurch wirksam {Session Hijacking} (das Entführen von Sitzungen) verhindert wird \cite[S. 138]{wiefling2019}.
 
 \subsection{MFA und Regulatorik}
 Die Implementierung von Multifaktor-Authentifizierung (MFA) ist längst nicht mehr nur eine rein technische Entscheidung, sondern wird zunehmend durch europäische und nationale Gesetzgebungsakte mandatiert. Die europäische Gesetzgebung zielt darauf ab, die digitale Resilienz kritischer Infrastrukturen zu erhöhen und ein einheitliches Sicherheitsniveau zu etablieren. 
+
 Ein zentraler Treiber dieser Entwicklung ist die überarbeitete Richtlinie über Maßnahmen für ein hohes gemeinsames Cybersicherheitsniveau in der Union (NIS-2-Richtlinie), welche in Österreich durch das neue Netz- und Informationssystemsicherheitsgesetz (NISG 2026) umgesetzt wurde.
-Das sNISG 2026 verpflichtet betroffene Einrichtungen aus kritischen und wichtigen Sektoren, konkret aber nicht ausschließlich das Finanz- und Gesundheitswesen sowie die öffentliche Verwaltung, zur Implementierung strenger Authentifizierungsmechanismen und dem Ausbau der relevanten IT-Infrastruktur \cite[Art. 21]{eu2022a}.
+
+Das NISG 2026 verpflichtet betroffene Einrichtungen aus kritischen und wichtigen Sektoren, konkret aber nicht ausschließlich das Finanz- und Gesundheitswesen sowie die öffentliche Verwaltung, zur Implementierung strenger Authentifizierungsmechanismen und dem Ausbau der relevanten IT-Infrastruktur \cite[Art. 21]{eu2022a}.
+
 Verschärft wird diese Anforderung für den Finanzsektor durch den \textit{Digital Operational Resilience Act} (DORA), welcher im Januar 2025 in Kraft getreten ist.
+
 DORA verlangt von Finanzunternehmen explizit die Nutzung starker und mehrstufiger Authentifizierungsverfahren, um die Integrität und Vertraulichkeit von Transaktionen und Kundendaten zu schützen \cite[Art. 28 Abs. 2]{eu2022b}. Dies erfordert von den Instituten eine kontinuierliche Anpassung ihrer Authentifizierungsinfrastruktur an den aktuellen Stand der Technik.
+
 Ergänzend dazu fordert die Datenschutz-Grundverordnung (DSGVO) in Artikel 32 die Umsetzung geeigneter technischer und organisatorischer Maßnahmen (TOMs), um ein dem Risiko angemessenes Schutzniveau zu gewährleisten. Europäische Aufsichtsbehörden, wie der Europäische Datenschutzausschuss (EDSA), interpretieren den Schutz von personenbezogenen Daten mittels MFA mittlerweile als integralen Bestandteil des „Stands der Technik“ \cite[S. 11]{enisa2025}. Unternehmen, die auf Authentifizierung mittels einfacher Passwörter setzen, laufen demnach Gefahr, bei Sicherheitsvorfällen ein höheres Bußgeld wegen mangelnder Sorgfaltspflicht zu riskieren \cite[S. 42]{krykavska2023}.
 
 \subsection{Verwendungskontext und Akzeptanz}
 Im privaten Bereich dominiert oft die Freiwilligkeit, sofern keine Vorgaben wie beispielsweise durch die PSD2 im Banking bestehen. %habe ich die PSD schon vorgestellt??
+
 Hier sind Bequemlichkeit und Usability die Hauptentscheidungskriterien.
+
 Im beruflichen Umfeld hingegen erzwingt die IT-Governance die Nutzung durch Richtlinien. Akzeptanzfaktoren sind hierbei ein intuitives Onboarding, risikobasierte Anpassungen (Authentifizierung nur bei Bedarf) sowie zuverlässige Recovery-Prozesse für den Fall eines Geräteverlusts.
 
 % wie besprochen am 10.02. füge ich einen Input zu diesem Thema an
@@ -60,11 +76,17 @@ Im beruflichen Umfeld hingegen erzwingt die IT-Governance die Nutzung durch Rich
 Für das Verständnis der Thematik ist die Mensch-Maschine-Interaktion (HCI) ein Schlüsselkonzept. Im Zentrum steht die Anpassung von Systemen an menschliche Grenzen.
 % Sinnvoll? Oder zu weit? Paradigmenwechsel: Der Mensch gilt nicht mehr primär als „Weakest Link“ (Risikofaktor), sondern mangelhaftes Systemdesign als Ursache für Anwendungsfehler.
 % Ergänzung: Hier könnte ich kurz das "Mental Model" der Nutzerin erwähnen. Wenn der Nutzer nicht versteht, warum er MFA nutzt, sinkt die Compliance.
+
 Für das grundlegende Verständnis der Akzeptanz von Authentifizierungsverfahren ist die Mensch-Maschine-Interaktion (HCI) ein zentrales Konzept. In der modernen Sicherheitsforschung hat dabei ein wesentlicher Paradigmenwechsel stattgefunden: Der Mensch wird nicht mehr primär als das „schwächste Glied“ ({Weakest Link}) und somit als Sicherheitsrisiko betrachtet. Vielmehr wird mangelhaftes und kontraintuitives Systemdesign als eigentliche Ursache für Anwendungsfehler und Umgehungsverhalten identifiziert \cite[S. 345]{gratian2018}. Systeme müssen sich folglich an die kognitiven und physischen Grenzen der Nutzenden anpassen, anstatt umgekehrt.
+
 Dieser Ansatzes baut aud dem Konzept der sogeannten Usable Security auf. Dieses fordert, dass Sicherheitsmechanismen so gestaltet sein müssen, dass sie effektiv und gleichzeitig ohne übermäßige kognitive Last bedienbar sind. Die ISO 9241-11 definiert Usability über die drei Dimensionen Effektivität, Effizienz und Zufriedenstellung \cite[S. 42]{bortz2016}. Im Kontext der Multi-Faktor-Authentifizierung (MFA) bedeutet dies, dass die Interaktion mit dem Sicherheitsfaktor die eigentliche Arbeitsaufgabe nicht übermäßig dominieren darf.
+
 Ein Einflussfaktor auf die Interaktion ist, dass MFA für Anwender:innen eine Nebenrolle einnimmt. Das primäre Ziel ist der schnelle und unterbrechungsfreie Zugriff auf eine Anwendung oder Ressource.
-Wenn das {Mental Model} (das mentale Modell) der Nutzenden nicht mit der zugrunde liegenden Sicherheitsarchitektur übereinstimmt, sinkt die Compliance.
+
+Wenn das {Mental Model} (das mentale Model) der Nutzenden nicht mit der zugrunde liegenden Sicherheitsarchitektur übereinstimmt, sinkt die Compliance.
+
 Verstehen Anwender:innen beispielsweise nicht, warum ein zusätzlicher Authentifizierungsschritt notwendig ist, wird dieser als Barriere und nicht als Schutz wahrgenommen \cite[S. 160]{das2020}. 
+
 Ist der Authentifizierungsprozess folglich mit zu vielen Hürden verbunden, führt dies unvermeidlich zu {Security Fatigue} (Sicherheitsmüdigkeit) oder zur Etablierung riskanter Workarounds wie der Schatten-IT \cite[S. 1141]{acemyan2018}. Die Gestaltung von MFA-Systemen muss daher die Prinzipien des {Design-for-Usability} priorisieren. Adaptive und transparente Systeme, die den kognitiven Aufwand minimieren, erhöhen nicht nur die Benutzerzufriedenheit, sondern stärken letztlich auch das Sicherheitsniveau der gesamten Organisation \cite[S. 201]{enhuber2023}.
 
 \subsection{Zwischenfazit der Grundlagen}

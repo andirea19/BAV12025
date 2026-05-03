@@ -1,14 +1,14 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.5.3)  3 MAY 2026 14:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.3)  3 MAY 2026 14:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/unger/Documents/BA2025/BAV12025/main.tex
-(c:/Users/unger/Documents/BA2025/BAV12025/main.tex
+**c:/Users/unger/Documents/BA2025/BAV12025/data/_Packages.tex
+(c:/Users/unger/Documents/BA2025/BAV12025/data/_Packages.tex
 LaTeX2e <2025-11-01>
-L3 programming layer <2026-03-20>
+L3 programming layer <2025-12-24>
 (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
-Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
 (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
 File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 )
@@ -22,20 +22,8 @@ File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \c@table=\count282
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
-\bibindent=\dimen150
-) (data/_Packages.tex
-
-data/_Packages.tex:1: LaTeX Error: Two \documentclass or \documentstyle commands.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 \documentclass[12pt,a4paper]{
-                                 article} % Beispielklasse (an deine Vorlage...
-The document may only declare one class.
-
-(C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+\bibindent=\dimen148
+) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
@@ -69,23 +57,23 @@ Package: figureversions 2025-04-29 v1.0.1 Figure versions
 )
 Already applied: [0000-00-00] Fall back to v1 on input line 76.
 )) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2026/04/15 v26.6 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
+Package: babel 2025/12/11 v25.17 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
 \babel@savecnt=\count284
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2078.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2080.
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2082.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line 2083.
-LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2084.
-LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2086.
-LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2111.
-\U@D=\dimen151
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2068.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2070.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2072.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line 2073.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2074.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2076.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2101.
+\U@D=\dimen149
 \l@unhyphenated=\language79
  (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count285
 Package babel Info: Configuration files are deprecated, as
 (babel)             they can break document portability.
-(babel)             Reported on input line 4206.
+(babel)             Reported on input line 4196.
 
 *************************************
 * Local config file bblopts.cfg used
@@ -94,11 +82,11 @@ Package babel Info: Configuration files are deprecated, as
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
 ) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/invalid\babel-ngerman.tex)
 Package babel Info: Importing font and identification data for ngerman
-(babel)             from babel-de.ini. Reported on input line 4330.
+(babel)             from babel-de.ini. Reported on input line 4320.
  (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/babel-german\ngerman.ldf
 Language: ngerman 
  (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/babel-german\babel-german.def
-Package babel Info: Making " an active character on input line 500.
+Package babel Info: Making " an active character on input line 459.
 ))) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
 ) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
@@ -111,10 +99,10 @@ Package: amstext 2024/11/17 v2.01 AMS text
  (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks21
-\ex@=\dimen152
+\ex@=\dimen150
 )) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen153
+\pmbraise@=\dimen151
 ) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
@@ -135,7 +123,7 @@ LaTeX Info: Redefining \big on input line 721.
 LaTeX Info: Redefining \Big on input line 722.
 LaTeX Info: Redefining \bigg on input line 723.
 LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen154
+\big@size=\dimen152
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
 \macc@depth=\count291
@@ -153,12 +141,12 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \column@=\count296
 \maxfields@=\count297
 \andhelp@=\toks23
-\eqnshift@=\dimen155
-\alignsep@=\dimen156
-\tagshift@=\dimen157
-\tagwidth@=\dimen158
-\totwidth@=\dimen159
-\lineht@=\dimen160
+\eqnshift@=\dimen153
+\alignsep@=\dimen154
+\tagshift@=\dimen155
+\tagwidth@=\dimen156
+\totwidth@=\dimen157
+\lineht@=\dimen158
 \@envbody=\toks24
 \multlinegap=\skip52
 \multlinetaggap=\skip53
@@ -180,22 +168,22 @@ Package graphics Info: Driver file: pdftex.def on input line 106.
  (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen161
-\Gin@req@width=\dimen162
+\Gin@req@height=\dimen159
+\Gin@req@width=\dimen160
 ) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
  (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
  (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen163
-\captionmargin=\dimen164
-\caption@leftmargin=\dimen165
-\caption@rightmargin=\dimen166
-\caption@width=\dimen167
-\caption@indent=\dimen168
-\caption@parindent=\dimen169
-\caption@hangindent=\dimen170
+\caption@tempdima=\dimen161
+\captionmargin=\dimen162
+\caption@leftmargin=\dimen163
+\caption@rightmargin=\dimen164
+\caption@width=\dimen165
+\caption@indent=\dimen166
+\caption@parindent=\dimen167
+\caption@hangindent=\dimen168
 Package caption Info: Standard document class detected.
 )
 \c@caption@flags=\count298
@@ -271,14 +259,14 @@ Package: relsize 2013/03/29 ver 4.1
 \lst@gtempboxa=\box55
 \lst@token=\toks26
 \lst@length=\count323
-\lst@currlwidth=\dimen171
+\lst@currlwidth=\dimen169
 \lst@column=\count324
 \lst@pos=\count325
-\lst@lostspace=\dimen172
-\lst@width=\dimen173
+\lst@lostspace=\dimen170
+\lst@width=\dimen171
 \lst@newlines=\count326
 \lst@lineno=\count327
-\lst@maxwidth=\dimen174
+\lst@maxwidth=\dimen172
  (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
 File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
 ) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
@@ -320,8 +308,8 @@ Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 ) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
 \pgfutil@everybye=\toks27
-\pgfutil@tempdima=\dimen175
-\pgfutil@tempdimb=\dimen176
+\pgfutil@tempdima=\dimen173
+\pgfutil@tempdimb=\dimen174
 ) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
 \pgfutil@abb=\box57
 ) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
@@ -336,16 +324,16 @@ Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
  (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.tex
 \pgfkeys@tmptoks=\toks30
 ))
-\pgf@x=\dimen177
-\pgf@y=\dimen178
-\pgf@xa=\dimen179
-\pgf@ya=\dimen180
-\pgf@xb=\dimen181
-\pgf@yb=\dimen182
-\pgf@xc=\dimen183
-\pgf@yc=\dimen184
-\pgf@xd=\dimen185
-\pgf@yd=\dimen186
+\pgf@x=\dimen175
+\pgf@y=\dimen176
+\pgf@xa=\dimen177
+\pgf@ya=\dimen178
+\pgf@xb=\dimen179
+\pgf@yb=\dimen180
+\pgf@xc=\dimen181
+\pgf@yc=\dimen182
+\pgf@xd=\dimen183
+\pgf@yd=\dimen184
 \w@pgf@writea=\write3
 \r@pgf@reada=\read3
 \c@pgf@counta=\count330
@@ -373,7 +361,7 @@ File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.code.tex
 Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
  (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex
-\pgfmath@dimen=\dimen187
+\pgfmath@dimen=\dimen185
 \pgfmath@count=\count337
 \pgfmath@box=\box58
 \pgfmath@toks=\toks34
@@ -383,28 +371,28 @@ Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
 \c@pgfmathroundto@lastzeros=\count338
 )) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.tex) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@picminx=\dimen188
-\pgf@picmaxx=\dimen189
-\pgf@picminy=\dimen190
-\pgf@picmaxy=\dimen191
-\pgf@pathminx=\dimen192
-\pgf@pathmaxx=\dimen193
-\pgf@pathminy=\dimen194
-\pgf@pathmaxy=\dimen195
-\pgf@xx=\dimen196
-\pgf@xy=\dimen197
-\pgf@yx=\dimen198
-\pgf@yy=\dimen199
-\pgf@zx=\dimen256
-\pgf@zy=\dimen257
+\pgf@picminx=\dimen186
+\pgf@picmaxx=\dimen187
+\pgf@picminy=\dimen188
+\pgf@picmaxy=\dimen189
+\pgf@pathminx=\dimen190
+\pgf@pathmaxx=\dimen191
+\pgf@pathminy=\dimen192
+\pgf@pathmaxy=\dimen193
+\pgf@xx=\dimen194
+\pgf@xy=\dimen195
+\pgf@yx=\dimen196
+\pgf@yy=\dimen197
+\pgf@zx=\dimen198
+\pgf@zy=\dimen199
 ) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@path@lastx=\dimen258
-\pgf@path@lasty=\dimen259
+\pgf@path@lastx=\dimen256
+\pgf@path@lasty=\dimen257
 ) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@shorten@end@additional=\dimen260
-\pgf@shorten@start@additional=\dimen261
+\pgf@shorten@end@additional=\dimen258
+\pgf@shorten@start@additional=\dimen259
 ) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfpic=\box59
@@ -413,12 +401,12 @@ File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@picture@serial@count=\count339
 ) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgflinewidth=\dimen262
+\pgflinewidth=\dimen260
 ) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@pt@x=\dimen263
-\pgf@pt@y=\dimen264
-\pgf@pt@temp=\dimen265
+\pgf@pt@x=\dimen261
+\pgf@pt@y=\dimen262
+\pgf@pt@temp=\dimen263
 ) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
@@ -427,10 +415,10 @@ File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowsep=\dimen266
+\pgfarrowsep=\dimen264
 ) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@max=\dimen267
+\pgf@max=\dimen265
 \pgf@sys@shading@range@num=\count340
 \pgf@shadingcount=\count341
 ) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
@@ -453,14 +441,14 @@ File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@nodesepstart=\dimen268
-\pgf@nodesepend=\dimen269
+\pgf@nodesepstart=\dimen266
+\pgf@nodesepend=\dimen267
 ) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
 )) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.sty (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex)) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex)) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.code.tex
 Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
-\pgffor@iter=\dimen270
-\pgffor@skip=\dimen271
+\pgffor@iter=\dimen268
+\pgffor@skip=\dimen269
 \pgffor@stack=\toks37
 \pgffor@toks=\toks38
 )) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
@@ -468,16 +456,16 @@ Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
  (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@plot@mark@count=\count342
-\pgfplotmarksize=\dimen272
+\pgfplotmarksize=\dimen270
 )
-\tikz@lastx=\dimen273
-\tikz@lasty=\dimen274
-\tikz@lastxsaved=\dimen275
-\tikz@lastysaved=\dimen276
-\tikz@lastmovetox=\dimen277
-\tikz@lastmovetoy=\dimen278
-\tikzleveldistance=\dimen279
-\tikzsiblingdistance=\dimen280
+\tikz@lastx=\dimen271
+\tikz@lasty=\dimen272
+\tikz@lastxsaved=\dimen273
+\tikz@lastysaved=\dimen274
+\tikz@lastmovetox=\dimen275
+\tikz@lastmovetoy=\dimen276
+\tikzleveldistance=\dimen277
+\tikzsiblingdistance=\dimen278
 \tikz@figbox=\box64
 \tikz@figbox@bg=\box65
 \tikz@tempbox=\box66
@@ -501,8 +489,8 @@ File: tikzlibrarypositioning.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
 \calc@Acount=\count351
 \calc@Bcount=\count352
-\calc@Adimen=\dimen281
-\calc@Bdimen=\dimen282
+\calc@Adimen=\dimen279
+\calc@Bdimen=\dimen280
 \calc@Askip=\skip85
 \calc@Bskip=\skip86
 LaTeX Info: Redefining \setlength on input line 86.
@@ -512,7 +500,7 @@ LaTeX Info: Redefining \addtolength on input line 87.
 )
 \c@@todonotes@numberoftodonotes=\count354
 ) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/base\glossaries.sty
-Package: glossaries 2026/04/21 v5.1 (NLCT)
+Package: glossaries 2025/11/09 v4.9 (NLCT)
  (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/mfirstuc\mfirstuc.sty
 Package: mfirstuc 2025/04/03 v2.09 (NLCT)
  (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
@@ -540,8 +528,8 @@ Package: datatool-base 2025/12/04 v3.4.3 (NLCT)
 \l__datatool_tmpd_int=\count359
 \l__datatool_count_int=\count360
 \l__datatool_tmp_datatype_int=\count361
-\l__datatool_tmpa_dim=\dimen283
-\l__datatool_tmpb_dim=\dimen284
+\l__datatool_tmpa_dim=\dimen281
+\l__datatool_tmpb_dim=\dimen282
  (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/datatool\datatool-l3fp.def
 File: datatool-l3fp.def 2025/12/04 v3.4.3 (NLCT)
 )
@@ -578,19 +566,19 @@ Package tracklang Warning: No `datatool' support for dialect `ngerman'  on input
 \gls@level=\count381
 \@gls@tmpb=\toks42
 \gls@tmplen=\skip89
-\l__glossaries_tmpa_dim=\dimen285
-\l__glossaries_tmpb_dim=\dimen286
+\l__glossaries_tmpa_dim=\dimen283
+\l__glossaries_tmpb_dim=\dimen284
 \glskeylisttok=\toks43
 \glslabeltok=\toks44
 \glsshorttok=\toks45
 \glslongtok=\toks46
  (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glossary-hypernav.sty
-Package: glossary-hypernav 2026/04/21 v5.1 (NLCT)
+Package: glossary-hypernav 2025/11/09 v4.9 (NLCT)
 ) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glossary-list.sty
-Package: glossary-list 2026/04/21 v5.1 (NLCT)
+Package: glossary-list 2025/11/09 v4.9 (NLCT)
 \glslistdottedwidth=\skip90
 ) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glossary-long.sty
-Package: glossary-long 2026/04/21 v5.1 (NLCT)
+Package: glossary-long 2025/11/09 v4.9 (NLCT)
  (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
 Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \LTleft=\skip91
@@ -598,7 +586,7 @@ Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \LTpre=\skip93
 \LTpost=\skip94
 \LTchunksize=\count382
-\LTcapwidth=\dimen287
+\LTcapwidth=\dimen285
 \LT@head=\box69
 \LT@firsthead=\box70
 \LT@foot=\box71
@@ -613,36 +601,36 @@ Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \glsdescwidth=\skip95
 \glspagelistwidth=\skip96
 ) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glossary-super.sty
-Package: glossary-super 2026/04/21 v5.1 (NLCT)
+Package: glossary-super 2025/11/09 v4.9 (NLCT)
  (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/supertabular\supertabular.sty
 Package: supertabular 2025/06/26 v4.2d the supertabular environment
 \c@tracingst=\count387
-\ST@wd=\dimen288
+\ST@wd=\dimen286
 \ST@rightskip=\skip97
 \ST@leftskip=\skip98
 \ST@parfillskip=\skip99
-\ST@pageleft=\dimen289
-\ST@headht=\dimen290
-\ST@tailht=\dimen291
-\ST@pagesofar=\dimen292
-\ST@pboxht=\dimen293
-\ST@rowht=\dimen294
-\ST@prevht=\dimen295
-\ST@toadd=\dimen296
-\ST@dimen=\dimen297
+\ST@pageleft=\dimen287
+\ST@headht=\dimen288
+\ST@tailht=\dimen289
+\ST@pagesofar=\dimen290
+\ST@pboxht=\dimen291
+\ST@rowht=\dimen292
+\ST@prevht=\dimen293
+\ST@toadd=\dimen294
+\ST@dimen=\dimen295
 \ST@pbox=\box74
 )) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glossary-tree.sty
-Package: glossary-tree 2026/04/21 v5.1 (NLCT)
+Package: glossary-tree 2025/11/09 v4.9 (NLCT)
 \l__glossaries_tree_max_known_level_int=\count388
-\l__glossaries_tree_offset_dim=\dimen298
-\l__glossaries_tree_namewidth_dim=\dimen299
-\l__glossaries_tree_symbolwidth_dim=\dimen300
-\l__glossaries_tree_prenamesym_width_dim=\dimen301
-\l__glossaries_tree_presubnamesym_width_dim=\dimen302
-\l__glossaries_tree_namewidth_padding_dim=\dimen303
-\l__glossaries_tree_symbolwidth_padding_dim=\dimen304
-\l__glossaries_tree_namesymbolwidth_dim=\dimen305
-\l__glossaries_tree_namesymbolwidth_padding_dim=\dimen306
+\l__glossaries_tree_offset_dim=\dimen296
+\l__glossaries_tree_namewidth_dim=\dimen297
+\l__glossaries_tree_symbolwidth_dim=\dimen298
+\l__glossaries_tree_prenamesym_width_dim=\dimen299
+\l__glossaries_tree_presubnamesym_width_dim=\dimen300
+\l__glossaries_tree_namewidth_padding_dim=\dimen301
+\l__glossaries_tree_symbolwidth_padding_dim=\dimen302
+\l__glossaries_tree_namesymbolwidth_dim=\dimen303
+\l__glossaries_tree_namesymbolwidth_padding_dim=\dimen304
 \l__glossaries_tree_level_int=\count389
 \glstreeindent=\skip100
 )) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
@@ -655,7 +643,7 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count390
 ) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
-Package: hyperref 2026-04-24 v7.01q Hypertext links for LaTeX
+Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
  (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 ) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
@@ -675,7 +663,7 @@ Package pdftexcmds Info: \pdfdraftmode found.
 )) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 ) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
-Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
+Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
  (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
@@ -687,11 +675,11 @@ Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
-\@linkdim=\dimen307
+\@linkdim=\dimen305
 \Hy@linkcounter=\count392
 \Hy@pagecounter=\count393
  (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
-File: pd1enc.def 2026-04-24 v7.01q Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 ) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
@@ -699,42 +687,42 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count394
  (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
-File: puenc.def 2026-04-24 v7.01q Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Hyper figures OFF on input line 4199.
-Package hyperref Info: Link nesting OFF on input line 4204.
-Package hyperref Info: Hyper index ON on input line 4207.
-Package hyperref Info: Plain pages OFF on input line 4214.
-Package hyperref Info: Backreferencing OFF on input line 4219.
+Package hyperref Info: Hyper figures OFF on input line 4195.
+Package hyperref Info: Link nesting OFF on input line 4200.
+Package hyperref Info: Hyper index ON on input line 4203.
+Package hyperref Info: Plain pages OFF on input line 4210.
+Package hyperref Info: Backreferencing OFF on input line 4215.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4466.
+Package hyperref Info: Bookmarks ON on input line 4462.
 \c@Hy@tempcnt=\count395
-LaTeX Info: Redefining \url on input line 4805.
-\XeTeXLinkMargin=\dimen308
+LaTeX Info: Redefining \url on input line 4801.
+\XeTeXLinkMargin=\dimen306
  (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
 \Fld@menulength=\count396
-\Field@Width=\dimen309
-\Fld@charsize=\dimen310
-Package hyperref Info: Hyper figures OFF on input line 6091.
-Package hyperref Info: Link nesting OFF on input line 6096.
-Package hyperref Info: Hyper index ON on input line 6099.
-Package hyperref Info: backreferencing OFF on input line 6106.
-Package hyperref Info: Link coloring OFF on input line 6111.
-Package hyperref Info: Link coloring with OCG OFF on input line 6116.
-Package hyperref Info: PDF/A mode OFF on input line 6121.
+\Field@Width=\dimen307
+\Fld@charsize=\dimen308
+Package hyperref Info: Hyper figures OFF on input line 6078.
+Package hyperref Info: Link nesting OFF on input line 6083.
+Package hyperref Info: Hyper index ON on input line 6086.
+Package hyperref Info: backreferencing OFF on input line 6093.
+Package hyperref Info: Link coloring OFF on input line 6098.
+Package hyperref Info: Link coloring with OCG OFF on input line 6103.
+Package hyperref Info: PDF/A mode OFF on input line 6108.
 \Hy@abspage=\count397
 \c@Item=\count398
 \c@Hfootnote=\count399
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
-File: hpdftex.def 2026-04-24 v7.01q Hyperref driver for pdfTeX
+File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
 \Fld@listcount=\count400
 \c@bookmark@seq@number=\count401
  (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
@@ -761,594 +749,19 @@ LaTeX Info: Redefining \labelcpageref on input line 2370.
 Package cleveref Info: `listings' support loaded on input line 3131.
 )
 ==> First Aid for cleveref.sty applied!
-) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpage.sty
-Package: lastpage 2025/08/14 v2.1h lastpage: 2.09 or 2e? (HMM)
- (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpage2e.sty
-Package: lastpage2e 2025/08/14 v2.1h Decide which 2e lastpage version to use (HMM)
- (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpagemodern.sty
-Package: lastpagemodern 2025-08-14 v2.1h Refers to last page's name (HMM; JPG)
-\c@lastpagecount=\count402
-) 
-))
-\glswrite=\write4
-\glo@main@file=\write5
-\openout5 = `main.glo'.
-
-Package glossaries Info: Writing glossary file main.glo on input line 5.
-\glo@acronym@file=\write6
-\openout6 = `main.acn'.
-
-Package glossaries Info: Writing glossary file main.acn on input line 5.
- (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
-Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
-\f@nch@headwidth=\skip104
-\f@nch@offset@elh=\skip105
-\f@nch@offset@erh=\skip106
-\f@nch@offset@olh=\skip107
-\f@nch@offset@orh=\skip108
-\f@nch@offset@elf=\skip109
-\f@nch@offset@erf=\skip110
-\f@nch@offset@olf=\skip111
-\f@nch@offset@orf=\skip112
-\f@nch@height=\skip113
-\f@nch@footalignment=\skip114
-\f@nch@widthL=\skip115
-\f@nch@widthC=\skip116
-\f@nch@widthR=\skip117
-\@temptokenb=\toks48
 )
-LaTeX Font Info:    Trying to load font information for T1+Arimo-TLF on input line 65.
- (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/arimo\t1arimo-tlf.fd
-File: T1Arimo-TLF.fd 2017/01/04 (autoinst) Font definitions for T1/Arimo-TLF.
-)
-LaTeX Font Info:    Font shape `T1/Arimo-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 65.
- (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
-File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count403
-)
-No file main.aux.
-\openout1 = `main.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-\c@mv@tabular=\count404
-\c@mv@boldtabular=\count405
-Package babel Info: 'ngerman' activates 'german' shorthands.
-(babel)             Reported on input line 65.
-\symgns@font=\mathgroup4
-LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/Arimo-TLF/m/n --> TS1/Arimo-TLF/b/n on input line 65.
-Package gensymb Info: Math companion symbols declared on input line 65.
-LaTeX Info: Redefining \degree on input line 65.
-LaTeX Info: Redefining \celsius on input line 65.
-Package gensymb Info: Using text companion symbols for \degree, \celsius and \perthousand on input line 65.
-LaTeX Info: Redefining \ohm on input line 65.
-Package gensymb Info: Using \textohm for \ohm on input line 65.
-Package gensymb Info: Using \textmu for \micro on input line 65.
-(C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count406
-\scratchdimen=\dimen311
-\scratchbox=\box75
-\nofMPsegments=\count407
-\nofMParguments=\count408
-\everyMPshowfont=\toks49
-\MPscratchCnt=\count409
-\MPscratchDim=\dimen312
-\MPnumerator=\count410
-\makeMPintoPDFobject=\count411
-\everyMPtoPDFconversion=\toks50
-) (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
- (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
-))
-Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: hyperref package is loaded.
-Package caption Info: listings package is loaded.
-Package caption Info: longtable package is loaded.
- (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
-Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
-)
-Package caption Info: supertabular package is loaded.
-Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count412
-Package hyperref Info: Link coloring OFF on input line 65.
-\@outlinefile=\write7
-\openout7 = `main.out'.
-
-\openout2 = `Dokument/Deckblatt.aux'.
-
- (Dokument/Deckblatt.tex (data/_Variables.tex)
-<FH-Burgenland_Logos/image1.png, id=6, 6359.76pt x 1589.94pt>
-File: FH-Burgenland_Logos/image1.png Graphic file (type png)
-<use FH-Burgenland_Logos/image1.png>
-Package pdftex.def Info: FH-Burgenland_Logos/image1.png  used on input line 8.
-(pdftex.def)             Requested size: 597.47922pt x 149.34763pt.
-LaTeX Font Info:    Font shape `T1/Arimo-TLF/m/n' will be
-(Font)              scaled to size 24.88pt on input line 14.
-LaTeX Font Info:    Font shape `T1/Arimo-TLF/b/n' will be
-(Font)              scaled to size 24.88pt on input line 14.
- [1
-
-\openout4 = `main.ist'.
-
-
-{C:/Users/unger/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/unger/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/arimo/arm_l3opzb.enc} <./FH-Burgenland_Logos/image1.png>])
-LaTeX Font Info:    Font shape `T1/Arimo-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 74.
-LaTeX Font Info:    Font shape `T1/Arimo-TLF/b/n' will be
-(Font)              scaled to size 17.28pt on input line 74.
-
-No file main.toc.
-\tf@toc=\write8
-\openout8 = `main.toc'.
-
-(data/_Variables.tex)
-<FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png, id=16, 277.2759pt x 100.4553pt>
-File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
-<use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
-Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 93.
-(pdftex.def)             Requested size: 133.50977pt x 48.36958pt.
-LaTeX Font Info:    Font shape `T1/Arimo-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 93.
-
-
-LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 93.
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.93 \clearpage
-                [1
-
-
- <./FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>] (Kapitel/0_Aufgabenstellung.tex
-LaTeX Font Info:    Font shape `T1/Arimo-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 2.
-LaTeX Font Info:    Font shape `T1/Arimo-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 2.
-) (Kapitel/1_Einleitung.tex
-File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
-<use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
-Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 17.
-(pdftex.def)             Requested size: 133.50977pt x 48.36958pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 17.
-
-[2
-
-]
-Kapitel/1_Einleitung.tex:23: Misplaced alignment tab character &.
-l.23 ...teiligten in Einklang zu bringen (Wibowo &
-                                                   Ramli, 2022, S. 2; IT Gov...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-Kapitel/1_Einleitung.tex:26: Misplaced alignment tab character &.
-l.26 ...PlÃ¤ne fÃ¼r die IT gemacht werden (Weill &
-                                                   Ross, 2004, S. 8).
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-LaTeX Font Info:    Font shape `T1/Arimo-TLF/m/it' will be
-(Font)              scaled to size 12.0pt on input line 30.
-File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
-<use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
-Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 36.
-(pdftex.def)             Requested size: 133.50977pt x 48.36958pt.
-
-LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 36.
-
-[3]
-LaTeX Font Info:    Trying to load font information for TS1+Arimo-TLF on input line 36.
- (C:\Users\unger\AppData\Local\Programs\MiKTeX\tex/latex/arimo\ts1arimo-tlf.fd
-File: TS1Arimo-TLF.fd 2017/01/04 (autoinst) Font definitions for TS1/Arimo-TLF.
-)
-LaTeX Font Info:    Font shape `TS1/Arimo-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 36.
-
-Overfull \hbox (0.17238pt too wide) in paragraph at lines 39--40
-[]\T1/Arimo-TLF/b/n/12 Unterfrage 4: \T1/Arimo-TLF/m/n/12 Wel-che Kon-se-quen-zen hat die Um-set-zung der IT-Governance-Vorgaben
- []
-
-) (Kapitel/2_Grundlagen.tex
-File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
-<use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
-Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 9.
-(pdftex.def)             Requested size: 133.50977pt x 48.36958pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 9.
-
-[4{C:/Users/unger/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/arimo/arm_c3z4r2.enc}]
-Overfull \hbox (21.2251pt too wide) in paragraph at lines 19--20
-[]\T1/Arimo-TLF/b/n/12 Ortsbezug \T1/Arimo-TLF/m/n/12 (^^RSo-me-whe-re you are^^P): Die Ve-ri-fi-zie-rung er-folgt über Ge-ofen-cing, IP-Adressen-
- []
-
-File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
-<use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
-Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 35.
-(pdftex.def)             Requested size: 133.50977pt x 48.36958pt.
-
-LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 35.
-
-[5]
-Overfull \hbox (1.73334pt too wide) in paragraph at lines 36--37
-\T1/Arimo-TLF/m/n/12 oder FI-DO2 ei-ne so-ge-nann-te Challenge-Response-Authentifizierung. Hier-bei sen-det der Ser-
- []
-
-
-Package natbib Warning: Citation `ulqinaku2021' on page 6 undefined on input line 44.
-
-
-Package natbib Warning: Citation `keil2024' on page 6 undefined on input line 48.
-
-
-Package natbib Warning: Citation `ciolino2019' on page 6 undefined on input line 48.
-
-
-Package natbib Warning: Citation `otta2023' on page 6 undefined on input line 50.
-
-
-Package natbib Warning: Citation `wiefling2019' on page 6 undefined on input line 52.
-
-File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
-<use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
-Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 56.
-(pdftex.def)             Requested size: 133.50977pt x 48.36958pt.
-
-LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 56.
-
-[6]
-
-Package natbib Warning: Citation `eu2022a' on page 7 undefined on input line 59.
-
-
-Package natbib Warning: Citation `eu2022b' on page 7 undefined on input line 63.
-
-
-Package natbib Warning: Citation `enisa2025' on page 7 undefined on input line 65.
-
-
-Package natbib Warning: Citation `krykavska2023' on page 7 undefined on input line 65.
-
-File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
-<use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
-Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 80.
-(pdftex.def)             Requested size: 133.50977pt x 48.36958pt.
-
-LaTeX Warning: Reference `LastPage' on page 7 undefined on input line 80.
-
-[7]
-
-Package natbib Warning: Citation `gratian2018' on page 8 undefined on input line 80.
-
-
-Package natbib Warning: Citation `bortz2016' on page 8 undefined on input line 82.
-
-
-Package natbib Warning: Citation `das2020' on page 8 undefined on input line 88.
-
-
-Package natbib Warning: Citation `acemyan2018' on page 8 undefined on input line 90.
-
-
-Package natbib Warning: Citation `enhuber2023' on page 8 undefined on input line 90.
-
-) (Kapitel/3_Forschungsstand.tex
-
-Package natbib Warning: Citation `1' on page 8 undefined on input line 13.
-
-
-Package natbib Warning: Citation `1' on page 8 undefined on input line 14.
-
-
-Package natbib Warning: Citation `1' on page 8 undefined on input line 15.
-
-
-Package natbib Warning: Citation `1' on page 8 undefined on input line 15.
-
-
-Package natbib Warning: Citation `1' on page 8 undefined on input line 15.
-
-
-Package natbib Warning: Citation `1' on page 8 undefined on input line 16.
-
-
-Package natbib Warning: Citation `1' on page 8 undefined on input line 16.
-
-
-Package natbib Warning: Citation `1' on page 8 undefined on input line 16.
-
-
-Package natbib Warning: Citation `1' on page 8 undefined on input line 17.
-
-
-Package natbib Warning: Citation `1' on page 8 undefined on input line 18.
-
-
-Package natbib Warning: Citation `1' on page 8 undefined on input line 19.
-
-File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
-<use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
-Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 20.
-(pdftex.def)             Requested size: 133.50977pt x 48.36958pt.
-
-LaTeX Warning: Reference `LastPage' on page 8 undefined on input line 20.
-
-[8]
-
-Package natbib Warning: Citation `1' on page 9 undefined on input line 23.
-
-
-Package natbib Warning: Citation `1' on page 9 undefined on input line 24.
-
-
-Package natbib Warning: Citation `1' on page 9 undefined on input line 24.
-
-
-Package natbib Warning: Citation `1' on page 9 undefined on input line 24.
-
-
-Package natbib Warning: Citation `1' on page 9 undefined on input line 25.
-
-
-Package natbib Warning: Citation `1' on page 9 undefined on input line 25.
-
-
-Package natbib Warning: Citation `1' on page 9 undefined on input line 26.
-
-
-Package natbib Warning: Citation `1' on page 9 undefined on input line 26.
-
-File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
-<use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
-Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 28.
-(pdftex.def)             Requested size: 133.50977pt x 48.36958pt.
-
-LaTeX Warning: Reference `LastPage' on page 9 undefined on input line 28.
-
-[9]
-
-Package natbib Warning: Citation `1' on page 10 undefined on input line 31.
-
-
-Package natbib Warning: Citation `1' on page 10 undefined on input line 32.
-
-
-Package natbib Warning: Citation `1' on page 10 undefined on input line 32.
-
-
-Package natbib Warning: Citation `1' on page 10 undefined on input line 33.
-
-
-Package natbib Warning: Citation `1' on page 10 undefined on input line 33.
-
-
-Package natbib Warning: Citation `1' on page 10 undefined on input line 34.
-
-
-Package natbib Warning: Citation `1' on page 10 undefined on input line 34.
-
-File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
-<use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
-Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 36.
-(pdftex.def)             Requested size: 133.50977pt x 48.36958pt.
-
-LaTeX Warning: Reference `LastPage' on page 10 undefined on input line 36.
-
-[10]
-
-Package natbib Warning: Citation `1' on page 11 undefined on input line 39.
-
-
-Package natbib Warning: Citation `1' on page 11 undefined on input line 39.
-
-
-Package natbib Warning: Citation `1' on page 11 undefined on input line 40.
-
-
-Package natbib Warning: Citation `1' on page 11 undefined on input line 40.
-
-
-Package natbib Warning: Citation `1' on page 11 undefined on input line 40.
-
-
-Package natbib Warning: Citation `1' on page 11 undefined on input line 41.
-
-
-Package natbib Warning: Citation `1' on page 11 undefined on input line 41.
-
-
-Package natbib Warning: Citation `1' on page 11 undefined on input line 42.
-
-
-Package natbib Warning: Citation `1' on page 11 undefined on input line 42.
-
-
-Package natbib Warning: Citation `1' on page 11 undefined on input line 42.
-
-
-Package natbib Warning: Citation `Mark2022' on page 11 undefined on input line 46.
-
-
-Overfull \hbox (30.16537pt too wide) in paragraph at lines 46--47
-\T1/Arimo-TLF/m/n/12 sicherheitsbezogene Li-te-ra-tur be-legt, dass be-ruf-li-che Er-fah-run-gen mit Multifaktor-Authentifizierung
- []
-
-File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
-<use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
-Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 47.
-(pdftex.def)             Requested size: 133.50977pt x 48.36958pt.
-
-LaTeX Warning: Reference `LastPage' on page 11 undefined on input line 47.
-
-[11]
-
-Package natbib Warning: Citation `Colnago2018' on page 12 undefined on input line 49.
-
-
-Package natbib Warning: Citation `Wibowo2022' on page 12 undefined on input line 50.
-
-
-Package natbib Warning: Citation `Vance2020' on page 12 undefined on input line 50.
-
-
-Package natbib Warning: Citation `Das2021' on page 12 undefined on input line 51.
-
-
-Package natbib Warning: Citation `Enhuber2023' on page 12 undefined on input line 57.
-
-) (Kapitel/4_Forschungsmethodik.tex
-LaTeX Font Info:    Font shape `TS1/Arimo-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 7.
-LaTeX Font Info:    Font shape `TS1/Arimo-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 7.
-File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
-<use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
-Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 10.
-(pdftex.def)             Requested size: 133.50977pt x 48.36958pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 12 undefined on input line 10.
-
-[12]
-File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
-<use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
-Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 25.
-(pdftex.def)             Requested size: 133.50977pt x 48.36958pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 13 undefined on input line 25.
-
-[13]
-File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
-<use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
-Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 33.
-(pdftex.def)             Requested size: 133.50977pt x 48.36958pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 14 undefined on input line 33.
-
-[14]
-Overfull \hbox (7.05829pt too wide) in paragraph at lines 44--45
-\T1/Arimo-TLF/m/n/12 Nutzung so-wie Mes-sung des kom-pe-tenz-ba-sier-ten und psy-cho-lo-gi-schen Über-trags (Spill-
- []
-
-File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
-<use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
-Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 58.
-(pdftex.def)             Requested size: 133.50977pt x 48.36958pt.
-
-LaTeX Warning: Reference `LastPage' on page 15 undefined on input line 58.
-
-[15]
-Overfull \hbox (259.7828pt too wide) in paragraph at lines 61--69
- [] 
- []
-
-) (Kapitel/5_Analyse.tex) (Kapitel/6_Fazit.tex)
-Overfull \hbox (28.83577pt too wide) in paragraph at lines 2--110
-\T1/Arimo-TLF/m/n/12 Die vor-lie-gen-de Ar-beit hat ge-zeigt, dass die tech-ni-sche Si-cher-heit von Multifaktor-Authentifizierung
- []
-
-File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
-<use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
-Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 110.
-(pdftex.def)             Requested size: 133.50977pt x 48.36958pt.
-
-LaTeX Warning: Reference `LastPage' on page 16 undefined on input line 110.
-
-[16]
-File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
-<use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
-Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 114.
-(pdftex.def)             Requested size: 133.50977pt x 48.36958pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 17 undefined on input line 114.
-
-[17]
-No file main.acr.
-
-Package natbib Warning: There were undefined citations.
-
-File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
-<use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
-Package pdftex.def Info: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png  used on input line 128.
-(pdftex.def)             Requested size: 133.50977pt x 48.36958pt.
-
-LaTeX Warning: Reference `LastPage' on page 18 undefined on input line 128.
-
-[18] 
-enddocument/afterlastpage (AED): lastpage setting LastPage.
-(main.aux (Dokument/Deckblatt.aux)
-Package cleveref Info: loaded `ngerman' language definitions on input line 18.
-)
- ***********
-LaTeX2e <2025-11-01>
-L3 programming layer <2026-03-20>
- ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  67EA0882EDDBADAB32FDC3EEE6670EB8;7603.
-
-Package lastpage Warning: Rerun to get the references right on input line 128.
-
- ) 
+! Emergency stop.
+<*> ...ocuments/BA2025/BAV12025/data/_Packages.tex
+                                                  
+*** (job aborted, no legal \end found)
+
+ 
 Here is how much of TeX's memory you used:
- 34892 strings out of 467691
- 697576 string characters out of 5414988
- 1168896 words of memory out of 5000000
- 63340 multiletter control sequences out of 15000+600000
- 640094 words of font info for 74 fonts, out of 8000000 for 9000
+ 32074 strings out of 467871
+ 633342 string characters out of 5418377
+ 1151523 words of memory out of 5000000
+ 60515 multiletter control sequences out of 15000+600000
+ 628783 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 104i,16n,134p,2538b,583s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\unger\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk><C:/Users/unger/AppData/Local/Programs/MiKTeX/fonts/type1/google/arimo/Arimo-Bold.pfb><C:/Users/unger/AppData/Local/Programs/MiKTeX/fonts/type1/google/arimo/Arimo-Italic.pfb><C:/Users/unger/AppData/Local/Programs/MiKTeX/fonts/type1/google/arimo/Arimo.pfb><C:/Users/unger/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/unger/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/unger/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on main.pdf (19 pages, 1028055 bytes).
-PDF statistics:
- 188 PDF objects out of 1000 (max. 8388607)
- 58 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 99i,0n,131p,2523b,266s stack positions out of 10000i,1000n,20000p,200000b,200000s
+!  ==> Fatal error occurred, no output PDF file produced!
